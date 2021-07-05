@@ -1,0 +1,47 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+//this script is about clciking on the dropped leafs and poop
+public class TouchObj : MonoBehaviour
+{
+    public GameObject clickSplash;
+    void Start()
+    {
+        
+    }
+    void Update()
+    {
+   
+    }
+    void OnMouseDown(){
+    //Debug.Log("yup");
+        if(this.transform.gameObject.tag == "Normal"){
+            Debug.Log("normal"); 
+            //add some animation
+            GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
+            Status.Instance.normalC +=1;
+            Destroy(this.gameObject); //later: Destroy(this.gameObject, 1f)
+            Destroy(c, 1f);
+            //add sound
+        }
+         if(this.transform.gameObject.tag == "Rare"){
+            Debug.Log("rare");
+            GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity); 
+            Status.Instance.rareC +=1;
+            Destroy(this.gameObject);
+            Destroy(c, 1f);
+            //add sound
+        }
+         if(this.transform.gameObject.tag == "Trash"){
+            Debug.Log("trash"); 
+            GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
+            Destroy(c, 1f);
+            //add sound
+        }
+    }
+    
+    void Detect(){
+        }
+    }
+

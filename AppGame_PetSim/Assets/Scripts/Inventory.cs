@@ -1,0 +1,75 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Inventory : MonoBehaviour
+{
+    public static Inventory instance;
+    //public List<GameObject> Items = new List<GameObject>();
+    public GameObject[] inventorySlot; //to put invent slot
+    public bool add;
+    public GameObject purchasedItem;
+    public bool[] full;  //check if slots are full
+    public Vector3 productSize;
+    public int fullslot;
+    void Awake(){
+        instance = this;
+    }
+    void Start()
+    {
+        fullslot = 0;
+    }
+    void Update()
+    {
+        if(add){
+            AddToSlots();
+            add = false;
+        }
+        CheckNull();
+        //CheckAllFull();
+    }
+    public void AddToSlots(){
+        Debug.Log("good");
+        for (int i = 0; i < inventorySlot.Length; i++)
+        {
+            //if(inventorySlot[i] != null){ //not appearing
+             if(full[i] == false){
+                   full[i] = true;
+                GameObject item = Instantiate(purchasedItem, inventorySlot[i].transform.position, Quaternion.identity)as GameObject;
+                item.transform.parent = inventorySlot[i].transform; 
+                item.transform.localScale = productSize;  //new Vector3(.4f, .5f, .5f);
+                Debug.Log(inventorySlot[i]); 
+                break;
+             } 
+            }
+
+    }
+    void CheckNull(){
+        for (int i = 0; i < inventorySlot.Length; i++)
+        {
+            if(inventorySlot[i].transform.childCount < 1)
+            {
+                full[i] = false;
+            }
+             if(inventorySlot[i].transform.childCount > 0)
+            {
+                full[i] = true;
+            }
+        }
+    }
+    public void CheckAllFull(){ //need to be more accurate
+          for (int i = 0; i < inventorySlot.Length; i++)
+        {
+            if(full[i] == true){
+                fullslot += 1;
+            }
+            break;
+        }
+        if(fullslot>14){
+            Debug.Log("all full");
+            Buy.Instance.canBuy = false;
+        }else{
+            Buy.Instance.canBuy = true;
+        }
+    }
+}
