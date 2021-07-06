@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 2247991195423946399}
   - component: {fileID: 2247991195423946336}
   - component: {fileID: 8144646163018424692}
+  - component: {fileID: 1717688853863706566}
   m_Layer: 10
   m_Name: W04A
   m_TagString: Drink
@@ -207,3 +208,15 @@ MonoBehaviour:
   hungerEx: {fileID: 483648205025446981, guid: d829602612b1e402fa65e201019b163f, type: 3}
   hydraEx: {fileID: 9217448240166525496, guid: 8f60045a8d51944d9bca4226f68a365b, type: 3}
   statValueAdded: 20
+--- !u!114 &1717688853863706566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2247991195423946340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e5c2c215a4b4ffeb45e5512e1de7ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

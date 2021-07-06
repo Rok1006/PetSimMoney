@@ -8,11 +8,14 @@ public class User : MonoBehaviour
     public static User Instance;
     //fp == friendship point
     public Slider fp;
-    public Text levelNum;
-    public int fpValue; //current friendship value owned by user, save and load
-    public int maxfpValue; //the current max value for slider, save and load
+    [SerializeField] private Text statusLevelNum;
+    [SerializeField] private GameObject levelUpPanel;
+    [SerializeField] private Text panelLevelNum;
+    [SerializeField] private GameObject levelUpRewardTemplate;
+    public int fpValue = 10; //current friendship value owned by user, save and load
+    public int maxfpValue = 10; //the current max value for slider, save and load
     //private float fpRate; //rate for friendship value increase
-    public int level; //level of the user; increase everytime friendship value reaches the max, link to text
+    public int level = 1; //level of the user; increase everytime friendship value reaches the max, link to text
                       //Friendship level
     void Awake() 
     {
@@ -20,15 +23,12 @@ public class User : MonoBehaviour
     }
     void Start()
     {
-        fpValue = 0;
-        maxfpValue = 10; //first max is 10, will increase
-        //fpRate = 5; //temp
-        level = 1;
+
     }
     void Update()
     {
         fp.value = fpValue;
-        levelNum.text = level.ToString();
+        statusLevelNum.text = level.ToString();
         fp.maxValue = maxfpValue;
 
         //Developer Cheat
@@ -50,10 +50,12 @@ public class User : MonoBehaviour
     }
     public void LevelUp()
     { //level up
-        LevelUpManager.Instance.LevelUpPanel.SetActive(true);
         fpValue -= maxfpValue;
-        level += 1; //increase one level
-        maxfpValue = 10 * (int)Mathf.Round(Mathf.Pow(level, 1.5f));
+        level++; //increase one level
+        maxfpValue = 10 * (int)Mathf.Round(Mathf.Pow(level, 2.0f));
         maxfpValue -= maxfpValue % 10;
+        Instance.levelUpPanel.SetActive(true);
+        panelLevelNum.text = level.ToString();
+        RewardManager.Instance.RewardGen(levelUpRewardTemplate);
     }
 }
