@@ -21,9 +21,9 @@ public class LevelUpManager : MonoBehaviour
     {
         LevelUpPanel.SetActive(false);
     }
-     void Update()
+    void Update()
     {
-        Level.text = User.Instance.Level.ToString();
+        Level.text = User.Instance.level.ToString();
     }
     public void ClickOK(){
         LevelUpPanel.SetActive(false);

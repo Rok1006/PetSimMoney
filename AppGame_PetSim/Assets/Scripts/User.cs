@@ -6,54 +6,54 @@ using UnityEngine.UI;
 public class User : MonoBehaviour
 {
     public static User Instance;
-    public Slider exp;
+    //fp == friendship point
+    public Slider fp;
     public Text levelNum;
-    public int expValue;
-    public int MaxValue; //the current max value for slider, save and load
-    private int interval; //rate for exp increase
-    public int currentExp; //current exp owned by user, save and load
-    public int Level; //level of the user; increase everytime exp reaches the max, link to text
-    void Awake() {
+    public int fpValue; //current friendship value owned by user, save and load
+    public int maxfpValue; //the current max value for slider, save and load
+    //private float fpRate; //rate for friendship value increase
+    public int level; //level of the user; increase everytime friendship value reaches the max, link to text
+                      //Friendship level
+    void Awake() 
+    {
         Instance = this;
     }
     void Start()
     {
-        currentExp = 0;
-        MaxValue = 10; //first max is 10, will increase
-        interval = 5; //temp
-        Level = 1;
+        fpValue = 0;
+        maxfpValue = 10; //first max is 10, will increase
+        //fpRate = 5; //temp
+        level = 1;
     }
     void Update()
     {
-        exp.value = currentExp;
-        levelNum.text = Level.ToString();
-        exp.maxValue = MaxValue;
-        if(currentExp==MaxValue){
-            LevelUpManager.Instance.LevelUpPanel.SetActive(true);
-            LevelUp();
-            MaxExpIncrease();
-            currentExp = 0;
-        }
+        fp.value = fpValue;
+        levelNum.text = level.ToString();
+        fp.maxValue = maxfpValue;
 
         //Developer Cheat
-        if(Input.GetKeyDown(KeyCode.Space)){
-            ExpUP();
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            ExpUP(maxfpValue);
         }
     }
-    public void ExpUP(){ //increase Exp value, put this at diff places
-        if(currentExp<MaxValue){
-            currentExp+=5;
-        }
-    }
-    public void LevelUp(){ //level up
-        Level += 1; //increase one level
-    }
-    public void MaxExpIncrease(){
-        if(MaxValue<100){
-          MaxValue +=5;   
-        }
-       
-    }
+    public void ExpUP(int value)
+    {
+        //increase Exp value, put this at diff places
+        fpValue += value;
 
-
+        while(fpValue >= maxfpValue)
+        {
+            Debug.Log("Level: " + level + "max: " + maxfpValue);
+            LevelUp();
+        }
+    }
+    public void LevelUp()
+    { //level up
+        LevelUpManager.Instance.LevelUpPanel.SetActive(true);
+        fpValue -= maxfpValue;
+        level += 1; //increase one level
+        maxfpValue = 10 * (int)Mathf.Round(Mathf.Pow(level, 1.5f));
+        maxfpValue -= maxfpValue % 10;
+    }
 }
