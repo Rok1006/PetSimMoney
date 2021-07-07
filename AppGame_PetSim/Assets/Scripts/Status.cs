@@ -15,8 +15,6 @@ public class Status : MonoBehaviour
     public Text rareT;
     public Text Store_norT;
     public Text Store_rarT;
-    public Text Gacha_norT;
-    public Text Gacha_rarT;
     [Header("StatusValue")]
     public float happyV;
     public float energyV;
@@ -54,8 +52,6 @@ public class Status : MonoBehaviour
         rareT.text = rareC.ToString();
         Store_norT.text = normalC.ToString();
         Store_rarT.text = rareC.ToString();
-        Gacha_norT.text = normalC.ToString();
-        Gacha_rarT.text = rareC.ToString();
 
         DevCheat();
         
