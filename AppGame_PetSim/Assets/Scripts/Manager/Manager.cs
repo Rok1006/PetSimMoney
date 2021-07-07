@@ -14,7 +14,6 @@ public class Manager : MonoBehaviour
     public GameObject StoreMenu;
     public GameObject Inventory;
     public GameObject MainScreenUI;
-    public GameObject GachaScreen;
     [Header("Anim")]
     Animator starAnim;
     Animator InsideStatusAnim;
@@ -43,7 +42,6 @@ public class Manager : MonoBehaviour
         MainScreenUI.SetActive(true);
         boughtItems = 0;
         numholder.SetActive(false);
-        GachaScreen.SetActive(false);
     }
 
     void Update()
@@ -115,12 +113,6 @@ public class Manager : MonoBehaviour
         ClickBag();
         ClickInvent();
         boughtItems = 0;
-    }
-    public void ClickGacha(){
-        GachaScreen.SetActive(true);
-    }
-    public void ClickCloseGacha(){
-        GachaScreen.SetActive(false);
     }
       void DetermineOnOff(){   //this is the function for the APP ui Pannel
        if(openclose==1){
