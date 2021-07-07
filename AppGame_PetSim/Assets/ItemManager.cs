@@ -5,7 +5,6 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {
     public enum ItemType { Food, Drink, Toy, Special }
-    public enum Rarity { Common, Rare, SuperRare, UltraRare, SecretUltraRare }
     public static ItemManager Instance;
     private List<GameObject> _itemList = new List<GameObject>();
     public List<GameObject> itemList { get { return _itemList; } }
