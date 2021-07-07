@@ -54,6 +54,7 @@ public class User : MonoBehaviour
         level++; //increase one level
         maxfpValue = 10 * (int)Mathf.Round(Mathf.Pow(level, 2.0f));
         maxfpValue -= maxfpValue % 10;
+
         Instance.levelUpPanel.SetActive(true);
         panelLevelNum.text = level.ToString();
         RewardManager.Instance.RewardGen(levelUpRewardTemplate);

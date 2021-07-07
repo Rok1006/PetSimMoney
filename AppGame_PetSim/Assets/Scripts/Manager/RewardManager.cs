@@ -7,21 +7,42 @@ using UnityEngine.UI;
 
 public class RewardManager : MonoBehaviour
 {
+    public enum Rarity { Common, Rare, SuperRare, UltraRare, SecretUltraRare }
     public static RewardManager Instance;
+    //public 
     private GameObject rewardTemplate;
     private List<Reward> rewardList = new List<Reward>();
 
-    void Awake() {
+    void Awake() 
+    {
         Instance = this;
     }
     void Update()
     {
-
+        
     }
 
     public void RewardGen(GameObject template)
     {
         rewardTemplate = template;
+    }
+
+    public void Shuffling(ItemManager.ItemType type, Rarity rarity)
+    {
+        foreach (GameObject item in ItemManager.Instance.itemList)
+        {
+            
+        }
+    }
+
+    public void ShufflingAll(Rarity rarity)
+    {
+        
+    }
+
+    public void draw()
+    {
+
     }
 }
 
