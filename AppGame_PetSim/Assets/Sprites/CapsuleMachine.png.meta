@@ -35,6 +35,15 @@ TextureImporter:
   - first:
       213: -1318123052112691562
     second: CapsuleMachine_10
+  - first:
+      213: 97703728201008336
+    second: CapsuleMachine_11
+  - first:
+      213: 255974722933975909
+    second: CapsuleMachine_12
+  - first:
+      213: 5906417348714195463
+    second: CapsuleMachine_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -382,6 +391,69 @@ TextureImporter:
       bones: []
       spriteID: 69eb19c511615bde0800000000000000
       internalID: -1318123052112691562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_11
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 167
+        width: 119
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d407ace50d1b5100800000000000000
+      internalID: 97703728201008336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_12
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 26
+        width: 119
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b65ff77a76d8300800000000000000
+      internalID: 255974722933975909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_13
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 168
+        width: 119
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a605df84fc7f150800000000000000
+      internalID: 5906417348714195463
       vertices: []
       indices: 
       edges: []
