@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Text;
+using Newtonsoft.Json;
 
 public class SaveLoadManager : MonoBehaviour
 {
@@ -14,9 +15,10 @@ public class SaveLoadManager : MonoBehaviour
     void Start()
     {
         DataGen();
+        var serializedData = JsonConvert.SerializeObject(data);
+        //var newPerson = JsonConvert.DeserializeObject<Person>(serializedPerson);
         resultsFilePath = Path.Combine(Application.persistentDataPath, ResultsFile);
-        File.WriteAllText(resultsFilePath,
-            (JsonUtility.ToJson(data,true)));
+        //File.WriteAllText(resultsFilePath, serializedData);
     }
 
     // Update is called once per frame
@@ -26,29 +28,35 @@ public class SaveLoadManager : MonoBehaviour
         {
             List<string> names = new List<string>();
             List<int> amount = new List<int>();
-            for(int j = 1; j <= 4; j++)
-            {
-                foreach(GameObject item in ItemManager.Instance.itemList)
-                {
-                    if(item.name == "Leaf" || item.name == "RareLeaf")
-                    {
-                        names.Add(item.name);
-                        amount.Add(1);
-                    }
-                }
 
-                foreach(GameObject item in ItemManager.Instance.itemList)
+            foreach(GameObject item in ItemManager.Instance.itemList)
+            {
+                if(item.name == "Leaf" || item.name == "RareLeaf")
                 {
-                    if(item.name != "Leaf" && item.name != "RareLeaf")
-                    {
-                        names.Add(item.name);
-                        amount.Add(1);
-                    }
+                    names.Add(item.name);
+                    amount.Add(1);
+                }
+            }
+            int Count = 0;
+            foreach(GameObject item in ItemManager.Instance.itemList)
+            {
+                if(Count == 4)
+                {
+                    break;
+                }
+                else
+                {
+                    Count++;
+                }
+                if(item.name != "Leaf" && item.name != "RareLeaf")
+                {
+                    names.Add(item.name);
+                    amount.Add(1);
                 }
             }
             LevelRewardData datafield = new LevelRewardData(i, names, amount);
             data.levelRewardData.Add(datafield);
-            //Debug.Log("datafield: " + data.levelRewardData.Count);
+            Debug.Log("datafield: " + data.levelRewardData.Count);
         }
     }
 }
