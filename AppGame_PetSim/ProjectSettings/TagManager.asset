@@ -11,6 +11,9 @@ TagManager:
   - Toy
   - Food
   - ItemFloor
+  - BackPiece
+  - NeckPiece
+  - HeadPiece
   layers:
   - Default
   - TransparentFX
@@ -56,6 +59,9 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 713112303
+    locked: 0
+  - name: Garment
+    uniqueID: 3064184387
     locked: 0
   - name: Items
     uniqueID: 880815963
