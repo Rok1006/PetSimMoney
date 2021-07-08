@@ -7,16 +7,11 @@ using UnityEngine.UI;
 
 public class RewardManager : MonoBehaviour
 {
-    public enum PoolType { Common, Rare } 
-    public static RewardManager Instance; 
+    public enum Rarity { Common, Rare, SuperRare, UltraRare, SecretUltraRare }
+    public static RewardManager Instance;
+    //public 
     private GameObject rewardTemplate;
-    private List<GameObject> pool = new List<GameObject>();
-    private List<Reward> _rewardList = new List<Reward>();
-    public List<Reward> rewardList { get { return _rewardList; } }
-
-    public int luck = 0;
-    private float[] _chances = {0.05f, 0.285f, 0.7f};
-    public float[] chances { get { return _chances; } }
+    private List<Reward> rewardList = new List<Reward>();
 
     void Awake() 
     {
@@ -32,63 +27,22 @@ public class RewardManager : MonoBehaviour
         rewardTemplate = template;
     }
 
-    public void ChancesUpdate()
+    public void Shuffling(ItemManager.ItemType type, Rarity rarity)
     {
-        if(luck <= 1000)
+        foreach (GameObject item in ItemManager.Instance.itemList)
         {
-            _chances[0] = Mathf.Round((0.05f + (luck * 0.00005f)) * 1000.0f) / 1000.0f;
-        }
-        else
-        {
-            _chances[0] = Mathf.Round((0.1f + (luck * 0.0009f)) * 1000.0f) / 1000.0f;
-        }
-        _chances[1] = Mathf.Floor(((1.0f - _chances[0]) * 3.0f / 10.0f) * 1000.0f) / 1000.0f;
-        _chances[2] = 1.0f - _chances[0] - _chances[1];
-    }
-
-    public void Shuffling(ItemManager.ItemType type, PoolType pool)
-    {
-        foreach(GameObject item in ItemManager.Instance.itemList)
-        {
-            if(item.name != "Leaf" && item.name != "RareLeaf")
-            {
-
-            }
+            
         }
     }
 
-    public void ShufflingAll(PoolType pool)
+    public void ShufflingAll(Rarity rarity)
     {
-        foreach(GameObject item in ItemManager.Instance.itemList)
-        {
-            if(item.name != "Leaf" && item.name != "RareLeaf")
-            {
-
-            }
-        }
+        
     }
 
-    private void draw()
-    {
-        //...
-
-        reset();
-    }
-
-    public void addReward(Reward reward)
+    public void draw()
     {
 
-    }
-
-    public void giveReward()
-    {
-
-    }
-
-    private void reset()
-    {
-        pool.Clear();
-        _rewardList.Clear();
     }
 }
 

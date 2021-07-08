@@ -736,7 +736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 48.700195, y: 192.5}
+  m_AnchoredPosition: {x: 48.69995, y: 192.5}
   m_SizeDelta: {x: 60.3, y: 79.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &51162456
@@ -1206,7 +1206,7 @@ MonoBehaviour:
   levelUpRewardTemplate: {fileID: 2332090679488969870}
   fpValue: 0
   maxfpValue: 10
-  level: 0
+  level: 1
 --- !u!114 &76563527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,7 +1219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce084819a80fc4c53b02045356bd0479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luck: 0
 --- !u!1 &78839527
 GameObject:
   m_ObjectHideFlags: 0
@@ -30060,6 +30059,7 @@ GameObject:
   - component: {fileID: 1797783006}
   - component: {fileID: 1797783008}
   - component: {fileID: 1797783009}
+  - component: {fileID: 1797783012}
   - component: {fileID: 1797783010}
   - component: {fileID: 1797783011}
   m_Layer: 0
@@ -30169,6 +30169,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4c9b58e4f294ed49818f713ee8e5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1797783012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797783005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598a28d935fa448b28fe91f1ad13f4bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CapsuleMachine: {fileID: 1687553199}
 --- !u!1 &1806111735
 GameObject:
   m_ObjectHideFlags: 0
@@ -33642,7 +33655,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2020310953}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1797783012}
+        m_MethodName: ClickDraw
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2020310953
 MonoBehaviour:
   m_ObjectHideFlags: 0
