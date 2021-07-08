@@ -15,7 +15,7 @@ public class GachaManager : MonoBehaviour
     {
         
     }
-    void ClickDraw(){ //pressing the buttons to begin drawing animation , for the draw 1 item button
+    public void ClickDraw(){ //pressing the buttons to begin drawing animation , for the draw 1 item button
         CMAnim.SetTrigger("PressDraw"); //do a series of anim
         //using event: determine items, in code function decide what items to be generate accord to probability
         //create temporary slot in inspector, get the item and place it in the obj variable
