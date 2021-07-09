@@ -182,9 +182,8 @@ MonoBehaviour:
   itemName: Milk
   GeneratedItem: {fileID: 2111432705200479594, guid: eb7fe40dd83434867b724efb4e621936,
     type: 3}
-  type: 0
-  rarity: 0
-  eggType: {fileID: 0}
+  type: 1
+  rarity: 1
 --- !u!223 &1827770699641630159
 Canvas:
   m_ObjectHideFlags: 0

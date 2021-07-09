@@ -179,12 +179,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: TC01
-  itemName: Mouse
+  itemName: Leaf
   GeneratedItem: {fileID: 1043107114550410067, guid: 79c87d289945e4b219c4e1d6c27d9dd6,
     type: 3}
-  type: 0
+  type: 3
   rarity: 0
-  eggType: {fileID: 0}
 --- !u!223 &3689669048758106768
 Canvas:
   m_ObjectHideFlags: 0

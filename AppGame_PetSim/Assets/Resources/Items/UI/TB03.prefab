@@ -181,9 +181,8 @@ MonoBehaviour:
   itemName: DogFish
   GeneratedItem: {fileID: 2125768863543327881, guid: 58365d469c98a4ae29a9ff5b68628a46,
     type: 3}
-  type: 0
-  rarity: 0
-  eggType: {fileID: 0}
+  type: 2
+  rarity: 1
 --- !u!223 &1676802310347196501
 Canvas:
   m_ObjectHideFlags: 0

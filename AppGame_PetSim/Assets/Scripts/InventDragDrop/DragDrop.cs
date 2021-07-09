@@ -131,8 +131,8 @@ public class DragDrop : MonoBehaviour, IInitializePotentialDragHandler, IPointer
             Debug.Log(mousePos); //some how the object always instantiate at the center
             generate = true;
             if(generate){
-                Debug.Log("ItemID: " + ItemsInfo.Instance.itemID); //make sure it only do once
-                Debug.Log("ItemName: " + ItemsInfo.Instance.itemName); //make sure it only do once
+                //Debug.Log("ItemID: " + ItemsInfo.Instance.itemID); //make sure it only do once
+                //Debug.Log("ItemName: " + ItemsInfo.Instance.itemName); //make sure it only do once
                 var sc = this.gameObject.GetComponent<ItemsInfo>();
                 GameObject i = Instantiate(sc.GeneratedItem, mousePos, Quaternion.identity);
                 i.transform.position = new Vector3(i.transform.position.x, i.transform.position.y, 0);
