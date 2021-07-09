@@ -70,8 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -460629514272958201, guid: d57d7ab2121ef4aa897b2b92ba0e2c91,
-    type: 3}
+  m_Sprite: {fileID: 334803350457491486, guid: b5342a6ed04b842ea8e91c63d075c312, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -182,7 +181,9 @@ MonoBehaviour:
   itemName: DogFish
   GeneratedItem: {fileID: 2125768863543327881, guid: 58365d469c98a4ae29a9ff5b68628a46,
     type: 3}
-  valueAdded: 10
+  type: 0
+  rarity: 0
+  eggType: {fileID: 0}
 --- !u!223 &1676802310347196501
 Canvas:
   m_ObjectHideFlags: 0

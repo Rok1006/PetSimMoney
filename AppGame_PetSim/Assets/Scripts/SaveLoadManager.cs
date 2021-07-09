@@ -7,21 +7,43 @@ using Newtonsoft.Json;
 
 public class SaveLoadManager : MonoBehaviour
 {
-    private const string ResultsFile = "reward.dat";
-    private string resultsFilePath;
-    public static SaveData data = new SaveData();
+    private const string dataFile = "data.dat";
+    private string dataFilePath;
+    public static Data data = new Data();
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        DataGen();
-        var serializedData = JsonConvert.SerializeObject(data);
-        //var newPerson = JsonConvert.DeserializeObject<Person>(serializedPerson);
-        resultsFilePath = Path.Combine(Application.persistentDataPath, ResultsFile);
+        //DataGen();
+        //var serializedData = JsonConvert.SerializeObject(data);
+        readData();
         //File.WriteAllText(resultsFilePath, serializedData);
     }
 
-    // Update is called once per frame
+    private void readData()
+    {
+        dataFilePath = Path.Combine(Application.persistentDataPath, dataFile);
+        string serializedData = File.ReadAllText(dataFilePath);
+        data = JsonConvert.DeserializeObject<Data>(serializedData);
+        foreach(LevelRewardData reward in data.levelRewardData)
+        {
+            //Debug.Log("Level: " + reward.level);
+            string ids = "";
+            foreach(string id in reward.name)
+            {
+                ids = ids + " " + id;
+            }
+            //Debug.Log("rewardIDs: " + ids);
+            string amounts = "";
+            foreach(int n in reward.amount)
+            {
+                amounts = amounts + " " + n.ToString();
+            }
+            //Debug.Log("Amounts: " + amounts);
+        }
+    }
+
+    /*
     private void DataGen()
     {
         for(int i = 1; i <= 100; i++)
@@ -59,13 +81,14 @@ public class SaveLoadManager : MonoBehaviour
             Debug.Log("datafield: " + data.levelRewardData.Count);
         }
     }
+    */
 }
 
-public class SaveData
+public class Data
 {
     public List<LevelRewardData> levelRewardData;
 
-    public SaveData()
+    public Data()
     {
         levelRewardData = new List<LevelRewardData>();
     }

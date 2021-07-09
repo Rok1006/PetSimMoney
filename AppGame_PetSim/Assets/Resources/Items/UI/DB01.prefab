@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4203739411735069946, guid: d57d7ab2121ef4aa897b2b92ba0e2c91,
+  m_Sprite: {fileID: -5718715131236768836, guid: b5342a6ed04b842ea8e91c63d075c312,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -182,7 +182,9 @@ MonoBehaviour:
   itemName: Milk
   GeneratedItem: {fileID: 2111432705200479594, guid: eb7fe40dd83434867b724efb4e621936,
     type: 3}
-  valueAdded: 10
+  type: 0
+  rarity: 0
+  eggType: {fileID: 0}
 --- !u!223 &1827770699641630159
 Canvas:
   m_ObjectHideFlags: 0
