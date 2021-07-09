@@ -37,7 +37,7 @@ public class Buy : MonoBehaviour
             bAnim.SetTrigger("buy");
             valueAnim.SetTrigger("norm");
             Status.Instance.normalC -= cost;
-            Inventory.instance.add = true;
+            Inventory.instance.add = true; //turn true, will turn false after instanciate
             Inventory.instance.purchasedItem = item;
             Inventory.instance.productSize = size;
             Manager.Instance.boughtItems += 1;
@@ -48,6 +48,7 @@ public class Buy : MonoBehaviour
         if(Status.Instance.rareC>=cost && canBuy){ //cost = 1, result: 3 drinks
             bAnim.SetTrigger("buy");
             valueAnim.SetTrigger("rare");
+            //invent.add == true?
             Status.Instance.rareC -= cost;
             Inventory.instance.purchasedItem = item;
             Inventory.instance.productSize = size;

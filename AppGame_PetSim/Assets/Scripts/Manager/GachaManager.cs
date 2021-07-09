@@ -46,7 +46,7 @@ public class GachaManager : MonoBehaviour
             Draw3Panel.SetActive(true);
         }
     }
-    void ShowResults(){
+    void ShowResults(){ //not using currently
         //if(item type == common)
          //trigger this animation CMAnim.SetTrigger("Red");
         //in event crackopen: add sound, link it to inventory do the generate

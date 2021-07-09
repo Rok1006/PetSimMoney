@@ -21,11 +21,11 @@ public class Inventory : MonoBehaviour
     }
     void Update()
     {
-        if(add){
+        if(add){ //called in BUy script
             AddToSlots();
             add = false;
         }
-        CheckNull();
+        CheckNull(); //check if all the slots is null
         //CheckAllFull();
     }
     public void AddToSlots(){
@@ -34,17 +34,16 @@ public class Inventory : MonoBehaviour
         {
             //if(inventorySlot[i] != null){ //not appearing
              if(full[i] == false){
-                   full[i] = true;
-                GameObject item = Instantiate(purchasedItem, inventorySlot[i].transform.position, Quaternion.identity)as GameObject;
-                item.transform.parent = inventorySlot[i].transform; 
+                   full[i] = true; //true if there is sth in it
+                GameObject item = Instantiate(purchasedItem, inventorySlot[i].transform.position, Quaternion.identity)as GameObject; //instanciate items in slot pos
+                item.transform.parent = inventorySlot[i].transform; //must need, make it as a child
                 item.transform.localScale = productSize;  //new Vector3(.4f, .5f, .5f);
                 Debug.Log(inventorySlot[i]); 
                 break;
              } 
             }
-
     }
-    void CheckNull(){
+    void CheckNull(){ //check true false if every slot is empty
         for (int i = 0; i < inventorySlot.Length; i++)
         {
             if(inventorySlot[i].transform.childCount < 1)
@@ -57,7 +56,7 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-    public void CheckAllFull(){ //need to be more accurate
+    public void CheckAllFull(){ //check if slots are full
           for (int i = 0; i < inventorySlot.Length; i++)
         {
             if(full[i] == true){
@@ -65,7 +64,7 @@ public class Inventory : MonoBehaviour
             }
             break;
         }
-        if(fullslot>14){
+        if(fullslot>14){ //change value if have more slots
             Debug.Log("all full");
             Buy.Instance.canBuy = false;
         }else{
