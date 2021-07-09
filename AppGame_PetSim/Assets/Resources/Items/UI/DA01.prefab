@@ -182,9 +182,8 @@ MonoBehaviour:
   itemName: PurpleSky
   GeneratedItem: {fileID: 2247991195423946340, guid: 4c7e567cf5be04d97a1d7dbba9ece5d0,
     type: 3}
-  type: 0
-  rarity: 0
-  eggType: {fileID: 0}
+  type: 1
+  rarity: 2
 --- !u!223 &3802232497078423250
 Canvas:
   m_ObjectHideFlags: 0

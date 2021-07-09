@@ -181,9 +181,8 @@ MonoBehaviour:
   itemName: Orange Juice
   GeneratedItem: {fileID: 6943845177838410998, guid: d71874adb42634506b98c5244f0be8e1,
     type: 3}
-  type: 0
+  type: 1
   rarity: 0
-  eggType: {fileID: 0}
 --- !u!223 &4258303646998470550
 Canvas:
   m_ObjectHideFlags: 0

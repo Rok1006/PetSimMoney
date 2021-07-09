@@ -56,6 +56,10 @@ public class User : MonoBehaviour
         maxfpValue = 10 * (int)Mathf.Round(Mathf.Pow(level + 1, 2.0f));
         maxfpValue -= maxfpValue % 10;
 
+        if(levelUpPanel.activeSelf)
+        {
+            levelUpPanel.SetActive(false);
+        }
         levelUpPanel.SetActive(true);
         panelLevelNum.text = level.ToString();
         foreach(LevelRewardData data in SaveLoadManager.data.levelRewardData)

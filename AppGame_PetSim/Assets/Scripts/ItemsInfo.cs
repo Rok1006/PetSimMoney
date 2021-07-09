@@ -10,17 +10,4 @@ public class ItemsInfo : MonoBehaviour
     //public int valueAdded; //value added to cat if consume
     public ItemManager.ItemType type;
     public ItemManager.Rarity rarity;
-    public static ItemsInfo Instance;
-    public GameObject eggType;
-    void Awake() {
-        Instance = this;
-    }
-  
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-    }
 }

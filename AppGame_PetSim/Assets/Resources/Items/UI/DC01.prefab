@@ -171,9 +171,8 @@ MonoBehaviour:
   itemName: Blue Water
   GeneratedItem: {fileID: 7996751361508475778, guid: 5108b2f4c4f3d4b118aaaed29a209a1d,
     type: 3}
-  type: 0
+  type: 1
   rarity: 0
-  eggType: {fileID: 0}
 --- !u!223 &357599957
 Canvas:
   m_ObjectHideFlags: 0

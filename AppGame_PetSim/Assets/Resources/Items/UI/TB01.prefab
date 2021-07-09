@@ -182,9 +182,8 @@ MonoBehaviour:
   itemName: Flower Mouse
   GeneratedItem: {fileID: 6714260013200599580, guid: 3b4370bbafd2e451bbf9ab6675021431,
     type: 3}
-  type: 0
-  rarity: 0
-  eggType: {fileID: 0}
+  type: 2
+  rarity: 1
 --- !u!223 &5247178773580950767
 Canvas:
   m_ObjectHideFlags: 0

@@ -172,8 +172,7 @@ MonoBehaviour:
   GeneratedItem: {fileID: 6443674148722607525, guid: f7063e8ac442843ec8d9604e7fc3667f,
     type: 3}
   type: 0
-  rarity: 0
-  eggType: {fileID: 0}
+  rarity: 1
 --- !u!223 &6153512991005058339
 Canvas:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class RewardManager : MonoBehaviour
     public List<Reward> rewardList { get { return _rewardList; } }
 
     public int luck = 0;
-    private float[] _probability = {0.05f, 0.285f, 0.7f};
+    private float[] _probability = {0.05f, 0.295f, 0.7f};
     public float[] probability { get { return _probability; } }
 
     void Awake() 
@@ -30,6 +30,7 @@ public class RewardManager : MonoBehaviour
 
     public void RewardGen(RewardData data, GameObject template)
     {
+        _rewardList.Clear();
         int count = 0;
         foreach(string name in data.name)
         {
@@ -61,7 +62,6 @@ public class RewardManager : MonoBehaviour
             newIcon.transform.SetParent(rewardIconTemplate.transform.parent, false);
             rewardIconList.Add(newIcon);
         }
-        _rewardList.Clear();
     }
 
     public void ProbabilityUpdate()

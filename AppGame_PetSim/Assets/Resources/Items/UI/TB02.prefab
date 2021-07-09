@@ -182,9 +182,8 @@ MonoBehaviour:
   itemName: WoolBall
   GeneratedItem: {fileID: 1891202453858981399, guid: d30cfabda8661436c957610951e67e38,
     type: 3}
-  type: 0
-  rarity: 0
-  eggType: {fileID: 0}
+  type: 2
+  rarity: 1
 --- !u!223 &3713484135285202876
 Canvas:
   m_ObjectHideFlags: 0
