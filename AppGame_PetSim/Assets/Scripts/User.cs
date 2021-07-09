@@ -12,10 +12,11 @@ public class User : MonoBehaviour
     [SerializeField] private GameObject levelUpPanel;
     [SerializeField] private Text panelLevelNum;
     [SerializeField] private GameObject levelUpRewardTemplate;
+    private LevelRewardData currentLevelRewardData;
     public int fpValue = 10; //current friendship value owned by user, save and load
     public int maxfpValue = 10; //the current max value for slider, save and load
     //private float fpRate; //rate for friendship value increase
-    public int level = 1; //level of the user; increase everytime friendship value reaches the max, link to text
+    public int level = 0; //level of the user; increase everytime friendship value reaches the max, link to text
                       //Friendship level
     void Awake() 
     {
@@ -44,7 +45,7 @@ public class User : MonoBehaviour
 
         while(fpValue >= maxfpValue)
         {
-            Debug.Log("Level: " + level + "max: " + maxfpValue);
+            Debug.Log("Level: " + level + " max: " + maxfpValue);
             LevelUp();
         }
     }
@@ -52,11 +53,18 @@ public class User : MonoBehaviour
     { //level up
         fpValue -= maxfpValue;
         level++; //increase one level
-        maxfpValue = 10 * (int)Mathf.Round(Mathf.Pow(level, 2.0f));
+        maxfpValue = 10 * (int)Mathf.Round(Mathf.Pow(level + 1, 2.0f));
         maxfpValue -= maxfpValue % 10;
 
-        Instance.levelUpPanel.SetActive(true);
+        levelUpPanel.SetActive(true);
         panelLevelNum.text = level.ToString();
-        RewardManager.Instance.RewardGen(levelUpRewardTemplate);
+        foreach(LevelRewardData data in SaveLoadManager.data.levelRewardData)
+        {
+            if(data.level == level)
+            {
+                currentLevelRewardData = data;
+            }
+        }
+        RewardManager.Instance.RewardGen(currentLevelRewardData, levelUpRewardTemplate);
     }
 }

@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 8144646163018424692}
   - component: {fileID: 1717688853863706566}
   m_Layer: 10
-  m_Name: W04A
+  m_Name: DA01_obj
   m_TagString: Drink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 880815963
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -511387633022464438, guid: d57d7ab2121ef4aa897b2b92ba0e2c91,
     type: 3}
@@ -220,3 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e5c2c215a4b4ffeb45e5512e1de7ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  description: 
+  rarity: 0

@@ -13,6 +13,6 @@ public class ItemManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        _itemList = new List<GameObject>(Resources.LoadAll<GameObject>("Items/Objs"));
+        _itemList = new List<GameObject>(Resources.LoadAll<GameObject>("Items/UI"));
     }
 }

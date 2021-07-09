@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5007094989838287883, guid: d57d7ab2121ef4aa897b2b92ba0e2c91,
+  m_Sprite: {fileID: -166239206238322077, guid: b5342a6ed04b842ea8e91c63d075c312,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -182,7 +182,9 @@ MonoBehaviour:
   itemName: Donut
   GeneratedItem: {fileID: 3436734034381785010, guid: c37bff771597a4625b99af7b9a0802a8,
     type: 3}
-  valueAdded: 10
+  type: 0
+  rarity: 0
+  eggType: {fileID: 0}
 --- !u!223 &4507188312726106586
 Canvas:
   m_ObjectHideFlags: 0

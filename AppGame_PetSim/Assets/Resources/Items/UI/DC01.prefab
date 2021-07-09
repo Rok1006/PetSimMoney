@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8695652827076175103, guid: d57d7ab2121ef4aa897b2b92ba0e2c91,
+  m_Sprite: {fileID: 2663681557878834929, guid: b5342a6ed04b842ea8e91c63d075c312,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -171,7 +171,9 @@ MonoBehaviour:
   itemName: Blue Water
   GeneratedItem: {fileID: 7996751361508475778, guid: 5108b2f4c4f3d4b118aaaed29a209a1d,
     type: 3}
-  valueAdded: 3
+  type: 0
+  rarity: 0
+  eggType: {fileID: 0}
 --- !u!223 &357599957
 Canvas:
   m_ObjectHideFlags: 0

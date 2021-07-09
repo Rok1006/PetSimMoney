@@ -70,7 +70,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 898542815707103988, guid: d57d7ab2121ef4aa897b2b92ba0e2c91, type: 3}
+  m_Sprite: {fileID: 6747642640158049050, guid: b5342a6ed04b842ea8e91c63d075c312,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -170,7 +171,9 @@ MonoBehaviour:
   itemName: Cupcake
   GeneratedItem: {fileID: 6443674148722607525, guid: f7063e8ac442843ec8d9604e7fc3667f,
     type: 3}
-  valueAdded: 7
+  type: 0
+  rarity: 0
+  eggType: {fileID: 0}
 --- !u!223 &6153512991005058339
 Canvas:
   m_ObjectHideFlags: 0
