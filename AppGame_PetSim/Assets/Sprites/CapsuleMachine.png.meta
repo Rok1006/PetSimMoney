@@ -44,6 +44,33 @@ TextureImporter:
   - first:
       213: 5906417348714195463
     second: CapsuleMachine_13
+  - first:
+      213: -2610685779436109295
+    second: CapsuleMachine_14
+  - first:
+      213: -1016555389723779352
+    second: CapsuleMachine_15
+  - first:
+      213: 6113867474043541840
+    second: CapsuleMachine_16
+  - first:
+      213: 2700760584448301517
+    second: CapsuleMachine_17
+  - first:
+      213: 4604765442818641807
+    second: CapsuleMachine_18
+  - first:
+      213: -8357648203626303590
+    second: CapsuleMachine_19
+  - first:
+      213: -6614608144440221799
+    second: CapsuleMachine_20
+  - first:
+      213: 1447952966233248412
+    second: CapsuleMachine_21
+  - first:
+      213: -7324415496447313681
+    second: CapsuleMachine_22
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -404,7 +431,7 @@ TextureImporter:
         width: 119
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,7 +452,7 @@ TextureImporter:
         width: 119
         height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,7 +473,7 @@ TextureImporter:
         width: 119
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -454,6 +481,195 @@ TextureImporter:
       bones: []
       spriteID: 70a605df84fc7f150800000000000000
       internalID: 5906417348714195463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_14
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 316
+        width: 113
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1120c889d1bf4cbd0800000000000000
+      internalID: -2610685779436109295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_15
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 320
+        width: 62
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee510d424874e1f0800000000000000
+      internalID: -1016555389723779352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_16
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 471
+        width: 390
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0591e223312d8d450800000000000000
+      internalID: 6113867474043541840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_17
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 1036
+        width: 195
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9da6b31770b7520800000000000000
+      internalID: 2700760584448301517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_18
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 978
+        width: 318
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f033de5c967ef30800000000000000
+      internalID: 4604765442818641807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_19
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 900
+        width: 77
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f2c215d3ba30c80800000000000000
+      internalID: -8357648203626303590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_20
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 900
+        width: 77
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f1c3630f03434a0800000000000000
+      internalID: -6614608144440221799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_21
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 730
+        width: 313
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c925ecb1d89281410800000000000000
+      internalID: 1447952966233248412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_22
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 25
+        width: 529
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe834e299e27a5a90800000000000000
+      internalID: -7324415496447313681
       vertices: []
       indices: 
       edges: []

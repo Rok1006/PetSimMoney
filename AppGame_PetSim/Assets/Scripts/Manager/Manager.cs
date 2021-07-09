@@ -15,6 +15,7 @@ public class Manager : MonoBehaviour
     public GameObject Inventory;
     public GameObject MainScreenUI;
     public GameObject GachaScreen;
+    public GameObject ProbaScreen;
     [Header("Anim")]
     Animator starAnim;
     Animator InsideStatusAnim;
@@ -44,6 +45,7 @@ public class Manager : MonoBehaviour
         boughtItems = 0;
         numholder.SetActive(false);
         GachaScreen.SetActive(false);
+        ProbaScreen.SetActive(false);
     }
 
     void Update()
@@ -93,7 +95,7 @@ public class Manager : MonoBehaviour
     }
     public void ClickStore(){
         StoreMenu.SetActive(true);
-        MainScreenUI.SetActive(false);
+        //MainScreenUI.SetActive(false);
          //also close inventory
         InventAnim.SetBool("hide", true);
         InventAnim.SetBool("out", false);
@@ -101,7 +103,7 @@ public class Manager : MonoBehaviour
     }
      public void ClickCloseStore(){
         StoreMenu.SetActive(false);
-        MainScreenUI.SetActive(true);
+        //MainScreenUI.SetActive(true);
     }
     public void ClickSetting(){
 
@@ -121,6 +123,12 @@ public class Manager : MonoBehaviour
     }
     public void ClickCloseGacha(){
         GachaScreen.SetActive(false);
+    }
+    public void ClickProbability(){
+        ProbaScreen.SetActive(true);
+    }
+    public void ClickCloseProob(){
+        ProbaScreen.SetActive(false);
     }
       void DetermineOnOff(){   //this is the function for the APP ui Pannel
        if(openclose==1){
