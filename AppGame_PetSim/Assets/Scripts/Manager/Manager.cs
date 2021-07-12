@@ -14,17 +14,28 @@ public class Manager : MonoBehaviour
     public GameObject StoreMenu;
     public GameObject Inventory;
     public GameObject MainScreenUI;
+    [Header("Costume")]
+    public GameObject CostumePanel;
+    public GameObject HeadPage;
+    public GameObject NeckPage;
+    public GameObject BackPage;
+    [Header("Gacha")]
     public GameObject GachaScreen;
     public GameObject ProbaScreen;
+    public GameObject RedMachine;
+    public GameObject BlueMachine;
+
     [Header("Anim")]
+    public int boughtItems;
+    public int CostumePageCount = 0;
+    public Text boughtnum;
+    public GameObject numholder;
     Animator starAnim;
     Animator InsideStatusAnim;
     Animator bagAnim;
     Animator InsideBagAnim;
     Animator InventAnim;
-    public int boughtItems;
-    public Text boughtnum;
-    public GameObject numholder;
+  
     void Awake(){
         Instance = this;
     }
@@ -46,8 +57,15 @@ public class Manager : MonoBehaviour
         numholder.SetActive(false);
         GachaScreen.SetActive(false);
         ProbaScreen.SetActive(false);
-    }
+        RedMachine.SetActive(false);
+        BlueMachine.SetActive(true);
 
+        CostumePanel.SetActive(false);
+        HeadPage.SetActive(false);
+        NeckPage.SetActive(false);
+        BackPage.SetActive(false);
+        
+    }
     void Update()
     {
          DetermineOnOff();
@@ -57,6 +75,20 @@ public class Manager : MonoBehaviour
              numholder.SetActive(false);
          }
          boughtnum.text = boughtItems.ToString();
+
+         if(CostumePageCount==0){
+            HeadPage.SetActive(true);
+            NeckPage.SetActive(false);
+            BackPage.SetActive(false);
+         }else if(CostumePageCount==1){
+            HeadPage.SetActive(false);
+            NeckPage.SetActive(true);
+            BackPage.SetActive(false);
+         }else if(CostumePageCount==2){
+            HeadPage.SetActive(false);
+            NeckPage.SetActive(false);
+            BackPage.SetActive(true);
+         }
     }
     public void ClickStatus(){ //click the star
         starAnim.SetBool("hide", true);
@@ -96,7 +128,6 @@ public class Manager : MonoBehaviour
     public void ClickStore(){
         StoreMenu.SetActive(true);
         //MainScreenUI.SetActive(false);
-         //also close inventory
         InventAnim.SetBool("hide", true);
         InventAnim.SetBool("out", false);
         openclose = 0;
@@ -118,6 +149,7 @@ public class Manager : MonoBehaviour
         ClickInvent();
         boughtItems = 0;
     }
+    //Gacha Page Related
     public void ClickGacha(){
         GachaScreen.SetActive(true);
     }
@@ -130,6 +162,32 @@ public class Manager : MonoBehaviour
     public void ClickCloseProob(){
         ProbaScreen.SetActive(false);
     }
+    public void ClickItemB(){
+        RedMachine.SetActive(false);
+        BlueMachine.SetActive(true);
+    }
+     public void ClickCostumeB(){
+        RedMachine.SetActive(true);
+        BlueMachine.SetActive(false);
+    }
+    //Costume Page RElated
+    public void ClickCostumes(){
+        CostumePanel.SetActive(true);
+    }
+    public void ClickCloseCostumes(){
+        CostumePanel.SetActive(false);
+    }
+     public void ClickLeft(){
+         if(CostumePageCount>0){
+           CostumePageCount-=1;   
+         }
+    }
+     public void ClickRight(){
+        if(CostumePageCount<2){
+           CostumePageCount+=1;   
+        }
+    }
+    //others
       void DetermineOnOff(){   //this is the function for the APP ui Pannel
        if(openclose==1){
             Inventory.SetActive(true);

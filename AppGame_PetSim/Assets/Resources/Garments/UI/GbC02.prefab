@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 1409719903518254732}
   - component: {fileID: 1409719903518254740}
   - component: {fileID: 1409719903518254731}
-  - component: {fileID: 1409719903518254730}
   - component: {fileID: 1409719903518254729}
   - component: {fileID: 1409719903518254728}
-  - component: {fileID: 1409719903518254735}
   - component: {fileID: 1409719903518254734}
   - component: {fileID: 1409719903518254733}
+  - component: {fileID: -2256047806967937781}
   m_Layer: 0
   m_Name: GbC02
   m_TagString: Untagged
@@ -40,7 +39,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 533, y: -3}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 87.8, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1409719903518254740
@@ -81,25 +80,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1409719903518254730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409719903518254723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00bd691276be84d00a9fdd8a2528796a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 2442379027536876160, guid: 24a28ee7ce32542e781ee09e4ecb23c2, type: 3}
-  StartPosition: {x: 0, y: 0, z: 0}
-  thisUI: {fileID: 1409719903518254732}
-  dropPlace: {fileID: 7740868302158531491, guid: ae600f31805884df09af753f1b85a7df,
-    type: 3}
-  inDropArea: 0
-  dist: 0
 --- !u!225 &1409719903518254729
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -155,24 +135,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1409719903518254735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409719903518254723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933d21e0aa1cb4298958624c69fc556f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemID: GbC01
-  itemName: Devil Wings
-  GeneratedItem: {fileID: 0}
-  type: 3
-  rarity: 0
-  eggType: {fileID: 0}
 --- !u!223 &1409719903518254734
 Canvas:
   m_ObjectHideFlags: 0
@@ -211,3 +173,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &-2256047806967937781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409719903518254723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35343e5a71a484c1f9d09dda1e442062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 
+  itemName: 
+  GeneratedItem: {fileID: 0}
+  type: 0
+  rarity: 0
+  PlacementPosition: {fileID: 0}

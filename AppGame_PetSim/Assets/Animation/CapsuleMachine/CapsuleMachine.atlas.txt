@@ -1,166 +1,327 @@
 
 CapsuleMachine.png
-size: 1637,1041
+size: 2016,1039
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-Ball
+CheapCM/Ball
+  rotate: true
+  xy: 1237, 328
+  size: 323, 322
+  orig: 323, 322
+  offset: 0, 0
+  index: -1
+CheapCM/Body
   rotate: false
-  xy: 956, 655
+  xy: 1548, 15
+  size: 234, 311
+  orig: 234, 311
+  offset: 0, 0
+  index: -1
+CheapCM/Holder
+  rotate: true
+  xy: 1121, 32
+  size: 246, 150
+  orig: 246, 150
+  offset: 0, 0
+  index: -1
+CheapCM/Hole
+  rotate: false
+  xy: 1561, 538
+  size: 93, 113
+  orig: 93, 113
+  offset: 0, 0
+  index: -1
+CheapCM/HoleHat
+  rotate: true
+  xy: 1273, 34
+  size: 98, 51
+  orig: 98, 51
+  offset: 0, 0
+  index: -1
+CheapCM/MachineHolder
+  rotate: true
+  xy: 956, 18
+  size: 260, 30
+  orig: 260, 30
+  offset: 0, 0
+  index: -1
+CheapCM/ball1
+  rotate: false
+  xy: 1884, 116
+  size: 100, 103
+  orig: 100, 103
+  offset: 0, 0
+  index: -1
+CheapCM/ball2
+  rotate: true
+  xy: 1672, 334
+  size: 106, 105
+  orig: 106, 105
+  offset: 0, 0
+  index: -1
+CheapCM/ball3
+  rotate: true
+  xy: 1779, 335
+  size: 105, 104
+  orig: 105, 104
+  offset: 0, 0
+  index: -1
+CheapCM/ball4
+  rotate: false
+  xy: 1784, 229
+  size: 99, 104
+  orig: 99, 104
+  offset: 0, 0
+  index: -1
+CheapCM/bell
+  rotate: true
+  xy: 1326, 45
+  size: 87, 73
+  orig: 87, 73
+  offset: 0, 0
+  index: -1
+CheapCM/leftear
+  rotate: false
+  xy: 1465, 213
+  size: 79, 77
+  orig: 79, 77
+  offset: 0, 0
+  index: -1
+CheapCM/lefthand
+  rotate: true
+  xy: 1784, 747
+  size: 110, 215
+  orig: 110, 215
+  offset: 0, 0
+  index: -1
+CheapCM/rightear
+  rotate: false
+  xy: 1465, 134
+  size: 78, 77
+  orig: 78, 77
+  offset: 0, 0
+  index: -1
+CheapCM/righthand
+  rotate: false
+  xy: 1273, 140
+  size: 190, 150
+  orig: 190, 150
+  offset: 0, 0
+  index: -1
+CheapCM/topholder
+  rotate: true
+  xy: 1784, 96
+  size: 131, 98
+  orig: 131, 98
+  offset: 0, 0
+  index: -1
+capsuleM/Ball
+  rotate: false
+  xy: 956, 653
   size: 384, 384
   orig: 384, 384
   offset: 0, 0
   index: -1
-Body
+capsuleM/Body
   rotate: false
-  xy: 1342, 668
+  xy: 956, 280
   size: 279, 371
   orig: 279, 371
   offset: 0, 0
   index: -1
-Holder
+capsuleM/Holder
   rotate: false
-  xy: 1342, 488
+  xy: 1342, 859
   size: 293, 178
   orig: 293, 178
   offset: 0, 0
   index: -1
-Hole
-  rotate: true
-  xy: 1484, 253
+capsuleM/Hole
+  rotate: false
+  xy: 1672, 442
   size: 110, 134
   orig: 110, 134
   offset: 0, 0
   index: -1
-HoleHat
-  rotate: true
-  xy: 1067, 103
+capsuleM/HoleHat
+  rotate: false
+  xy: 1885, 221
   size: 116, 59
   orig: 116, 59
   offset: 0, 0
   index: -1
-MachineHolder
-  rotate: true
-  xy: 1296, 344
+capsuleM/MachineHolder
+  rotate: false
+  xy: 1237, 292
   size: 309, 34
   orig: 309, 34
   offset: 0, 0
   index: -1
-ball1
-  rotate: false
-  xy: 1484, 129
+capsuleM/ball1
+  rotate: true
+  xy: 1660, 919
   size: 118, 122
   orig: 118, 122
   offset: 0, 0
   index: -1
-ball2
-  rotate: true
-  xy: 1358, 238
+capsuleM/ball2
+  rotate: false
+  xy: 1889, 408
   size: 125, 124
   orig: 125, 124
   offset: 0, 0
   index: -1
-ball3
-  rotate: true
-  xy: 1358, 111
+capsuleM/ball3
+  rotate: false
+  xy: 1885, 282
   size: 125, 124
   orig: 125, 124
   offset: 0, 0
   index: -1
-ball4
-  rotate: true
-  xy: 1489, 368
+capsuleM/ball4
+  rotate: false
+  xy: 1660, 578
   size: 118, 123
   orig: 118, 123
   offset: 0, 0
   index: -1
-bell
+capsuleM/bell
   rotate: false
-  xy: 1067, 14
+  xy: 1784, 445
   size: 103, 87
   orig: 103, 87
   offset: 0, 0
   index: -1
-bottom
+capsuleM/bottom
   rotate: false
-  xy: 1172, 2
+  xy: 1784, 534
   size: 204, 100
   orig: 204, 100
   offset: 0, 0
   index: -1
-fallball
+CheapCM/bottom
+  rotate: false
+  xy: 1784, 534
+  size: 204, 100
+  orig: 204, 100
+  offset: 0, 0
+  index: -1
+capsuleM/fallball
   rotate: true
-  xy: 956, 449
+  xy: 1342, 653
   size: 204, 205
   orig: 204, 205
   offset: 0, 0
   index: -1
-leftear
+CheapCM/fallball
   rotate: true
-  xy: 1378, 17
+  xy: 1342, 653
+  size: 204, 205
+  orig: 204, 205
+  offset: 0, 0
+  index: -1
+capsuleM/leftear
+  rotate: true
+  xy: 1784, 2
   size: 92, 91
   orig: 92, 91
   offset: 0, 0
   index: -1
-lefthand
+capsuleM/lefthand
   rotate: false
-  xy: 1163, 398
+  xy: 988, 23
   size: 131, 255
   orig: 131, 255
   offset: 0, 0
   index: -1
-orangehead
+capsuleM/orangehead
   rotate: true
-  xy: 1136, 192
+  xy: 1549, 653
   size: 204, 109
   orig: 204, 109
   offset: 0, 0
   index: -1
-redhead
+CheapCM/orangehead
   rotate: true
-  xy: 956, 15
+  xy: 1549, 653
   size: 204, 109
   orig: 204, 109
   offset: 0, 0
   index: -1
-rightear
+capsuleM/redhead
+  rotate: false
+  xy: 1784, 636
+  size: 204, 109
+  orig: 204, 109
+  offset: 0, 0
+  index: -1
+CheapCM/redhead
+  rotate: false
+  xy: 1784, 636
+  size: 204, 109
+  orig: 204, 109
+  offset: 0, 0
+  index: -1
+capsuleM/rightear
   rotate: true
-  xy: 1471, 17
+  xy: 1877, 2
   size: 92, 91
   orig: 92, 91
   offset: 0, 0
   index: -1
-righthand
-  rotate: true
-  xy: 956, 221
+capsuleM/righthand
+  rotate: false
+  xy: 1784, 859
   size: 226, 178
   orig: 226, 178
   offset: 0, 0
   index: -1
-stars
-  rotate: false
-  xy: 1128, 104
+capsuleM/stars
+  rotate: true
+  xy: 1637, 860
   size: 57, 86
   orig: 57, 86
   offset: 0, 0
   index: -1
-topholder
-  rotate: false
-  xy: 1332, 365
+CheapCM/stars
+  rotate: true
+  xy: 1637, 860
+  size: 57, 86
+  orig: 57, 86
+  offset: 0, 0
+  index: -1
+capsuleM/topholder
+  rotate: true
+  xy: 1660, 703
   size: 155, 121
   orig: 155, 121
   offset: 0, 0
   index: -1
-yellowemphasis
+capsuleM/yellowemphasis
   rotate: true
-  xy: 2, 14
+  xy: 2, 12
   size: 1025, 952
   orig: 1025, 952
   offset: 0, 0
   index: -1
-yellowhead
+CheapCM/yellowemphasis
   rotate: true
-  xy: 1247, 138
+  xy: 2, 12
+  size: 1025, 952
+  orig: 1025, 952
+  offset: 0, 0
+  index: -1
+capsuleM/yellowhead
+  rotate: true
+  xy: 1561, 332
+  size: 204, 109
+  orig: 204, 109
+  offset: 0, 0
+  index: -1
+CheapCM/yellowhead
+  rotate: true
+  xy: 1561, 332
   size: 204, 109
   orig: 204, 109
   offset: 0, 0
