@@ -11,8 +11,13 @@ public class RewardManager : MonoBehaviour
     public static RewardManager Instance; 
     private GameObject rewardIconTemplate;
     private List<GameObject> rewardIconList = new List<GameObject>();
+    private List<GameObject> pool = new List<GameObject>();
     private List<Reward> _rewardList = new List<Reward>();
     public List<Reward> rewardList { get { return _rewardList; } }
+
+    public int luck = 0;
+    private float[] _probability = {0.05f, 0.295f, 0.7f};
+    public float[] probability { get { return _probability; } }
 
     void Awake() 
     {
@@ -23,20 +28,9 @@ public class RewardManager : MonoBehaviour
         
     }
 
-    public void RewardGen(List<Reward> rewards, GameObject[] slots, bool visible)
-    {
-        _rewardList.Clear(); //clear old list
-        foreach(Reward reward in rewards)
-        {
-            addReward(reward);
-        }
-        giveReward();
-        RewardUIGen(slots, visible);
-    }
-
     public void RewardGen(RewardData data, GameObject template)
     {
-        _rewardList.Clear(); //clear old list
+        _rewardList.Clear();
         int count = 0;
         foreach(string name in data.name)
         {
@@ -48,36 +42,11 @@ public class RewardManager : MonoBehaviour
         RewardUIGen(template);
     }
 
-    private void RewardUIGen(GameObject[] slots, bool visible)
-    {
-        foreach (GameObject icon in rewardIconList) //clear old list
-        {
-            Destroy(icon);
-        }
-        rewardIconList.Clear();
-
-        int Count = 0;
-        foreach(GameObject slot in slots)
-        {
-            GameObject newIcon = Instantiate(rewardIconTemplate) as GameObject;
-            newIcon.name = _rewardList[Count].item.name;
-            newIcon.GetComponent<Image>().sprite = _rewardList[Count].item.GetComponent<Image>().sprite;
-            newIcon.GetComponentInChildren<Text>().text = "X " + _rewardList[Count].amount.ToString();
-            if(visible)
-            {
-                newIcon.SetActive(true);
-            }
-            newIcon.transform.SetParent(rewardIconTemplate.transform.parent, false);
-            rewardIconList.Add(newIcon);
-            Count++;
-        }
-    }
-
-    private void RewardUIGen(GameObject template) //Generate icons of rewards
+    public void RewardUIGen(GameObject template)
     {
         rewardIconTemplate = template;
 
-        foreach (GameObject icon in rewardIconList) //clear old list
+        foreach (GameObject icon in rewardIconList)
         {
             Destroy(icon);
         }
@@ -95,7 +64,50 @@ public class RewardManager : MonoBehaviour
         }
     }
 
-    private void addReward(Reward reward)
+    public void ProbabilityUpdate()
+    {
+        if(luck <= 1000)
+        {
+            _probability[0] = Mathf.Round((0.05f + (luck * 0.00005f)) * 1000.0f) / 1000.0f;
+        }
+        else
+        {
+            probability[0] = Mathf.Round((0.1f + (luck * 0.0009f)) * 1000.0f) / 1000.0f;
+        }
+        _probability[1] = Mathf.Floor(((1.0f - _probability[0]) * 3.0f / 10.0f) * 1000.0f) / 1000.0f;
+        _probability[2] = 1.0f - _probability[0] - _probability[1];
+    }
+
+    public void Shuffling(ItemManager.ItemType type, PoolType pool)
+    {
+        foreach(GameObject item in ItemManager.Instance.itemList)
+        {
+            if(item.name != "Leaf" && item.name != "RareLeaf")
+            {
+
+            }
+        }
+    }
+
+    public void ShufflingAll(PoolType pool)
+    {
+        foreach(GameObject item in ItemManager.Instance.itemList)
+        {
+            if(item.name != "Leaf" && item.name != "RareLeaf")
+            {
+
+            }
+        }
+    }
+
+    private void draw()
+    {
+        //...
+
+        reset();
+    }
+
+    public void addReward(Reward reward)
     {
         _rewardList.Add(reward);
         //Debug.Log("Reward: " + _rewardList.Count);
@@ -104,6 +116,12 @@ public class RewardManager : MonoBehaviour
     public void giveReward()
     {
 
+    }
+
+    private void reset()
+    {
+        pool.Clear();
+        _rewardList.Clear();
     }
 }
 
