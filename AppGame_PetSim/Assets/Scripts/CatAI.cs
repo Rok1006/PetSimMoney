@@ -203,7 +203,7 @@ public class CatAI : MonoBehaviour
     }
     IEnumerator SwitchAct(){ //for animation idle, sitsleep,sitawake, meow
         int t = Random.Range(5,10);
-        Debug.Log(t);
+        //Debug.Log(t);
         yield return new WaitForSeconds(t);//wait for 5 sec to do the next
         NormalState();//after wait for 5 sec do random generate, detect value to change to different state
         CheckToyList();
