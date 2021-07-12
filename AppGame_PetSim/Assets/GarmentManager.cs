@@ -14,6 +14,6 @@ public class GarmentManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        _garmentList = new List<GameObject>(Resources.LoadAll<GameObject>("Garments/UI"));
+        _garmentList = new List<GameObject>(Resources.LoadAll<GameObject>("Items/UI"));
     }
 }
