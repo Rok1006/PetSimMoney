@@ -71,6 +71,27 @@ TextureImporter:
   - first:
       213: -7324415496447313681
     second: CapsuleMachine_22
+  - first:
+      213: 2565063150791225116
+    second: CapsuleMachine_23
+  - first:
+      213: 5673377332698810145
+    second: CapsuleMachine_24
+  - first:
+      213: -5464037085811007897
+    second: CapsuleMachine_25
+  - first:
+      213: -1532528753613274752
+    second: CapsuleMachine_26
+  - first:
+      213: -9098135585027127504
+    second: CapsuleMachine_27
+  - first:
+      213: -948883667351404933
+    second: CapsuleMachine_28
+  - first:
+      213: -1502013659942625592
+    second: CapsuleMachine_29
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -578,7 +599,7 @@ TextureImporter:
         width: 318
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -599,7 +620,7 @@ TextureImporter:
         width: 77
         height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -620,7 +641,7 @@ TextureImporter:
         width: 77
         height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -641,7 +662,7 @@ TextureImporter:
         width: 313
         height: 340
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -662,7 +683,7 @@ TextureImporter:
         width: 529
         height: 690
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -670,6 +691,153 @@ TextureImporter:
       bones: []
       spriteID: fe834e299e27a5a90800000000000000
       internalID: -7324415496447313681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_23
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 300
+        width: 328
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1fea59685fe89320800000000000000
+      internalID: 2565063150791225116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_24
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 374
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127044010a2ebbe40800000000000000
+      internalID: 5673377332698810145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_25
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 291
+        width: 63
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e9cac5837db24b0800000000000000
+      internalID: -5464037085811007897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_26
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 223
+        width: 111
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0810fc0e73d5bbae0800000000000000
+      internalID: -1532528753613274752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_27
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 225
+        width: 71
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0370e10b3edecb180800000000000000
+      internalID: -9098135585027127504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_28
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 160
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e795af453e4d2f0800000000000000
+      internalID: -948883667351404933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_29
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 15
+        width: 225
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ced557c886c72be0800000000000000
+      internalID: -1502013659942625592
       vertices: []
       indices: 
       edges: []
