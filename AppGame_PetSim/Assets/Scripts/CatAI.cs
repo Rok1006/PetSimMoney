@@ -174,7 +174,7 @@ public class CatAI : MonoBehaviour
            }
         } //beingtouch
     }
-    void RanPos(){  	
+    void RanPos(){  	//the range where the cat will walk around at
         x =  Random.Range(-1.41f, 16.91f);   //-2,29
         y = Random.Range(-6.3f, -2.78f);   //-12.8,-4
         target.transform.position = new Vector2(x, y);
