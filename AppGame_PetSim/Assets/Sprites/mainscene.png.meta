@@ -101,6 +101,9 @@ TextureImporter:
   - first:
       213: 474866445679436326
     second: mainscene_32
+  - first:
+      213: -5391440038617933931
+    second: mainscene_33
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -910,6 +913,27 @@ TextureImporter:
       bones: []
       spriteID: 622a9723480179600800000000000000
       internalID: 474866445679436326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_33
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 517
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5971c5699d1cd25b0800000000000000
+      internalID: -5391440038617933931
       vertices: []
       indices: 
       edges: []
