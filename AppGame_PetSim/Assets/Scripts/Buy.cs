@@ -10,7 +10,7 @@ public class Buy : MonoBehaviour
     Animator valueAnim;
     public int cost; //determine the cost of every item, indicate this in the inspector, each is different
     public GameObject item; //assign the product in inspector
-    public Vector3 size;
+    public Vector3 size; //not using currently
     public bool canBuy = true;
     void Awake(){
         Instance = this;
@@ -39,7 +39,7 @@ public class Buy : MonoBehaviour
             Status.Instance.normalC -= cost;
             Inventory.instance.add = true; //turn true, will turn false after instanciate
             Inventory.instance.purchasedItem = item;
-            Inventory.instance.productSize = size;
+            Inventory.instance.productSize = new Vector3(.5f,.5f,.5f);  //size
             Manager.Instance.boughtItems += 1;
             Inventory.instance.CheckAllFull();
         }
@@ -51,7 +51,7 @@ public class Buy : MonoBehaviour
             //invent.add == true?
             Status.Instance.rareC -= cost;
             Inventory.instance.purchasedItem = item;
-            Inventory.instance.productSize = size;
+            Inventory.instance.productSize = new Vector3(.5f,.5f,.5f);
             Manager.Instance.boughtItems += 1;
             Inventory.instance.CheckAllFull();
         }

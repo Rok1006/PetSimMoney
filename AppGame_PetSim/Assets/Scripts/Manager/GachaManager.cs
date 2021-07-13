@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GachaManager : MonoBehaviour
 {
-    public GameObject CapsuleMachine;
+    public GameObject RedMachine;
+    Animator RCMAnim;
+    public GameObject BlueMachine;
+    Animator BCMAnim;
     public GameObject Draw1Panel;
     public GameObject Draw3Panel;
     private int resultState = 0;
-    public Animator CMAnim;
+    
     public GameObject[] Draw3Slot; //to put invent slot
 
     private int _luck = 0;
@@ -18,7 +21,8 @@ public class GachaManager : MonoBehaviour
     private List<GameObject> pool = new List<GameObject>();
     void Start()
     {
-        CMAnim = CapsuleMachine.GetComponent<Animator>();
+        RCMAnim = RedMachine.GetComponent<Animator>();
+        BCMAnim = BlueMachine.GetComponent<Animator>();
         Draw1Panel.SetActive(false);
         Draw3Panel.SetActive(false);
     }
@@ -66,9 +70,9 @@ public class GachaManager : MonoBehaviour
                                    (_probability[1] * 100).ToString() + "% Common: " +
                                    (_probability[2] * 100).ToString() + "%");
     }
-
+//Costumes Gacha Panel
     public void ClickDraw1(){ //pressing the buttons to begin drawing animation , for the draw 1 item button
-        CMAnim.SetTrigger("PressDraw"); //do a series of anim
+        RCMAnim.SetTrigger("PressDraw"); //do a series of anim
         resultState = 1;
         
         GarmentManager.Rarity eggType = DrawEgg();
@@ -85,7 +89,7 @@ public class GachaManager : MonoBehaviour
         //draw item and place them in that pos
     }
     public void ClickDraw3(){ //pressing the buttons to begin drawing animation , for the draw 1 item button
-        CMAnim.SetTrigger("PressDraw"); //do a series of anim
+        RCMAnim.SetTrigger("PressDraw"); //do a series of anim
         resultState = 2;
         for (int i = 0; i < Draw3Slot.Length; i++)
         {
@@ -105,6 +109,7 @@ public class GachaManager : MonoBehaviour
         //using event: determine items, in code function decide what items to be generate accord to probability
         //create temporary slot in inspector, get the item and place it in the obj variable
     }
+    //Items Gacha Panel: do the same above
     public void crackopen(){ //spine event crackopen in Showing result All
         if(resultState==1){ //draw 1
             Draw1Panel.SetActive(true);
@@ -112,16 +117,5 @@ public class GachaManager : MonoBehaviour
             Draw3Panel.SetActive(true);
         }
     }
-    void ShowResults(){ //not using currently
-        //if(item type == common)
-         //trigger this animation CMAnim.SetTrigger("Red");
-        //in event crackopen: add sound, link it to inventory do the generate
-        //GameObject j = Instanciate in another invent thing?? shd we open another invent to on off clothes?
-
-        //if(item type == Rare) 
-        //trigger this animation CMAnim.SetTrigger("Orange"); 
-
-        //if(item type == SuperRare) 
-        //trigger this animation CMAnim.SetTrigger("Yellow/Gold"); 
-    }
+ 
 }
