@@ -24,7 +24,9 @@ public class Manager : MonoBehaviour
     public GameObject ProbaScreen;
     public GameObject RedMachine;
     public GameObject BlueMachine;
-
+    [Header("Others")]
+    public GameObject SettingPannel;
+    public GameObject GiftPannel;
     [Header("Anim")]
     public int boughtItems;
     public int CostumePageCount = 0;
@@ -64,6 +66,8 @@ public class Manager : MonoBehaviour
         HeadPage.SetActive(false);
         NeckPage.SetActive(false);
         BackPage.SetActive(false);
+        SettingPannel.SetActive(false);
+        GiftPannel.SetActive(false);
         
     }
     void Update()
@@ -137,7 +141,10 @@ public class Manager : MonoBehaviour
         //MainScreenUI.SetActive(true);
     }
     public void ClickSetting(){
-
+        SettingPannel.SetActive(true);
+    }
+    public void CLickCLoseSetting(){
+        SettingPannel.SetActive(false);
     }
     public void ClickInvent(){
       openclose+=1;
@@ -188,6 +195,12 @@ public class Manager : MonoBehaviour
         }
     }
     //others
+    public void ClickGift(){
+        GiftPannel.SetActive(true);
+    }
+     public void ClickCloseGift(){
+        GiftPannel.SetActive(false);
+    }
       void DetermineOnOff(){   //this is the function for the APP ui Pannel
        if(openclose==1){
             Inventory.SetActive(true);
