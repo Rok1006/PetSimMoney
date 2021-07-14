@@ -1495,13 +1495,18 @@ MonoBehaviour:
   Store_rarT: {fileID: 1225102239}
   Gacha_norT: {fileID: 1662146031604505401}
   Gacha_rarT: {fileID: 1662146030726853911}
-  happyV: 100
-  energyV: 100
-  hungerV: 100
-  hydrationV: 100
+  statsValue:
+  - 100
+  - 100
+  - 100
+  - 100
+  statsMax:
+  - 100
+  - 100
+  - 100
+  - 100
   rareC: 0
   normalC: 0
-  valueUP: 0
 --- !u!114 &76563524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,7 +1578,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce084819a80fc4c53b02045356bd0479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luck: 0
 --- !u!1 &78839527
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,10 +4199,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 214619679}
         m_MethodName: ClickBuyNormalItem
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6149,9 +6153,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1331967851}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 44
+  m_Value: 0.44
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22837,7 +22841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &781235917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26891,7 +26895,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1806111736}
   m_Direction: 3
   m_Value: 0.99999404
-  m_Size: 0.4930794
+  m_Size: 0.49307936
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -29630,9 +29634,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1732470021}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 58
+  m_Value: 0.58
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -31462,9 +31466,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 63141346}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 67
+  m_Value: 0.67
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -38929,25 +38933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13c3e464a64b4ca5827acc8cf89ae5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventorySlot:
-  - {fileID: 1041664562}
-  - {fileID: 166935438}
-  - {fileID: 1165160255}
-  - {fileID: 294176353}
-  - {fileID: 1825977539}
-  - {fileID: 2024649840}
-  - {fileID: 1642801602}
-  - {fileID: 309172841}
-  - {fileID: 2029018865}
-  - {fileID: 1347851199}
-  - {fileID: 2046466959}
-  - {fileID: 1134917031}
-  - {fileID: 1861176712}
-  - {fileID: 912135843}
-  - {fileID: 464674221}
-  - {fileID: 762531554}
-  add: 0
-  purchasedItem: {fileID: 0}
   full: 00000000000000000000000000000000
   productSize: {x: 0, y: 0, z: 0}
   fullslot: 0
@@ -38990,7 +38975,7 @@ MonoBehaviour:
   CapsuleMachine: {fileID: 1687553199}
   Draw1Panel: {fileID: 630764327}
   Draw3Panel: {fileID: 1814087546}
-  draw1Pos: {fileID: 630764327}
+  CMAnim: {fileID: 0}
   Draw3Slot:
   - {fileID: 2116711719}
   - {fileID: 496188616}
@@ -39079,7 +39064,7 @@ RectTransform:
   m_Father: {fileID: 1602227415}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.0000030100346}
+  m_AnchorMin: {x: 0, y: 0.0000030398369}
   m_AnchorMax: {x: 1, y: 0.4930824}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -41358,8 +41343,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2111139330}
   m_HandleRect: {fileID: 2111139329}
   m_Direction: 3
-  m_Value: 0.99999976
-  m_Size: 0.50926447
+  m_Value: 0.9999997
+  m_Size: 0.5092644
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -42107,9 +42092,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 991160366}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 74
+  m_Value: 0.74
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -49800,7 +49785,7 @@ RectTransform:
   m_Father: {fileID: 1843850660}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.00000011920929}
+  m_AnchorMin: {x: 0, y: 0.00000014901161}
   m_AnchorMax: {x: 1, y: 0.5092646}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -58184,11 +58169,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbe898b302354fae90b60ce803ad4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info: {fileID: 0}
   dist: 0
   explode: {fileID: 6222639126503631770, guid: e3638e807c17f4341955eea36202b10f, type: 3}
   hungerEx: {fileID: 483648205025446981, guid: d829602612b1e402fa65e201019b163f, type: 3}
   hydraEx: {fileID: 9217448240166525496, guid: 8f60045a8d51944d9bca4226f68a365b, type: 3}
-  statValueAdded: 5
 --- !u!114 &3332392231293561138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68020,11 +68005,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbe898b302354fae90b60ce803ad4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info: {fileID: 0}
   dist: 0
   explode: {fileID: 6222639126503631770, guid: e3638e807c17f4341955eea36202b10f, type: 3}
   hungerEx: {fileID: 483648205025446981, guid: d829602612b1e402fa65e201019b163f, type: 3}
   hydraEx: {fileID: 9217448240166525496, guid: 8f60045a8d51944d9bca4226f68a365b, type: 3}
-  statValueAdded: 5
 --- !u!1001 &4442715450553456786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75555,8 +75540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbe898b302354fae90b60ce803ad4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info: {fileID: 0}
   dist: 0
   explode: {fileID: 6222639126503631770, guid: e3638e807c17f4341955eea36202b10f, type: 3}
   hungerEx: {fileID: 483648205025446981, guid: d829602612b1e402fa65e201019b163f, type: 3}
   hydraEx: {fileID: 9217448240166525496, guid: 8f60045a8d51944d9bca4226f68a365b, type: 3}
-  statValueAdded: 5

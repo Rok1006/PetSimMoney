@@ -175,15 +175,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 5476863298520019382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933d21e0aa1cb4298958624c69fc556f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bb224ef809c34e5386456659627f030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: TC01
+  itemID: RareLeaf
   itemName: Rare Leaf
-  GeneratedItem: {fileID: 1043107114550410067, guid: 79c87d289945e4b219c4e1d6c27d9dd6,
+  GeneratedItem: {fileID: 7506501776709650742, guid: f34b93572b47d433a855aac1c10d9e10,
     type: 3}
   type: 3
   rarity: 2
+  costMethod: 1
+  cost: 1
+  levelRequirement: 0
 --- !u!223 &3689669048758106768
 Canvas:
   m_ObjectHideFlags: 0

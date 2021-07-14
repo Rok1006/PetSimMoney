@@ -175,15 +175,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3713484135285202879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933d21e0aa1cb4298958624c69fc556f, type: 3}
+  m_Script: {fileID: 11500000, guid: db4516bb49243420582f6ac8cd74067f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: TB02
-  itemName: WoolBall
+  itemName: Wool Ball
   GeneratedItem: {fileID: 1891202453858981399, guid: d30cfabda8661436c957610951e67e38,
     type: 3}
   type: 2
   rarity: 1
+  costMethod: 0
+  cost: 50
+  levelRequirement: 10
+  HappinessValue: 35
 --- !u!223 &3713484135285202876
 Canvas:
   m_ObjectHideFlags: 0

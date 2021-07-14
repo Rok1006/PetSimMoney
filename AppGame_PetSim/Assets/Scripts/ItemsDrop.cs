@@ -22,7 +22,7 @@ public class ItemsDrop : MonoBehaviour
    }
     void Start()
     { 
-        InvokeRepeating("Generator",0,3);
+        InvokeRepeating("Generator",0,7);
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class ItemsDrop : MonoBehaviour
     }
     //check total num, generate if less than ?? num
     void Generator(){
-        if(CatAI.Instance.action == 2 && totalItemDropped <20){ //drop items only when walking and total less than 20, can change
+        if(CatAI.Instance.action == CatAI.Action.Walking && totalItemDropped <20){ //drop items only when walking and total less than 20, can change
             //Debug.Log("dropped");
             ItemProbability();
             if(itemID==0){
@@ -56,12 +56,12 @@ public class ItemsDrop : MonoBehaviour
     }
 
     void ItemProbability(){
-        finalprobability = Random.Range(0,99); //full 100
-        if(finalprobability<40){ //40%
+        finalprobability = Random.Range(1,101); //full 100
+        if(finalprobability<85){ //85%
             itemID = 0;
-        }else if(finalprobability>=40 && finalprobability<80){ //40%
+        }else if(finalprobability>=85 && finalprobability<90){ //5%
             itemID = 1;
-        }else if(finalprobability>=80){ //20%
+        }else if(finalprobability>=90){ //10%
             itemID = 2;
         }
     }

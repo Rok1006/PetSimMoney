@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 2111432705200479598}
   - component: {fileID: 8320594131799296634}
   m_Layer: 10
-  m_Name: W03B
+  m_Name: DB01_obj
   m_TagString: Drink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +120,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 880815963
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -4203739411735069946, guid: d57d7ab2121ef4aa897b2b92ba0e2c91,
     type: 3}
@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbe898b302354fae90b60ce803ad4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info: {fileID: 1236635464739933620, guid: 6b8404123edd5456b94c0136f8677d2b, type: 3}
   dist: 0
   explode: {fileID: 6222639126503631770, guid: e3638e807c17f4341955eea36202b10f, type: 3}
   hungerEx: {fileID: 483648205025446981, guid: d829602612b1e402fa65e201019b163f, type: 3}
   hydraEx: {fileID: 9217448240166525496, guid: 8f60045a8d51944d9bca4226f68a365b, type: 3}
-  statValueAdded: 10

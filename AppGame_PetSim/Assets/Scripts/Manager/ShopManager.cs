@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Buy : MonoBehaviour
+public class ShopManager : MonoBehaviour
 {
-    public static Buy Instance;
+    public static ShopManager Instance;
     Animator bAnim;
     public GameObject valueHolder;
     Animator valueAnim;
@@ -32,16 +32,15 @@ public class Buy : MonoBehaviour
     //         Status.Instance.normalC -=1;
     //     }
     // }
-    public void ClickBuyNormalItem(){ //pay with normleaf
+    public void ClickBuyNormalItem(GameObject item){ //pay with normleaf
         if(Status.Instance.normalC>=cost && canBuy){ //cost = 1, result: 3 drinks
             bAnim.SetTrigger("buy");
             valueAnim.SetTrigger("norm");
             Status.Instance.normalC -= cost;
-            Inventory.instance.add = true; //turn true, will turn false after instanciate
-            Inventory.instance.purchasedItem = item;
+            //Inventory.instance.AddToSlots(item) //turn true, will turn false after instanciate
             Inventory.instance.productSize = size;
             Manager.Instance.boughtItems += 1;
-            Inventory.instance.CheckAllFull();
+            //Inventory.instance.CheckAllFull();
         }
     }
     public void ClickBuyRareItem(){ //pay with normleaf
@@ -50,10 +49,10 @@ public class Buy : MonoBehaviour
             valueAnim.SetTrigger("rare");
             //invent.add == true?
             Status.Instance.rareC -= cost;
-            Inventory.instance.purchasedItem = item;
+            //Inventory.instance.purchasedItem = item;
             Inventory.instance.productSize = size;
             Manager.Instance.boughtItems += 1;
-            Inventory.instance.CheckAllFull();
+            //Inventory.instance.CheckAllFull();
         }
     }
    

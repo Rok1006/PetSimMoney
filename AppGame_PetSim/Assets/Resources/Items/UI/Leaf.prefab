@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5476863298520019373}
   - component: {fileID: 5476863298520019370}
   - component: {fileID: 5476863298520019371}
-  - component: {fileID: 5476863298520019368}
+  - component: {fileID: 4737746158336968326}
   - component: {fileID: 3689669048758106768}
   - component: {fileID: 1393460587959154228}
   m_Layer: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5476863298520019368}
+      - m_Target: {fileID: 0}
         m_MethodName: UseWater
         m_Mode: 1
         m_Arguments:
@@ -166,7 +166,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5476863298520019368
+--- !u!114 &4737746158336968326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,15 +175,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 5476863298520019382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933d21e0aa1cb4298958624c69fc556f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bb224ef809c34e5386456659627f030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: TC01
-  itemName: Leaf
-  GeneratedItem: {fileID: 1043107114550410067, guid: 79c87d289945e4b219c4e1d6c27d9dd6,
+  itemID: Leaf
+  itemName: Green Leaf
+  GeneratedItem: {fileID: 7493196608483323147, guid: 64f50cb6168b242aea94adf4d8935d43,
     type: 3}
   type: 3
   rarity: 0
+  costMethod: 0
+  cost: 1
+  levelRequirement: 0
 --- !u!223 &3689669048758106768
 Canvas:
   m_ObjectHideFlags: 0

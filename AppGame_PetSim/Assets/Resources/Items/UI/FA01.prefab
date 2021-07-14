@@ -175,7 +175,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4507188312726106583}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933d21e0aa1cb4298958624c69fc556f, type: 3}
+  m_Script: {fileID: 11500000, guid: 083cc6b8b39cf41c2828af113d8f0b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: FA01
@@ -184,6 +184,10 @@ MonoBehaviour:
     type: 3}
   type: 0
   rarity: 2
+  costMethod: 0
+  cost: 60
+  levelRequirement: 20
+  HungerValue: 70
 --- !u!223 &4507188312726106586
 Canvas:
   m_ObjectHideFlags: 0
