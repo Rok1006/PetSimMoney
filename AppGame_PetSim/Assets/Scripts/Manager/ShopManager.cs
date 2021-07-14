@@ -10,7 +10,7 @@ public class ShopManager : MonoBehaviour
     Animator valueAnim;
     public int cost; //determine the cost of every item, indicate this in the inspector, each is different
     public GameObject item; //assign the product in inspector
-    public Vector3 size;
+    public Vector3 size; //not using currently
     public bool canBuy = true;
     void Awake(){
         Instance = this;
