@@ -30,12 +30,12 @@ public class ItemsDrop : MonoBehaviour
         CheckDroppedItem();
     }
     void CheckDroppedItem(){
-        GameObject[] rare = GameObject.FindGameObjectsWithTag("Rare");
-        numOfRare = rare.Length;
-        GameObject[] nor = GameObject.FindGameObjectsWithTag("Normal");
-        numOfNor = nor.Length;
         GameObject[] trash = GameObject.FindGameObjectsWithTag("Trash");
         numOfTrash = trash.Length;
+        GameObject[] nor = GameObject.FindGameObjectsWithTag("Normal");
+        numOfNor = nor.Length;
+        GameObject[] rare = GameObject.FindGameObjectsWithTag("Rare");
+        numOfRare = rare.Length;
         //------
         totalItemDropped = numOfRare+ numOfNor + numOfTrash;
         totalTrashDropped = numOfTrash;
@@ -57,11 +57,11 @@ public class ItemsDrop : MonoBehaviour
 
     void ItemProbability(){
         finalprobability = Random.Range(1,101); //full 100
-        if(finalprobability<85){ //85%
+        if(finalprobability<10){ //10%
             itemID = 0;
-        }else if(finalprobability>=85 && finalprobability<90){ //5%
+        }else if(finalprobability>=10 && finalprobability<95){ //85%
             itemID = 1;
-        }else if(finalprobability>=90){ //10%
+        }else if(finalprobability>=95){ //5%
             itemID = 2;
         }
     }

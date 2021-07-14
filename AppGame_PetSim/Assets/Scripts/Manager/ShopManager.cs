@@ -32,7 +32,8 @@ public class ShopManager : MonoBehaviour
     //         Status.Instance.normalC -=1;
     //     }
     // }
-    public void ClickBuyNormalItem(GameObject item){ //pay with normleaf
+    public void ClickBuyNormalItem(GameObject item)
+    { //pay with normleaf
         if(Status.Instance.normalC>=cost && canBuy){ //cost = 1, result: 3 drinks
             bAnim.SetTrigger("buy");
             valueAnim.SetTrigger("norm");
@@ -44,7 +45,8 @@ public class ShopManager : MonoBehaviour
         }
     }
     public void ClickBuyRareItem(){ //pay with normleaf
-        if(Status.Instance.rareC>=cost && canBuy){ //cost = 1, result: 3 drinks
+        if(Status.Instance.rareC>=cost && canBuy)
+        { //cost = 1, result: 3 drinks
             bAnim.SetTrigger("buy");
             valueAnim.SetTrigger("rare");
             //invent.add == true?

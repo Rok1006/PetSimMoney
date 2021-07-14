@@ -122,7 +122,8 @@ public class CatAI : MonoBehaviour
                 { //if cat arrive at the toy pos, do play animation
                     for (int i = 0; i < toy.Count; i++) //go through the list
                     {
-                        if(toy[i]!= null){
+                        if(toy[i]!= null)
+                        {
                             var sc = toy[i].GetComponent<ObjDrag>();
                             sc.ToySnap(); 
                             break;
@@ -271,7 +272,7 @@ public class CatAI : MonoBehaviour
         Debug.Log("finish executing"); 
         catanim.SetTrigger("play");
         yield return new WaitForSeconds(7);//before it finish waiting the state changes
-                   for (int i = 0; i < toy.Count; i++) //go through the list 
+                for (int i = 0; i < toy.Count; i++) //go through the list 
                 {
                     if(toy[i]!= null){
                          var sc = toy[i].GetComponent<ObjDrag>();
@@ -289,14 +290,14 @@ public class CatAI : MonoBehaviour
     }
     void CheckToyList()
     {
-              for (int i = 0; i < toy.Count; i++)
-                {
-                    if(toy[i]!= null){
-                        Debug.Log("did");
-                       var sc = toy[i].GetComponent<ObjDrag>();
-                        sc.DetectToy(); //works 
-                    }
-                }
+        for (int i = 0; i < toy.Count; i++)
+        {
+            if(toy[i]!= null){
+                Debug.Log("did");
+                var sc = toy[i].GetComponent<ObjDrag>();
+                sc.DetectToy(); //works 
+            }
+        }
     }
     void stopMeow()
     { //end state
