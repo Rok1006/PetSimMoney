@@ -174,15 +174,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1676802310347196504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933d21e0aa1cb4298958624c69fc556f, type: 3}
+  m_Script: {fileID: 11500000, guid: db4516bb49243420582f6ac8cd74067f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: TB03
-  itemName: DogFish
+  itemName: Dog Fish
   GeneratedItem: {fileID: 2125768863543327881, guid: 58365d469c98a4ae29a9ff5b68628a46,
     type: 3}
   type: 2
   rarity: 1
+  costMethod: 0
+  cost: 60
+  levelRequirement: 20
+  HappinessValue: 70
 --- !u!223 &1676802310347196501
 Canvas:
   m_ObjectHideFlags: 0

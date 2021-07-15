@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjDrag : MonoBehaviour
 {
-public static ObjDrag Instance;
+public ItemsInfo info;
 private bool selected;
 public float dist;
 Rigidbody2D rb;
@@ -12,15 +12,11 @@ private GameObject thisObj;
 public GameObject explode;
 public GameObject hungerEx;
 public GameObject hydraEx;
-public int statValueAdded;
 private bool getAdd = true;
-void Awake() {
-    Instance = this;
+void Start() {
+    dist = transform.position.z - Camera.main.transform.position.z;
+    rb = GetComponent<Rigidbody2D>();
 }
- void Start() {
-      dist = transform.position.z - Camera.main.transform.position.z;
-       rb = GetComponent<Rigidbody2D>();
- }
  //dragdrop
 void Update(){
     if(selected == true){
@@ -55,9 +51,7 @@ public void ToySnap(){
 }
 public void DestroyToy(){
     if(this.gameObject.tag == "Toy"){
-        if(Status.Instance.happyV<100){
-            Status.Instance.happyV += statValueAdded;
-        }
+        info.Use();
         GameObject c = Instantiate(explode, this.transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         CatAI.Instance.toy.Remove(this.gameObject);
@@ -66,18 +60,14 @@ public void DestroyToy(){
 }
 public void DestroyFoodDrink(){
     if(this.gameObject.tag == "Food"){
-        if(Status.Instance.hungerV<100){
-            Status.Instance.hungerV += statValueAdded;
-        }
+        info.Use();
         GameObject c = Instantiate(hungerEx, this.transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         Destroy(c, 5f);
         //trigger animation: action = ?
      }
     if(this.gameObject.tag == "Drink"){
-        if(Status.Instance.hydrationV<100){
-            Status.Instance.hydrationV += statValueAdded;
-        }
+        info.Use();
         GameObject c = Instantiate(hydraEx, this.transform.position, Quaternion.identity);
         Destroy(this.gameObject); 
         Destroy(c, 5f);
@@ -87,7 +77,7 @@ public void DestroyFoodDrink(){
 public void DetectToy(){
         Debug.Log(this.gameObject.tag);
         GetToyPos(); //get the pos of the toy when drop on the floor
-        CatAI.Instance.action = 6; //do playing
+        CatAI.Instance.Dashing(); //do playing
         CatAI.Instance.p = 0; //stop normal state
         //CatAI.Instance.executing = true;
 }

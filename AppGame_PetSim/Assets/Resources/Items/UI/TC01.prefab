@@ -175,7 +175,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5476863298520019382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933d21e0aa1cb4298958624c69fc556f, type: 3}
+  m_Script: {fileID: 11500000, guid: db4516bb49243420582f6ac8cd74067f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: TC01
@@ -184,6 +184,10 @@ MonoBehaviour:
     type: 3}
   type: 2
   rarity: 0
+  costMethod: 0
+  cost: 20
+  levelRequirement: 1
+  HappinessValue: 10
 --- !u!223 &3689669048758106768
 Canvas:
   m_ObjectHideFlags: 0

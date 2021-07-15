@@ -61,7 +61,6 @@ GameObject:
   - component: {fileID: 2247991195423946399}
   - component: {fileID: 2247991195423946336}
   - component: {fileID: 8144646163018424692}
-  - component: {fileID: 1717688853863706566}
   m_Layer: 10
   m_Name: DA01_obj
   m_TagString: Drink
@@ -203,23 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbe898b302354fae90b60ce803ad4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info: {fileID: 6036092562436712604, guid: 86c0829d485e241cba53c45c2b8d67f7, type: 3}
   dist: 0
   explode: {fileID: 6222639126503631770, guid: e3638e807c17f4341955eea36202b10f, type: 3}
   hungerEx: {fileID: 483648205025446981, guid: d829602612b1e402fa65e201019b163f, type: 3}
   hydraEx: {fileID: 9217448240166525496, guid: 8f60045a8d51944d9bca4226f68a365b, type: 3}
-  statValueAdded: 20
---- !u!114 &1717688853863706566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2247991195423946340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10e5c2c215a4b4ffeb45e5512e1de7ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
-  description: 
-  rarity: 0

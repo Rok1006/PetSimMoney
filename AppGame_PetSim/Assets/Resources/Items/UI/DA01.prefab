@@ -175,15 +175,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3859878090055939602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 933d21e0aa1cb4298958624c69fc556f, type: 3}
+  m_Script: {fileID: 11500000, guid: c4262c4c51fe04ff2af16bfddc1f572f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: DA01
-  itemName: PurpleSky
+  itemName: Purple Sky
   GeneratedItem: {fileID: 2247991195423946340, guid: 4c7e567cf5be04d97a1d7dbba9ece5d0,
     type: 3}
   type: 1
   rarity: 2
+  costMethod: 0
+  cost: 60
+  levelRequirement: 20
+  hydrationValue: 70
 --- !u!223 &3802232497078423250
 Canvas:
   m_ObjectHideFlags: 0
