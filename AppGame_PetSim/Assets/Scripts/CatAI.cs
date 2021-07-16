@@ -8,9 +8,10 @@ using UnityEngine;
      // void FulfillingState(){ //when ?? value lower to certain amount, do this state, what lower do what first, wait! it doent need to audto do it 
     // //include animation that appears when it is happy and fulfufilled
     // }
+public enum Action {Idle, Walking, SitSleeping, SitAwake, Meowing, Dashing, Playing}
+
 public class CatAI : MonoBehaviour
 {
-    public enum Action {Idle, Walking, SitSleeping, SitAwake, Meowing, Dashing, Playing}
     public static CatAI Instance;
     Animator catanim;
     public GameObject target;
@@ -143,10 +144,10 @@ public class CatAI : MonoBehaviour
         isPlayingToy = false;
         canEatDrink = true;
         canTouch = true;
-        Status.Instance.StatsChange(Status.StatsType.Hydration, -Status.Instance.hydrationMax / 100);
-        Status.Instance.StatsChange(Status.StatsType.Hunger, -Status.Instance.hungerMax / 100);
-        Status.Instance.StatsChange(Status.StatsType.Happiness, -Status.Instance.happyMax / 50);
-        Status.Instance.StatsChange(Status.StatsType.Energy, -Status.Instance.energyMax / 100);
+        Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 100);
+        Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100);
+        Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 50);
+        Status.Instance.StatsChange(StatsType.Energy, -Status.Instance.energyMax / 100);
         action = Action.Idle;
     }
 
@@ -155,10 +156,10 @@ public class CatAI : MonoBehaviour
         isPlayingToy = false;
         canEatDrink = false;
         canTouch = false;
-        Status.Instance.StatsChange(Status.StatsType.Hydration, -Status.Instance.hydrationMax / 100);
-        Status.Instance.StatsChange(Status.StatsType.Hunger, -Status.Instance.hungerMax / 100);
-        Status.Instance.StatsChange(Status.StatsType.Happiness, -Status.Instance.happyMax / 66);
-        Status.Instance.StatsChange(Status.StatsType.Energy, -Status.Instance.energyMax / 50);
+        Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 100);
+        Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100);
+        Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 66);
+        Status.Instance.StatsChange(StatsType.Energy, -Status.Instance.energyMax / 50);
         action = Action.Walking;
     }
 
@@ -167,9 +168,9 @@ public class CatAI : MonoBehaviour
         isPlayingToy = true;//turn true to stop it from detecting
         canEatDrink = false;
         canTouch = false;
-        Status.Instance.StatsChange(Status.StatsType.Hydration, -Status.Instance.hydrationMax / 150);
-        Status.Instance.StatsChange(Status.StatsType.Hunger, -Status.Instance.hungerMax / 200);
-        Status.Instance.StatsChange(Status.StatsType.Energy, Status.Instance.energyMax / 50);
+        Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 150);
+        Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 200);
+        Status.Instance.StatsChange(StatsType.Energy, Status.Instance.energyMax / 50);
         action = Action.SitSleeping;
     }
 
@@ -178,10 +179,10 @@ public class CatAI : MonoBehaviour
         isPlayingToy = true;
         canEatDrink = true;
         canTouch = false;
-        Status.Instance.StatsChange(Status.StatsType.Hydration, -Status.Instance.hydrationMax / 100);
-        Status.Instance.StatsChange(Status.StatsType.Hunger, -Status.Instance.hungerMax / 100);
-        Status.Instance.StatsChange(Status.StatsType.Happiness, -Status.Instance.happyMax / 50);
-        Status.Instance.StatsChange(Status.StatsType.Energy, Status.Instance.energyMax / 200);
+        Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 100);
+        Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100);
+        Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 50);
+        Status.Instance.StatsChange(StatsType.Energy, Status.Instance.energyMax / 200);
         action = Action.SitAwake;
     }
     public void Meowing()
@@ -189,10 +190,10 @@ public class CatAI : MonoBehaviour
         isPlayingToy = false;
         canEatDrink = true;
         canTouch = true;
-        Status.Instance.StatsChange(Status.StatsType.Hydration, -Status.Instance.hydrationMax / 100);
-        Status.Instance.StatsChange(Status.StatsType.Hunger, -Status.Instance.hungerMax / 100);
-        Status.Instance.StatsChange(Status.StatsType.Happiness, -Status.Instance.happyMax / 66);
-        Status.Instance.StatsChange(Status.StatsType.Energy, -Status.Instance.energyMax / 66);
+        Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 100);
+        Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100);
+        Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 66);
+        Status.Instance.StatsChange(StatsType.Energy, -Status.Instance.energyMax / 66);
         action = Action.Meowing;
     }
     public void Dashing()
@@ -201,10 +202,10 @@ public class CatAI : MonoBehaviour
         canTouch = false;
         canEatDrink = false;
         isPlayingToy = true;
-        Status.Instance.StatsChange(Status.StatsType.Hydration, -Status.Instance.hydrationMax / 50);
-        Status.Instance.StatsChange(Status.StatsType.Hunger, -Status.Instance.hungerMax / 50);
-        Status.Instance.StatsChange(Status.StatsType.Happiness, -Status.Instance.happyMax / 100);
-        Status.Instance.StatsChange(Status.StatsType.Energy, -Status.Instance.energyMax / 33);
+        Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 50);
+        Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 50);
+        Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 100);
+        Status.Instance.StatsChange(StatsType.Energy, -Status.Instance.energyMax / 33);
         action = Action.Dashing;
     }
 
@@ -214,9 +215,9 @@ public class CatAI : MonoBehaviour
         canEatDrink = false;
         canTouch = false;
         doNormal = false; //for when playing is executing, normal switch dont execute
-        Status.Instance.StatsChange(Status.StatsType.Hydration, -Status.Instance.hydrationMax / 50);
-        Status.Instance.StatsChange(Status.StatsType.Hunger, -Status.Instance.hungerMax / 50);
-        Status.Instance.StatsChange(Status.StatsType.Energy, -Status.Instance.energyMax / 33);
+        Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 50);
+        Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 50);
+        Status.Instance.StatsChange(StatsType.Energy, -Status.Instance.energyMax / 33);
         action = Action.Playing;
     }
 
@@ -254,7 +255,7 @@ public class CatAI : MonoBehaviour
     IEnumerator SwitchAct()
     { //for animation idle, sitsleep,sitawake, meow
         int t = Random.Range(5,10);
-        Debug.Log(t);
+        //Debug.Log(t);
         yield return new WaitForSeconds(t);//wait for 5 sec to do the next
         NormalState();//after wait for 5 sec do random generate, detect value to change to different state
         CheckToyList();
@@ -319,7 +320,7 @@ public class CatAI : MonoBehaviour
             beingTouch = true;
             catanim.SetTrigger("touch");
             Effects.Instance.HappyEmittion();
-            Status.Instance.StatsChange(Status.StatsType.Happiness, Status.Instance.happyMax / 100);
+            Status.Instance.StatsChange(StatsType.Happiness, Status.Instance.happyMax / 100);
         //}
     }
     void OnMouseUp()

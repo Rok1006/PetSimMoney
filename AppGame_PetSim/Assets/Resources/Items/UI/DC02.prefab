@@ -177,16 +177,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4262c4c51fe04ff2af16bfddc1f572f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: DC02
-  itemName: Orange Juice
-  GeneratedItem: {fileID: 6943845177838410998, guid: d71874adb42634506b98c5244f0be8e1,
+  _itemID: DC02
+  _itemName: Orange Juice
+  _generatedItem: {fileID: 6943845177838410998, guid: d71874adb42634506b98c5244f0be8e1,
     type: 3}
-  type: 1
-  rarity: 0
-  costMethod: 0
-  cost: 30
-  levelRequirement: 3
-  hydrationValue: 25
+  _type: 1
+  _rarity: 0
+  _costMethod: 0
+  _cost: 30
+  _levelRequirement: 3
+  _hydrationValue: 25
 --- !u!223 &4258303646998470550
 Canvas:
   m_ObjectHideFlags: 0

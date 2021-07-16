@@ -178,15 +178,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb224ef809c34e5386456659627f030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: Leaf
-  itemName: Green Leaf
-  GeneratedItem: {fileID: 7493196608483323147, guid: 64f50cb6168b242aea94adf4d8935d43,
+  _itemID: Leaf
+  _itemName: Green Leaf
+  _generatedItem: {fileID: 7493196608483323147, guid: 64f50cb6168b242aea94adf4d8935d43,
     type: 3}
-  type: 3
-  rarity: 0
-  costMethod: 0
-  cost: 1
-  levelRequirement: 0
+  _type: 3
+  _rarity: 0
+  _costMethod: 0
+  _cost: 1
+  _levelRequirement: 0
 --- !u!223 &3689669048758106768
 Canvas:
   m_ObjectHideFlags: 0

@@ -178,16 +178,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4262c4c51fe04ff2af16bfddc1f572f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: DB01
-  itemName: Milk
-  GeneratedItem: {fileID: 2111432705200479594, guid: eb7fe40dd83434867b724efb4e621936,
+  _itemID: DB01
+  _itemName: Milk
+  _generatedItem: {fileID: 2111432705200479594, guid: eb7fe40dd83434867b724efb4e621936,
     type: 3}
-  type: 1
-  rarity: 1
-  costMethod: 0
-  cost: 50
-  levelRequirement: 10
-  hydrationValue: 50
+  _type: 1
+  _rarity: 1
+  _costMethod: 0
+  _cost: 50
+  _levelRequirement: 10
+  _hydrationValue: 50
 --- !u!223 &1827770699641630159
 Canvas:
   m_ObjectHideFlags: 0

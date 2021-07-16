@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class ToyInfo : ItemsInfo
 {
-    public int HappinessValue;
+    [SerializeField]
+    private int _happinessValue;
+    public int happinessValue { get { return _happinessValue; } }
     public override void Use()
     {
-        Status.Instance.StatsChange(Status.StatsType.Happiness, HappinessValue);
+        Status.Instance.StatsChange(StatsType.Happiness, _happinessValue);
     }
 }

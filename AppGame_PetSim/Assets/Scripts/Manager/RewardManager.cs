@@ -5,9 +5,10 @@ using UnityEngine.UI;
 //determeine levelup panel UI text change
 //determine what items to be gifted
 
+public enum PoolType { Common, Rare } 
+
 public class RewardManager : MonoBehaviour
 {
-    public enum PoolType { Common, Rare } 
     public static RewardManager Instance; 
     private GameObject rewardIconTemplate;
     private List<GameObject> rewardIconList = new List<GameObject>();

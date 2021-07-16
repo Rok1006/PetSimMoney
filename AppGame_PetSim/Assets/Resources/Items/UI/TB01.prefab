@@ -178,16 +178,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4516bb49243420582f6ac8cd74067f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: TB01
-  itemName: Flower Mouse
-  GeneratedItem: {fileID: 6714260013200599580, guid: 3b4370bbafd2e451bbf9ab6675021431,
+  _itemID: TB01
+  _itemName: Flower Mouse
+  _generatedItem: {fileID: 6714260013200599580, guid: 3b4370bbafd2e451bbf9ab6675021431,
     type: 3}
-  type: 2
-  rarity: 1
-  costMethod: 0
-  cost: 30
-  levelRequirement: 3
-  HappinessValue: 25
+  _type: 2
+  _rarity: 1
+  _costMethod: 0
+  _cost: 30
+  _levelRequirement: 3
+  _happinessValue: 25
 --- !u!223 &5247178773580950767
 Canvas:
   m_ObjectHideFlags: 0

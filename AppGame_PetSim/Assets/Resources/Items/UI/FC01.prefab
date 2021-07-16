@@ -178,16 +178,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083cc6b8b39cf41c2828af113d8f0b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: FC01
-  itemName: Biscuit
-  GeneratedItem: {fileID: 5855285169297476193, guid: a042f02a9dd3d438b931fc2883c29286,
+  _itemID: FC01
+  _itemName: Biscuit
+  _generatedItem: {fileID: 5855285169297476193, guid: a042f02a9dd3d438b931fc2883c29286,
     type: 3}
-  type: 0
-  rarity: 0
-  costMethod: 0
-  cost: 20
-  levelRequirement: 1
-  HungerValue: 10
+  _type: 0
+  _rarity: 0
+  _costMethod: 0
+  _cost: 20
+  _levelRequirement: 1
+  _hungerValue: 10
 --- !u!223 &4462611900234596571
 Canvas:
   m_ObjectHideFlags: 0

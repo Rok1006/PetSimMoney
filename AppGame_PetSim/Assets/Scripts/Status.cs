@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 //this script is for determinging the rise low value of cat, and related slider
+public enum StatsType { Happiness, Energy, Hunger, Hydration }
+
 public class Status : MonoBehaviour
 {
-    public enum StatsType { Happiness, Energy, Hunger, Hydration }
     public static Status Instance;
     [Header("UI")]
     public Slider happiness;

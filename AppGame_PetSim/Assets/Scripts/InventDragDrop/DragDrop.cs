@@ -134,7 +134,7 @@ public class DragDrop : MonoBehaviour, IInitializePotentialDragHandler, IPointer
                 //Debug.Log("ItemID: " + ItemsInfo.Instance.itemID); //make sure it only do once
                 //Debug.Log("ItemName: " + ItemsInfo.Instance.itemName); //make sure it only do once
                 var sc = this.gameObject.GetComponent<ItemsInfo>();
-                GameObject i = Instantiate(sc.GeneratedItem, mousePos, Quaternion.identity);
+                GameObject i = Instantiate(sc.generatedItem, mousePos, Quaternion.identity);
                 i.transform.position = new Vector3(i.transform.position.x, i.transform.position.y, 0);
                 Destroy(this.gameObject); //destroy this ui
                 Inventory.instance.fullslot -= 1;
