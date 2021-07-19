@@ -9,7 +9,7 @@ public class ShopManager : MonoBehaviour
 {
     public static ShopManager Instance;
     public GameObject valueHolder;
-    Animator valueAnim;
+    public Animator valueAnim;
 
     [SerializeField]
     private GameObject shopDrinkTemplates, shopFoodTemplates, shopToyTemplates, shopLeafTemplates;
@@ -69,80 +69,60 @@ public class ShopManager : MonoBehaviour
                 switch((ItemType) type)
                 {
                     case ItemType.Drink:
-                        ShopItemCreate(item, shopDrinkTemplates);
+                        ShopItemCreate(item, shopDrinkTemplates, type);
                         break;
                     case ItemType.Food:
-                        ShopItemCreate(item, shopFoodTemplates);
+                        ShopItemCreate(item, shopFoodTemplates, type);
                         break;
                     case ItemType.Toy:
-                        ShopItemCreate(item, shopToyTemplates);
+                        ShopItemCreate(item, shopToyTemplates, type);
                         break;
                     case ItemType.Leaf:
-                        ShopItemCreate(item, shopLeafTemplates);
+                        ShopItemCreate(item, shopLeafTemplates, type);
+                        break;
+                    default:
                         break;
                 }
             }
         }
     }
 
-    private void ShopItemCreate(ShopItem shopItem, GameObject template)
+    private void ShopItemCreate(ShopItem shopItem, GameObject template, int typeIndex)
     {
-        GameObject newitem = Instantiate(template) as GameObject;
+        GameObject newItem = Instantiate(template) as GameObject;
 
-        newitem.name = shopItem.item.name;
-        newitem.GetComponent<Image>().sprite = shopItem.item.GetComponent<Image>().sprite;
-        newitem.transform.Find("Price").gameObject.GetComponentInChildren<Text>().text = shopItem.cost.ToString();
-        if(visible)
-        {
-            newIcon.SetActive(true);
-        }
-        newIcon.transform.SetParent(rewardIconTemplate.transform.parent, false);
-        rewardIconList.Add(newIcon);
-        Count++;
+        newItem.GetComponent<ObjectReference>().referencedObj = shopItem.item;
+        newItem.name = shopItem.item.GetComponent<ItemsInfo>().itemID;
+        newItem.transform.Find("Product").gameObject.GetComponent<Image>().sprite = shopItem.item.GetComponent<Image>().sprite;
+        newItem.transform.Find("Title").gameObject.GetComponentInChildren<Text>().text = shopItem.item.GetComponent<ItemsInfo>().itemName;
+        newItem.transform.Find("Descript").gameObject.GetComponentInChildren<Text>().text = shopItem.item.GetComponent<ItemsInfo>().description;
+        newItem.transform.Find("Price").gameObject.GetComponentInChildren<Text>().text = shopItem.cost.ToString();
+        newItem.SetActive(true);
+        newItem.transform.SetParent(template.transform.parent, false);
+        shopItemUIList[typeIndex].Add(newItem);
     }
 
-        int count = 0;
-        foreach(string name in data.name)
-        {
-            GameObject reward = ItemManager.Instance.itemList.Find(x => x.name.Contains(name));
-            addReward(new Reward(reward, data.amount[count]));
-            count++;
-        }
-        giveReward();
-        RewardUIGen(template);
-        foreach(GameObject item in ItemManager.Instance.separatedItemLists[(int) ItemType.Drink])
-        {
-            
-            //Gen + Info
-        }
-    }
-
-    public void ClickBuyItem()
+    public void OnClickBuyItem()
     { //pay with normleaf
         selectedButton = EventSystem.current.currentSelectedGameObject;
+        GameObject item = selectedButton.transform.parent.gameObject.GetComponent<ObjectReference>().referencedObj;
+        ItemsInfo info = item.GetComponent<ItemsInfo>();
+        CostMethod costMethod = info.costMethod;
 
+        if(Status.Instance.LeafChange(costMethod, info.cost))
+        {
+            //TODO
+            ////////ADD ITEM TO INVENTORY
+            Manager.Instance.boughtItems += 1;
 
-        if(Status.Instance.normalC>=cost && canBuy){ //cost = 1, result: 3 drinks
-            bAnim.SetTrigger("buy");
+            selectedButton.GetComponent<Animator>().SetTrigger("buy");
             valueAnim.SetTrigger("norm");
-            Status.Instance.normalC -= cost;
-            //Inventory.instance.AddToSlots(item) //turn true, will turn false after instanciate
-            Inventory.instance.productSize = size;
-            Manager.Instance.boughtItems += 1;
-            //Inventory.instance.CheckAllFull();
+
+            Debug.Log("Item bought: " + info.itemName + " (" + info.itemID + ")");
         }
-    }
-    public void ClickBuyRareItem(){ //pay with normleaf
-        if(Status.Instance.rareC>=cost && canBuy)
-        { //cost = 1, result: 3 drinks
-            bAnim.SetTrigger("buy");
-            valueAnim.SetTrigger("rare");
-            //invent.add == true?
-            Status.Instance.rareC -= cost;
-            //Inventory.instance.purchasedItem = item;
-            Inventory.instance.productSize = size;
-            Manager.Instance.boughtItems += 1;
-            //Inventory.instance.CheckAllFull();
+        else
+        {
+            Debug.Log("Not enough leaf");
         }
     }
 }
