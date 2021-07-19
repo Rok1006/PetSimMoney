@@ -5,19 +5,19 @@ using UnityEngine;
 public class ItemsDrop : MonoBehaviour
 {
     public static ItemsDrop Instance;
-   public GameObject itemEmitSpot;
-   public GameObject NormalItem; //prefab, ID = 1
-   public GameObject RareItem; //prefab  ID = 2
-   public GameObject Trash; //prefab  ID = 0
-   int finalprobability;
-   int itemID;
-   int numOfRare;
-   int numOfNor;
-   int numOfTrash;
-   public int totalItemDropped;
-   public int totalTrashDropped;
+    public GameObject itemEmitSpot;
+    public GameObject NormalItem; //prefab, ID = 1
+    public GameObject RareItem; //prefab  ID = 2
+    public GameObject Trash; //prefab  ID = 0
+    int finalprobability;
+    int itemID;
+    int numOfRare;
+    int numOfNor;
+    int numOfTrash;
+    public int totalItemDropped;
+    public int totalTrashDropped;
  
-   void Awake() {
+    void Awake() {
        Instance = this;
    }
     void Start()
@@ -42,7 +42,7 @@ public class ItemsDrop : MonoBehaviour
     }
     //check total num, generate if less than ?? num
     void Generator(){
-        if(CatAI.Instance.action == CatAI.Action.Walking && totalItemDropped <20){ //drop items only when walking and total less than 20, can change
+        if(CatAI.Instance.action == Action.Walking && totalItemDropped <20){ //drop items only when walking and total less than 20, can change
             //Debug.Log("dropped");
             ItemProbability();
             if(itemID==0){

@@ -167,16 +167,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083cc6b8b39cf41c2828af113d8f0b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: FB02
-  itemName: Cupcake
-  GeneratedItem: {fileID: 6443674148722607525, guid: f7063e8ac442843ec8d9604e7fc3667f,
+  _itemID: FB02
+  _itemName: Cupcake
+  _generatedItem: {fileID: 6443674148722607525, guid: f7063e8ac442843ec8d9604e7fc3667f,
     type: 3}
-  type: 0
-  rarity: 1
-  costMethod: 0
-  cost: 50
-  levelRequirement: 10
-  HungerValue: 50
+  _type: 0
+  _rarity: 1
+  _costMethod: 0
+  _cost: 50
+  _levelRequirement: 10
+  _hungerValue: 50
 --- !u!223 &6153512991005058339
 Canvas:
   m_ObjectHideFlags: 0

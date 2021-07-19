@@ -178,16 +178,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4516bb49243420582f6ac8cd74067f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: TC01
-  itemName: Mouse
-  GeneratedItem: {fileID: 1043107114550410067, guid: 79c87d289945e4b219c4e1d6c27d9dd6,
+  _itemID: TC01
+  _itemName: Mouse
+  _generatedItem: {fileID: 1043107114550410067, guid: 79c87d289945e4b219c4e1d6c27d9dd6,
     type: 3}
-  type: 2
-  rarity: 0
-  costMethod: 0
-  cost: 20
-  levelRequirement: 1
-  HappinessValue: 10
+  _type: 2
+  _rarity: 0
+  _costMethod: 0
+  _cost: 20
+  _levelRequirement: 1
+  _happinessValue: 10
 --- !u!223 &3689669048758106768
 Canvas:
   m_ObjectHideFlags: 0

@@ -27,27 +27,27 @@ public class GachaManager : MonoBehaviour
         Draw3Panel.SetActive(false);
     }
 
-    public GarmentManager.Rarity DrawEgg() 
+    public Rarity DrawEgg() 
     {
         float randNum = Random.Range(0.0f, 1.0f);
-        GarmentManager.Rarity resultRarity;
+        Rarity resultRarity;
         if(randNum < _probability[0]) //Super Rare
         {
             _luck = 0;
             Debug.Log("Super Rare");
-            resultRarity = GarmentManager.Rarity.SuperRare;
+            resultRarity = Rarity.SuperRare;
         } 
         else if (randNum < _probability[1]) //Rare
         {
             _luck += 50;
             Debug.Log("Rare");
-            resultRarity = GarmentManager.Rarity.Rare;
+            resultRarity = Rarity.Rare;
         }
         else //Common   
         {
             _luck += 50;
             Debug.Log("Common");
-            resultRarity = GarmentManager.Rarity.Common;
+            resultRarity = Rarity.Common;
         }
         ProbabilityUpdate();
         return resultRarity;
@@ -75,14 +75,14 @@ public class GachaManager : MonoBehaviour
         RCMAnim.SetTrigger("PressDraw"); //do a series of anim
         resultState = 1;
         
-        GarmentManager.Rarity eggType = DrawEgg();
+        Rarity eggType = DrawEgg();
         switch(eggType)
         {
-            case GarmentManager.Rarity.Common:
+            case Rarity.Common:
                 break;
-            case GarmentManager.Rarity.Rare:
+            case Rarity.Rare:
                 break;
-            case GarmentManager.Rarity.SuperRare:
+            case Rarity.SuperRare:
                 break;
         }
         //GameObject a = Instantiate(obj, draw1Pos.transform.position, Quaternion.identity); //instanciate prefab
@@ -93,14 +93,14 @@ public class GachaManager : MonoBehaviour
         resultState = 2;
         for (int i = 0; i < Draw3Slot.Length; i++)
         {
-            GarmentManager.Rarity eggType = DrawEgg();
+            Rarity eggType = DrawEgg();
             switch(eggType)
             {
-                case GarmentManager.Rarity.Common:
+                case Rarity.Common:
                     break;
-                case GarmentManager.Rarity.Rare:
+                case Rarity.Rare:
                     break;
-                case GarmentManager.Rarity.SuperRare:
+                case Rarity.SuperRare:
                     break;
             }
             //GameObject a = Instantiate([the generated ball color], Draw3Slot[i].transform.position, Quaternion.identity); //instanciate prefab
@@ -113,7 +113,9 @@ public class GachaManager : MonoBehaviour
     public void crackopen(){ //spine event crackopen in Showing result All
         if(resultState==1){ //draw 1
             Draw1Panel.SetActive(true);
-        }else if(resultState==2){ //draw 2
+        }
+        else if(resultState==2)
+        { //draw 2
             Draw3Panel.SetActive(true);
         }
     }

@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum GarmentType { Hat, Neck, Back }
+
 public class GarmentManager : MonoBehaviour
 {
-
-    public enum GarmentType { Hat, Neck, Back }
-    public enum Rarity { Common, Rare, SuperRare, UltraRare, SecretUltraRare }
     public static GarmentManager Instance;
     private List<GameObject> _garmentList = new List<GameObject>();
     public List<GameObject> garmentList { get { return _garmentList; } }

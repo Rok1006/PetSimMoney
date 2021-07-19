@@ -167,16 +167,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4262c4c51fe04ff2af16bfddc1f572f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: DC01
-  itemName: Blue Water
-  GeneratedItem: {fileID: 7996751361508475778, guid: 5108b2f4c4f3d4b118aaaed29a209a1d,
+  _itemID: DC01
+  _itemName: Blue Water
+  _generatedItem: {fileID: 7996751361508475778, guid: 5108b2f4c4f3d4b118aaaed29a209a1d,
     type: 3}
-  type: 1
-  rarity: 0
-  costMethod: 0
-  cost: 20
-  levelRequirement: 1
-  hydrationValue: 10
+  _type: 1
+  _rarity: 0
+  _costMethod: 0
+  _cost: 20
+  _levelRequirement: 1
+  _hydrationValue: 10
 --- !u!223 &357599957
 Canvas:
   m_ObjectHideFlags: 0

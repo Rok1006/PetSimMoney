@@ -19,7 +19,7 @@ public class TouchObj : MonoBehaviour
             Debug.Log("normal"); 
             //add some animation
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
-            Status.Instance.normalC +=1;
+            Status.Instance.LeafChange(CostMethod.GreenLeaf, 1);
             Destroy(this.gameObject); //later: Destroy(this.gameObject, 1f)
             Destroy(c, 1f);
             //add sound
@@ -27,7 +27,7 @@ public class TouchObj : MonoBehaviour
          if(this.transform.gameObject.tag == "Rare"){
             Debug.Log("rare");
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity); 
-            Status.Instance.rareC +=1;
+            Status.Instance.LeafChange(CostMethod.GoldLeaf, 1);
             Destroy(this.gameObject);
             Destroy(c, 1f);
             //add sound

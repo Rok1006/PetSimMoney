@@ -7,8 +7,8 @@ public class GarmentInfo : MonoBehaviour
     public string itemID;
     public string itemName; //name of the item
     public GameObject GeneratedItem; //place real gameobject of the costumes
-    public GarmentManager.GarmentType type;
-    public GarmentManager.Rarity rarity;
+    public GarmentType type;
+    public Rarity rarity;
     public GameObject HeadPosition;
     public GameObject NeckPosition;
     public GameObject BackPosition;

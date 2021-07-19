@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class DrinkInfo : ItemsInfo
 {
-    public int hydrationValue;
+    [SerializeField]
+    private int _hydrationValue;
+    public int hydrationValue { get { return _hydrationValue; } }
     public override void Use()
     {
-        Status.Instance.StatsChange(Status.StatsType.Hydration, hydrationValue);
+        Status.Instance.StatsChange(StatsType.Hydration, _hydrationValue);
     }
 }

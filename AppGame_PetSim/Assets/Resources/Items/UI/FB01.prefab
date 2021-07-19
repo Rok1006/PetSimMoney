@@ -167,16 +167,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083cc6b8b39cf41c2828af113d8f0b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: FB01
-  itemName: Pretzel
-  GeneratedItem: {fileID: 2520320155980062900, guid: 7b8b54e890b324e93bfb30941ff64f0d,
+  _itemID: FB01
+  _itemName: Pretzel
+  _generatedItem: {fileID: 2520320155980062900, guid: 7b8b54e890b324e93bfb30941ff64f0d,
     type: 3}
-  type: 0
-  rarity: 1
-  costMethod: 0
-  cost: 30
-  levelRequirement: 3
-  HungerValue: 25
+  _type: 0
+  _rarity: 1
+  _costMethod: 0
+  _cost: 30
+  _levelRequirement: 3
+  _hungerValue: 25
 --- !u!223 &4739645389422153106
 Canvas:
   m_ObjectHideFlags: 0

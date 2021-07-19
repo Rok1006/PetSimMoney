@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class FoodInfo : ItemsInfo
 {
-    public int HungerValue;
+    [SerializeField]
+    private int _hungerValue;
+    public int hungerValue { get { return _hungerValue; } }
     public override void Use()
     {
-        Status.Instance.StatsChange(Status.StatsType.Hunger, HungerValue);
+        Status.Instance.StatsChange(StatsType.Hunger, _hungerValue);
     }
 }

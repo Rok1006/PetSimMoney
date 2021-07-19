@@ -178,16 +178,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4516bb49243420582f6ac8cd74067f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: TB02
-  itemName: Wool Ball
-  GeneratedItem: {fileID: 1891202453858981399, guid: d30cfabda8661436c957610951e67e38,
+  _itemID: TB02
+  _itemName: Wool Ball
+  _generatedItem: {fileID: 1891202453858981399, guid: d30cfabda8661436c957610951e67e38,
     type: 3}
-  type: 2
-  rarity: 1
-  costMethod: 0
-  cost: 50
-  levelRequirement: 10
-  HappinessValue: 35
+  _type: 2
+  _rarity: 1
+  _costMethod: 0
+  _cost: 50
+  _levelRequirement: 10
+  _happinessValue: 50
 --- !u!223 &3713484135285202876
 Canvas:
   m_ObjectHideFlags: 0

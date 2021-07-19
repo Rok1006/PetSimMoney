@@ -178,16 +178,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083cc6b8b39cf41c2828af113d8f0b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: FA01
-  itemName: Donut
-  GeneratedItem: {fileID: 3436734034381785010, guid: c37bff771597a4625b99af7b9a0802a8,
+  _itemID: FA01
+  _itemName: Donut
+  _generatedItem: {fileID: 3436734034381785010, guid: c37bff771597a4625b99af7b9a0802a8,
     type: 3}
-  type: 0
-  rarity: 2
-  costMethod: 0
-  cost: 60
-  levelRequirement: 20
-  HungerValue: 70
+  _type: 0
+  _rarity: 2
+  _costMethod: 0
+  _cost: 60
+  _levelRequirement: 20
+  _hungerValue: 70
 --- !u!223 &4507188312726106586
 Canvas:
   m_ObjectHideFlags: 0
