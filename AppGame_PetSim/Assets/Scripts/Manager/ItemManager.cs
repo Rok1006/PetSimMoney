@@ -29,6 +29,7 @@ public class ItemManager : MonoBehaviour
         }
 
         _itemList = new List<GameObject>(Resources.LoadAll<GameObject>("Items/UI"));
+        Sorting.QuickSort(_itemList, 0, _itemList.Count - 1);
         foreach(GameObject item in itemList)
         {
             foreach(ItemType type in Enum.GetValues(typeof(ItemType)))
