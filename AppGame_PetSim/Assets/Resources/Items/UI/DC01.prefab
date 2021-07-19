@@ -171,11 +171,12 @@ MonoBehaviour:
   _itemName: Blue Water
   _generatedItem: {fileID: 7996751361508475778, guid: 5108b2f4c4f3d4b118aaaed29a209a1d,
     type: 3}
-  _type: 1
+  _type: 0
   _rarity: 0
   _costMethod: 0
   _cost: 20
   _levelRequirement: 1
+  _description: 
   _hydrationValue: 10
 --- !u!223 &357599957
 Canvas:

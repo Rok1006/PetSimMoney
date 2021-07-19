@@ -182,11 +182,12 @@ MonoBehaviour:
   _itemName: Biscuit
   _generatedItem: {fileID: 5855285169297476193, guid: a042f02a9dd3d438b931fc2883c29286,
     type: 3}
-  _type: 0
+  _type: 1
   _rarity: 0
   _costMethod: 0
   _cost: 20
   _levelRequirement: 1
+  _description: 
   _hungerValue: 10
 --- !u!223 &4462611900234596571
 Canvas:
