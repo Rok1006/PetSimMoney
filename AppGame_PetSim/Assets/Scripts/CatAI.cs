@@ -8,7 +8,7 @@ using UnityEngine;
      // void FulfillingState(){ //when ?? value lower to certain amount, do this state, what lower do what first, wait! it doent need to audto do it 
     // //include animation that appears when it is happy and fulfufilled
     // }
-public enum Action {Idle, Walking, SitSleeping, SitAwake, Meowing, Dashing, Playing}
+public enum Action {Idle, Walking, SitSleeping, SitAwake, Meowing, Dashing, Playing, Happy}
 
 public class CatAI : MonoBehaviour
 {
@@ -136,6 +136,13 @@ public class CatAI : MonoBehaviour
                         executing = false;
                     } 
                 } break;
+            // case Action.Happy:
+            //  if(executing)
+            // {
+            //     catanim.SetTrigger("meow");
+            //     //StartCoroutine("SwitchAct");
+            //     executing = false;
+            // }break;
            }
         } //beingtouch
     }
@@ -332,9 +339,11 @@ public class CatAI : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Food") || col.gameObject.CompareTag("Drink"))
         {
+            catanim.SetTrigger("happy");
             FdDk = col.gameObject.transform.parent.gameObject;
             var sc = FdDk.GetComponent<ObjDrag>();
             sc.DestroyFoodDrink();
+            //change action to happy
         }
     }
    
