@@ -595,6 +595,7 @@ GameObject:
   - component: {fileID: 24828026}
   - component: {fileID: 24828028}
   - component: {fileID: 24828027}
+  - component: {fileID: 24828029}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -665,6 +666,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24828025}
   m_CullTransparentMesh: 0
+--- !u!114 &24828029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24828025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53d64d9a272443ba5e0d5794cc4abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referencedObj: {fileID: 0}
 --- !u!1001 &26021600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1587,8 +1601,6 @@ MonoBehaviour:
   - 100
   - 100
   - 100
-  rareC: 0
-  normalC: 0
 --- !u!114 &76563524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,6 +3362,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 161976612}
   m_CullTransparentMesh: 0
+--- !u!1 &162708017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 3967083293319814971}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 162708018}
+  m_Layer: 0
+  m_Name: GbA02_obj   (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &162708018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 3967083293319814971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162708017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1119005161}
+  m_Father: {fileID: 686563578}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &165330563
 GameObject:
   m_ObjectHideFlags: 0
@@ -4668,10 +4711,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueHolder: {fileID: 1934836537}
-  cost: 1
-  item: {fileID: 2083078729617430103, guid: 398e5b57645914e3e910577d077100be, type: 3}
-  size: {x: 0.5, y: 0.5, z: 0.5}
-  canBuy: 1
+  valueAnim: {fileID: 0}
+  shopDrinkTemplates: {fileID: 0}
+  shopFoodTemplates: {fileID: 0}
+  shopToyTemplates: {fileID: 0}
+  shopLeafTemplates: {fileID: 0}
 --- !u!1 &216619473
 GameObject:
   m_ObjectHideFlags: 0
@@ -14215,6 +14259,7 @@ GameObject:
   - component: {fileID: 496043138}
   - component: {fileID: 496043140}
   - component: {fileID: 496043139}
+  - component: {fileID: 496043141}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -14285,6 +14330,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496043137}
   m_CullTransparentMesh: 0
+--- !u!114 &496043141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496043137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53d64d9a272443ba5e0d5794cc4abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referencedObj: {fileID: 0}
 --- !u!1 &496188616
 GameObject:
   m_ObjectHideFlags: 0
@@ -16534,6 +16592,22 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 638225924}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &640406470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 3967083293319814971}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1119005161}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &640717311
 GameObject:
   m_ObjectHideFlags: 0
@@ -18036,8 +18110,8 @@ Transform:
   m_LocalPosition: {x: 2.5281, y: -1.8483, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1119005161}
-  - {fileID: 1406946958}
+  - {fileID: 1778537081}
+  - {fileID: 162708018}
   m_Father: {fileID: 33809870}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29653,10 +29727,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueHolder: {fileID: 1934836537}
-  cost: 1
-  item: {fileID: 2877832642350039828, guid: 4be87d1d199ba418bb3dc481923680f5, type: 3}
-  size: {x: 0.5, y: 0.5, z: 0.5}
-  canBuy: 1
+  valueAnim: {fileID: 0}
+  shopDrinkTemplates: {fileID: 0}
+  shopFoodTemplates: {fileID: 0}
+  shopToyTemplates: {fileID: 0}
+  shopLeafTemplates: {fileID: 0}
 --- !u!1 &1072659254
 GameObject:
   m_ObjectHideFlags: 0
@@ -30447,12 +30522,21 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1108774267}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1119005161 stripped
+--- !u!4 &1119005161
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 7064743309326955205, guid: a996cb0725a6c4c0fbbf1c1ccbf74abd,
     type: 3}
   m_PrefabInstance: {fileID: 3967083293319814971}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640406470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 162708018}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120799924
 GameObject:
   m_ObjectHideFlags: 0
@@ -32233,6 +32317,22 @@ Canvas:
   m_SortingLayerID: 268477013
   m_SortingOrder: 6
   m_TargetDisplay: 0
+--- !u!1 &1194240309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 2056547192}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1406946958}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1195968115
 GameObject:
   m_ObjectHideFlags: 0
@@ -36410,12 +36510,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
---- !u!4 &1406946958 stripped
+--- !u!4 &1406946958
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 2207580848303975200, guid: f83c80463ae6c448d80e5e2abd20321e,
     type: 3}
   m_PrefabInstance: {fileID: 2056547192}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194240309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1778537081}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1407565648
 GameObject:
   m_ObjectHideFlags: 0
@@ -37057,6 +37166,7 @@ GameObject:
   - component: {fileID: 1425620407}
   - component: {fileID: 1425620409}
   - component: {fileID: 1425620408}
+  - component: {fileID: 1425620410}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -37127,6 +37237,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425620406}
   m_CullTransparentMesh: 0
+--- !u!114 &1425620410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425620406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff53d64d9a272443ba5e0d5794cc4abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referencedObj: {fileID: 0}
 --- !u!1001 &1425746733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42223,6 +42346,37 @@ MonoBehaviour:
   zPosition: 1
   overrideAlpha: 1
   hierarchy: {fileID: 1687553205}
+--- !u!1 &1778537080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 2056547192}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1778537081}
+  m_Layer: 0
+  m_Name: GbB01_obj  (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1778537081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 2056547192}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778537080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1406946958}
+  m_Father: {fileID: 686563578}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1778865551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44187,10 +44341,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueHolder: {fileID: 1934836537}
-  cost: 1
-  item: {fileID: 135104181053405100, guid: 6b8404123edd5456b94c0136f8677d2b, type: 3}
-  size: {x: 0.5, y: 0.5, z: 0.5}
-  canBuy: 1
+  valueAnim: {fileID: 0}
+  shopDrinkTemplates: {fileID: 0}
+  shopFoodTemplates: {fileID: 0}
+  shopToyTemplates: {fileID: 0}
+  shopLeafTemplates: {fileID: 0}
 --- !u!95 &1843703363
 Animator:
   serializedVersion: 3
@@ -68696,10 +68851,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueHolder: {fileID: 1934836537}
-  cost: 1
-  item: {fileID: 7424992429871050576, guid: 7caaaefa222e340dca4a5e4a181225c6, type: 3}
-  size: {x: 0.5, y: 0.5, z: 0.5}
-  canBuy: 1
+  valueAnim: {fileID: 0}
+  shopDrinkTemplates: {fileID: 0}
+  shopFoodTemplates: {fileID: 0}
+  shopToyTemplates: {fileID: 0}
+  shopLeafTemplates: {fileID: 0}
 --- !u!222 &3850916681980508938
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -80081,10 +80237,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueHolder: {fileID: 1934836537}
-  cost: 1
-  item: {fileID: 5476863298520019382, guid: 23961a3cb5dc343b78afad4ecd41fc71, type: 3}
-  size: {x: 0.53, y: 0.36, z: 0.66}
-  canBuy: 1
+  valueAnim: {fileID: 0}
+  shopDrinkTemplates: {fileID: 0}
+  shopFoodTemplates: {fileID: 0}
+  shopToyTemplates: {fileID: 0}
+  shopLeafTemplates: {fileID: 0}
 --- !u!58 &7239197050806326162
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -80567,10 +80724,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueHolder: {fileID: 1934836537}
-  cost: 1
-  item: {fileID: 3859878090055939602, guid: 86c0829d485e241cba53c45c2b8d67f7, type: 3}
-  size: {x: 0.5, y: 0.5, z: 0.5}
-  canBuy: 1
+  valueAnim: {fileID: 0}
+  shopDrinkTemplates: {fileID: 0}
+  shopFoodTemplates: {fileID: 0}
+  shopToyTemplates: {fileID: 0}
+  shopLeafTemplates: {fileID: 0}
 --- !u!1 &8296931117168062540
 GameObject:
   m_ObjectHideFlags: 0
