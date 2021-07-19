@@ -12,7 +12,9 @@ public class ShopManager : MonoBehaviour
     public Animator valueAnim;
 
     [SerializeField]
-    private GameObject shopDrinkTemplates, shopFoodTemplates, shopToyTemplates, shopLeafTemplates;
+    private GameObject shopDrinkTemplates, shopFoodTemplates, shopToyTemplates;
+    //TODO
+    //private GameObject shopLeafTemplates;
     private List<List<GameObject>> shopItemUIList = new List<List<GameObject>>();
     private List<List<ShopItem>> _shopItemList = new List<List<ShopItem>>();
     public List<List<ShopItem>> shopItemList { get { return _shopItemList; } }
@@ -29,6 +31,7 @@ public class ShopManager : MonoBehaviour
     void Start()
     {
         valueAnim = valueHolder.GetComponent<Animator>();
+        ShopItemsGen();
     }
     void Update()
     {
@@ -78,7 +81,8 @@ public class ShopManager : MonoBehaviour
                         ShopItemCreate(item, shopToyTemplates, type);
                         break;
                     case ItemType.Leaf:
-                        ShopItemCreate(item, shopLeafTemplates, type);
+                        //TODO
+                        //ShopItemCreate(item, shopLeafTemplates, type);
                         break;
                     default:
                         break;
