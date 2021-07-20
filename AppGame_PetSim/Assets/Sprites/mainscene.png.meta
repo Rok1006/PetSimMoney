@@ -104,6 +104,39 @@ TextureImporter:
   - first:
       213: -5391440038617933931
     second: mainscene_33
+  - first:
+      213: -4583299750994635931
+    second: mainscene_34
+  - first:
+      213: -8467439715163265929
+    second: mainscene_35
+  - first:
+      213: -191698962453729694
+    second: mainscene_36
+  - first:
+      213: 8343568616600311719
+    second: mainscene_37
+  - first:
+      213: -5631176067260832393
+    second: mainscene_38
+  - first:
+      213: 7874391716576079303
+    second: mainscene_39
+  - first:
+      213: 3781876240301661381
+    second: mainscene_40
+  - first:
+      213: 3832383256796256121
+    second: mainscene_41
+  - first:
+      213: 721399226439246861
+    second: mainscene_42
+  - first:
+      213: 311536177854079
+    second: mainscene_43
+  - first:
+      213: 7131348297816832248
+    second: mainscene_44
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -926,7 +959,7 @@ TextureImporter:
         width: 48
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -934,6 +967,237 @@ TextureImporter:
       bones: []
       spriteID: 5971c5699d1cd25b0800000000000000
       internalID: -5391440038617933931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_34
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 1017
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56314dae829d460c0800000000000000
+      internalID: -4583299750994635931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_35
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 1021
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774a8a4017c9d7a80800000000000000
+      internalID: -8467439715163265929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_36
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1017
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e622f2fc2f65df0800000000000000
+      internalID: -191698962453729694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_37
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1023
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a71f8f537f4ac370800000000000000
+      internalID: 8343568616600311719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_38
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 923
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775ac3bb33b0ad1b0800000000000000
+      internalID: -5631176067260832393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_39
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 767
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cdabc0cb85774d60800000000000000
+      internalID: 7874391716576079303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_40
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 616
+        width: 153
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc9baf376ceb7430800000000000000
+      internalID: 3781876240301661381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_41
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 468
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977de78644c5f2530800000000000000
+      internalID: 3832383256796256121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_42
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 295
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04272936cce20a00800000000000000
+      internalID: 721399226439246861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_43
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 105
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76373b275b110000800000000000000
+      internalID: 311536177854079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mainscene_44
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 26
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f875fc4e73a7f260800000000000000
+      internalID: 7131348297816832248
       vertices: []
       indices: 
       edges: []
