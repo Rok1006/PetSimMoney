@@ -10,6 +10,7 @@ public class ShopManager : MonoBehaviour
     public static ShopManager Instance;
     public GameObject valueHolder;
     public Animator valueAnim;
+    public GameObject LockBlock;
 
     [SerializeField]
     private GameObject shopDrinkTemplates, shopFoodTemplates, shopToyTemplates;
@@ -94,13 +95,22 @@ public class ShopManager : MonoBehaviour
     private void ShopItemCreate(ShopItem shopItem, GameObject template, int typeIndex)
     {
         GameObject newItem = Instantiate(template) as GameObject;
+        ItemsInfo info = shopItem.item.GetComponent<ItemsInfo>();
 
         newItem.GetComponent<ObjectReference>().referencedObj = shopItem.item;
-        newItem.name = shopItem.item.GetComponent<ItemsInfo>().itemID;
+        newItem.name = info.itemID;
         newItem.transform.Find("Product").gameObject.GetComponent<Image>().sprite = shopItem.item.GetComponent<Image>().sprite;
-        newItem.transform.Find("Title").gameObject.GetComponentInChildren<Text>().text = shopItem.item.GetComponent<ItemsInfo>().itemName;
-        newItem.transform.Find("Descript").gameObject.GetComponentInChildren<Text>().text = shopItem.item.GetComponent<ItemsInfo>().description;
+        newItem.transform.Find("Title").gameObject.GetComponentInChildren<Text>().text = info.itemName;
+        newItem.transform.Find("Descript").gameObject.GetComponentInChildren<Text>().text = info.description;
         newItem.transform.Find("Price").gameObject.GetComponentInChildren<Text>().text = shopItem.cost.ToString();
+        if(User.Instance.level >= info.levelRequirement)
+        {
+            newItem.transform.Find("LockBlock").gameObject.SetActive(true);
+        }
+        else
+        {
+            newItem.transform.Find("LockBlock").gameObject.SetActive(false);
+        }
         newItem.SetActive(true);
         newItem.transform.SetParent(template.transform.parent, false);
         shopItemUIList[typeIndex].Add(newItem);
