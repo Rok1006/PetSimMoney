@@ -10,7 +10,6 @@ public class ShopManager : MonoBehaviour
     public static ShopManager Instance;
     public GameObject valueHolder;
     public Animator valueAnim;
-    public GameObject LockBlock;
 
     [SerializeField]
     private GameObject shopDrinkTemplates, shopFoodTemplates, shopToyTemplates;
@@ -105,11 +104,11 @@ public class ShopManager : MonoBehaviour
         newItem.transform.Find("Price").gameObject.GetComponentInChildren<Text>().text = shopItem.cost.ToString();
         if(User.Instance.level >= info.levelRequirement)
         {
-            newItem.transform.Find("LockBlock").gameObject.SetActive(true);
+            newItem.transform.Find("LockBlock").gameObject.SetActive(false);
         }
         else
         {
-            newItem.transform.Find("LockBlock").gameObject.SetActive(false);
+            newItem.transform.Find("LockBlock").gameObject.SetActive(true);
         }
         newItem.SetActive(true);
         newItem.transform.SetParent(template.transform.parent, false);
