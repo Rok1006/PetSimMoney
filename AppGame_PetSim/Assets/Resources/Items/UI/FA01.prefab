@@ -182,11 +182,12 @@ MonoBehaviour:
   _itemName: Donut
   _generatedItem: {fileID: 3436734034381785010, guid: c37bff771597a4625b99af7b9a0802a8,
     type: 3}
-  _type: 0
+  _type: 1
   _rarity: 2
   _costMethod: 0
   _cost: 60
   _levelRequirement: 20
+  _description: 
   _hungerValue: 70
 --- !u!223 &4507188312726106586
 Canvas:
