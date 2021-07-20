@@ -132,6 +132,7 @@ public class Manager : MonoBehaviour
     public void ClickStore(){
         StoreMenu.SetActive(true);
         //MainScreenUI.SetActive(false);
+        ShopManager.Instance.ShopItemsGen();
         InventAnim.SetBool("hide", true);
         InventAnim.SetBool("out", false);
         openclose = 0;
