@@ -25198,6 +25198,7 @@ MonoBehaviour:
   canTouch: 0
   isPlayingToy: 0
   canEatDrink: 1
+  switchCooldown: 0
 --- !u!114 &798963682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43737,9 +43738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13c3e464a64b4ca5827acc8cf89ae5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  full: 00000000000000000000000000000000
-  productSize: {x: 0, y: 0, z: 0}
-  fullslot: 0
+  slotHolders:
+  - {fileID: 1047192717}
+  - {fileID: 2073946925}
 --- !u!114 &1797783010
 MonoBehaviour:
   m_ObjectHideFlags: 0
