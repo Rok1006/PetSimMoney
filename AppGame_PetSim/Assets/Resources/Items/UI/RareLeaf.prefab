@@ -183,7 +183,7 @@ MonoBehaviour:
   _generatedItem: {fileID: 7506501776709650742, guid: f34b93572b47d433a855aac1c10d9e10,
     type: 3}
   _type: 3
-  _rarity: 0
+  _rarity: 2
   _costMethod: 1
   _cost: 1
   _levelRequirement: 0

@@ -41,7 +41,7 @@ public class RewardManager : MonoBehaviour
         int count = 0;
         foreach(string name in data.name)
         {
-            GameObject reward = ItemManager.Instance.itemList.Find(x => x.name.Contains(name));
+            GameObject reward = ItemManager.Instance.itemList.Find(x => x.name.Equals(name));
             addReward(new Reward(reward, data.amount[count]));
             count++;
         }
@@ -104,7 +104,22 @@ public class RewardManager : MonoBehaviour
 
     public void giveReward()
     {
-
+        foreach(Reward reward in rewardList)
+        {
+            ItemsInfo info = reward.item.GetComponent<ItemsInfo>();
+            if(info.type != ItemType.Leaf)
+            {
+                Inventory.instance.AddToSlots(reward.item, reward.amount);
+            }
+            else if(info.itemID == "Leaf")
+            {
+                Status.Instance.LeafChange(CostMethod.GreenLeaf, reward.amount);
+            }
+            else if(info.itemID == "RareLeaf")
+            {
+                Status.Instance.LeafChange(CostMethod.GoldLeaf, reward.amount);
+            }
+        }
     }
 }
 
