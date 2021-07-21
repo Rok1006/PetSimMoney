@@ -17,29 +17,30 @@ public class StoreManager : MonoBehaviour
         bottom.GetComponent<Canvas>().sortingOrder = 1;
         others.GetComponent<Canvas>().sortingOrder = 0;
     }
+
+    void Update()
+    {
+        
+    }
     public void ClickTop(){
-        SoundManager.Instance.Flip();
         top.GetComponent<Canvas>().sortingOrder = 3;
         middle.GetComponent<Canvas>().sortingOrder = 2;
         bottom.GetComponent<Canvas>().sortingOrder = 1;
         others.GetComponent<Canvas>().sortingOrder = 0;
     }
     public void ClickMiddle(){
-        SoundManager.Instance.Flip();
         top.GetComponent<Canvas>().sortingOrder = 1;
         middle.GetComponent<Canvas>().sortingOrder = 3;
         bottom.GetComponent<Canvas>().sortingOrder = 2;
         others.GetComponent<Canvas>().sortingOrder = 0;
     }
     public void ClickBottom(){
-        SoundManager.Instance.Flip();
         top.GetComponent<Canvas>().sortingOrder = 1;
         middle.GetComponent<Canvas>().sortingOrder = 2;
         bottom.GetComponent<Canvas>().sortingOrder = 3;
         others.GetComponent<Canvas>().sortingOrder = 0;
     } 
     public void ClickAdsPage(){
-        SoundManager.Instance.Flip();
         top.GetComponent<Canvas>().sortingOrder = 2;
         middle.GetComponent<Canvas>().sortingOrder = 1;
         bottom.GetComponent<Canvas>().sortingOrder = 0;
