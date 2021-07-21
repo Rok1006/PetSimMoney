@@ -202,6 +202,31 @@ public class Manager : MonoBehaviour
      public void ClickCloseGift(){
         GiftPannel.SetActive(false);
     }
+    public void ClickAds(){
+        //play ads
+    }
+    //Settings
+    public void OnClickMusicToggle(bool isOn){
+        if(isOn){
+            Debug.Log("Music On");
+        }else{
+            Debug.Log("Music Off");
+        }
+    }
+      public void OnClickSoundToggle(bool isOn){
+        if(isOn){
+            Debug.Log("Music On");
+        }else{
+            Debug.Log("Music Off");
+        }
+    }
+      public void OnClickNoticeToggle(bool isOn){
+        if(isOn){
+            Debug.Log("Music On");
+        }else{
+            Debug.Log("Music Off");
+        }
+    }
       void DetermineOnOff(){   //this is the function for the APP ui Pannel
        if(openclose==1){
             Inventory.SetActive(true);
