@@ -335,6 +335,7 @@ public class CatAI : MonoBehaviour
     {
         beingTouch = false; 
         canTouch = false;
+        //SoundManager.Instance.purr.Stop();
     }
     void OnTriggerEnter2D(Collider2D col) 
     {
