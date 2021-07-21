@@ -187,6 +187,7 @@ MonoBehaviour:
   _costMethod: 0
   _cost: 30
   _levelRequirement: 3
+  _description: + 25 happiness per play
   _happinessValue: 25
 --- !u!223 &5247178773580950767
 Canvas:

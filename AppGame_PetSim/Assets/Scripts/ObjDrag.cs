@@ -85,6 +85,7 @@ void OnCollisionEnter2D(Collision2D col) {
     if(this.gameObject.tag == "Toy"){  
         if (col.gameObject.CompareTag("ItemFloor"))
         {
+            SoundManager.Instance.ToyFall();
              if(getAdd){ //boolean: ADD TO LIST ONLY ONCE
                      GameObject t = this.gameObject; //add it into list 
                     CatAI.Instance.toy.Add(t);
@@ -94,6 +95,18 @@ void OnCollisionEnter2D(Collision2D col) {
                 DetectToy();
            }
             
+        }
+    }
+    if(this.gameObject.tag == "Drink"){  
+        if (col.gameObject.CompareTag("ItemFloor"))
+        {
+            SoundManager.Instance.DrinkFall();
+        }
+    }
+      if(this.gameObject.tag == "Food"){  
+        if (col.gameObject.CompareTag("ItemFloor"))
+        {
+            SoundManager.Instance.FoodFall();
         }
     }
 }
