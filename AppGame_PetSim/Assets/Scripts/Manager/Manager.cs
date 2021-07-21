@@ -188,11 +188,15 @@ public class Manager : MonoBehaviour
      public void ClickLeft(){
          if(CostumePageCount>0){
            CostumePageCount-=1;   
+         }else{
+            CostumePageCount=2;//Last
          }
     }
      public void ClickRight(){
         if(CostumePageCount<2){
            CostumePageCount+=1;   
+        }else{
+            CostumePageCount=0;//First
         }
     }
     //others
