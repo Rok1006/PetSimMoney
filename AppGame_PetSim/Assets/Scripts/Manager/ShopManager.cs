@@ -99,16 +99,18 @@ public class ShopManager : MonoBehaviour
         newItem.GetComponent<ObjectReference>().referencedObj = shopItem.item;
         newItem.name = info.itemID;
         newItem.transform.Find("Product").gameObject.GetComponent<Image>().sprite = shopItem.item.GetComponent<Image>().sprite;
-        newItem.transform.Find("Title").gameObject.GetComponentInChildren<Text>().text = info.itemName;
-        newItem.transform.Find("Descript").gameObject.GetComponentInChildren<Text>().text = info.description;
+        newItem.transform.Find("Title").gameObject.GetComponent<Text>().text = info.itemName;
+        newItem.transform.Find("Descript").gameObject.GetComponent<Text>().text = info.description;
         newItem.transform.Find("Price").gameObject.GetComponentInChildren<Text>().text = shopItem.cost.ToString();
+        GameObject lockBlock = newItem.transform.Find("LockBlock").gameObject;
+        lockBlock.transform.Find("Lv").gameObject.GetComponent<Text>().text = "LV" + info.levelRequirement.ToString();
         if(User.Instance.level >= info.levelRequirement)
         {
-            newItem.transform.Find("LockBlock").gameObject.SetActive(false);
+            lockBlock.SetActive(false);
         }
         else
         {
-            newItem.transform.Find("LockBlock").gameObject.SetActive(true);
+            lockBlock.SetActive(true);
         }
         newItem.SetActive(true);
         newItem.transform.SetParent(template.transform.parent, false);
@@ -126,6 +128,7 @@ public class ShopManager : MonoBehaviour
         {
             //TODO
             ////////ADD ITEM TO INVENTORY
+            Inventory.instance.AddToSlots(item, 1); //Current amount of all item is 1
             Manager.Instance.boughtItems += 1;
 
             selectedButton.GetComponent<Animator>().SetTrigger("buy");

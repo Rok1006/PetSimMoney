@@ -39,6 +39,7 @@ public class CatAI : MonoBehaviour
     public bool canTouch; //if cat is sleeping it cant be touch; default turn true
     public bool isPlayingToy = false;
     public bool canEatDrink = true;
+    public bool switchCooldown = false;
    void Awake() {
        Instance = this;
    }
@@ -261,9 +262,14 @@ public class CatAI : MonoBehaviour
     }
     IEnumerator SwitchShortAct()
     { //for shorter animation
-        yield return new WaitForSeconds(2f);//wait for 5 sec to do the next
-        NormalState();//after wait for 5 sec do random generate, detect value to change to different state
-        CheckToyList();
+        if(!switchCooldown)
+        {
+            switchCooldown = true;
+            yield return new WaitForSeconds(2f);//wait for 5 sec to do the next
+            switchCooldown = false;
+            NormalState();//after wait for 5 sec do random generate, detect value to change to different state
+            CheckToyList();
+        }
     }
     IEnumerator Walk()
     { //walking

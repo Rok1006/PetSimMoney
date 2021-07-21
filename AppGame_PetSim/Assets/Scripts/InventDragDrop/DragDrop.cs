@@ -137,7 +137,7 @@ public class DragDrop : MonoBehaviour, IInitializePotentialDragHandler, IPointer
                 GameObject i = Instantiate(sc.generatedItem, mousePos, Quaternion.identity);
                 i.transform.position = new Vector3(i.transform.position.x, i.transform.position.y, 0);
                 Destroy(this.gameObject); //destroy this ui
-                Inventory.instance.fullslot -= 1;
+                //Inventory.instance.fullslot -= 1;
                 generate = false;
             }
             
