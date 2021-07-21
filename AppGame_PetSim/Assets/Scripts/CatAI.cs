@@ -8,7 +8,7 @@ using UnityEngine;
      // void FulfillingState(){ //when ?? value lower to certain amount, do this state, what lower do what first, wait! it doent need to audto do it 
     // //include animation that appears when it is happy and fulfufilled
     // }
-public enum Action {Idle, Walking, SitSleeping, SitAwake, Meowing, Dashing, Playing, Smile, Touch}
+public enum Action {Idle, Walking, SitSleeping, SitAwake, Meowing, Dashing, Playing, Smile, Touch, Angry}
 
 public class CatAI : MonoBehaviour
 {
@@ -39,6 +39,7 @@ public class CatAI : MonoBehaviour
     public bool canTouch; //if cat is sleeping it cant be touch; default turn true
     public bool isPlayingToy = false;
     public bool canEatDrink = true;
+    public bool switchCooldown = false;
    void Awake() {
        Instance = this;
    }
@@ -112,10 +113,10 @@ public class CatAI : MonoBehaviour
                     } 
                 } break;
             case Action.Smile:
-            //stop
             break;
             case Action.Touch:
-            //stop
+            break;
+            case Action.Angry:
             break;
            }
     }
@@ -220,6 +221,10 @@ public class CatAI : MonoBehaviour
         StartCoroutine("SwitchShortAct");
         action = Action.Touch;
     }
+    private void Angry(){ //be angry when stats all lower than certain: use if but nt else, put action = Action.Angry
+        catanim.SetTrigger("angry");
+        action = Action.Angry;
+    }
     void RanPos()
     {  	//the range where the cat will walk around at
         x =  Random.Range(-1.41f, 16.91f);   //-2,29
@@ -261,9 +266,14 @@ public class CatAI : MonoBehaviour
     }
     IEnumerator SwitchShortAct()
     { //for shorter animation
-        yield return new WaitForSeconds(2f);//wait for 5 sec to do the next
-        NormalState();//after wait for 5 sec do random generate, detect value to change to different state
-        CheckToyList();
+        if(!switchCooldown)
+        {
+            switchCooldown = true;
+            yield return new WaitForSeconds(2f);//wait for 5 sec to do the next
+            switchCooldown = false;
+            NormalState();//after wait for 5 sec do random generate, detect value to change to different state
+            CheckToyList();
+        }
     }
     IEnumerator Walk()
     { //walking
@@ -329,7 +339,6 @@ public class CatAI : MonoBehaviour
     {
         beingTouch = false; 
         canTouch = false;
-        //SoundManager.Instance.purr.Stop();
     }
     void OnTriggerEnter2D(Collider2D col) 
     {
