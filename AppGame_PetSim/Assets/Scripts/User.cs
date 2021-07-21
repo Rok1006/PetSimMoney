@@ -18,6 +18,7 @@ public class User : MonoBehaviour
     //private float fpRate; //rate for friendship value increase
     public int level = 0; //level of the user; increase everytime friendship value reaches the max, link to text
                       //Friendship level
+    public static int maxLevel = 40;
     void Awake() 
     {
         Instance = this;
@@ -40,21 +41,29 @@ public class User : MonoBehaviour
     }
     public void ExpUP(int value)
     {
-        //increase Exp value, put this at diff places
-        fpValue += value;
-
-        while(fpValue >= maxfpValue)
+        if(level < maxLevel)
         {
-            Debug.Log("Level: " + level + " max: " + maxfpValue);
-            LevelUp();
+            //increase Exp value, put this at diff places
+            fpValue += value;
+
+            while(fpValue >= maxfpValue && level != maxLevel)
+            {
+                Debug.Log("Level: " + level + " max: " + maxfpValue);
+                LevelUp();
+            }
         }
     }
     public void LevelUp()
-    { //level up
+    {   //level up
         fpValue -= maxfpValue;
         level++; //increase one level
         maxfpValue = 10 * (int)Mathf.Round(Mathf.Pow(level + 1, 2.0f));
         maxfpValue -= maxfpValue % 10;
+
+        if(level >= maxLevel)
+        {
+            fpValue = 0;
+        }
 
         if(levelUpPanel.activeSelf)
         {
