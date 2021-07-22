@@ -330,12 +330,10 @@ public class CatAI : MonoBehaviour
     }
     void OnMouseDown()
     {
-        ItemsDrop.Instance.TouchGenerator();
-        beingTouch = true;
-        Touch();
-        Effects.Instance.HappyEmittion();
-        Status.Instance.StatsChange(StatsType.Happiness, Status.Instance.happyMax / 100);
-            
+            beingTouch = true;
+            Touch();
+            Effects.Instance.HappyEmittion();
+            Status.Instance.StatsChange(StatsType.Happiness, Status.Instance.happyMax / 100);
     }
     void OnMouseUp()
     {

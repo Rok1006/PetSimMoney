@@ -53,6 +53,6 @@ public class Effects : MonoBehaviour
     }
     public void HappyEmittion(){
         happyheart.transform.position = HeartEmit.transform.position;
-        happyheart.Emit(1);
+        happyheart.Emit(5);
     }
 }

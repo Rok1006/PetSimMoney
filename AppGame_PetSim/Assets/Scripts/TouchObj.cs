@@ -17,11 +17,12 @@ public class TouchObj : MonoBehaviour
     //Debug.Log("yup");
         if(this.transform.gameObject.tag == "Normal"){
             Debug.Log("normal"); 
+            //add some animation
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
             Status.Instance.LeafChange(CostMethod.GreenLeaf, 1);
             Destroy(this.gameObject); //later: Destroy(this.gameObject, 1f)
             Destroy(c, 1f);
-            SoundManager.Instance.Bling();
+            //add sound
         }
          if(this.transform.gameObject.tag == "Rare"){
             Debug.Log("rare");
@@ -29,14 +30,14 @@ public class TouchObj : MonoBehaviour
             Status.Instance.LeafChange(CostMethod.GoldLeaf, 1);
             Destroy(this.gameObject);
             Destroy(c, 1f);
-            SoundManager.Instance.Bling();
+            //add sound
         }
          if(this.transform.gameObject.tag == "Trash"){
             Debug.Log("trash"); 
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
             Destroy(c, 1f);
-           SoundManager.Instance.Trash();
+            //add sound
         }
     }
     
