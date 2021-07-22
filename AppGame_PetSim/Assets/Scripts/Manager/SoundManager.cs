@@ -19,6 +19,13 @@ public class SoundManager : MonoBehaviour
     public GameObject EffectSound;
     private AudioSource click;
     private AudioSource flip;
+    private AudioSource bling;
+    private AudioSource trash;
+    public GameObject GachaSound;
+    private AudioSource pull;
+    private AudioSource draw;
+    private AudioSource ball;
+    private AudioSource flyby;
 
     void Awake() {
         Instance = this;
@@ -41,6 +48,14 @@ public class SoundManager : MonoBehaviour
         AudioSource[] effectAudios = EffectSound.GetComponents<AudioSource>();
         click = effectAudios[0];
         flip = effectAudios[1];
+        bling = effectAudios[2];
+        trash = effectAudios[3];
+        //Gacha sound
+        AudioSource[] gachaAudios = GachaSound.GetComponents<AudioSource>();
+        pull = gachaAudios[0];
+        draw = gachaAudios[1];
+        ball = gachaAudios[2];
+        flyby = gachaAudios[3];
     }
     //cat sound
     public void footstep(){
@@ -76,6 +91,25 @@ public class SoundManager : MonoBehaviour
     }
     public void Flip(){
         flip.Play();
+    }
+    public void Bling(){
+        bling.Play();
+    }
+    public void Trash(){
+        trash.Play();
+    }
+    //gacha sound
+    public void PressDraw(){
+        pull.Play();
+    }
+    public void drawingsound(){
+        draw.Play();
+    }
+    public void ballLand(){
+        ball.Play();
+    }
+    public void Flyby(){
+        flyby.Play();
     }
 
 }
