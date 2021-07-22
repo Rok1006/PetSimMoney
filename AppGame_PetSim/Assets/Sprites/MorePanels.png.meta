@@ -44,6 +44,21 @@ TextureImporter:
   - first:
       213: 7029476688455885436
     second: MorePanels_13
+  - first:
+      213: -8767774263132976109
+    second: MorePanels_14
+  - first:
+      213: 5450896142267393978
+    second: MorePanels_15
+  - first:
+      213: 9030721400797833074
+    second: MorePanels_16
+  - first:
+      213: 6011850172363004264
+    second: MorePanels_17
+  - first:
+      213: 2522320050027176186
+    second: MorePanels_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -454,6 +469,111 @@ TextureImporter:
       bones: []
       spriteID: c726d4cedc7bd8160800000000000000
       internalID: 7029476688455885436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_14
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 924
+        width: 138
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c8527e2cb925680800000000000000
+      internalID: -8767774263132976109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_15
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 203
+        width: 137
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7256b492975ab40800000000000000
+      internalID: 5450896142267393978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_16
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 194
+        width: 162
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277a2186441935d70800000000000000
+      internalID: 9030721400797833074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_17
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 82
+        width: 74
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869519e21e16e6350800000000000000
+      internalID: 6011850172363004264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_18
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 877
+        width: 438
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af027bfb8b4110320800000000000000
+      internalID: 2522320050027176186
       vertices: []
       indices: 
       edges: []
