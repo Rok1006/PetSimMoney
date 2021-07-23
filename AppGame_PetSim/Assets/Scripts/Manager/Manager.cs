@@ -207,12 +207,16 @@ public class Manager : MonoBehaviour
          SoundManager.Instance.Click();
          if(CostumePageCount>0){
            CostumePageCount-=1;   
+         }else{
+            CostumePageCount=2;//Last
          }
     }
      public void ClickRight(){
          SoundManager.Instance.Click();
         if(CostumePageCount<2){
            CostumePageCount+=1;   
+        }else{
+            CostumePageCount=0;//First
         }
     }
     //others

@@ -7,8 +7,6 @@ using Newtonsoft.Json;
 
 public class SaveLoadManager : MonoBehaviour
 {
-    private const string dataFile = "data.dat";
-    private string dataFilePath;
     public static Data data = new Data();
 
     // Start is called before the first frame update
@@ -22,25 +20,25 @@ public class SaveLoadManager : MonoBehaviour
 
     private void readData()
     {
-        dataFilePath = Path.Combine(Application.persistentDataPath, dataFile);
-        string serializedData = File.ReadAllText(dataFilePath);
+        TextAsset file = Resources.Load<TextAsset>("Data/data");
+        string serializedData = file.text;
         data = JsonConvert.DeserializeObject<Data>(serializedData);
-        foreach(LevelRewardData reward in data.levelRewardData)
-        {
-            //Debug.Log("Level: " + reward.level);
-            string ids = "";
-            foreach(string id in reward.name)
-            {
-                ids = ids + " " + id;
-            }
-            //Debug.Log("rewardIDs: " + ids);
-            string amounts = "";
-            foreach(int n in reward.amount)
-            {
-                amounts = amounts + " " + n.ToString();
-            }
-            //Debug.Log("Amounts: " + amounts);
-        }
+        // foreach(LevelRewardData reward in data.levelRewardData)
+        // {
+        //     Debug.Log("Level: " + reward.level);
+        //     string ids = "";
+        //     foreach(string id in reward.name)
+        //     {
+        //         ids = ids + " " + id;
+        //     }
+        //     Debug.Log("rewardIDs: " + ids);
+        //     string amounts = "";
+        //     foreach(int n in reward.amount)
+        //     {
+        //         amounts = amounts + " " + n.ToString();
+        //     }
+        //     Debug.Log("Amounts: " + amounts);
+        // }
     }
 
     /*
