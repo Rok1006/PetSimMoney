@@ -185,11 +185,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35343e5a71a484c1f9d09dda1e442062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: GbA01
-  itemName: Galaxy Devil Wing
-  GeneratedItem: {fileID: 443005508378920116, guid: 36eb6a86bb4434d4f9b6154ff32e4e79,
+  itemID: GnA01
+  itemName: Crystal Ribbon
+  GeneratedItem: {fileID: 1757202111169573741, guid: 08f7d156f31b142c794e42fce7cb5991,
     type: 3}
-  type: 2
+  type: 1
   rarity: 2
   HeadPosition: {fileID: 0}
   NeckPosition: {fileID: 0}

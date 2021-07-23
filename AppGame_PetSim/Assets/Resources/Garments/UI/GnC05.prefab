@@ -185,12 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35343e5a71a484c1f9d09dda1e442062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: GbA01
-  itemName: Galaxy Devil Wing
-  GeneratedItem: {fileID: 443005508378920116, guid: 36eb6a86bb4434d4f9b6154ff32e4e79,
+  itemID: GnC05
+  itemName: Red Scarf
+  GeneratedItem: {fileID: 6137221264074030646, guid: ba20dd62f016c46d59092bc8274fe6d3,
     type: 3}
-  type: 2
-  rarity: 2
+  type: 1
+  rarity: 0
   HeadPosition: {fileID: 0}
   NeckPosition: {fileID: 0}
   BackPosition: {fileID: 0}
