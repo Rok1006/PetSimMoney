@@ -35,3 +35,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+AppGame_PetSim/Assets/.DS_Store
