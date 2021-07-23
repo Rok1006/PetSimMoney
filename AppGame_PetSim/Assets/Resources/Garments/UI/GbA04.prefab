@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35343e5a71a484c1f9d09dda1e442062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: GbA01
-  itemName: Galaxy Devil Wing
-  GeneratedItem: {fileID: 443005508378920116, guid: 36eb6a86bb4434d4f9b6154ff32e4e79,
+  itemID: GbA04
+  itemName: King's Cape
+  GeneratedItem: {fileID: 7635609547964965841, guid: b15d2ee95c2d942edb14d60cac7556cb,
     type: 3}
   type: 2
   rarity: 2

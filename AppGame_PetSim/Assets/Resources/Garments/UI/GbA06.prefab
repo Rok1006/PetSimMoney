@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35343e5a71a484c1f9d09dda1e442062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: GbA01
-  itemName: Galaxy Devil Wing
-  GeneratedItem: {fileID: 443005508378920116, guid: 36eb6a86bb4434d4f9b6154ff32e4e79,
+  itemID: GbA06
+  itemName: Crystal Dress
+  GeneratedItem: {fileID: 2946712396505596603, guid: acb510062f74747b98f6321eb0d02e6a,
     type: 3}
   type: 2
   rarity: 2

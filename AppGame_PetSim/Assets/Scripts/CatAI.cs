@@ -8,7 +8,7 @@ using UnityEngine;
      // void FulfillingState(){ //when ?? value lower to certain amount, do this state, what lower do what first, wait! it doent need to audto do it 
     // //include animation that appears when it is happy and fulfufilled
     // }
-public enum Action {Idle, Walking, SitSleeping, SitAwake, Meowing, Dashing, Playing, Smile, Touch}
+public enum Action {Idle, Walking, SitSleeping, SitAwake, Meowing, Dashing, Playing, Smile, Touch, Angry}
 
 public class CatAI : MonoBehaviour
 {
@@ -63,6 +63,7 @@ public class CatAI : MonoBehaviour
     }
     void Update()
     {
+        CheckLowStats();
         if (transform.position.x > oldPosition) // direction:looking right
         { transform.localScale = new Vector3(-x1,y1,z1); }
         if (transform.position.x < oldPosition) // direction:he's looking left
@@ -113,12 +114,17 @@ public class CatAI : MonoBehaviour
                     } 
                 } break;
             case Action.Smile:
-            //stop
             break;
             case Action.Touch:
-            //stop
+            break;
+            case Action.Angry:
             break;
            }
+    }
+    void CheckLowStats(){ //if hunger and dryness low to certain rate, be angry:have to feed 
+        if(Status.Instance.hungerV/Status.Instance.hungerMax<.2f||Status.Instance.hydrationV/Status.Instance.hydrationMax<.2f){ 
+         Angry();
+        }
     }
     public void Idle()
     {
@@ -220,6 +226,10 @@ public class CatAI : MonoBehaviour
         catanim.SetTrigger("touch");
         StartCoroutine("SwitchShortAct");
         action = Action.Touch;
+    }
+    private void Angry(){ //be angry when stats all lower than certain: use if but nt else, put action = Action.Angry
+        catanim.SetTrigger("angry");
+        action = Action.Angry;
     }
     void RanPos()
     {  	//the range where the cat will walk around at
@@ -326,16 +336,17 @@ public class CatAI : MonoBehaviour
     }
     void OnMouseDown()
     {
-            beingTouch = true;
-            Touch();
-            Effects.Instance.HappyEmittion();
-            Status.Instance.StatsChange(StatsType.Happiness, Status.Instance.happyMax / 100);
+        ItemsDrop.Instance.TouchGenerator();
+        beingTouch = true;
+        Touch();
+        Effects.Instance.HappyEmittion();
+        Status.Instance.StatsChange(StatsType.Happiness, Status.Instance.happyMax / 100);
+            
     }
     void OnMouseUp()
     {
         beingTouch = false; 
         canTouch = false;
-        //SoundManager.Instance.purr.Stop();
     }
     void OnTriggerEnter2D(Collider2D col) 
     {

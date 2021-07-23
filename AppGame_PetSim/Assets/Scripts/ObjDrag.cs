@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjDrag : MonoBehaviour
 {
+public GameObject emitSpot;
 public ItemsInfo info;
 private bool selected;
 public float dist;
@@ -16,6 +17,7 @@ private bool getAdd = true;
 void Start() {
     dist = transform.position.z - Camera.main.transform.position.z;
     rb = GetComponent<Rigidbody2D>();
+    emitSpot = GameObject.Find("HeartEmit");
 }
  //dragdrop
 void Update(){
@@ -61,14 +63,14 @@ public void DestroyToy(){
 public void DestroyFoodDrink(){
     if(this.gameObject.tag == "Food"){
         info.Use();
-        GameObject c = Instantiate(hungerEx, this.transform.position, Quaternion.identity);
+        GameObject c = Instantiate(hungerEx, emitSpot.transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         Destroy(c, 5f);
         //trigger animation: action = ?
      }
     if(this.gameObject.tag == "Drink"){
         info.Use();
-        GameObject c = Instantiate(hydraEx, this.transform.position, Quaternion.identity);
+        GameObject c = Instantiate(hydraEx, emitSpot.transform.position, Quaternion.identity);
         Destroy(this.gameObject); 
         Destroy(c, 5f);
         //trigger animation: action = ?

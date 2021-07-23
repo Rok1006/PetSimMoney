@@ -185,9 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35343e5a71a484c1f9d09dda1e442062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: 
-  itemName: 
-  GeneratedItem: {fileID: 0}
+  itemID: GhC01
+  itemName: Straw Hat
+  GeneratedItem: {fileID: 7434067287384847299, guid: 1714c96ddcc104802ad0069a46981946,
+    type: 3}
   type: 0
   rarity: 0
-  PlacementPosition: {fileID: 0}
+  HeadPosition: {fileID: 0}
+  NeckPosition: {fileID: 0}
+  BackPosition: {fileID: 0}

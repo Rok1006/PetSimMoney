@@ -185,12 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35343e5a71a484c1f9d09dda1e442062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: GbA01
-  itemName: Galaxy Devil Wing
-  GeneratedItem: {fileID: 443005508378920116, guid: 36eb6a86bb4434d4f9b6154ff32e4e79,
+  itemID: GbB03
+  itemName: SnowWhite Dress
+  GeneratedItem: {fileID: 5439174531175221874, guid: 227036ce3a743439091dc9808d468607,
     type: 3}
   type: 2
-  rarity: 2
+  rarity: 1
   HeadPosition: {fileID: 0}
   NeckPosition: {fileID: 0}
   BackPosition: {fileID: 0}

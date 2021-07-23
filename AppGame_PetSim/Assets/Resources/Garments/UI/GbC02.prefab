@@ -185,9 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35343e5a71a484c1f9d09dda1e442062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemID: 
-  itemName: 
-  GeneratedItem: {fileID: 0}
-  type: 0
+  itemID: GbC02
+  itemName: Angel Wing
+  GeneratedItem: {fileID: 2410617236104671204, guid: 796c152a33e4940b68917bd860fe0a87,
+    type: 3}
+  type: 2
   rarity: 0
-  PlacementPosition: {fileID: 0}
+  HeadPosition: {fileID: 0}
+  NeckPosition: {fileID: 0}
+  BackPosition: {fileID: 0}
