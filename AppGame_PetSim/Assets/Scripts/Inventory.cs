@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System;
 
 public class Inventory : MonoBehaviour
@@ -16,6 +17,8 @@ public class Inventory : MonoBehaviour
     public List<ItemsCollect> collection = new List<ItemsCollect>();
     //public int fullslot;
     private int slotCapacity = 99;
+    public int currentPage = 0;
+    private GameObject itemSelected;
     void Awake()
     {
         instance = this;
@@ -88,17 +91,23 @@ public class Inventory : MonoBehaviour
             }
             else //Different item
             {
-                //TODO
-                
+                Debug.LogError("Trying to cover a different item");                
             }
         }
         else //Add to empty slot
         {
+            if(amount > slotCapacity) //amount exceed
+            {
+                int newAmount = amount - slotCapacity;
+                amount = slotCapacity;
+                AddToSlots(itemCollected, newAmount);
+            }
             GameObject item = Instantiate(itemCollected, inventorySlot[page, slot].transform.position, Quaternion.identity)as GameObject; //instanciate items in slot pos
             collection.Add(new ItemsCollect(item, amount, page, slot));
             item.transform.Find("Text").gameObject.GetComponent<Text>().text = "X " + amount.ToString();
             //item.transform.SetParent(inventorySlot[page, slot].transform, false); //must need, make it as a child
-            inventorySlot[page, slot].GetComponent<EquipmentSlot>().Initialize(item.GetComponent<DragDrop>());
+            item.transform.position = inventorySlot[page, slot].transform.position;
+            item.transform.parent = inventorySlot[page, slot].transform;  //set objects to become child of slots
             item.transform.localScale = productSize;  //new Vector3(.4f, .5f, .5f);
         }
     }
@@ -146,6 +155,80 @@ public class Inventory : MonoBehaviour
             } 
         }
         return countOccupied;
+    }
+
+    public void OnChangePage()
+    {
+        if(currentPage == 0)
+        {
+            currentPage = 1;
+            slotHolders[0].SetActive(false);
+            slotHolders[1].SetActive(true);
+        }
+        else
+        {
+            currentPage = 0;
+            slotHolders[1].SetActive(false);
+            slotHolders[0].SetActive(true); 
+        }
+        
+    }
+
+    public void OnItemClick()
+    {
+        itemSelected = EventSystem.current.currentSelectedGameObject;
+        
+    }
+
+    public void OnItemUseClick()
+    {
+        if(itemSelected != null)
+        {
+
+        }
+        // GameObject item = EventSystem.current.currentSelectedGameObject;
+        // ItemsInfo info = item.GetComponent<ItemsInfo>();
+        // GameObject itemGen = Instantiate(info.generatedItem, mousePos, Quaternion.identity);
+        // i.transform.position = new Vector3(i.transform.position.x, i.transform.position.y, 0);
+        // if(item.amount <= 0)
+        // {
+        //     Destroy(this.gameObject); //destroy this ui
+        // }
+        // //Inventory.instance.fullslot -= 1;
+    }
+
+    public void OnArrangeClick()
+    {
+        List<Reward> temp = new List<Reward>();
+        foreach(ItemsCollect collect in collection)
+        {
+            Reward tempEqual =  temp.Find(x => x.item.name.Equals(collect.item.name));
+            if(tempEqual != null)
+            {
+                tempEqual.amount += collect.amount;
+            }
+            else
+            {
+                temp.Add(new Reward(collect.item, collect.amount));
+            }
+        }
+        CleanInventory();
+        Sorting.QuickSortReward(temp, 0, temp.Count - 1);
+        foreach(Reward item in temp)
+        {
+            AddToSlots(item.item, item.amount);
+        }
+    }
+
+    public void CleanInventory() //Warning: It will clean all data from inventory
+    {
+        for(int page = 0; page < pageNum; page++)
+        {
+            for(int slot = 0; slot < slotNum; slot++)
+            {
+                RemoveFromSlot(page, slot);
+            }
+        }
     }
 }
 

@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class EquipmentSlot : MonoBehaviour
 {
- 	protected DropArea DropArea;
+ protected DropArea DropArea;
 	protected DragDrop CurrentItem = null;
 
 	private DisableDropCondition disableDropCondition;
