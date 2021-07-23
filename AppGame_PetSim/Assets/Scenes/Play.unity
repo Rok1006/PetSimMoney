@@ -24131,7 +24131,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 680255361}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 957121808}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &683255076
 GameObject:
   m_ObjectHideFlags: 0
@@ -29443,6 +29454,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1797783009}
         m_MethodName: OnItemUseClick
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 957121808}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -35959,7 +35981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &957121809
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41692,8 +41714,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 798963679}
+  m_Follow: {fileID: 798963679}
   m_Lens:
     FieldOfView: 61
     OrthographicSize: 10
@@ -50966,7 +50988,9 @@ MonoBehaviour:
   - {fileID: 1047192717}
   - {fileID: 2073946925}
   currentPage: 0
+  itemSelected: {fileID: 0}
   PopUpItem: {fileID: 957121808}
+  ItemGenPos: {fileID: 744430432}
 --- !u!114 &1797783010
 MonoBehaviour:
   m_ObjectHideFlags: 0
