@@ -20,6 +20,7 @@ public class Inventory : MonoBehaviour
     public int currentPage = 0;
     public GameObject itemSelected;
     public GameObject PopUpItem;
+    public Transform ItemGenPos;
     void Awake()
     {
         instance = this;
@@ -180,17 +181,21 @@ public class Inventory : MonoBehaviour
     {
         if(itemSelected != null)
         {
-
+            ItemsInfo info = itemSelected.GetComponent<ItemsInfo>();
+            GameObject itemGen = Instantiate(info.generatedItem, ItemGenPos.position, Quaternion.identity);
+            itemGen.transform.position = new Vector3(itemGen.transform.position.x, itemGen.transform.position.y, 0);
+            ItemsCollect collect = collection.Find(x => x.item == itemSelected);
+            if(collect.amount <= 1)
+            {
+                RemoveFromSlot(collect.slotPlaced[0], collect.slotPlaced[1]); //destroy this ui
+            }
+            else
+            {
+                collect.amount -= 1;
+                itemSelected.transform.Find("Text").gameObject.GetComponent<Text>().text = "X " + collect.amount;
+            }
         }
-        // GameObject item = EventSystem.current.currentSelectedGameObject;
-        // ItemsInfo info = item.GetComponent<ItemsInfo>();
-        // GameObject itemGen = Instantiate(info.generatedItem, mousePos, Quaternion.identity);
-        // i.transform.position = new Vector3(i.transform.position.x, i.transform.position.y, 0);
-        // if(item.amount <= 0)
-        // {
-        //     Destroy(this.gameObject); //destroy this ui
-        // }
-        // //Inventory.instance.fullslot -= 1;
+        //Inventory.instance.fullslot -= 1;
     }
 
     public void OnArrangeClick()
