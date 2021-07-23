@@ -18,7 +18,8 @@ public class Inventory : MonoBehaviour
     //public int fullslot;
     private int slotCapacity = 99;
     public int currentPage = 0;
-    private GameObject itemSelected;
+    public GameObject itemSelected;
+    public GameObject PopUpItem;
     void Awake()
     {
         instance = this;
@@ -173,12 +174,6 @@ public class Inventory : MonoBehaviour
             slotHolders[0].SetActive(true); 
         }
         
-    }
-
-    public void OnItemClick()
-    {
-        itemSelected = EventSystem.current.currentSelectedGameObject;
-
     }
 
     public void OnItemUseClick()
