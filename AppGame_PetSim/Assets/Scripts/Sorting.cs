@@ -104,7 +104,7 @@ public static class Sorting
             ItemsInfo itemsInfo = itemList[j].item.GetComponent<ItemsInfo>();
             int itemID = 0;
             Int32.TryParse(itemsInfo.itemID.Substring(2,2), out itemID);
-            if (itemsInfo.type > pivotType)
+            if (itemsInfo.type < pivotType)
             {
                 leftIndex++;
 
@@ -114,7 +114,7 @@ public static class Sorting
             }
             else if(itemsInfo.type == pivotType)
             {
-                if (itemsInfo.rarity > pivotRarity)
+                if (itemsInfo.rarity < pivotRarity)
                 {
                         leftIndex++;
 
@@ -124,7 +124,7 @@ public static class Sorting
                 }
                 else if(itemsInfo.rarity == pivotRarity)
                 {
-                    if(itemID > pivotId)
+                    if(itemID < pivotId)
                     {
                         leftIndex++;
 
@@ -132,13 +132,16 @@ public static class Sorting
                         itemList[leftIndex] = itemList[j];
                         itemList[j] = temp;
                     }
-                    else if(itemList[j].amount < itemList[right].amount)
+                    else if(itemsInfo.rarity == pivotRarity)
                     {
-                        leftIndex++;
+                        if(itemList[j].amount > itemList[right].amount)
+                        {
+                            leftIndex++;
 
-                        Reward temp = itemList[leftIndex];
-                        itemList[leftIndex] = itemList[j];
-                        itemList[j] = temp;
+                            Reward temp = itemList[leftIndex];
+                            itemList[leftIndex] = itemList[j];
+                            itemList[j] = temp;
+                        }
                     }
                 }
             }

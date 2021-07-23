@@ -51,7 +51,7 @@ public class Inventory : MonoBehaviour
             if(item.item.GetComponent<ItemsInfo>().itemID == itemCollected.GetComponent<ItemsInfo>().itemID &&
                item.amount < slotCapacity) //Add to same item if the slot is not full, exceed amount does not matter
             {
-                Debug.Log("A " + item.slotPlaced[0].ToString() + " " + item.slotPlaced[1].ToString());
+                //Debug.Log("A " + item.slotPlaced[0].ToString() + " " + item.slotPlaced[1].ToString());
                 AddToSlots(itemCollected, amount, item.slotPlaced[0], item.slotPlaced[1]);
                 return;
             }
@@ -61,9 +61,10 @@ public class Inventory : MonoBehaviour
         {
             for(int slot = 0; slot < inventorySlot.GetLength(1); slot++)
             {
+                //Debug.Log("page: " + page.ToString() + ", slot: " + slot.ToString() + ", Child: " + inventorySlot[page, slot].transform.childCount.ToString());
                 if(SlotIsEmpty(page, slot))
                 {
-                    Debug.Log("B: " + page.ToString() + " " + slot.ToString());
+                    //Debug.Log("B: " + page.ToString() + " " + slot.ToString());
                     AddToSlots(itemCollected, amount, page, slot);
                     return;
                 }
@@ -113,11 +114,11 @@ public class Inventory : MonoBehaviour
     }
     public void RemoveFromSlot(int page, int slot)
     {
-        for(int i = inventorySlot[page, slot].transform.childCount - 1; i > 0; i--)
+        for(int i = inventorySlot[page, slot].transform.childCount - 1; i >= 0; i--)
         {
             if(!SlotIsEmpty(page, slot))
             {
-                Destroy(inventorySlot[page, slot].transform.GetChild(i).gameObject);
+                DestroyImmediate(inventorySlot[page, slot].transform.GetChild(i).gameObject);
             }
         }
         collection.Remove(collection.Find(x => x.slotPlaced[0] == page && x.slotPlaced[1] == slot));
@@ -130,11 +131,11 @@ public class Inventory : MonoBehaviour
     {
         foreach(ItemsCollect item in collection)
         {
-            Debug.Log(item.slotPlaced[0].ToString() + " " + item.slotPlaced[1].ToString());
-            Debug.Log(page + " " + slot);
+            //Debug.Log(item.slotPlaced[0].ToString() + " " + item.slotPlaced[1].ToString());
+            //Debug.Log(page + " " + slot);
             if(item.slotPlaced[0] == page && item.slotPlaced[1] == slot)
             {
-                Debug.Log("return successfully");
+                //Debug.Log("return successfully");
                 return item;
             }
         }
@@ -177,7 +178,7 @@ public class Inventory : MonoBehaviour
     public void OnItemClick()
     {
         itemSelected = EventSystem.current.currentSelectedGameObject;
-        
+
     }
 
     public void OnItemUseClick()
@@ -209,7 +210,9 @@ public class Inventory : MonoBehaviour
             }
             else
             {
-                temp.Add(new Reward(collect.item, collect.amount));
+                temp.Add(new Reward(ItemManager.Instance.itemList.Find(
+                    x => x.GetComponent<ItemsInfo>().itemID.Equals(collect.item.GetComponent<ItemsInfo>().itemID)
+                    ), collect.amount));
             }
         }
         CleanInventory();
