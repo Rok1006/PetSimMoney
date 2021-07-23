@@ -121,6 +121,7 @@ public class Manager : MonoBehaviour
         InsideBag.SetActive(true); //then play animation
         InsideBagAnim.SetBool("out", true);
         InsideBagAnim.SetBool("hide", false);
+        ClickInvent();
     }
      public void ClickHideBag(){
         SoundManager.Instance.Click();
@@ -164,7 +165,7 @@ public class Manager : MonoBehaviour
         SoundManager.Instance.Click();
         ClickCloseStore();
         ClickBag();
-        ClickInvent();
+        //ClickInvent();
         boughtItems = 0;
     }
     //Gacha Page Related

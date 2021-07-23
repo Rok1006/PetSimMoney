@@ -36,3 +36,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 AppGame_PetSim/Assets/.DS_Store
+AppGame_PetSim/.DS_Store
+.DS_Store
+AppGame_PetSim/Assets/.DS_Store

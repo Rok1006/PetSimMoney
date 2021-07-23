@@ -63,6 +63,7 @@ public class CatAI : MonoBehaviour
     }
     void Update()
     {
+        CheckLowStats();
         if (transform.position.x > oldPosition) // direction:looking right
         { transform.localScale = new Vector3(-x1,y1,z1); }
         if (transform.position.x < oldPosition) // direction:he's looking left
@@ -119,6 +120,11 @@ public class CatAI : MonoBehaviour
             case Action.Angry:
             break;
            }
+    }
+    void CheckLowStats(){ //if hunger and dryness low to certain rate, be angry:have to feed 
+        if(Status.Instance.hungerV/Status.Instance.hungerMax<.2f||Status.Instance.hydrationV/Status.Instance.hydrationMax<.2f){ 
+         Angry();
+        }
     }
     public void Idle()
     {

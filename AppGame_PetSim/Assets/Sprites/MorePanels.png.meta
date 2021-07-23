@@ -59,6 +59,33 @@ TextureImporter:
   - first:
       213: 2522320050027176186
     second: MorePanels_18
+  - first:
+      213: 6146176834117110501
+    second: MorePanels_19
+  - first:
+      213: 8321771042941049443
+    second: MorePanels_20
+  - first:
+      213: -6241485290632354245
+    second: MorePanels_21
+  - first:
+      213: 7613037526132606068
+    second: MorePanels_22
+  - first:
+      213: 5155880168628130242
+    second: MorePanels_23
+  - first:
+      213: -5016321898932373473
+    second: MorePanels_24
+  - first:
+      213: -949577045418912695
+    second: MorePanels_25
+  - first:
+      213: -995023198841231916
+    second: MorePanels_26
+  - first:
+      213: -5506650067422686092
+    second: MorePanels_27
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -393,9 +420,9 @@ TextureImporter:
       name: MorePanels_10
       rect:
         serializedVersion: 2
-        x: 408
+        x: 396
         y: 26
-        width: 417
+        width: 429
         height: 565
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -503,7 +530,7 @@ TextureImporter:
         width: 137
         height: 210
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -524,7 +551,7 @@ TextureImporter:
         width: 162
         height: 227
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -545,7 +572,7 @@ TextureImporter:
         width: 74
         height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -566,7 +593,7 @@ TextureImporter:
         width: 438
         height: 195
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -574,6 +601,195 @@ TextureImporter:
       bones: []
       spriteID: af027bfb8b4110320800000000000000
       internalID: 2522320050027176186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_19
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 879
+        width: 405
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea094c444b9b4550800000000000000
+      internalID: 6146176834117110501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_20
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 802
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a12a44caedc7370800000000000000
+      internalID: 8321771042941049443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_21
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 803
+        width: 109
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36680d623ac169a0800000000000000
+      internalID: -6241485290632354245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_22
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 83
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4744ade5b41f6a960800000000000000
+      internalID: 7613037526132606068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_23
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 11
+        width: 92
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c19f8342bd5d8740800000000000000
+      internalID: 5155880168628130242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_24
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 127
+        width: 64
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f187f1f7fc1726ab0800000000000000
+      internalID: -5016321898932373473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_25
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 64
+        width: 70
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944d0f055bc62d2f0800000000000000
+      internalID: -949577045418912695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_26
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 361
+        width: 138
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5abc92ca7f032f0800000000000000
+      internalID: -995023198841231916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_27
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 12
+        width: 306
+        height: 340
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474d3ec60f27493b0800000000000000
+      internalID: -5506650067422686092
       vertices: []
       indices: 
       edges: []
