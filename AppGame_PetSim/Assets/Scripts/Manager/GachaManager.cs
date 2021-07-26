@@ -10,6 +10,7 @@ public class GachaManager : MonoBehaviour
     Animator BCMAnim;
     public GameObject Draw1Panel;
     public GameObject Draw3Panel;
+    public GameObject ExchangePanel;
     private int resultState = 0;
     
     public GameObject[] Draw3Slot; //to put invent slot
