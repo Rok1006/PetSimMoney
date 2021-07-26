@@ -24,6 +24,7 @@ public class Manager : MonoBehaviour
     public GameObject ProbaScreen;
     public GameObject RedMachine;
     public GameObject BlueMachine;
+    public GameObject ExchangePanel;
     [Header("Others")]
     public GameObject SettingPannel;
     public GameObject GiftPannel;
@@ -59,8 +60,9 @@ public class Manager : MonoBehaviour
         numholder.SetActive(false);
         GachaScreen.SetActive(false);
         ProbaScreen.SetActive(false);
-        RedMachine.SetActive(false);
-        BlueMachine.SetActive(true);
+        RedMachine.SetActive(true);
+        BlueMachine.SetActive(false);
+        ExchangePanel.SetActive(true);
 
         CostumePanel.SetActive(false);
         HeadPage.SetActive(false);
@@ -257,16 +259,16 @@ public class Manager : MonoBehaviour
             Debug.Log("Music Off");
         }
     }
-      void DetermineOnOff(){   //this is the function for the APP ui Pannel
-       if(openclose==1){
-            Inventory.SetActive(true);
-            InventAnim.SetBool("out", true);
-            InventAnim.SetBool("hide", false);
-            }
-            if(openclose==2){
-            InventAnim.SetBool("out", false);
-            InventAnim.SetBool("hide", true);
-            openclose = 0; //close
-            }
-      }
+    void DetermineOnOff(){   //this is the function for the APP ui Pannel
+    if(openclose==1){
+        Inventory.SetActive(true);
+        InventAnim.SetBool("out", true);
+        InventAnim.SetBool("hide", false);
+        }
+        if(openclose==2){
+        InventAnim.SetBool("out", false);
+        InventAnim.SetBool("hide", true);
+        openclose = 0; //close
+        }
+    }
 }
