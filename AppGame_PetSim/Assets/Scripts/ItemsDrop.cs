@@ -86,9 +86,9 @@ public class ItemsDrop : MonoBehaviour
         touchprobability = Random.Range(1,101);
          if(touchprobability<10){ //10%
             itemID2 = 1;
-        }else if(touchprobability>=10 && touchprobability<70){ 
+        }else if(touchprobability>=10 && touchprobability<30){ 
             itemID2 = 0;
-        }else if(touchprobability>=70){
+        }else if(touchprobability>=30){
             itemID2 = 3;
         }
     }

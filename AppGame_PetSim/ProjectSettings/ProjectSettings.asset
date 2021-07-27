@@ -767,10 +767,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 31760d73-3f07-4897-ac45-b3bad776c7be
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: AppGame_PetSim
+  organizationId: rok1006
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
