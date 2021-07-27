@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType { Drink, Food, Toy, Leaf}
+public enum ItemType { Drink, Food, Toy, Leaf }
 public enum Rarity { Common, Rare, SuperRare, UltraRare, SecretUltraRare }
 public enum CostMethod { GreenLeaf, GoldLeaf, Cash }
 
@@ -29,7 +29,7 @@ public class ItemManager : MonoBehaviour
         }
 
         _itemList = new List<GameObject>(Resources.LoadAll<GameObject>("Items/UI"));
-        Sorting.QuickSort(_itemList, 0, _itemList.Count - 1);
+        Sorting.QuickSortItem(_itemList, 0, _itemList.Count - 1);
         foreach(GameObject item in itemList)
         {
             foreach(ItemType type in Enum.GetValues(typeof(ItemType)))

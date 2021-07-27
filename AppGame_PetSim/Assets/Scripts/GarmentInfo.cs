@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 //place this in every garment, info 
+
 public class GarmentInfo : MonoBehaviour
 {
     public string itemID;
@@ -13,6 +14,7 @@ public class GarmentInfo : MonoBehaviour
     public GameObject NeckPosition;
     public GameObject BackPosition;
     void Awake() {
+        GeneratedItem = gameObject;
         HeadPosition = GameObject.Find("HeadDecoration");
         NeckPosition = GameObject.Find("NeckDecoration");
         BackPosition = GameObject.Find("BackDecoration");
