@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public enum GarmentType { Hat, Neck, Back }
 
@@ -15,11 +16,17 @@ public class GarmentManager : MonoBehaviour
     public List<List<Garment>> separatedGarmentLists { get { return _separatedGarmentLists; } }    
     public GameObject[] GarmentUITemplate = new GameObject[3];
     public List<List<GameObject>> garmentUIList = new List<List<GameObject>>();
+    private Garment[] currentGarment; 
+    private GameObject[] wearing;
+    public GameObject[] garmentPlaceHolder = new GameObject[3];
+    
     void Awake()
     {
         Instance = this;
         LoadGarmentsToSeperatedLists();
         LoadGarmentsUI();
+        currentGarment = new Garment[Enum.GetValues(typeof(GarmentType)).Length];
+        wearing = new GameObject[Enum.GetValues(typeof(GarmentType)).Length];
     }
 
     private void LoadGarmentsToSeperatedLists()
@@ -37,7 +44,7 @@ public class GarmentManager : MonoBehaviour
             {
                 if(garment.GetComponent<GarmentInfo>().type == type)
                 {
-                    Garment theGarment = new Garment(garment);
+                    Garment theGarment = new Garment(garment, type);
                     _separatedGarmentLists[(int) type].Add(theGarment);
                     break;
                 }
@@ -63,17 +70,121 @@ public class GarmentManager : MonoBehaviour
             }
         }
     }
+
+    public bool OwnGarment(Garment garment)
+    {
+        int index = separatedGarmentLists[(int) garment.type].IndexOf(garment);
+        if(_separatedGarmentLists[(int) garment.type][index].owned)
+        {
+            return false; //Garment already owned
+        }
+        else
+        {
+            _separatedGarmentLists[(int) garment.type][index].owned = true;
+            UpdateGarmentUI();
+            return true; //Own successfully
+        }
+    }
+
+    public bool EquipGarment(Garment garment)
+    {
+        int index = separatedGarmentLists[(int) garment.type].IndexOf(garment);
+        if(_separatedGarmentLists[(int) garment.type][index].eqiupped)
+        {
+            return false; //Garment already equipped
+        }
+        else
+        {
+            UnequipGarment(garment.type);
+            _separatedGarmentLists[(int) garment.type][index].eqiupped = true;
+            currentGarment[(int) garment.type] = _separatedGarmentLists[(int) garment.type][index];
+            GameObject wear = Instantiate(garment.garment, garmentPlaceHolder[(int) garment.type].transform) as GameObject;
+            wearing[(int) garment.type] = wear;
+            UpdateGarmentUI();
+            return true; //Equipped successfully
+        }
+    }
+
+    private void UnequipGarment(GarmentType type)
+    {
+        foreach(Garment garment in _separatedGarmentLists[(int) type])
+        {
+            if(garment.eqiupped)
+            {
+                UnequipGarment(garment);
+            }
+        }
+    }
+
+    private void UnequipGarment(Garment garment)
+    {
+        garment.eqiupped = false;
+        currentGarment[(int) garment.type] = null;
+        DestroyImmediate(wearing[(int) garment.type]);
+        UpdateGarmentUI();
+    }
+
+    public void OnClickEquip()
+    {
+        GameObject button = EventSystem.current.currentSelectedGameObject;
+        string name = button.transform.parent.name;
+        foreach(GarmentType type in Enum.GetValues(typeof(GarmentType)))
+        {
+            foreach(Garment garment in _separatedGarmentLists[(int) type])
+            {
+                if(garment.garment.name == name)
+                {
+                    EquipGarment(garment);
+                }
+            }
+        }
+    }
+
+    public void OnClickUnequip()
+    {
+        GameObject button = EventSystem.current.currentSelectedGameObject;
+        string name = button.transform.parent.name;
+        foreach(GarmentType type in Enum.GetValues(typeof(GarmentType)))
+        {
+            foreach(Garment garment in _separatedGarmentLists[(int) type])
+            {
+                if(garment.garment.name == name)
+                {
+                    UnequipGarment(garment);
+                }
+            }
+        }
+    }
+
+    private void UpdateGarmentUI()
+    {
+        foreach(GarmentType type in Enum.GetValues(typeof(GarmentType)))
+        {
+            int index = 0;
+            foreach(Garment garment in _separatedGarmentLists[(int) type])
+            {
+                ///////TOOODOOOOOO
+                //garmentUIList[(int) type][index].transform.Find("Lock").gameObject.SetActive(
+                //     _separatedGarmentLists[(int) type][index].owned);
+                garmentUIList[(int) type][index].transform.Find("Equipped").gameObject.SetActive(
+                     _separatedGarmentLists[(int) type][index].eqiupped);
+                index++;
+            }
+        }
+    }
 }
 
 public class Garment
 {
     public GameObject garment;
-    public bool eqiuped;
-    public bool own;
-    public Garment(GameObject garment)
+    public GarmentType type;
+    public bool eqiupped;
+    public bool owned;
+    public Garment(GameObject garment, GarmentType type)
     {
         this.garment = garment;
-        eqiuped = false;
-        own = false;
+        this.type = type;
+        eqiupped = false;
+        owned = false;
     }
 }
