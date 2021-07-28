@@ -62,7 +62,7 @@ public class Manager : MonoBehaviour
         ProbaScreen.SetActive(false);
         RedMachine.SetActive(true);
         BlueMachine.SetActive(false);
-        ExchangePanel.SetActive(true);
+        ExchangePanel.SetActive(false);
 
         CostumePanel.SetActive(false);
         HeadPage.SetActive(false);
