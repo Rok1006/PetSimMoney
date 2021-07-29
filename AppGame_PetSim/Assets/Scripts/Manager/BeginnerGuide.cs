@@ -167,6 +167,7 @@ public class BeginnerGuide : MonoBehaviour
             EnableAllButton();
             catai.enabled = true;
             BeginnerGuideUI.SetActive(false);
+            User.Instance.ExpUP(User.Instance.maxfpValue);
             //check beginner guide as finished
             this.enabled = false;
            break;
