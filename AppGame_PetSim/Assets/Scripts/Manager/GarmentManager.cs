@@ -89,16 +89,16 @@ public class GarmentManager : MonoBehaviour
     public bool EquipGarment(Garment garment)
     {
         int index = separatedGarmentLists[(int) garment.type].IndexOf(garment);
-        if(_separatedGarmentLists[(int) garment.type][index].eqiupped)
+        if(_separatedGarmentLists[(int) garment.type][index].eqiupped || !_separatedGarmentLists[(int) garment.type][index].owned)
         {
-            return false; //Garment already equipped
+            return false; //Garment already equipped or player do not own it
         }
         else
         {
             UnequipGarment(garment.type);
             _separatedGarmentLists[(int) garment.type][index].eqiupped = true;
             currentGarment[(int) garment.type] = _separatedGarmentLists[(int) garment.type][index];
-            GameObject wear = Instantiate(garment.garment, garmentPlaceHolder[(int) garment.type].transform) as GameObject;
+            GameObject wear = Instantiate(garment.garment.GetComponent<GarmentInfo>().GeneratedItem, garmentPlaceHolder[(int) garment.type].transform) as GameObject;
             wearing[(int) garment.type] = wear;
             UpdateGarmentUI();
             return true; //Equipped successfully
@@ -118,10 +118,13 @@ public class GarmentManager : MonoBehaviour
 
     private void UnequipGarment(Garment garment)
     {
-        garment.eqiupped = false;
-        currentGarment[(int) garment.type] = null;
-        DestroyImmediate(wearing[(int) garment.type]);
-        UpdateGarmentUI();
+        if(garment.eqiupped && garment.owned)
+        {
+            garment.eqiupped = false;
+            currentGarment[(int) garment.type] = null;
+            DestroyImmediate(wearing[(int) garment.type]);
+            UpdateGarmentUI();
+        }
     }
 
     public void OnClickEquip()
@@ -164,8 +167,8 @@ public class GarmentManager : MonoBehaviour
             foreach(Garment garment in _separatedGarmentLists[(int) type])
             {
                 ///////TOOODOOOOOO
-                //garmentUIList[(int) type][index].transform.Find("Lock").gameObject.SetActive(
-                //     _separatedGarmentLists[(int) type][index].owned);
+                garmentUIList[(int) type][index].transform.Find("LockBlock").gameObject.SetActive(
+                     _separatedGarmentLists[(int) type][index].owned);
                 garmentUIList[(int) type][index].transform.Find("Equipped").gameObject.SetActive(
                      _separatedGarmentLists[(int) type][index].eqiupped);
                 index++;
