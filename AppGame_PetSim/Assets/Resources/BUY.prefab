@@ -211,6 +211,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &3850916682267453680
 Animator:
   serializedVersion: 3
@@ -243,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueHolder: {fileID: 0}
-  cost: 1
-  item: {fileID: 2083078729617430103, guid: 398e5b57645914e3e910577d077100be, type: 3}
-  size: {x: 0.4, y: 0.5, z: 0.5}
-  canBuy: 1
+  valueAnim: {fileID: 0}
+  shopDrinkTemplates: {fileID: 0}
+  shopFoodTemplates: {fileID: 0}
+  shopToyTemplates: {fileID: 0}
