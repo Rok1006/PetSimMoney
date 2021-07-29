@@ -5,9 +5,12 @@ using UnityEngine;
 public class TouchObj : MonoBehaviour
 {
     public GameObject clickSplash;
+    public GameObject SoundM;
+    public SoundManager sm;
     void Start()
     {
-        
+        SoundM = GameObject.Find("SoundManager");
+        sm = SoundM.GetComponent<SoundManager>();
     }
     void Update()
     {
@@ -21,7 +24,7 @@ public class TouchObj : MonoBehaviour
             Status.Instance.LeafChange(CostMethod.GreenLeaf, 1);
             Destroy(this.gameObject); //later: Destroy(this.gameObject, 1f)
             Destroy(c, 1f);
-            SoundManager.Instance.Bling();
+            sm.Bling();
         }
          if(this.transform.gameObject.tag == "Rare"){
             Debug.Log("rare");
@@ -29,14 +32,14 @@ public class TouchObj : MonoBehaviour
             Status.Instance.LeafChange(CostMethod.GoldLeaf, 1);
             Destroy(this.gameObject);
             Destroy(c, 1f);
-            SoundManager.Instance.Bling();
+            sm.Bling();
         }
          if(this.transform.gameObject.tag == "Trash"){
             Debug.Log("trash"); 
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
             Destroy(c, 1f);
-           SoundManager.Instance.Trash();
+           sm.Trash();
         }
     }
     

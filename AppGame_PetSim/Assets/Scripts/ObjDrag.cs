@@ -14,10 +14,15 @@ public GameObject explode;
 public GameObject hungerEx;
 public GameObject hydraEx;
 private bool getAdd = true;
+ public GameObject SoundM;
+public SoundManager sm;
+
 void Start() {
     dist = transform.position.z - Camera.main.transform.position.z;
     rb = GetComponent<Rigidbody2D>();
     emitSpot = GameObject.Find("HeartEmit");
+    SoundM = GameObject.Find("SoundManager");
+    sm = SoundM.GetComponent<SoundManager>();
 }
  //dragdrop
 void Update(){
@@ -87,7 +92,7 @@ void OnCollisionEnter2D(Collision2D col) {
     if(this.gameObject.tag == "Toy"){  
         if (col.gameObject.CompareTag("ItemFloor"))
         {
-            SoundManager.Instance.ToyFall();
+            sm.ToyFall();
              if(getAdd){ //boolean: ADD TO LIST ONLY ONCE
                      GameObject t = this.gameObject; //add it into list 
                     CatAI.Instance.toy.Add(t);
@@ -102,13 +107,13 @@ void OnCollisionEnter2D(Collision2D col) {
     if(this.gameObject.tag == "Drink"){  
         if (col.gameObject.CompareTag("ItemFloor"))
         {
-            SoundManager.Instance.DrinkFall();
+            sm.DrinkFall();
         }
     }
       if(this.gameObject.tag == "Food"){  
         if (col.gameObject.CompareTag("ItemFloor"))
         {
-            SoundManager.Instance.FoodFall();
+            sm.FoodFall();
         }
     }
 }

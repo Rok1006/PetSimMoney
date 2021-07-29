@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 //this script is for implementing function/animation for UI button
 public class Manager : MonoBehaviour
 {
@@ -40,10 +41,16 @@ public class Manager : MonoBehaviour
     Animator InventAnim;
     public GameObject SoundM;
     public SoundManager sm;
+    public GameObject BGM;
+    public string sceneName;
+    public GameObject BGCover;
+    public GameObject CrossCloseEgg;
   
     void Awake(){
         Instance = this;
         sm = SoundM.GetComponent<SoundManager>();
+        BGM.SetActive(true);
+        SoundM.SetActive(true);
     }
 
     public int openclose = 0;
@@ -73,6 +80,8 @@ public class Manager : MonoBehaviour
         BackPage.SetActive(false);
         SettingPannel.SetActive(false);
         GiftPannel.SetActive(false);
+        BGCover.SetActive(false); //in gacha pannel
+        CrossCloseEgg.SetActive(false);
         
     }
     void Update()
@@ -161,6 +170,9 @@ public class Manager : MonoBehaviour
         sm.Click();
         SettingPannel.SetActive(false);
     }
+    public void SettingtoMenu(){
+         SceneManager.LoadScene(sceneName);
+    }
     public void ClickInvent(){
         sm.Click();
         openclose+=1;
@@ -242,16 +254,20 @@ public class Manager : MonoBehaviour
         sm.Click();
         if(isOn){
             Debug.Log("Music On");
+            BGM.SetActive(true);
         }else{
             Debug.Log("Music Off");
+            BGM.SetActive(false);
         }
     }
       public void OnClickSoundToggle(bool isOn){
          sm.Click();
         if(isOn){
             Debug.Log("Music On");
+            SoundM.SetActive(true);
         }else{
             Debug.Log("Music Off");
+            SoundM.SetActive(false);
         }
     }
       public void OnClickNoticeToggle(bool isOn){

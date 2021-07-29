@@ -112,9 +112,15 @@ public class SoundManager : MonoBehaviour
     }
     public void Flyby(){
         flyby.Play();
+        //Manager.Instance.BGCover.SetActive(true);
     }
     public void Open(){
         crack.Play();
+    }
+    public void crackopen(){
+        bling.Play();
+        Manager.Instance.BGCover.SetActive(true);
+        Manager.Instance.CrossCloseEgg.SetActive(true);
     }
 
 }
