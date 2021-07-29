@@ -161,6 +161,7 @@ public class GachaManager : MonoBehaviour
 
     //Items Gacha Panel: do the same above
     public void crackopen(int i = 0){ //spine event crackopen in Showing result All
+        SoundManager.Instance.Open();
         GameObject finalResult;
         if(resultState==1){ //draw 1
             CleanSlot();

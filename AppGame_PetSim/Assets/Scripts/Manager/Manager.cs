@@ -38,9 +38,12 @@ public class Manager : MonoBehaviour
     Animator bagAnim;
     Animator InsideBagAnim;
     Animator InventAnim;
+    public GameObject SoundM;
+    public SoundManager sm;
   
     void Awake(){
         Instance = this;
+        sm = SoundM.GetComponent<SoundManager>();
     }
 
     public int openclose = 0;
@@ -97,7 +100,7 @@ public class Manager : MonoBehaviour
          }
     }
     public void ClickStatus(){ //click the star
-        SoundManager.Instance.Click();
+        sm.Click();
         starAnim.SetBool("hide", true);
         starAnim.SetBool("reveal", false);
         InsideStatus.SetActive(true); //then play animation
@@ -110,14 +113,14 @@ public class Manager : MonoBehaviour
         openclose = 0;
     }
     public void ClickHideStatus(){
-        SoundManager.Instance.Click();
+        sm.Click();
         starAnim.SetBool("hide", false);
         starAnim.SetBool("reveal", true);
         InsideStatusAnim.SetBool("reveal", false);
         InsideStatusAnim.SetBool("hide", true);
     }
     public void ClickBag(){
-        SoundManager.Instance.Click();
+        sm.Click();
         bagAnim.SetBool("hide", true);
         bagAnim.SetBool("out", false);
         InsideBag.SetActive(true); //then play animation
@@ -126,7 +129,7 @@ public class Manager : MonoBehaviour
         ClickInvent();
     }
      public void ClickHideBag(){
-        SoundManager.Instance.Click();
+        sm.Click();
         bagAnim.SetBool("hide", false);
         bagAnim.SetBool("out", true);
         InsideBagAnim.SetBool("out", false);
@@ -137,7 +140,7 @@ public class Manager : MonoBehaviour
         openclose = 0;
     }
     public void ClickStore(){
-        SoundManager.Instance.Click();
+        sm.Click();
         StoreMenu.SetActive(true);
         //MainScreenUI.SetActive(false);
         ShopManager.Instance.ShopItemsGen();
@@ -146,25 +149,25 @@ public class Manager : MonoBehaviour
         openclose = 0;
     }
      public void ClickCloseStore(){
-        SoundManager.Instance.Click();
+        sm.Click();
         StoreMenu.SetActive(false);
         //MainScreenUI.SetActive(true);
     }
     public void ClickSetting(){
-        SoundManager.Instance.Click();
+        sm.Click();
         SettingPannel.SetActive(true);
     }
     public void CLickCLoseSetting(){
-        SoundManager.Instance.Click();
+        sm.Click();
         SettingPannel.SetActive(false);
     }
     public void ClickInvent(){
-        SoundManager.Instance.Click();
+        sm.Click();
         openclose+=1;
         ClickHideStatus();
     }
     public void ClickStoreBag(){
-        SoundManager.Instance.Click();
+        sm.Click();
         ClickCloseStore();
         ClickBag();
         //ClickInvent();
@@ -172,42 +175,42 @@ public class Manager : MonoBehaviour
     }
     //Gacha Page Related
     public void ClickGacha(){
-        SoundManager.Instance.Click();
+        sm.Click();
         GachaScreen.SetActive(true);
     }
     public void ClickCloseGacha(){
-        SoundManager.Instance.Click();
+        sm.Click();
         GachaScreen.SetActive(false);
     }
     public void ClickProbability(){
-        SoundManager.Instance.Click();
+        sm.Click();
         ProbaScreen.SetActive(true);
     }
     public void ClickCloseProob(){
-        SoundManager.Instance.Click();
+        sm.Click();
         ProbaScreen.SetActive(false);
     }
     public void ClickItemB(){
-        SoundManager.Instance.Click();
+        sm.Click();
         RedMachine.SetActive(false);
         BlueMachine.SetActive(true);
     }
      public void ClickCostumeB(){
-        SoundManager.Instance.Click();
+        sm.Click();
         RedMachine.SetActive(true);
         BlueMachine.SetActive(false);
     }
     //Costume Page RElated
     public void ClickCostumes(){
-        SoundManager.Instance.Click();
+        sm.Click();
         CostumePanel.SetActive(true);
     }
     public void ClickCloseCostumes(){
-        SoundManager.Instance.Click();
+        sm.Click();
         CostumePanel.SetActive(false);
     }
      public void ClickLeft(){
-         SoundManager.Instance.Click();
+         sm.Click();
          if(CostumePageCount>0){
            CostumePageCount-=1;   
          }else{
@@ -215,7 +218,7 @@ public class Manager : MonoBehaviour
          }
     }
      public void ClickRight(){
-         SoundManager.Instance.Click();
+         sm.Click();
         if(CostumePageCount<2){
            CostumePageCount+=1;   
         }else{
@@ -224,11 +227,11 @@ public class Manager : MonoBehaviour
     }
     //others
     public void ClickGift(){
-        SoundManager.Instance.Click();
+        sm.Click();
         GiftPannel.SetActive(true);
     }
      public void ClickCloseGift(){
-         SoundManager.Instance.Click();
+        sm.Click();
         GiftPannel.SetActive(false);
     }
     public void ClickAds(){
@@ -236,7 +239,7 @@ public class Manager : MonoBehaviour
     }
     //Settings
     public void OnClickMusicToggle(bool isOn){
-        SoundManager.Instance.Click();
+        sm.Click();
         if(isOn){
             Debug.Log("Music On");
         }else{
@@ -244,7 +247,7 @@ public class Manager : MonoBehaviour
         }
     }
       public void OnClickSoundToggle(bool isOn){
-          SoundManager.Instance.Click();
+         sm.Click();
         if(isOn){
             Debug.Log("Music On");
         }else{
@@ -252,7 +255,7 @@ public class Manager : MonoBehaviour
         }
     }
       public void OnClickNoticeToggle(bool isOn){
-          SoundManager.Instance.Click();
+          sm.Click();
         if(isOn){
             Debug.Log("Music On");
         }else{
