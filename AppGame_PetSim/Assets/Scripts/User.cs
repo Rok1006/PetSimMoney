@@ -19,9 +19,19 @@ public class User : MonoBehaviour
     public int level = 0; //level of the user; increase everytime friendship value reaches the max, link to text
                       //Friendship level
     public static int maxLevel = 40;
+    public bool beginnerGuide;
+    public GameObject BeginnerG;
+    public GameObject BGUI;
+    public BeginnerGuide BG;
     void Awake() 
     {
+        BG = BeginnerG.GetComponent<BeginnerGuide>();
         Instance = this;
+         if(User.Instance.beginnerGuide){ //if already finish tutorial
+            BGUI.SetActive(false);
+            BG.enabled = false;
+            BG.NoGuide();
+        }
     }
     void Start()
     {

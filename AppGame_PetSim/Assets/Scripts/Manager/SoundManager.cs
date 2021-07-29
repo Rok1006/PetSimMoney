@@ -26,6 +26,7 @@ public class SoundManager : MonoBehaviour
     private AudioSource draw;
     private AudioSource ball;
     private AudioSource flyby;
+    private AudioSource crack;
 
     void Awake() {
         Instance = this;
@@ -56,6 +57,7 @@ public class SoundManager : MonoBehaviour
         draw = gachaAudios[1];
         ball = gachaAudios[2];
         flyby = gachaAudios[3];
+        crack = gachaAudios[4];
     }
     //cat sound
     public void footstep(){
@@ -110,6 +112,15 @@ public class SoundManager : MonoBehaviour
     }
     public void Flyby(){
         flyby.Play();
+        //Manager.Instance.BGCover.SetActive(true);
+    }
+    public void Open(){
+        crack.Play();
+    }
+    public void crackopen(){
+        bling.Play();
+        Manager.Instance.BGCover.SetActive(true);
+        Manager.Instance.CrossCloseEgg.SetActive(true);
     }
 
 }

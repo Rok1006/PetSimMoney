@@ -168,7 +168,7 @@ public class BeginnerGuide : MonoBehaviour
             catai.enabled = true;
             BeginnerGuideUI.SetActive(false);
             User.Instance.ExpUP(User.Instance.maxfpValue);
-            //check beginner guide as finished
+            User.Instance.beginnerGuide = true;
             this.enabled = false;
            break;
 
@@ -210,5 +210,22 @@ public class BeginnerGuide : MonoBehaviour
             textDisplay.text = "";
         }
         guideState++;
+    }
+    public void SkipButton(){
+        DisableAllFingers();
+        EnableAllButton();
+        catai.enabled = true;
+        BeginnerGuideUI.SetActive(false);
+        User.Instance.ExpUP(User.Instance.maxfpValue);
+        //check beginner guide as finished
+        this.enabled = false;
+        User.Instance.beginnerGuide = true;
+    }
+    public void NoGuide(){
+        DisableAllFingers();
+        EnableAllButton();
+        catai.enabled = true;
+        BeginnerGuideUI.SetActive(false);
+        this.enabled = false;
     }
 }
