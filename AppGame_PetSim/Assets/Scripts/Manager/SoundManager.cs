@@ -21,6 +21,7 @@ public class SoundManager : MonoBehaviour
     private AudioSource flip;
     private AudioSource bling;
     private AudioSource trash;
+    private AudioSource buy;
     public GameObject GachaSound;
     private AudioSource pull;
     private AudioSource draw;
@@ -51,6 +52,7 @@ public class SoundManager : MonoBehaviour
         flip = effectAudios[1];
         bling = effectAudios[2];
         trash = effectAudios[3];
+        buy = effectAudios[4];
         //Gacha sound
         AudioSource[] gachaAudios = GachaSound.GetComponents<AudioSource>();
         pull = gachaAudios[0];
@@ -121,6 +123,9 @@ public class SoundManager : MonoBehaviour
         bling.Play();
         Manager.Instance.BGCover.SetActive(true);
         Manager.Instance.CrossCloseEgg.SetActive(true);
+    }
+    public void Buy(){
+        buy.Play();
     }
 
 }
