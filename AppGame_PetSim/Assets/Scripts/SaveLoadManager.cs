@@ -80,7 +80,7 @@ public class SaveLoadManager : MonoBehaviour
         userdata.level = User.Instance.level;
         userdata.maxfpValue = User.Instance.maxfpValue;
         userdata.fpValue = User.Instance.fpValue;
-        //User.Instance.beginnerGuide = resultData.beginnerGuide;
+        userdata.beginnerGuide = User.Instance.beginnerGuide;
 
         userdata.statsValue = Status.Instance.statsValue;
         userdata.statsMax = Status.Instance.statsMax;
@@ -138,7 +138,7 @@ public class SaveLoadManager : MonoBehaviour
         User.Instance.level = resultData.level;
         User.Instance.maxfpValue = resultData.maxfpValue;
         User.Instance.fpValue = resultData.fpValue;
-        //User.Instance.beginnerGuide = resultData.beginnerGuide;
+        User.Instance.beginnerGuide = resultData.beginnerGuide;
 
         Status.Instance.statsValue = resultData.statsValue;
         Status.Instance.statsMax = resultData.statsMax;

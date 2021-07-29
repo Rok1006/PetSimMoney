@@ -31,6 +31,8 @@ public class GachaManager : MonoBehaviour
     private List<List<Garment>> pool = new List<List<Garment>>();
     private Garment result1;
     private Garment[] result3 = new Garment[3];
+    public GameObject BG;
+    public GameObject closeButton;
     void Awake()
     {
         Instance = this;
@@ -179,7 +181,7 @@ public class GachaManager : MonoBehaviour
         if(resultState==1){ //draw 1
             CleanSlot();
             finalResult = Instantiate(result1.garment, Draw1Panel.transform) as GameObject;
-            finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button
+            //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button
             Draw1Panel.SetActive(true);
         }
         else if(resultState==3)
@@ -189,7 +191,7 @@ public class GachaManager : MonoBehaviour
             // {
                 CleanSlot(i);
                 finalResult = Instantiate(result3[i].garment, Draw3Slot[i].transform) as GameObject;
-                finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button
+                //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button
             // }
             Draw3Panel.SetActive(true);
         }
@@ -224,6 +226,8 @@ public class GachaManager : MonoBehaviour
         CleanSlot();
         Draw1Panel.SetActive(false);
         Draw3Panel.SetActive(false);
+        BG.SetActive(false);
+        closeButton.SetActive(false);
     }
 
     private void CleanSlot()
