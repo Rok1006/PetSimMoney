@@ -21,8 +21,8 @@ public class Status : MonoBehaviour
     public Text Gacha_norT;
     public Text Gacha_rarT;
     [Header("StatusValue")]
-    [SerializeField] private float[] statsValue = new float[4]{100, 100, 100, 100};
-    [SerializeField] private float[] statsMax = new float[4]{100, 100, 100, 100};
+    public float[] statsValue = new float[4]{100, 100, 100, 100};
+    public float[] statsMax = new float[4]{100, 100, 100, 100};
     public float happyV { get { return statsValue[0]; }}
     public float happyMax { get { return statsMax[0]; }}
     public float energyV { get { return statsValue[1]; }}
@@ -32,7 +32,7 @@ public class Status : MonoBehaviour
     public float hydrationV { get { return statsValue[3]; }}
     public float hydrationMax { get { return statsMax[3]; }}
     [Header("ItemsCount")]
-    private int[] leafC = new int[2]{0, 0}; 
+    public int[] leafC = new int[2]{0, 0}; 
     public int greenLeaf { get { return leafC[0]; }} 
     public int goldLeaf { get { return leafC[1]; }}
     public readonly int maxLeaf = 999999;

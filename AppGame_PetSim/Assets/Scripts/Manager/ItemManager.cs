@@ -10,9 +10,9 @@ public enum CostMethod { GreenLeaf, GoldLeaf, Cash }
 public class ItemManager : MonoBehaviour
 {
     public static ItemManager Instance;
-    private List<GameObject> _itemList = new List<GameObject>();
+    public List<GameObject> _itemList = new List<GameObject>();
     public List<GameObject> itemList { get { return _itemList; } }
-    private List<List<GameObject>> _separatedItemLists = new List<List<GameObject>>();
+    public List<List<GameObject>> _separatedItemLists = new List<List<GameObject>>();
     public List<List<GameObject>> separatedItemLists { get { return _separatedItemLists; } }
     // Start is called before the first frame update
     void Awake()

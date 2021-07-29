@@ -10,14 +10,14 @@ public enum GarmentType { Hat, Neck, Back }
 public class GarmentManager : MonoBehaviour
 {
     public static GarmentManager Instance;
-    private List<GameObject> _garmentList = new List<GameObject>();
+    public List<GameObject> _garmentList = new List<GameObject>();
     public List<GameObject> garmentList { get { return _garmentList; } }
-    private List<List<Garment>> _separatedGarmentLists = new List<List<Garment>>();
+    public List<List<Garment>> _separatedGarmentLists = new List<List<Garment>>();
     public List<List<Garment>> separatedGarmentLists { get { return _separatedGarmentLists; } }    
     public GameObject[] GarmentUITemplate = new GameObject[3];
     public List<List<GameObject>> garmentUIList = new List<List<GameObject>>();
-    private Garment[] currentGarment; 
-    private GameObject[] wearing;
+    public Garment[] currentGarment; 
+    public GameObject[] wearing;
     public GameObject[] garmentPlaceHolder = new GameObject[3];
     
     void Awake()
@@ -159,7 +159,7 @@ public class GarmentManager : MonoBehaviour
         }
     }
 
-    private void UpdateGarmentUI()
+    public void UpdateGarmentUI()
     {
         foreach(GarmentType type in Enum.GetValues(typeof(GarmentType)))
         {
@@ -168,10 +168,23 @@ public class GarmentManager : MonoBehaviour
             {
                 ///////TOOODOOOOOO
                 garmentUIList[(int) type][index].transform.Find("LockBlock").gameObject.SetActive(
-                     _separatedGarmentLists[(int) type][index].owned);
+                     !_separatedGarmentLists[(int) type][index].owned);
                 garmentUIList[(int) type][index].transform.Find("Equipped").gameObject.SetActive(
                      _separatedGarmentLists[(int) type][index].eqiupped);
                 index++;
+            }
+        }
+    }
+
+    public void UpdateWear()
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            if(currentGarment[i] != null)
+            {
+                DestroyImmediate(wearing[i]);
+                wearing[i] = Instantiate(currentGarment[i].garment.GetComponent<GarmentInfo>().GeneratedItem,
+                    garmentPlaceHolder[(int) currentGarment[i].type].transform) as GameObject;
             }
         }
     }
