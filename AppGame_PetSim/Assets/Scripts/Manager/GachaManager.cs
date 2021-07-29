@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GachaManager : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class GachaManager : MonoBehaviour
     public GameObject[] Draw3Slot; //to put invent slot
     public GameObject[] eggTemplate = new GameObject[3];
     private GameObject[] eggUI = new GameObject[3];
+    public GameObject[] drawButton = new GameObject[2]; 
+    public GameObject backButton;
 
     private int _luck = 0;
     public int luck { get { return _luck; } }
@@ -89,63 +92,154 @@ public class GachaManager : MonoBehaviour
     }
 //Costumes Gacha Panel
     public void ClickDraw1(){ //pressing the buttons to begin drawing animation , for the draw 1 item button
-        RCMAnim.SetTrigger("PressDraw"); //do a series of anim
-        resultState = 1;
-        
-        Rarity eggType = DrawEgg();
-        Draw(pool[(int) eggType], resultState, 1);
-        GameObject eggUI = Instantiate(eggTemplate[(int) eggType], Draw1Panel.transform) as GameObject;
-        //GameObject a = Instantiate(obj, draw1Pos.transform.position, Quaternion.identity); //instanciate prefab
-        //draw item and place them in that pos
+        if(Status.Instance.LeafChange(CostMethod.GoldLeaf, -10))
+        {
+            DrawDisable();
+            RCMAnim.SetTrigger("PressDraw"); //do a series of anim
+            resultState = 1;
+            
+            Rarity eggType = DrawEgg();
+            StartCoroutine(Draw(pool[(int) eggType], eggTemplate[(int) eggType], resultState, 1, Draw1Panel.transform));
+            //Draw1Panel.SetActive(true);
+            //GameObject a = Instantiate(obj, draw1Pos.transform.position, Quaternion.identity); //instanciate prefab
+            //draw item and place them in that pos
+        }
+        else
+        {
+            //Not Enough
+        }
     }
     public void ClickDraw3(){ //pressing the buttons to begin drawing animation , for the draw 1 item button
-        RCMAnim.SetTrigger("PressDraw"); //do a series of anim
-        resultState = 3;
-        
-        for (int i = 0; i < Draw3Slot.Length; i++)
+        if(Status.Instance.LeafChange(CostMethod.GoldLeaf, -30))
         {
-            Rarity eggType = DrawEgg();
-            Draw(pool[(int) eggType], resultState, i);
-            GameObject eggUI = Instantiate(eggTemplate[(int) eggType], Draw3Slot[i].transform) as GameObject;
-            //GameObject a = Instantiate([the generated ball color], Draw3Slot[i].transform.position, Quaternion.identity); //instanciate prefab
-            //Get the child of gameobjectA and place generate an item ui in it 
+            DrawDisable();
+            RCMAnim.SetTrigger("PressDraw"); //do a series of anim
+            resultState = 3;
+            
+            for (int i = 0; i < Draw3Slot.Length; i++)
+            {
+                Rarity eggType = DrawEgg();
+                StartCoroutine(Draw(pool[(int) eggType], eggTemplate[(int) eggType], resultState, i, Draw3Slot[i].transform));
+                //GameObject a = Instantiate([the generated ball color], Draw3Slot[i].transform.position, Quaternion.identity); //instanciate prefab
+                //Get the child of gameobjectA and place generate an item ui in it 
+            }
+            Draw3Panel.SetActive(true);
+            //using event: determine items, in code function decide what items to be generate accord to probability
+            //create temporary slot in inspector, get the item and place it in the obj variable
         }
-        //using event: determine items, in code function decide what items to be generate accord to probability
-        //create temporary slot in inspector, get the item and place it in the obj variable
+        else
+        {
+            //Not Enough
+        }
     }
 
-    private void Draw(List<Garment> garments, int drawType, int round)
+    IEnumerator Draw(List<Garment> garments, GameObject template, int drawType, int round, Transform pos)
     {
+        yield return new WaitForSeconds(3.8f);
         int rand = UnityEngine.Random.Range(0, garments.Count);
         switch(drawType)
         {
             case 1:
                 //Draw to result1
                 result1 = garments[rand];
+                GarmentManager.Instance.OwnGarment(result1);
                 break;
             case 3:
                 //Draw to result3
                 result3[round] = garments[rand];
+                GarmentManager.Instance.OwnGarment(result3[round]);
                 break;
             default:
                 //Error
                 break;            
         }
+        GameObject eggUI = Instantiate(template, pos) as GameObject;
+        eggUI.GetComponent<Button>().onClick.AddListener(delegate{crackopen(round);});
+        eggUI.SetActive(true);
+        eggUI.transform.parent.gameObject.SetActive(true);
     }
 
     //Items Gacha Panel: do the same above
-    public void crackopen(){ //spine event crackopen in Showing result All
+    public void crackopen(int i = 0){ //spine event crackopen in Showing result All
+        GameObject finalResult;
         if(resultState==1){ //draw 1
-            GameObject finalResult = Instantiate(result1.garment, Draw1Panel.transform) as GameObject;
+            CleanSlot();
+            finalResult = Instantiate(result1.garment, Draw1Panel.transform) as GameObject;
+            finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button
             Draw1Panel.SetActive(true);
         }
         else if(resultState==3)
         { //draw 2
-            GameObject finalResult1 = Instantiate(result3[0].garment, Draw3Slot[0].transform) as GameObject;
-            GameObject finalResult2 = Instantiate(result3[1].garment, Draw3Slot[1].transform) as GameObject;
-            GameObject finalResult3 = Instantiate(result3[2].garment, Draw3Slot[2].transform) as GameObject;
+            // GameObject[] finalResults = new GameObject[3];
+            // for(int i = 0; i < 3; i++)
+            // {
+                CleanSlot(i);
+                finalResult = Instantiate(result3[i].garment, Draw3Slot[i].transform) as GameObject;
+                finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button
+            // }
             Draw3Panel.SetActive(true);
         }
     }
- 
+
+    private void DrawDisable()
+    {
+        drawButton[0].GetComponent<Button>().enabled = false;
+        drawButton[1].GetComponent<Button>().enabled = false;
+        if(backButton != null)
+        {
+            backButton.SetActive(false);
+        }
+    }
+
+    private void DrawEnable()
+    {
+        drawButton[0].GetComponent<Button>().enabled = true;
+        drawButton[1].GetComponent<Button>().enabled = true;
+        if(backButton != null)
+        {
+            backButton.SetActive(true);
+        }
+    }
+
+    public void ClosePanel()
+    {
+        DrawEnable();
+        RCMAnim.SetTrigger("Idle");
+        CleanSlot();
+        Draw1Panel.SetActive(false);
+        Draw3Panel.SetActive(false);
+    }
+
+    private void CleanSlot()
+    {
+        foreach (Transform child in Draw1Panel.transform)
+        {
+            if (child != Draw1Panel.transform){
+                //child is your child transform
+                DestroyImmediate(child.gameObject);
+            }
+        }
+
+        foreach (GameObject slot in Draw3Slot)
+        {
+            foreach (Transform child in slot.transform)
+            {
+                if (child != slot.transform){
+                    //child is your child transform
+                    DestroyImmediate(child.gameObject);
+                }
+            }
+        }
+    }
+    
+    private void CleanSlot(int i)
+    {
+        foreach (Transform child in Draw3Slot[i].transform)
+        {
+            if (child != Draw3Slot[i].transform){
+                //child is your child transform
+                DestroyImmediate(child.gameObject);
+            }
+        }
+    }
 }

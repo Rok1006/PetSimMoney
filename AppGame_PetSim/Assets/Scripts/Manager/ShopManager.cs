@@ -124,7 +124,7 @@ public class ShopManager : MonoBehaviour
         ItemsInfo info = item.GetComponent<ItemsInfo>();
         CostMethod costMethod = info.costMethod;
 
-        if(Status.Instance.LeafChange(costMethod, info.cost))
+        if(Status.Instance.LeafChange(costMethod, -info.cost))
         {
             //TODO
             ////////ADD ITEM TO INVENTORY

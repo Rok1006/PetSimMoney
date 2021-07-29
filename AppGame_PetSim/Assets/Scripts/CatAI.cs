@@ -341,7 +341,7 @@ public class CatAI : MonoBehaviour
         Touch();
         Effects.Instance.HappyEmittion();
         Status.Instance.StatsChange(StatsType.Happiness, Status.Instance.happyMax / 100);
-            
+        User.Instance.ExpUP(1);            
     }
     void OnMouseUp()
     {
