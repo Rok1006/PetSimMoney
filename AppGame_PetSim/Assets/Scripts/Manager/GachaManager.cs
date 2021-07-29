@@ -21,6 +21,8 @@ public class GachaManager : MonoBehaviour
     public GameObject[] drawButton = new GameObject[2]; 
     public GameObject backButton;
 
+    public Text probabilityPreview;
+    public Text[] probabilityShowList = new Text[3];
     private int _luck = 0;
     public int luck { get { return _luck; } }
     private float[] _probability = {0.05f, 0.285f, 0.665f};
@@ -45,6 +47,7 @@ public class GachaManager : MonoBehaviour
                 }
             }
         }
+        ProbabilityUpdate();
     }
 
     public Rarity DrawEgg() 
@@ -84,11 +87,16 @@ public class GachaManager : MonoBehaviour
             _probability[0] = Mathf.Round((0.1f + ((luck - 1000) * 0.0009f)) * 1000.0f) / 1000.0f;
         }
         _probability[1] = Mathf.Floor(((1.0f - _probability[0]) * 3.0f / 10.0f) * 1000.0f) / 1000.0f;
-        Debug.Log("Test: " + _probability[0].ToString() + ", " + _probability[1].ToString());
+        //Debug.Log("Test: " + _probability[0].ToString() + ", " + _probability[1].ToString());
         _probability[2] = 1.0f - _probability[0] - _probability[1];
-        Debug.Log("Super Rare: " + (_probability[0] * 100).ToString() + "% Rare: " +
-                                   (_probability[1] * 100).ToString() + "% Common: " +
-                                   (_probability[2] * 100).ToString() + "%");
+        // Debug.Log("Super Rare: " + (_probability[0] * 100).ToString() + "% Rare: " +
+        //                            (_probability[1] * 100).ToString() + "% Common: " +
+        //                            (_probability[2] * 100).ToString() + "%");
+        probabilityPreview.text = (Mathf.Round(_probability[0]*1000)/10).ToString() + "%";
+        for(int i = 0; i < 3; i++)
+        {
+            probabilityShowList[i].text = (Mathf.Round(_probability[i]*1000)/10).ToString() + "%";
+        }
     }
 //Costumes Gacha Panel
     public void ClickDraw1(){ //pressing the buttons to begin drawing animation , for the draw 1 item button
@@ -186,6 +194,7 @@ public class GachaManager : MonoBehaviour
     {
         drawButton[0].GetComponent<Button>().enabled = false;
         drawButton[1].GetComponent<Button>().enabled = false;
+        probabilityPreview.transform.parent.GetComponent<Button>().enabled = false;
         if(backButton != null)
         {
             backButton.SetActive(false);
@@ -196,6 +205,7 @@ public class GachaManager : MonoBehaviour
     {
         drawButton[0].GetComponent<Button>().enabled = true;
         drawButton[1].GetComponent<Button>().enabled = true;
+        probabilityPreview.transform.parent.GetComponent<Button>().enabled = true;
         if(backButton != null)
         {
             backButton.SetActive(true);
