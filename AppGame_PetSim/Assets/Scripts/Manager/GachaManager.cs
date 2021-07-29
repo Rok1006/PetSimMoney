@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GachaManager : MonoBehaviour
 {
+    public static GachaManager Instance;
     public GameObject RedMachine;
     Animator RCMAnim;
     public GameObject BlueMachine;
@@ -23,13 +24,17 @@ public class GachaManager : MonoBehaviour
 
     public Text probabilityPreview;
     public Text[] probabilityShowList = new Text[3];
-    private int _luck = 0;
+    public int _luck = 0;
     public int luck { get { return _luck; } }
     private float[] _probability = {0.05f, 0.285f, 0.665f};
     public float[] probability { get { return _probability; } }
     private List<List<Garment>> pool = new List<List<Garment>>();
     private Garment result1;
     private Garment[] result3 = new Garment[3];
+    void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         RCMAnim = RedMachine.GetComponent<Animator>();
