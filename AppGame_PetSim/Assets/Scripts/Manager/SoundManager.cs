@@ -91,7 +91,7 @@ public class SoundManager : MonoBehaviour
         toyfall.Play();
     }
     public void Click(){
-        click.Play();
+  //      click.Play();
     }
     public void Flip(){
         flip.Play();

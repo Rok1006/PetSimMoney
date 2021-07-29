@@ -54,129 +54,136 @@ public class BeginnerGuide : MonoBehaviour
 
     void Update()
     {
-       switch(guideState) {
-           case 0:
-           break;
-           case 1:
-           break;
-           case 2: //introduce status panel
-                Fingers[0].SetActive(true);
-                StatusButton.GetComponent<Button>().interactable = true;
-           break;
-           case 3: //show status panel
+        if(!User.Instance.beginnerGuide)
+        {
+            switch(guideState) {
+                case 0:
+                break;
+                case 1:
+                break;
+                case 2: //introduce status panel
+                        Fingers[0].SetActive(true);
+                        StatusButton.GetComponent<Button>().interactable = true;
+                break;
+                case 3: //show status panel
+                        if(doIt){
+                            Fingers[0].SetActive(false);
+                            Manager.Instance.ClickStatus();
+                            doIt = false;
+                        }
+                break;
+                case 4: //introduce store
+                        if(doIt){
+                            Manager.Instance.ClickHideStatus();
+                            StatusButton.GetComponent<Button>().interactable = false;
+                            StoreButton.GetComponent<Button>().interactable = true;
+                            Fingers[3].SetActive(true);
+                            doIt = false;
+                        }
+                break;
+                case 5:
+                        if(doIt){
+                            Fingers[3].SetActive(false);
+                            Manager.Instance.ClickStore();
+                            doIt = false;
+                        }
+                break;
+                case 6: //introduce bag
+                        if(doIt){
+                            Manager.Instance.ClickCloseStore();
+                            StoreButton.GetComponent<Button>().interactable = false;
+                            BagButton.GetComponent<Button>().interactable = true;
+                            Fingers[1].SetActive(true);
+                            doIt = false;
+                        }
+                break;
+                case 7:
+                        if(doIt){
+                            Fingers[1].SetActive(false);
+                            Manager.Instance.ClickBag();
+                            doIt = false;
+                        }
+                break;
+                case 8: //introduce gacha
+                        if(doIt){
+                            Manager.Instance.ClickHideBag();
+                            BagButton.GetComponent<Button>().interactable = false;
+                            GachaButton.GetComponent<Button>().interactable = true;
+                            Fingers[2].SetActive(true);
+                            doIt = false;
+                        }
+                break;
+                case 9:
+                    if(doIt){
+                            Fingers[2].SetActive(false);
+                            Manager.Instance.ClickGacha();
+                            doIt = false;
+                        }
+                break;
+                case 10: //contiue dialogue in gacha screen
+                break;
+                case 11:
                 if(doIt){
-                    Fingers[0].SetActive(false);
-                    Manager.Instance.ClickStatus();
-                    doIt = false;
-                }
-           break;
-           case 4: //introduce store
+                            Manager.Instance.ClickCloseGacha();
+                            GachaButton.GetComponent<Button>().interactable = false;
+                            CostumeButton.GetComponent<Button>().interactable = true;
+                            Fingers[4].SetActive(true);
+                            doIt = false;
+                        }
+                break;
+                case 12:
+                    if(doIt){
+                            Fingers[4].SetActive(false);
+                            Manager.Instance.ClickCostumes();
+                            doIt = false;
+                        }
+                break;
+                case 13:
                 if(doIt){
-                    Manager.Instance.ClickHideStatus();
-                    StatusButton.GetComponent<Button>().interactable = false;
-                    StoreButton.GetComponent<Button>().interactable = true;
-                    Fingers[3].SetActive(true);
-                    doIt = false;
-                }
-           break;
-           case 5:
+                            Manager.Instance.ClickCloseCostumes();
+                            CostumeButton.GetComponent<Button>().interactable = false;
+                            GiftsButton.GetComponent<Button>().interactable = true;
+                            Fingers[5].SetActive(true);
+                            doIt = false;
+                        }
+                break;
+                case 14:
+                    if(doIt){
+                            Fingers[5].SetActive(false);
+                            Manager.Instance.ClickGift();
+                            doIt = false;
+                        }
+                break;
+                case 15:
                 if(doIt){
-                    Fingers[3].SetActive(false);
-                    Manager.Instance.ClickStore();
-                    doIt = false;
-                }
-           break;
-           case 6: //introduce bag
-                if(doIt){
-                    Manager.Instance.ClickCloseStore();
-                    StoreButton.GetComponent<Button>().interactable = false;
-                    BagButton.GetComponent<Button>().interactable = true;
-                    Fingers[1].SetActive(true);
-                    doIt = false;
-                }
-           break;
-           case 7:
-                if(doIt){
-                    Fingers[1].SetActive(false);
-                    Manager.Instance.ClickBag();
-                    doIt = false;
-                }
-           break;
-           case 8: //introduce gacha
-                if(doIt){
-                    Manager.Instance.ClickHideBag();
-                    BagButton.GetComponent<Button>().interactable = false;
-                    GachaButton.GetComponent<Button>().interactable = true;
-                    Fingers[2].SetActive(true);
-                    doIt = false;
-                }
-           break;
-           case 9:
-              if(doIt){
-                    Fingers[2].SetActive(false);
-                    Manager.Instance.ClickGacha();
-                    doIt = false;
-                }
-           break;
-           case 10: //contiue dialogue in gacha screen
-           break;
-           case 11:
-           if(doIt){
-                    Manager.Instance.ClickCloseGacha();
-                    GachaButton.GetComponent<Button>().interactable = false;
-                    CostumeButton.GetComponent<Button>().interactable = true;
-                    Fingers[4].SetActive(true);
-                    doIt = false;
-                }
-           break;
-           case 12:
-              if(doIt){
-                    Fingers[4].SetActive(false);
-                    Manager.Instance.ClickCostumes();
-                    doIt = false;
-                }
-           break;
-           case 13:
-           if(doIt){
-                    Manager.Instance.ClickCloseCostumes();
-                    CostumeButton.GetComponent<Button>().interactable = false;
-                    GiftsButton.GetComponent<Button>().interactable = true;
-                    Fingers[5].SetActive(true);
-                    doIt = false;
-                }
-           break;
-           case 14:
-            if(doIt){
-                    Fingers[5].SetActive(false);
-                    Manager.Instance.ClickGift();
-                    doIt = false;
-                }
-           break;
-           case 15:
-           if(doIt){
-                    Manager.Instance.ClickCloseGift();
-                    GiftsButton.GetComponent<Button>().interactable = false;
-                    Fingers[6].SetActive(true);
-                    doIt = false;
-                }
-           break;
-           case 16:
-           break;
-           case 17:
-            Fingers[6].SetActive(false);
-            EnableAllButton();
-            catai.enabled = true;
-            BeginnerGuideUI.SetActive(false);
-            User.Instance.ExpUP(User.Instance.maxfpValue);
-            User.Instance.beginnerGuide = true;
-            this.enabled = false;
-           break;
+                            Manager.Instance.ClickCloseGift();
+                            GiftsButton.GetComponent<Button>().interactable = false;
+                            Fingers[6].SetActive(true);
+                            doIt = false;
+                        }
+                break;
+                case 16:
+                break;
+                case 17:
+                    Fingers[6].SetActive(false);
+                    EnableAllButton();
+                    catai.enabled = true;
+                    BeginnerGuideUI.SetActive(false);
+                    User.Instance.ExpUP(User.Instance.maxfpValue);
+                    User.Instance.beginnerGuide = true;
+                    this.enabled = false;
+                break;
 
 
-       }
-       if(textDisplay.text == sentences[index]){
-           NextB.GetComponent<Button>().interactable = true;
-       }
+            }
+            if(textDisplay.text == sentences[index]){
+                NextB.GetComponent<Button>().interactable = true;
+            }
+        }
+        else
+        {
+            NoGuide();
+        }
     }
     void DisableAllFingers(){
         for(int i = 0; i < Fingers.Length; i++){

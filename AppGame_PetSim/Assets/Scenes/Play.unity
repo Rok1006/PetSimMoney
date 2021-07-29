@@ -2156,6 +2156,7 @@ MonoBehaviour:
   - 100
   - 100
   - 100
+  leafC: 0000000000000000
 --- !u!114 &76563524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24069,7 +24070,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 653686940}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1797783012}
+        m_MethodName: ClosePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &653686943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58678,6 +58690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2cfd54ce2a3e4728ab375284479a11a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _itemList: []
 --- !u!114 &1797783011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58724,6 +58737,9 @@ MonoBehaviour:
   - {fileID: 1780467758}
   - {fileID: 1304464190}
   - {fileID: 1579108881}
+  _luck: 0
+  BG: {fileID: 1528157241}
+  closeButton: {fileID: 653686938}
 --- !u!114 &1797783013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58736,10 +58752,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e374a03ac824f1ab236e92ce16c81e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _garmentList: []
   GarmentUITemplate:
   - {fileID: 323074298}
   - {fileID: 1101693515}
   - {fileID: 1417594591042960753}
+  wearing: []
   garmentPlaceHolder:
   - {fileID: 1489782536}
   - {fileID: 1807625765}
