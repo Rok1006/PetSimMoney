@@ -31178,7 +31178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &781235917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56792,6 +56792,10 @@ MonoBehaviour:
   - {fileID: 2116711719}
   - {fileID: 496188616}
   - {fileID: 714561419}
+  eggTemplate:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1797783013
 MonoBehaviour:
   m_ObjectHideFlags: 0
