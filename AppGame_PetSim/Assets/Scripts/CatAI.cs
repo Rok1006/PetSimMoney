@@ -132,8 +132,8 @@ public class CatAI : MonoBehaviour
         canEatDrink = true;
         canTouch = true;
         Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 100);
-        Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100);
-        Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 50);
+        Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100); //1%  increase more the value , lesser it decrease
+        Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 50); //2%
         Status.Instance.StatsChange(StatsType.Energy, -Status.Instance.energyMax / 100);
         action = Action.Idle;
         catanim.SetTrigger("idle");
@@ -240,7 +240,7 @@ public class CatAI : MonoBehaviour
     }
     public void NormalState()
     { //randomize action, change probability when more animation
-        if(doNormal){
+        if(doNormal && !switchCooldown){
         p = Random.Range(0,100); //int p = 
         if(p>0 && p<30){
             Walking();
@@ -266,7 +266,9 @@ public class CatAI : MonoBehaviour
     { //for animation idle, sitsleep,sitawake, meow
         int t = Random.Range(5,10);
         //Debug.Log(t);
+        switchCooldown = true;
         yield return new WaitForSeconds(t);//wait for 5 sec to do the next
+        switchCooldown = false;
         NormalState();//after wait for 5 sec do random generate, detect value to change to different state
         CheckToyList();
     }
