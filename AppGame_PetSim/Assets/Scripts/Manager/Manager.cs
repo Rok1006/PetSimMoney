@@ -45,12 +45,15 @@ public class Manager : MonoBehaviour
     public string sceneName;
     public GameObject BGCover;
     public GameObject CrossCloseEgg;
+    public GameObject functionManager;
+    public SaveLoadManager slm;
   
     void Awake(){
         Instance = this;
         sm = SoundM.GetComponent<SoundManager>();
         BGM.SetActive(true);
         SoundM.SetActive(true);
+        slm = GameObject.Find("FunctionManager").GetComponent<SaveLoadManager>();
     }
 
     public int openclose = 0;
@@ -170,7 +173,8 @@ public class Manager : MonoBehaviour
         sm.Click();
         SettingPannel.SetActive(false);
     }
-    public void SettingtoMenu(){
+    public void SettingtoMenu(){ //click to menu
+        slm.SaveData();
          SceneManager.LoadScene(sceneName);
     }
     public void ClickInvent(){
@@ -245,9 +249,6 @@ public class Manager : MonoBehaviour
      public void ClickCloseGift(){
         sm.Click();
         GiftPannel.SetActive(false);
-    }
-    public void ClickAds(){
-        //play ads
     }
     //Settings
     public void OnClickMusicToggle(bool isOn){
