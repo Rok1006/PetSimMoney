@@ -135,5 +135,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickSplash: {fileID: 7164442863636164519, guid: 67db229c29946414e809f9ef1836f5e4,
     type: 3}
-  SoundM: {fileID: 6889173809004950055, guid: c54207927046b4b9d85468fe8e529fd6, type: 3}
+  exp: {fileID: 185456089615144960, guid: f7b0eae7db0e448d4b6cfc88484293dd, type: 3}
+  SoundM: {fileID: 0}
   sm: {fileID: 0}

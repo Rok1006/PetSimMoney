@@ -15,6 +15,7 @@ TagManager:
   - NeckPiece
   - HeadPiece
   - PopUpUse
+  - Air
   layers:
   - Default
   - TransparentFX

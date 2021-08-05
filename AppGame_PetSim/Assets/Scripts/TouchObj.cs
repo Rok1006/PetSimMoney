@@ -5,6 +5,7 @@ using UnityEngine;
 public class TouchObj : MonoBehaviour
 {
     public GameObject clickSplash;
+    public GameObject exp;
     public GameObject SoundM;
     public SoundManager sm;
     void Start()
@@ -14,7 +15,9 @@ public class TouchObj : MonoBehaviour
     }
     void Update()
     {
-   
+          if(this.transform.gameObject.tag == "Air"){
+            Destroy(this.gameObject, 2f); //later: Destroy(this.gameObject, 1f)
+        }
     }
     void OnMouseDown(){
     //Debug.Log("yup");
@@ -35,11 +38,15 @@ public class TouchObj : MonoBehaviour
             Destroy(c, 1f);
         }
          if(this.transform.gameObject.tag == "Trash"){
+            User.Instance.ExpUP(3); //add three exp
             Debug.Log("trash"); 
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
+            GameObject d = Instantiate(exp, this.transform.position, Quaternion.identity);
             sm.Trash();
-            Destroy(this.gameObject);
             Destroy(c, 1f);
+            //Destroy(d, 1f);
+            Destroy(this.gameObject);
+            
         }
     }
     

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7506501776709650746}
   - component: {fileID: 7506501776709650745}
   m_Layer: 0
-  m_Name: RareItem
+  m_Name: RareLeaf_obj
   m_TagString: Rare
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1544776963
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -4759560171531908217, guid: d57d7ab2121ef4aa897b2b92ba0e2c91,
     type: 3}
@@ -137,6 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickSplash: {fileID: 4965846237356139520, guid: 6f0487bb3c301438cbc82f49b7346e8c,
     type: 3}
+  exp: {fileID: 185456089615144960, guid: f7b0eae7db0e448d4b6cfc88484293dd, type: 3}
+  SoundM: {fileID: 0}
+  sm: {fileID: 0}
 --- !u!1 &7506501777609463394
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +209,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1544776963
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 5231701614279053906, guid: 01fbb42b0767a4f7cabd18ea758865ed,
     type: 3}

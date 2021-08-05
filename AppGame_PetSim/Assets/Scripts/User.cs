@@ -49,7 +49,7 @@ public class User : MonoBehaviour
             ExpUP(maxfpValue);
         }
     }
-    public void ExpUP(int value)
+    public void ExpUP(int value) //call this function 
     {
         if(level < maxLevel)
         {

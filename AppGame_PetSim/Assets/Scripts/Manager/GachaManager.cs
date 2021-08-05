@@ -11,11 +11,12 @@ public class GachaManager : MonoBehaviour
     Animator RCMAnim;
     public GameObject BlueMachine;
     Animator BCMAnim;
+    public GameObject Flash;
+    Animator flashAnim;
     public GameObject Draw1Panel;
     public GameObject Draw3Panel;
     public GameObject ExchangePanel;
     private int resultState = 0;
-    
     public GameObject[] Draw3Slot; //to put invent slot
     public GameObject[] eggTemplate = new GameObject[3];
     private GameObject[] eggUI = new GameObject[3];
@@ -33,6 +34,8 @@ public class GachaManager : MonoBehaviour
     private Garment[] result3 = new Garment[3];
     public GameObject BG;
     public GameObject closeButton;
+    Animator eggAnim;
+    public bool canReveal = false;
     void Awake()
     {
         Instance = this;
@@ -41,6 +44,7 @@ public class GachaManager : MonoBehaviour
     {
         RCMAnim = RedMachine.GetComponent<Animator>();
         BCMAnim = BlueMachine.GetComponent<Animator>();
+        flashAnim = Flash.GetComponent<Animator>();
         Draw1Panel.SetActive(false);
         Draw3Panel.SetActive(false);
         foreach(Rarity rarity in Enum.GetValues(typeof(Rarity)))
@@ -168,34 +172,57 @@ public class GachaManager : MonoBehaviour
                 //Error
                 break;            
         }
-        GameObject eggUI = Instantiate(template, pos) as GameObject;
-        eggUI.GetComponent<Button>().onClick.AddListener(delegate{crackopen(round);});
+        GameObject eggUI = Instantiate(template, pos) as GameObject; //where the eggs appear
+        eggAnim = eggUI.GetComponent<Animator>();
+        eggUI.GetComponent<Button>().onClick.AddListener(delegate{crackopen(round);});    
         eggUI.SetActive(true);
         eggUI.transform.parent.gameObject.SetActive(true);
+    }
+    public void ClickEgg(){ //do this animation before the egg disappear
+        eggAnim.SetTrigger("ClickEgg");
     }
 
     //Items Gacha Panel: do the same above
     public void crackopen(int i = 0){ //spine event crackopen in Showing result All
+        flashAnim.SetTrigger("flash");
         SoundManager.Instance.Open();
         GameObject finalResult;
         if(resultState==1){ //draw 1
-            CleanSlot();
+            // StartCoroutine("Draw1");
+            CleanSlot(); //clear egg
             finalResult = Instantiate(result1.garment, Draw1Panel.transform) as GameObject;
-            //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button
+            //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button //not using
             Draw1Panel.SetActive(true);
         }
         else if(resultState==3)
         { //draw 2
+            //StartCoroutine("Draw3");
             // GameObject[] finalResults = new GameObject[3];
             // for(int i = 0; i < 3; i++)
             // {
                 CleanSlot(i);
                 finalResult = Instantiate(result3[i].garment, Draw3Slot[i].transform) as GameObject;
-                //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button
-            // }
+                //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button //not using
+            //}
             Draw3Panel.SetActive(true);
         }
     }
+    // IEnumerator Draw1(){
+    //     yield return new WaitForSeconds(.5f);
+    //     canReveal = true;
+    //     // GameObject finalResult;
+    //     // CleanSlot(); //clear egg
+    //     //   finalResult = Instantiate(result1.garment, Draw1Panel.transform) as GameObject;
+    //     //     //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button
+    //     //     Draw1Panel.SetActive(true);
+    // }
+    //    IEnumerator Draw3(int i = 0){
+    //     yield return new WaitForSeconds(.5f);
+    //     GameObject finalResult;
+    //     CleanSlot(i); //clear egg
+    //     finalResult = Instantiate(result3[i].garment, Draw3Slot[i].transform) as GameObject;
+    //     Draw3Panel.SetActive(true);
+    // }
 
     private void DrawDisable()
     {
