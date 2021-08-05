@@ -126,7 +126,7 @@ public class ShopManager : MonoBehaviour
 
         if(Status.Instance.LeafChange(costMethod, -info.cost))
         {
-            //TODO
+            SoundManager.Instance.Buy();
             ////////ADD ITEM TO INVENTORY
             Inventory.instance.AddToSlots(item, 1); //Current amount of all item is 1
             Manager.Instance.boughtItems += 1;

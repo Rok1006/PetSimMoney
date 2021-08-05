@@ -9,6 +9,7 @@ public class ItemsDrop : MonoBehaviour
     public GameObject NormalItem; //prefab, ID = 1
     public GameObject RareItem; //prefab  ID = 2
     public GameObject Trash; //prefab  ID = 0
+    public GameObject Air; //prefab  ID = 0
     int finalprobability;
     int touchprobability;
     int itemID;
@@ -79,6 +80,8 @@ public class ItemsDrop : MonoBehaviour
                 GameObject i = Instantiate(NormalItem, itemEmitSpot.transform.position, Quaternion.identity);
                 SoundManager.Instance.FoodFall();
             }else if(itemID2==3){
+                GameObject i = Instantiate(Air, itemEmitSpot.transform.position, Quaternion.identity);
+                SoundManager.Instance.FoodFall();
             }
         }
     }
