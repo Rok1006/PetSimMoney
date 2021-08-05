@@ -186,9 +186,9 @@ MonoBehaviour:
   _type: 0
   _rarity: 0
   _costMethod: 0
-  _cost: 30
+  _cost: 15
   _levelRequirement: 3
-  _description: + 25 hydration per drink
+  _description: + 25 hydration
   _hydrationValue: 25
 --- !u!223 &4258303646998470550
 Canvas:

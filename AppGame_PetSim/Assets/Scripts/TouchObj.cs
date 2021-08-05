@@ -22,24 +22,24 @@ public class TouchObj : MonoBehaviour
             Debug.Log("normal"); 
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
             Status.Instance.LeafChange(CostMethod.GreenLeaf, 1);
+            sm.Bling();
             Destroy(this.gameObject); //later: Destroy(this.gameObject, 1f)
             Destroy(c, 1f);
-            sm.Bling();
         }
          if(this.transform.gameObject.tag == "Rare"){
             Debug.Log("rare");
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity); 
             Status.Instance.LeafChange(CostMethod.GoldLeaf, 1);
+            sm.Bling();
             Destroy(this.gameObject);
             Destroy(c, 1f);
-            sm.Bling();
         }
          if(this.transform.gameObject.tag == "Trash"){
             Debug.Log("trash"); 
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
+            sm.Trash();
             Destroy(this.gameObject);
             Destroy(c, 1f);
-           sm.Trash();
         }
     }
     

@@ -265,7 +265,7 @@ MonoBehaviour:
   _type: 0
   _rarity: 0
   _costMethod: 0
-  _cost: 20
+  _cost: 5
   _levelRequirement: 1
   _description: + 10 hydration per drink
   _hydrationValue: 10

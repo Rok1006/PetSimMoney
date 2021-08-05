@@ -187,9 +187,9 @@ MonoBehaviour:
   _type: 2
   _rarity: 1
   _costMethod: 0
-  _cost: 30
+  _cost: 15
   _levelRequirement: 3
-  _description: 
+  _description: +25 happiness
   _happinessValue: 25
 --- !u!223 &5247178773580950767
 Canvas:

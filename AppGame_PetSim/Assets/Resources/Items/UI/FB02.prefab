@@ -187,7 +187,7 @@ MonoBehaviour:
   _type: 1
   _rarity: 1
   _costMethod: 0
-  _cost: 50
+  _cost: 30
   _levelRequirement: 10
   _description: + 50 fullness per piece
   _hungerValue: 50

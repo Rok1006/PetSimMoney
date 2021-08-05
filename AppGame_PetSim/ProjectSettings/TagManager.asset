@@ -79,6 +79,9 @@ TagManager:
   - name: StorePage
     uniqueID: 268477013
     locked: 0
+  - name: PopUP
+    uniqueID: 641619843
+    locked: 0
   - name: BeginnerGuide
     uniqueID: 1127204707
     locked: 0

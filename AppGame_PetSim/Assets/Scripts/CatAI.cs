@@ -122,8 +122,10 @@ public class CatAI : MonoBehaviour
            }
     }
     void CheckLowStats(){ //if hunger and dryness low to certain rate, be angry:have to feed 
-        if(Status.Instance.hungerV/Status.Instance.hungerMax<.2f||Status.Instance.hydrationV/Status.Instance.hydrationMax<.2f){ 
+        if(Status.Instance.hungerV/Status.Instance.hungerMax<.1f||Status.Instance.hydrationV/Status.Instance.hydrationMax<.1f){ 
          Angry();
+        }else{
+            doNormal = true;
         }
     }
     public void Idle()
@@ -160,7 +162,7 @@ public class CatAI : MonoBehaviour
         canTouch = false;
         Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 150);
         Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 200);
-        Status.Instance.StatsChange(StatsType.Energy, Status.Instance.energyMax / 50);
+        Status.Instance.StatsChange(StatsType.Energy, Status.Instance.energyMax); //30
         action = Action.SitSleeping;
          catanim.SetTrigger("sitsleep");
          StartCoroutine("SwitchAct");
@@ -174,7 +176,7 @@ public class CatAI : MonoBehaviour
         Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 100);
         Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100);
         Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 50);
-        Status.Instance.StatsChange(StatsType.Energy, Status.Instance.energyMax / 200);
+        Status.Instance.StatsChange(StatsType.Energy, Status.Instance.energyMax / 15); //original 200
         action = Action.SitAwake;
         catanim.SetTrigger("sitawake");
         StartCoroutine("SwitchAct");
@@ -201,7 +203,7 @@ public class CatAI : MonoBehaviour
         Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 50);
         Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 50);
         Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 100);
-        Status.Instance.StatsChange(StatsType.Energy, -Status.Instance.energyMax / 33);
+        Status.Instance.StatsChange(StatsType.Energy, -Status.Instance.energyMax / 50); //33
         action = Action.Dashing;
     }
     private void Play()
@@ -219,7 +221,7 @@ public class CatAI : MonoBehaviour
 
     private void Smile(){
         catanim.SetTrigger("happy");
-        StartCoroutine("SwitchShortAct");
+        StartCoroutine("SwitchShortActHappy");
         action = Action.Smile;
     }
     private void Touch(){
@@ -230,6 +232,7 @@ public class CatAI : MonoBehaviour
     private void Angry(){ //be angry when stats all lower than certain: use if but nt else, put action = Action.Angry
         catanim.SetTrigger("angry");
         action = Action.Angry;
+        doNormal = false;
     }
     void RanPos()
     {  	//the range where the cat will walk around at
@@ -272,12 +275,23 @@ public class CatAI : MonoBehaviour
         NormalState();//after wait for 5 sec do random generate, detect value to change to different state
         CheckToyList();
     }
-    IEnumerator SwitchShortAct()
+     IEnumerator SwitchShortActHappy()
     { //for shorter animation
         if(!switchCooldown)
         {
             switchCooldown = true;
             yield return new WaitForSeconds(2f);//wait for 5 sec to do the next
+            switchCooldown = false;
+            NormalState();//after wait for 5 sec do random generate, detect value to change to different state
+            CheckToyList();
+        }
+    }
+    IEnumerator SwitchShortAct() //for touch
+    { //for shorter animation
+        if(!switchCooldown)
+        {
+            switchCooldown = true;
+            yield return new WaitForSeconds(.5f);//wait for 5 sec to do the next
             switchCooldown = false;
             NormalState();//after wait for 5 sec do random generate, detect value to change to different state
             CheckToyList();
