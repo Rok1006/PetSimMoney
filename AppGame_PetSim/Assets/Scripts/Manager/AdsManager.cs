@@ -14,25 +14,32 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     // #else
     //     string gameId = "4232375";
     // #endif
+    public static AdsManager Instance;
     public GameObject GiftPanel;
     public Image giftImage; //image replace, place the image slot ui 
     public Text giftText; //place the text ui here
     int GiftNum;
     bool green;
     int currentBar = 0;
+    int lastBar = 4; //count from the opposite
     public GameObject[] bars;
     public GameObject[] ClaimButtons;
-    
+    void Awake() {
+        Instance = this;
+    }
     void Start()
     {
         Advertisement.Initialize("4232374");
         Advertisement.AddListener(this);
         GiftPanel.SetActive(false);
+        //CheckAndLoadBars();
     }
     void Update() {
         if(Input.GetKey(KeyCode.H)){ //Cheat
             Restart();
         }
+        //Debug.Log(lastBar);
+        //CheckAndLoadBars();
     }
     public void PLayRewardedAd(){
         if(Advertisement.IsReady("Rewarded_iOS")){
@@ -67,17 +74,31 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         GiftPanel.SetActive(false);
         RevealBar(); //unock the next bar
     }
-    public void RevealBar(){
+    public void RevealBar(){ //use this to reveal the next bar when last ads is read
         for(int i = 0; i < bars.Length; i++){
             bars[currentBar].SetActive(false);
             currentBar+=1; //back to 0 at the end
+            lastBar-=1;
             break;
         }
     }
-    public void Restart(){
+    // public void CheckAndLoadBars(){
+    //     if(currentBar == 1){
+    //         int barNum = currentBar;
+    //         for(int i = barNum; i < bars.Length; i++){
+    //         bars[i].SetActive(true);
+    //         }
+    //          for(int i = barNum; i < ClaimButtons.Length; i++){
+    //         ClaimButtons[i].GetComponent<Button>().interactable = true;
+    //         }
+    //     }
+       
+    // }
+    public void Restart(){ //change everything back to normal
         for(int i = 0; i < bars.Length; i++){
             bars[i].SetActive(true);
             currentBar=0; //back to 0 at the end
+            lastBar = 4;
         }
          for(int i = 0; i < ClaimButtons.Length; i++){
             ClaimButtons[i].GetComponent<Button>().interactable = true;
