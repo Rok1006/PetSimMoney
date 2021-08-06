@@ -64839,7 +64839,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2111139330}
   m_HandleRect: {fileID: 2111139329}
   m_Direction: 3
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -74466,6 +74466,7 @@ GameObject:
   - component: {fileID: 206765288110608065}
   - component: {fileID: 206765288110608064}
   - component: {fileID: 206765288110608071}
+  - component: {fileID: 206765288110608068}
   m_Layer: 5
   m_Name: BUY
   m_TagString: Untagged
@@ -74493,6 +74494,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0.2, y: -48.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &206765288110608068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206765288110608066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  productId: 
+  buttonType: 0
+  consumePurchase: 1
+  onPurchaseComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  onPurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  titleText: {fileID: 0}
+  descriptionText: {fileID: 0}
+  priceText: {fileID: 0}
 --- !u!222 &206765288110608070
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -101886,7 +101911,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7389458866649420617}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
