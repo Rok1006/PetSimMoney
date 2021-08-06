@@ -34,7 +34,7 @@ public class GachaManager : MonoBehaviour
     private Garment[] result3 = new Garment[3];
     public GameObject BG;
     public GameObject closeButton;
-    Animator eggAnim;
+    Animator EA;
     public bool canReveal = false;
     void Awake()
     {
@@ -173,13 +173,16 @@ public class GachaManager : MonoBehaviour
                 break;            
         }
         GameObject eggUI = Instantiate(template, pos) as GameObject; //where the eggs appear
-        eggAnim = eggUI.GetComponent<Animator>();
+        
+        Animator eggAnim = eggUI.GetComponent<Animator>(); //new added in
+        EA = eggAnim;  //new added in , only work with draw 1 option, not the draw 3 option
+
         eggUI.GetComponent<Button>().onClick.AddListener(delegate{crackopen(round);});    
         eggUI.SetActive(true);
         eggUI.transform.parent.gameObject.SetActive(true);
     }
     public void ClickEgg(){ //do this animation before the egg disappear
-        eggAnim.SetTrigger("ClickEgg");
+        //eggAnim.SetTrigger("ClickEgg");
     }
 
     //Items Gacha Panel: do the same above
@@ -188,7 +191,7 @@ public class GachaManager : MonoBehaviour
         SoundManager.Instance.Open();
         GameObject finalResult;
         if(resultState==1){ //draw 1
-            // StartCoroutine("Draw1");
+            EA.SetTrigger("ClickEgg");  //newly added: work great for draw 1
             CleanSlot(); //clear egg
             finalResult = Instantiate(result1.garment, Draw1Panel.transform) as GameObject;
             //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button //not using
@@ -200,6 +203,7 @@ public class GachaManager : MonoBehaviour
             // GameObject[] finalResults = new GameObject[3];
             // for(int i = 0; i < 3; i++)
             // {
+                //EA.SetTrigger("ClickEgg");//doent work for the draw three 
                 CleanSlot(i);
                 finalResult = Instantiate(result3[i].garment, Draw3Slot[i].transform) as GameObject;
                 //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button //not using
@@ -263,7 +267,7 @@ public class GachaManager : MonoBehaviour
         {
             if (child != Draw1Panel.transform){
                 //child is your child transform
-                DestroyImmediate(child.gameObject);
+                Destroy(child.gameObject,0.5f); 
             }
         }
 
@@ -273,7 +277,7 @@ public class GachaManager : MonoBehaviour
             {
                 if (child != slot.transform){
                     //child is your child transform
-                    DestroyImmediate(child.gameObject);
+                    DestroyImmediate(child.gameObject); //add seconds after it?
                 }
             }
         }
@@ -285,7 +289,7 @@ public class GachaManager : MonoBehaviour
         {
             if (child != Draw3Slot[i].transform){
                 //child is your child transform
-                DestroyImmediate(child.gameObject);
+                Destroy(child.gameObject,0.5f); //not working great
             }
         }
     }
