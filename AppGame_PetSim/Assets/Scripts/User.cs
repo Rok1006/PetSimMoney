@@ -30,6 +30,7 @@ public class User : MonoBehaviour
          if(User.Instance.beginnerGuide){ //if already finish tutorial
             BGUI.SetActive(false);
             BG.enabled = false;
+            BG.DisableAllFingers();
             BG.NoGuide();
         }
     }

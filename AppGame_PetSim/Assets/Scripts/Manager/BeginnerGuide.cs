@@ -185,7 +185,7 @@ public class BeginnerGuide : MonoBehaviour
             NoGuide();
         }
     }
-    void DisableAllFingers(){
+    public void DisableAllFingers(){
         for(int i = 0; i < Fingers.Length; i++){
             Fingers[i].SetActive(false);
     }
@@ -197,7 +197,7 @@ public class BeginnerGuide : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
     }
-    void EnableAllButton(){
+    public void EnableAllButton(){
         StatusButton.GetComponent<Button>().interactable = true;
         BagButton.GetComponent<Button>().interactable = true;
         GachaButton.GetComponent<Button>().interactable = true;

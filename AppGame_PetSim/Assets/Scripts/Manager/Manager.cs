@@ -110,6 +110,9 @@ public class Manager : MonoBehaviour
             NeckPage.SetActive(false);
             BackPage.SetActive(true);
          }
+         if(Input.GetKey(KeyCode.B)){
+             sm.Click();
+         }
     }
     public void ClickStatus(){ //click the star
         sm.Click();
