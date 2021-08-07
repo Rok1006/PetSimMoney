@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using System.Text;
 using Newtonsoft.Json;
@@ -117,6 +118,32 @@ public class SaveLoadManager : MonoBehaviour
 
         userdata.luck = GachaManager.Instance._luck;
 
+        userdata.blocks = new List<bool>();
+        userdata.buttons = new List<bool>();
+        foreach(GameObject bar in AdsManager.Instance.bars)
+        {
+            if(bar.activeSelf)
+            {
+                userdata.blocks.Add(true);
+            }
+            else
+            {
+                userdata.blocks.Add(false);
+            }
+        }
+
+        foreach(GameObject ClaimButton in AdsManager.Instance.ClaimButtons)
+        {
+            if(ClaimButton.GetComponent<Button>().interactable)
+            {
+                userdata.buttons.Add(true);
+            }
+            else
+            {
+                userdata.buttons.Add(false);
+            }
+        }
+
         return userdata;
     }
 
@@ -191,6 +218,20 @@ public class SaveLoadManager : MonoBehaviour
         }
 
         GachaManager.Instance._luck = resultData.luck;
+
+        i = 0;
+        foreach(bool block in resultData.blocks)
+        {
+            AdsManager.Instance.bars[i].SetActive(block);
+            i++;
+        }
+
+        i = 0;
+        foreach(bool button in resultData.buttons)
+        {
+            AdsManager.Instance.ClaimButtons[i].GetComponent<Button>().interactable = button;
+            i++;
+        }
 
         GarmentManager.Instance.UpdateGarmentUI();
         GarmentManager.Instance.UpdateWear();

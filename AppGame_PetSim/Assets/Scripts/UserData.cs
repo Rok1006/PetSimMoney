@@ -23,4 +23,7 @@ public class UserData
     public List<int> slot;
     [Header("GachaManager.cs")]
     public int luck;
+    [Header("AdsManager.cs")]
+    public List<bool> blocks;
+    public List<bool> buttons;
 }
