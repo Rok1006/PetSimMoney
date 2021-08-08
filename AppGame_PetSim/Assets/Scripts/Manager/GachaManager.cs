@@ -35,6 +35,7 @@ public class GachaManager : MonoBehaviour
     public GameObject BG;
     public GameObject closeButton;
     Animator EA;
+    Animator[] EA3 = new Animator[3];
     public bool canReveal = false;
     void Awake()
     {
@@ -173,9 +174,20 @@ public class GachaManager : MonoBehaviour
                 break;            
         }
         GameObject eggUI = Instantiate(template, pos) as GameObject; //where the eggs appear
-        
-        Animator eggAnim = eggUI.GetComponent<Animator>(); //new added in
-        EA = eggAnim;  //new added in , only work with draw 1 option, not the draw 3 option
+        switch(drawType)
+        {
+            case 1:
+                Animator eggAnim = eggUI.GetComponent<Animator>(); //new added in
+                EA = eggAnim;  //new added in , only work with draw 1 option, not the draw 3 option
+                break;
+            case 3:
+                Animator eggAnim3 = eggUI.GetComponent<Animator>(); //new added in
+                EA3[round] = eggAnim3;  //new added in , only work with draw 1 option, not the draw 3 option
+                break;
+            default:
+                //Error
+                break;            
+        }
 
         eggUI.GetComponent<Button>().onClick.AddListener(delegate{crackopen(round);});    
         eggUI.SetActive(true);
@@ -203,7 +215,6 @@ public class GachaManager : MonoBehaviour
             // GameObject[] finalResults = new GameObject[3];
             // for(int i = 0; i < 3; i++)
             // {
-                //EA.SetTrigger("ClickEgg");//doent work for the draw three 
                 CleanSlot(i);
                 finalResult = Instantiate(result3[i].garment, Draw3Slot[i].transform) as GameObject;
                 //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button //not using
@@ -277,7 +288,7 @@ public class GachaManager : MonoBehaviour
             {
                 if (child != slot.transform){
                     //child is your child transform
-                    DestroyImmediate(child.gameObject); //add seconds after it?
+                    DestroyImmediate(child.gameObject);  //add seconds after it?
                 }
             }
         }
@@ -289,6 +300,7 @@ public class GachaManager : MonoBehaviour
         {
             if (child != Draw3Slot[i].transform){
                 //child is your child transform
+                EA3[i].SetTrigger("ClickEgg");//doent work for the draw three 
                 Destroy(child.gameObject,0.5f); //not working great
             }
         }
