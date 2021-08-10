@@ -117,9 +117,10 @@ public class SaveLoadManager : MonoBehaviour
         }
 
         userdata.luck = GachaManager.Instance._luck;
-
+////Ads Manager 
         userdata.blocks = new List<bool>();
         userdata.buttons = new List<bool>();
+        //userdata.currentBar = AdsManager.Instance.currentBar; //save and load the num of current bar not working??
         foreach(GameObject bar in AdsManager.Instance.bars)
         {
             if(bar.activeSelf)

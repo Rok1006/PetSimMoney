@@ -37,6 +37,7 @@ public class GachaManager : MonoBehaviour
     Animator EA;
     Animator[] EA3 = new Animator[3];
     public bool canReveal = false;
+    public GameObject particles;
     void Awake()
     {
         Instance = this;
@@ -204,17 +205,19 @@ public class GachaManager : MonoBehaviour
         GameObject finalResult;
         if(resultState==1){ //draw 1
             EA.SetTrigger("ClickEgg");  //newly added: work great for draw 1
+            GameObject p = Instantiate(particles, Draw1Panel.transform.position, Quaternion.identity); 
             CleanSlot(); //clear egg
             finalResult = Instantiate(result1.garment, Draw1Panel.transform) as GameObject;
             //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button //not using
             Draw1Panel.SetActive(true);
+            //Destroy(p, .6f);
         }
         else if(resultState==3)
         { //draw 2
-            //StartCoroutine("Draw3");
             // GameObject[] finalResults = new GameObject[3];
             // for(int i = 0; i < 3; i++)
             // {
+                GameObject p = Instantiate(particles, Draw3Slot[i].transform.position, Quaternion.identity);
                 CleanSlot(i);
                 finalResult = Instantiate(result3[i].garment, Draw3Slot[i].transform) as GameObject;
                 //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button //not using
@@ -222,22 +225,6 @@ public class GachaManager : MonoBehaviour
             Draw3Panel.SetActive(true);
         }
     }
-    // IEnumerator Draw1(){
-    //     yield return new WaitForSeconds(.5f);
-    //     canReveal = true;
-    //     // GameObject finalResult;
-    //     // CleanSlot(); //clear egg
-    //     //   finalResult = Instantiate(result1.garment, Draw1Panel.transform) as GameObject;
-    //     //     //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button
-    //     //     Draw1Panel.SetActive(true);
-    // }
-    //    IEnumerator Draw3(int i = 0){
-    //     yield return new WaitForSeconds(.5f);
-    //     GameObject finalResult;
-    //     CleanSlot(i); //clear egg
-    //     finalResult = Instantiate(result3[i].garment, Draw3Slot[i].transform) as GameObject;
-    //     Draw3Panel.SetActive(true);
-    // }
 
     private void DrawDisable()
     {
