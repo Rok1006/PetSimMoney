@@ -38,13 +38,13 @@ public class TouchObj : MonoBehaviour
             Destroy(c, 1f);
         }
          if(this.transform.gameObject.tag == "Trash"){
-            User.Instance.ExpUP(3); //add three exp
+            User.Instance.ExpUP(5); //add three exp
             Debug.Log("trash"); 
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
             GameObject d = Instantiate(exp, this.transform.position, Quaternion.identity);
             sm.Trash();
             Destroy(c, 1f);
-            //Destroy(d, 1f);
+            Destroy(d, 5f);
             Destroy(this.gameObject);
             
         }
