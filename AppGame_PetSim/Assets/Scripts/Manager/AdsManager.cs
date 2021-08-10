@@ -20,8 +20,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public Text giftText; //place the text ui here
     int GiftNum;
     bool green;
-    int currentBar = 0;
-    int lastBar = 4; //count from the opposite
+    public int currentBar = 0;
+    //int lastBar = 4; //count from the opposite
     public GameObject[] bars;
     public GameObject[] ClaimButtons;
     void Awake() {
@@ -78,7 +78,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         for(int i = 0; i < bars.Length; i++){
             bars[currentBar].SetActive(false);
             currentBar+=1; //back to 0 at the end
-            lastBar-=1;
+            //lastBar-=1;
             break;
         }
     }
@@ -98,7 +98,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         for(int i = 0; i < bars.Length; i++){
             bars[i].SetActive(true);
             currentBar=0; //back to 0 at the end
-            lastBar = 4;
+            //lastBar = 4;
         }
          for(int i = 0; i < ClaimButtons.Length; i++){
             ClaimButtons[i].GetComponent<Button>().interactable = true;

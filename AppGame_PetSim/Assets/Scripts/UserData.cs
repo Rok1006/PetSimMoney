@@ -26,4 +26,5 @@ public class UserData
     [Header("AdsManager.cs")]
     public List<bool> blocks;
     public List<bool> buttons;
+    //public int currentBar;
 }
