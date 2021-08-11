@@ -202,6 +202,7 @@ public class GachaManager : MonoBehaviour
     public void crackopen(int i = 0){ //spine event crackopen in Showing result All
         flashAnim.SetTrigger("flash");
         SoundManager.Instance.Open();
+        SoundManager.Instance.Bling();
         GameObject finalResult;
         if(resultState==1){ //draw 1
             EA.SetTrigger("ClickEgg");  //newly added: work great for draw 1
