@@ -118,6 +118,7 @@ public class SaveLoadManager : MonoBehaviour
 
         userdata.luck = GachaManager.Instance._luck;
 ////Ads Manager 
+        userdata.currentBar = AdsManager.Instance.currentBar;
         userdata.blocks = new List<bool>();
         userdata.buttons = new List<bool>();
         //userdata.currentBar = AdsManager.Instance.currentBar; //save and load the num of current bar not working??
@@ -144,6 +145,9 @@ public class SaveLoadManager : MonoBehaviour
                 userdata.buttons.Add(false);
             }
         }
+
+        userdata.MusicIsOn = Manager.Instance.BGM.activeSelf;
+        userdata.SoundIsOn = Manager.Instance.SoundM.activeSelf;
 
         return userdata;
     }
@@ -220,6 +224,7 @@ public class SaveLoadManager : MonoBehaviour
 
         GachaManager.Instance._luck = resultData.luck;
 
+        AdsManager.Instance.currentBar = resultData.currentBar;
         i = 0;
         foreach(bool block in resultData.blocks)
         {
@@ -234,6 +239,10 @@ public class SaveLoadManager : MonoBehaviour
             i++;
         }
 
+        Manager.Instance.BGM.SetActive(resultData.MusicIsOn);
+        Manager.Instance.SoundM.SetActive(resultData.SoundIsOn);
+
+        Manager.Instance.UpdateSettingPannel();
         GarmentManager.Instance.UpdateGarmentUI();
         GarmentManager.Instance.UpdateWear();
         ShopManager.Instance.ShopItemsGen();

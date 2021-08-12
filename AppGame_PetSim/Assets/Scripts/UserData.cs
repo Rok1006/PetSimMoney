@@ -24,7 +24,11 @@ public class UserData
     [Header("GachaManager.cs")]
     public int luck;
     [Header("AdsManager.cs")]
+    public int currentBar;
     public List<bool> blocks;
     public List<bool> buttons;
+    [Header("Manager.cs")]
+    public bool MusicIsOn;
+    public bool SoundIsOn;
     //public int currentBar;
 }

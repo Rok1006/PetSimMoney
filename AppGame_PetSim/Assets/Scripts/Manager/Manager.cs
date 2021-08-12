@@ -282,6 +282,11 @@ public class Manager : MonoBehaviour
             Debug.Log("Music Off");
         }
     }
+    public void UpdateSettingPannel()
+    {
+        SettingPannel.transform.Find("Music/MusicToggle").gameObject.GetComponent<Toggle>().isOn = BGM.activeSelf;
+        SettingPannel.transform.Find("Sounds/SoundToggle").gameObject.GetComponent<Toggle>().isOn = SoundM.activeSelf;
+    }
     void DetermineOnOff(){   //this is the function for the APP ui Pannel
     if(openclose==1){
         Inventory.SetActive(true);
