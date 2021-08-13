@@ -12,6 +12,7 @@ public class TouchObj : MonoBehaviour
     {
         SoundM = GameObject.Find("SoundManager");
         sm = SoundM.GetComponent<SoundManager>();
+        //Invoke("DestroyAuto", 5f);
     }
     void Update()
     {
@@ -48,6 +49,10 @@ public class TouchObj : MonoBehaviour
             Destroy(this.gameObject);
             
         }
+    }
+
+    void DestroyAuto(){
+        Destroy(this.gameObject);
     }
     
     void Detect(){

@@ -225,8 +225,8 @@ public class BeginnerGuide : MonoBehaviour
         BeginnerGuideUI.SetActive(false);
         User.Instance.ExpUP(User.Instance.maxfpValue);
         //check beginner guide as finished
-        this.enabled = false;
         User.Instance.beginnerGuide = true;
+        this.enabled = false;
     }
     public void NoGuide(){
         DisableAllFingers();

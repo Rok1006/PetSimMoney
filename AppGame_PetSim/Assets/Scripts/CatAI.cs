@@ -146,7 +146,7 @@ public class CatAI : MonoBehaviour
     {
         isPlayingToy = false;
         canEatDrink = false;
-        canTouch = false;
+        canTouch = true;
         Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 100);
         Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100);
         Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 66);
@@ -172,7 +172,7 @@ public class CatAI : MonoBehaviour
     {
         isPlayingToy = true;
         canEatDrink = true;
-        canTouch = false;
+        canTouch = true;
         Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 100);
         Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100);
         Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 50);
@@ -197,7 +197,7 @@ public class CatAI : MonoBehaviour
     public void Dashing()
     {
         executing = true;
-        canTouch = false;
+        canTouch = true;
         canEatDrink = false;
         isPlayingToy = true;
         Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 50);
@@ -230,6 +230,7 @@ public class CatAI : MonoBehaviour
         action = Action.Touch;
     }
     private void Angry(){ //be angry when stats all lower than certain: use if but nt else, put action = Action.Angry
+        canTouch = false;
         catanim.SetTrigger("angry");
         action = Action.Angry;
         doNormal = false;
@@ -352,17 +353,19 @@ public class CatAI : MonoBehaviour
     }
     void OnMouseDown()
     {
+        if(canTouch){
         ItemsDrop.Instance.TouchGenerator();
         beingTouch = true;
         Touch();
         Effects.Instance.HappyEmittion();
         Status.Instance.StatsChange(StatsType.Happiness, Status.Instance.happyMax / 100);
-        User.Instance.ExpUP(1);            
+        User.Instance.ExpUP(1);      
+        }      
     }
     void OnMouseUp()
     {
         beingTouch = false; 
-        canTouch = false;
+        //canTouch = false;
     }
     void OnTriggerEnter2D(Collider2D col) 
     {
