@@ -58,7 +58,8 @@ public class GachaManager : MonoBehaviour
             {
                 foreach(Garment garment in GarmentManager.Instance.separatedGarmentLists[(int) type])
                 {
-                    pool[(int) rarity].Add(garment);
+                    if(garment.garment.GetComponent<GarmentInfo>().rarity == rarity)
+                        pool[(int) rarity].Add(garment);
                 }
             }
         }
