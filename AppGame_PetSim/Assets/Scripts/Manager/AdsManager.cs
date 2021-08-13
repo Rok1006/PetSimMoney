@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Advertisements;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 //To do: create index that adds on, every click add 1 to open the block in the next bar [done]
 //to reactivate all of them back on the next day [missing the timer]
 //click collect to add into players owned count [done]
@@ -24,6 +25,9 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     //int lastBar = 4; //count from the opposite
     public GameObject[] bars;
     public GameObject[] ClaimButtons;
+    public DateTime quitDt;
+    private string timeNow;
+    bool resetpanel = false;
     void Awake() {
         Instance = this;
     }
@@ -33,13 +37,43 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         Advertisement.AddListener(this);
         GiftPanel.SetActive(false);
         //CheckAndLoadBars();
+        // DateTime dtnow = DateTime.Now;
+        // if(quitDt>dtnow){
+        // TimeSpan ts = dtnow - quitDt;
+        // Debug.Log(ts);
+        //}
+        string time = DateTime.Now.ToString("HH:mm");
+        Debug.Log(time);
+    }
+    void OnApplicationQuit() {
+        // Debug.Log("app quit");
+        // quitDt = DateTime.Now;
     }
     void Update() {
         if(Input.GetKey(KeyCode.H)){ //Cheat
             Restart();
         }
-        //Debug.Log(lastBar);
-        //CheckAndLoadBars();
+        //timeNow = DateTime.Now.ToString("HH:mm");
+        // if(Input.GetKey(KeyCode.M)){
+        //     quitDt = DateTime.Now;
+        // }
+    }
+    public void CheckTime(){
+        //   if(timeNow == "12:16"){ //12 am
+        //     //resetpanel = true;
+        //     ResetPanelUponTime();
+        //     Debug.Log("resetttttttt");
+        // }
+        //  DateTime dtnow = DateTime.Now;
+        // if(quitDt>dtnow){
+        // TimeSpan ts = dtnow - quitDt;
+        // Debug.Log(ts);
+        //}
+    }
+    public void ResetPanelUponTime(){
+        // quitDt = DateTime.Now;
+        Restart();
+        resetpanel = false;
     }
     public void PLayRewardedAd(){
         if(Advertisement.IsReady("Rewarded_iOS")){

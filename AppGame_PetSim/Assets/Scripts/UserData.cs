@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class UserData
 {
@@ -30,5 +31,6 @@ public class UserData
     [Header("Manager.cs")]
     public bool MusicIsOn;
     public bool SoundIsOn;
+    public DateTime quitDt;
     //public int currentBar;
 }
