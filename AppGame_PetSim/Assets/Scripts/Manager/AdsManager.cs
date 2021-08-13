@@ -25,8 +25,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     //int lastBar = 4; //count from the opposite
     public GameObject[] bars;
     public GameObject[] ClaimButtons;
-    public DateTime quitDt;
-    private string timeNow;
+    public int[] onDt = {0, 0, 0};
+    public int[] quitDt = {0, 0, 0};
     bool resetpanel = false;
     void Awake() {
         Instance = this;
@@ -36,29 +36,43 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         Advertisement.Initialize("4232374");
         Advertisement.AddListener(this);
         GiftPanel.SetActive(false);
+        InvokeRepeating("CheckTime", 0.0f, 1f);
         //CheckAndLoadBars();
         // DateTime dtnow = DateTime.Now;
         // if(quitDt>dtnow){
         // TimeSpan ts = dtnow - quitDt;
         // Debug.Log(ts);
         //}
-        string time = DateTime.Now.ToString("HH:mm");
-        Debug.Log(time);
+        // string time = DateTime.Now.ToString("HH:mm");
+        // Debug.Log(time);
+    }
+    public void CheckTime()
+    {
+        if(onDt[0] != DateTime.Now.Year || onDt[1] != DateTime.Now.Month || onDt[2] != DateTime.Now.Day)
+        {
+            Restart();
+            onDt[0] = DateTime.Now.Year;
+            onDt[1] = DateTime.Now.Month;
+            onDt[2] = DateTime.Now.Day;
+        }
     }
     void OnApplicationQuit() {
         // Debug.Log("app quit");
-        // quitDt = DateTime.Now;
+        quitDt[0] = DateTime.Now.Year;
+        quitDt[1] = DateTime.Now.Month;
+        quitDt[2] = DateTime.Now.Day;
     }
     void Update() {
         if(Input.GetKey(KeyCode.H)){ //Cheat
             Restart();
+            Debug.Log("Restart");
         }
         //timeNow = DateTime.Now.ToString("HH:mm");
         // if(Input.GetKey(KeyCode.M)){
         //     quitDt = DateTime.Now;
         // }
     }
-    public void CheckTime(){
+    //public void CheckTime(){
         //   if(timeNow == "12:16"){ //12 am
         //     //resetpanel = true;
         //     ResetPanelUponTime();
@@ -69,7 +83,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         // TimeSpan ts = dtnow - quitDt;
         // Debug.Log(ts);
         //}
-    }
+    //}
     public void ResetPanelUponTime(){
         // quitDt = DateTime.Now;
         Restart();
