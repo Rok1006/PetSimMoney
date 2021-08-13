@@ -74,7 +74,7 @@ public class ItemsDrop : MonoBehaviour
             //Debug.Log("dropped");
             TouchProbability();
             if(itemID2==0){
-                GameObject i = Instantiate(Trash, itemEmitSpot.transform.position, Quaternion.identity);
+                GameObject i = Instantiate(RareItem, itemEmitSpot.transform.position, Quaternion.identity);
                 SoundManager.Instance.FoodFall();
             }else if(itemID2==1){
                 GameObject i = Instantiate(NormalItem, itemEmitSpot.transform.position, Quaternion.identity);
@@ -87,10 +87,10 @@ public class ItemsDrop : MonoBehaviour
     }
     void TouchProbability(){
         touchprobability = Random.Range(1,101);
-         if(touchprobability<10){ //10%
-            itemID2 = 1;
-        }else if(touchprobability>=10 && touchprobability<30){ 
+         if(touchprobability<5){ //10%
             itemID2 = 0;
+        }else if(touchprobability>=5 && touchprobability<30){ 
+            itemID2 = 1;
         }else if(touchprobability>=30){
             itemID2 = 3;
         }

@@ -19,6 +19,8 @@ public class GachaManager : MonoBehaviour
     private int resultState = 0;
     public GameObject[] Draw3Slot; //to put invent slot
     public GameObject[] eggTemplate = new GameObject[3];
+    private int eggColorNum;
+    private int[] eggColorNum1;
     private GameObject[] eggUI = new GameObject[3];
     public GameObject[] drawButton = new GameObject[2]; 
     public GameObject backButton;
@@ -72,18 +74,24 @@ public class GachaManager : MonoBehaviour
             _luck = 0;
             Debug.Log("Super Rare");
             resultRarity = Rarity.SuperRare;
+            eggColorNum = 2;
+            //eggColorNum1[2] = 2;
         } 
         else if (randNum < _probability[1]) //Rare
         {
             _luck += 50;
             Debug.Log("Rare");
             resultRarity = Rarity.Rare;
+            eggColorNum = 1;
+            //eggColorNum1[1] = 1;
         }
         else //Common   
         {
             _luck += 50;
             Debug.Log("Common");
             resultRarity = Rarity.Common;
+            eggColorNum = 0;
+            //eggColorNum1[0] = 0;
         }
         ProbabilityUpdate();
         return resultRarity;
@@ -120,7 +128,7 @@ public class GachaManager : MonoBehaviour
             resultState = 1;
             
             Rarity eggType = DrawEgg();
-            StartCoroutine(Draw(pool[(int) eggType], eggTemplate[(int) eggType], resultState, 1, Draw1Panel.transform));
+            StartCoroutine(Draw(pool[(int) eggType], eggTemplate[eggColorNum], resultState, 1, Draw1Panel.transform));
             //Draw1Panel.SetActive(true);
             //GameObject a = Instantiate(obj, draw1Pos.transform.position, Quaternion.identity); //instanciate prefab
             //draw item and place them in that pos
@@ -140,7 +148,7 @@ public class GachaManager : MonoBehaviour
             for (int i = 0; i < Draw3Slot.Length; i++)
             {
                 Rarity eggType = DrawEgg();
-                StartCoroutine(Draw(pool[(int) eggType], eggTemplate[(int) eggType], resultState, i, Draw3Slot[i].transform));
+                StartCoroutine(Draw(pool[(int) eggType], eggTemplate[(int) eggType], resultState, i, Draw3Slot[i].transform)); //replace (int) eggType with eggColorNum
                 //GameObject a = Instantiate([the generated ball color], Draw3Slot[i].transform.position, Quaternion.identity); //instanciate prefab
                 //Get the child of gameobjectA and place generate an item ui in it 
             }
