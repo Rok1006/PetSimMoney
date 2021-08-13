@@ -25,8 +25,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     //int lastBar = 4; //count from the opposite
     public GameObject[] bars;
     public GameObject[] ClaimButtons;
-    public int[] onDt = {0, 0, 0};
-    public int[] quitDt = {0, 0, 0};
+    public int[] onDt = {0, 0, 0}; //Year, Month, Day
+    public int[] quitDt = {0, 0, 0}; //Year, Month, Day
     bool resetpanel = false;
     void Awake() {
         Instance = this;
