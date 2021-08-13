@@ -248,6 +248,7 @@ public class Manager : MonoBehaviour
     public void ClickGift(){
         sm.Click();
         GiftPannel.SetActive(true);
+        AdsManager.Instance.CheckTime();
     }
      public void ClickCloseGift(){
         sm.Click();

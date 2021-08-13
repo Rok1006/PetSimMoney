@@ -87,6 +87,8 @@ public class SaveLoadManager : MonoBehaviour
         userdata.statsMax = Status.Instance.statsMax;
         userdata.leafC = Status.Instance.leafC;
 
+        userdata.quitDt = AdsManager.Instance.quitDt; //date time
+
         userdata.ownGarment = new List<string>();
         userdata.currentGarment = new List<string>();
         foreach(GarmentType type in Enum.GetValues(typeof(GarmentType)))
@@ -171,10 +173,12 @@ public class SaveLoadManager : MonoBehaviour
         User.Instance.maxfpValue = resultData.maxfpValue;
         User.Instance.fpValue = resultData.fpValue;
         User.Instance.beginnerGuide = resultData.beginnerGuide;
-
+        
         Status.Instance.statsValue = resultData.statsValue;
         Status.Instance.statsMax = resultData.statsMax;
         Status.Instance.leafC = resultData.leafC;
+
+        AdsManager.Instance.quitDt = resultData.quitDt; //date time
         
         foreach(string name in resultData.ownGarment)
         {
