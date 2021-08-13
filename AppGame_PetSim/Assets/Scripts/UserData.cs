@@ -28,9 +28,10 @@ public class UserData
     public int currentBar;
     public List<bool> blocks;
     public List<bool> buttons;
+    public int[] onDt = {0, 0, 0};
+    public int[] quitDt = {0, 0, 0};
     [Header("Manager.cs")]
     public bool MusicIsOn;
     public bool SoundIsOn;
-    public DateTime quitDt;
     //public int currentBar;
 }

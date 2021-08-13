@@ -87,8 +87,6 @@ public class SaveLoadManager : MonoBehaviour
         userdata.statsMax = Status.Instance.statsMax;
         userdata.leafC = Status.Instance.leafC;
 
-        userdata.quitDt = AdsManager.Instance.quitDt; //date time
-
         userdata.ownGarment = new List<string>();
         userdata.currentGarment = new List<string>();
         foreach(GarmentType type in Enum.GetValues(typeof(GarmentType)))
@@ -119,11 +117,9 @@ public class SaveLoadManager : MonoBehaviour
         }
 
         userdata.luck = GachaManager.Instance._luck;
-////Ads Manager 
         userdata.currentBar = AdsManager.Instance.currentBar;
         userdata.blocks = new List<bool>();
         userdata.buttons = new List<bool>();
-        //userdata.currentBar = AdsManager.Instance.currentBar; //save and load the num of current bar not working??
         foreach(GameObject bar in AdsManager.Instance.bars)
         {
             if(bar.activeSelf)
@@ -147,6 +143,9 @@ public class SaveLoadManager : MonoBehaviour
                 userdata.buttons.Add(false);
             }
         }
+
+        userdata.quitDt = AdsManager.Instance.quitDt; //date time
+        userdata.onDt = AdsManager.Instance.onDt; //date time
 
         userdata.MusicIsOn = Manager.Instance.BGM.activeSelf;
         userdata.SoundIsOn = Manager.Instance.SoundM.activeSelf;
@@ -242,6 +241,9 @@ public class SaveLoadManager : MonoBehaviour
             AdsManager.Instance.ClaimButtons[i].GetComponent<Button>().interactable = button;
             i++;
         }
+
+        AdsManager.Instance.quitDt = resultData.quitDt; //date time
+        AdsManager.Instance.onDt = resultData.onDt; //date time
 
         Manager.Instance.BGM.SetActive(resultData.MusicIsOn);
         Manager.Instance.SoundM.SetActive(resultData.SoundIsOn);
