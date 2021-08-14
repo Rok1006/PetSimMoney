@@ -2383,6 +2383,8 @@ MonoBehaviour:
   - {fileID: 578871166}
   - {fileID: 819985716}
   - {fileID: 851828361}
+  onDt: 000000000000000000000000
+  quitDt: 000000000000000000000000
 --- !u!114 &76563530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20679,6 +20681,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478253900}
   m_CullTransparentMesh: 0
+--- !u!1 &480673736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 480673737}
+  - component: {fileID: 480673739}
+  - component: {fileID: 480673738}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &480673737
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480673736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 669867393}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000015259, y: -245}
+  m_SizeDelta: {x: 278.3999, y: 44.234833}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &480673738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480673736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.38679248, g: 0.14626424, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 91deed54c30214443af62cf79a9f3669, type: 3}
+    m_FontSize: 13
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'COME BACK TOMORROW FOR MORE GIFTS '
+--- !u!222 &480673739
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480673736}
+  m_CullTransparentMesh: 0
 --- !u!1 &482610001
 GameObject:
   m_ObjectHideFlags: 0
@@ -25302,6 +25382,7 @@ RectTransform:
   - {fileID: 914369722}
   - {fileID: 618790834}
   - {fileID: 1472309591}
+  - {fileID: 480673737}
   m_Father: {fileID: 547036173}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36851,7 +36932,7 @@ RectTransform:
   m_GameObject: {fileID: 914369721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5857, y: 0.45391747, z: 0.5857}
+  m_LocalScale: {x: 0.78333104, y: 0.3682298, z: 0.5136597}
   m_Children: []
   m_Father: {fileID: 669867393}
   m_RootOrder: 1
@@ -36859,7 +36940,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 166}
-  m_SizeDelta: {x: 278.4, y: 81.5}
+  m_SizeDelta: {x: 285.77, y: 81.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &914369723
 MonoBehaviour:
@@ -36880,7 +36961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5267437852208268865, guid: 399a13a058e5d41b1b8f706bf52066e0,
+  m_Sprite: {fileID: 7635136696242298554, guid: 399a13a058e5d41b1b8f706bf52066e0,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -39845,7 +39926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -5.9000244, y: 4.5829}
+  m_AnchoredPosition: {x: -5.9003906, y: 4.5829}
   m_SizeDelta: {x: 71.14188, y: 1044.3661}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025541810
