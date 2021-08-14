@@ -56,11 +56,12 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             onDt[2] = DateTime.Now.Day;
         }
     }
-    void OnApplicationQuit() {
+    void OnApplicationQuit() { 
         // Debug.Log("app quit");
         quitDt[0] = DateTime.Now.Year;
         quitDt[1] = DateTime.Now.Month;
         quitDt[2] = DateTime.Now.Day;
+        //Debug.Log(quitDt);
     }
     void Update() {
         if(Input.GetKey(KeyCode.H)){ //Cheat
