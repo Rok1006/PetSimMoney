@@ -33,7 +33,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     }
     void Start()
     {
-        Advertisement.Initialize("4232374");
+        Advertisement.Initialize("4276520"); //new from new project ID hkmgt_game
         Advertisement.AddListener(this);
         GiftPanel.SetActive(false);
         InvokeRepeating("CheckTime", 0.0f, 1f);

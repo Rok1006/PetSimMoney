@@ -776,10 +776,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 31760d73-3f07-4897-ac45-b3bad776c7be
+  cloudProjectId: 64d8d0f5-f03f-49c6-ae1f-c854bdfc6623
   framebufferDepthMemorylessMode: 0
-  projectName: AppGame_PetSim
-  organizationId: rok1006
+  projectName: CatGame
+  organizationId: hkmgt_game
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
