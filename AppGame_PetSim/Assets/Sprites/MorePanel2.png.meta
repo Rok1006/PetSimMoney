@@ -56,6 +56,9 @@ TextureImporter:
   - first:
       213: 1866840146448684734
     second: MorePanel2_17
+  - first:
+      213: 5261637693232193253
+    second: MorePanel2_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -542,7 +545,7 @@ TextureImporter:
         width: 400
         height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -550,6 +553,27 @@ TextureImporter:
       bones: []
       spriteID: eb61385e83958e910800000000000000
       internalID: 1866840146448684734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanel2_18
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 929
+        width: 256
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee19e9ca97150940800000000000000
+      internalID: 5261637693232193253
       vertices: []
       indices: 
       edges: []

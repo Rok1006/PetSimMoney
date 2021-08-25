@@ -29,6 +29,7 @@ public class Manager : MonoBehaviour
     [Header("Others")]
     public GameObject SettingPannel;
     public GameObject GiftPannel;
+    public GameObject RewardPanel;
     [Header("Anim")]
     public int boughtItems;
     public int CostumePageCount = 0;
@@ -83,6 +84,7 @@ public class Manager : MonoBehaviour
         BackPage.SetActive(false);
         SettingPannel.SetActive(false);
         GiftPannel.SetActive(false);
+        RewardPanel.SetActive(false);
         BGCover.SetActive(false); //in gacha pannel
         CrossCloseEgg.SetActive(false);
         
@@ -253,6 +255,14 @@ public class Manager : MonoBehaviour
      public void ClickCloseGift(){
         sm.Click();
         GiftPannel.SetActive(false);
+    }
+     public void ClickTodayReward(){
+        sm.Click();
+        RewardPanel.SetActive(true);
+    }
+     public void ClickCloseReward(){
+        sm.Click();
+        RewardPanel.SetActive(false);
     }
     //Settings
     public void OnClickMusicToggle(bool isOn){
