@@ -49,8 +49,9 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public void CheckTime()
     {
         if(onDt[0] != DateTime.Now.Year || onDt[1] != DateTime.Now.Month || onDt[2] != DateTime.Now.Day)
-        {
+        { //when the day today is different from the saved date, and it renew the time
             Restart();
+            DailyRewardsManager.Instance.OpenNextDayReward();
             onDt[0] = DateTime.Now.Year;
             onDt[1] = DateTime.Now.Month;
             onDt[2] = DateTime.Now.Day;

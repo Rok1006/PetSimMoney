@@ -561,12 +561,12 @@ TextureImporter:
       name: MorePanel2_18
       rect:
         serializedVersion: 2
-        x: 572
-        y: 929
+        x: 656
+        y: 796
         width: 256
-        height: 142
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
