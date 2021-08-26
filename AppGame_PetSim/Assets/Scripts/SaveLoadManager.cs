@@ -149,7 +149,45 @@ public class SaveLoadManager : MonoBehaviour
 
         userdata.MusicIsOn = Manager.Instance.BGM.activeSelf;
         userdata.SoundIsOn = Manager.Instance.SoundM.activeSelf;
-
+        //daily reward
+        userdata.currentday = DailyRewardsManager.Instance.currentday;
+        userdata.rewardblocks = new List<bool>();
+        userdata.rewardchecks = new List<bool>();
+        userdata.daybuttons = new List<bool>();
+        foreach(GameObject Check in DailyRewardsManager.Instance.Checks)
+        {
+            if(Check.activeSelf)
+            {
+                userdata.rewardchecks.Add(true);
+            }
+            else
+            {
+                userdata.rewardchecks.Add(false);
+            }
+        }
+           foreach(GameObject Block in DailyRewardsManager.Instance.Blocks)
+        {
+            if(Block.activeSelf)
+            {
+                userdata.rewardblocks.Add(true);
+            }
+            else
+            {
+                userdata.rewardblocks.Add(false);
+            }
+        }
+        foreach(GameObject daybutton in DailyRewardsManager.Instance.Day)
+        {
+            if(daybutton.GetComponent<Button>().interactable)
+            {
+                userdata.daybuttons.Add(true);
+            }
+            else
+            {
+                userdata.daybuttons.Add(false);
+            }
+        }
+        userdata.collected = DailyRewardsManager.Instance.collected;
         return userdata;
     }
 
@@ -247,7 +285,28 @@ public class SaveLoadManager : MonoBehaviour
 
         Manager.Instance.BGM.SetActive(resultData.MusicIsOn);
         Manager.Instance.SoundM.SetActive(resultData.SoundIsOn);
-
+        //daily rewards
+        DailyRewardsManager.Instance.currentday = resultData.currentday;
+            i = 0;
+        foreach(bool check in resultData.rewardchecks)
+        {
+            DailyRewardsManager.Instance.Checks[i].SetActive(check);
+            i++;
+        }
+             i = 0;
+        foreach(bool block in resultData.rewardblocks)
+        {
+            DailyRewardsManager.Instance.Blocks[i].SetActive(block);
+            i++;
+        }
+        i = 0;
+        foreach(bool db in resultData.daybuttons)
+        {
+            DailyRewardsManager.Instance.Day[i].GetComponent<Button>().interactable = db;
+            i++;
+        }
+        DailyRewardsManager.Instance.collected = resultData.collected;
+        //end
         Manager.Instance.UpdateSettingPannel();
         GarmentManager.Instance.UpdateGarmentUI();
         GarmentManager.Instance.UpdateWear();

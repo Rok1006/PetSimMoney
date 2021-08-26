@@ -16,6 +16,7 @@ public class DailyRewardsManager : MonoBehaviour
     public GameObject[] Checks;
     public int currentday = 0;
     public int buttonID;
+    public bool collected = false;
     [Header("GiftPanel")]
     public GameObject RewardPopUpPanel;
     public Image rewardImage; //image replace, place the image slot ui 
@@ -28,17 +29,39 @@ public class DailyRewardsManager : MonoBehaviour
     public GameObject Milk;
     public GameObject Cupcake;
     public GameObject WoolBall;
-
+    void Awake() {
+        Instance = this;
+    }
     void Start()
     {
         OffAllBlocksCheck();
         SwitchingDays();
         RewardPopUpPanel.SetActive(false);
+        //Day[currentday].GetComponent<Button>().interactable = true;
     }
 
     void Update()
     {
         SwitchingDays();
+        if(Input.GetKey(KeyCode.R)){
+            OffAllBlocksCheck();
+            currentday = 0;
+        }
+        // if(Input.GetKeyDown(KeyCode.T)){
+        //     currentday++;
+        //     if(currentday>6){
+        //         currentday = 0;
+        //     }
+        // }
+        
+    }
+    public void OpenNextDayReward(){
+            collected = false; //turn false again when next day come, player can now collect the next day reward
+            currentday++;
+            if(currentday>6){
+                currentday = 0;
+                OffAllBlocksCheck();
+            }
     }
     public void OffAllBlocksCheck(){
         for(int i = 0; i < Blocks.Length; i++){
@@ -58,37 +81,51 @@ public class DailyRewardsManager : MonoBehaviour
         switch(currentday){
             case 0://Day1
                 Blocks[0].SetActive(false); 
+                if(!collected){
                 Day[0].GetComponent<Button>().interactable = true; //make it clickable
+                }
             break;
             case 1://Day2
                 Blocks[1].SetActive(false); 
                 Day[0].GetComponent<Button>().interactable = false; //make it clickable
+                if(!collected){
                 Day[1].GetComponent<Button>().interactable = true; //make it clickable
+                }
             break;
             case 2://Day3
                 Blocks[2].SetActive(false); 
                 Day[1].GetComponent<Button>().interactable = false;
+                if(!collected){
                 Day[2].GetComponent<Button>().interactable = true; //make it clickable
+                }
             break;
             case 3://Day4
                 Blocks[3].SetActive(false); 
                 Day[2].GetComponent<Button>().interactable = false;
+                if(!collected){
                 Day[3].GetComponent<Button>().interactable = true; //make it clickable
+                }
             break;
             case 4://Day5
                 Blocks[4].SetActive(false); 
                 Day[3].GetComponent<Button>().interactable = false;
+                if(!collected){
                 Day[4].GetComponent<Button>().interactable = true; //make it clickable
+                }
             break;
             case 5://Day6
                 Blocks[5].SetActive(false); 
                 Day[4].GetComponent<Button>().interactable = false;
+                if(!collected){
                 Day[5].GetComponent<Button>().interactable = true; //make it clickable
+                }
             break;
             case 6://Day7
                 Blocks[6].SetActive(false); 
                 Day[5].GetComponent<Button>().interactable = false;
+                if(!collected){
                 Day[6].GetComponent<Button>().interactable = true; //make it clickable
+                }
             break;
             case 7:
                 Day[6].GetComponent<Button>().interactable = false;
@@ -101,7 +138,9 @@ public class DailyRewardsManager : MonoBehaviour
     {
         Debug.Log(button.name);
         button.GetComponent<Button>().interactable = false;
+        Day[buttonID].GetComponent<Button>().interactable = false;
         Checks[buttonID].SetActive(true);
+        collected = true;
         //GameObject c = button.gameobject.transform.Find("Check") ; //on the parent gameobject
     }
     public void GetButtonNum(int num){ //assign the num back in inspector add to button
@@ -111,7 +150,7 @@ public class DailyRewardsManager : MonoBehaviour
         rewardImage.GetComponent<Image>().sprite = img; 
     }
     public void RewardCountGenerate(int num){ //add to button
-        rewardText.GetComponent<Text>().text = "X" + num.ToString();
+        rewardText.GetComponent<Text>().text = "X " + num.ToString();
         RewardNum = num;
     }
     public void DetermineRewardOnDay(string _day){ //add to button
@@ -142,7 +181,7 @@ public class DailyRewardsManager : MonoBehaviour
               Inventory.instance.AddToSlots(item2, RewardNum);
         }
         RewardPopUpPanel.SetActive(false);
-        currentday++;
+        //currentday++; //move on to the next day
     }
     public void ClaimRewards(){
         RewardPopUpPanel.SetActive(true);

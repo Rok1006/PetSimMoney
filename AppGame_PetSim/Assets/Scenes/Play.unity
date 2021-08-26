@@ -1090,6 +1090,7 @@ GameObject:
   - component: {fileID: 39453655}
   - component: {fileID: 39453657}
   - component: {fileID: 39453656}
+  - component: {fileID: 39453658}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -1153,6 +1154,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39453654}
   m_CullTransparentMesh: 0
+--- !u!114 &39453658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39453654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 39453656}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 76563521}
+        m_MethodName: ClickCloseReward
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &41446175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,6 +2569,7 @@ MonoBehaviour:
   - {fileID: 1292365559}
   currentday: 0
   buttonID: 0
+  collected: 0
   RewardPopUpPanel: {fileID: 1956899856}
   rewardImage: {fileID: 2136603265}
   rewardText: {fileID: 1819908577}
@@ -7813,7 +7869,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1720741565}
   m_HandleRect: {fileID: 1720741564}
   m_Direction: 3
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -71989,7 +72045,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 91deed54c30214443af62cf79a9f3669, type: 3}
     m_FontSize: 39
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 44
@@ -72024,7 +72080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41, y: -10}
+  m_AnchoredPosition: {x: 41, y: -18.000002}
   m_SizeDelta: {x: 79.96887, y: 69.85402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1824581099
@@ -74651,7 +74707,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2111139330}
   m_HandleRect: {fileID: 2111139329}
   m_Direction: 3
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -89949,8 +90005,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 29.999998}
-  m_SizeDelta: {x: 112.44, y: 95.6}
+  m_AnchoredPosition: {x: 0, y: 22}
+  m_SizeDelta: {x: 112, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2136603264
 CanvasRenderer:
@@ -90266,7 +90322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.moneygeneratortechnology.catgame.greenleaf50
+  productId: 
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:

@@ -33,5 +33,11 @@ public class UserData
     [Header("Manager.cs")]
     public bool MusicIsOn;
     public bool SoundIsOn;
-    //public int currentBar;
+    [Header("DailyRewardsManager.cs")]
+    public int currentday;
+    public List<bool> rewardblocks;
+    public List<bool> rewardchecks;
+    public List<bool> daybuttons;
+    public bool collected;
+
 }
