@@ -138,6 +138,10 @@ MonoBehaviour:
   clickSplash: {fileID: 4965846237356139520, guid: 6f0487bb3c301438cbc82f49b7346e8c,
     type: 3}
   exp: {fileID: 185456089615144960, guid: f7b0eae7db0e448d4b6cfc88484293dd, type: 3}
+  plusgreen: {fileID: 1144017739203671911, guid: 0ee0b33d500534bef99c3d3fd44edeb2,
+    type: 3}
+  plusgold: {fileID: 8842961030637542386, guid: c603dc2d892ae4f2e9b9345f8b896317,
+    type: 3}
   SoundM: {fileID: 0}
   sm: {fileID: 0}
 --- !u!1 &7506501777609463394
