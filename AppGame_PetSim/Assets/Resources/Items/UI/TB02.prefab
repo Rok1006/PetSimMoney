@@ -189,8 +189,8 @@ MonoBehaviour:
   _costMethod: 0
   _cost: 30
   _levelRequirement: 10
-  _description: + 50 happiness
-  _happinessValue: 50
+  _description: + 25 happiness
+  _happinessValue: 25
 --- !u!223 &3713484135285202876
 Canvas:
   m_ObjectHideFlags: 0

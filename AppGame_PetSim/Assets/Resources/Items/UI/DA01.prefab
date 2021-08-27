@@ -267,8 +267,8 @@ MonoBehaviour:
   _costMethod: 0
   _cost: 40
   _levelRequirement: 20
-  _description: + 70 hydration per drink
-  _hydrationValue: 70
+  _description: + 40 hydration per drink
+  _hydrationValue: 40
 --- !u!223 &3802232497078423250
 Canvas:
   m_ObjectHideFlags: 0

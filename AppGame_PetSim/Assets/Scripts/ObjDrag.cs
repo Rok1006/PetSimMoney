@@ -13,6 +13,7 @@ private GameObject thisObj;
 public GameObject explode;
 public GameObject hungerEx;
 public GameObject hydraEx;
+public GameObject plusHeart;
 private bool getAdd = true;
  public GameObject SoundM;
 public SoundManager sm;
@@ -60,9 +61,11 @@ public void DestroyToy(){
     if(this.gameObject.tag == "Toy"){
         info.Use();
         GameObject c = Instantiate(explode, this.transform.position, Quaternion.identity);
+        GameObject d = Instantiate(plusHeart, this.transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         CatAI.Instance.toy.Remove(this.gameObject);
         Destroy(c, 1f);
+        Destroy(d, 5f);
     }
 }
 public void DestroyFoodDrink(){

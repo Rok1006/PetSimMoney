@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 880815963
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 5363313002842720847, guid: d57d7ab2121ef4aa897b2b92ba0e2c91,
     type: 3}
@@ -155,11 +155,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbe898b302354fae90b60ce803ad4f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emitSpot: {fileID: 0}
   info: {fileID: 8261841903340035423, guid: 4be87d1d199ba418bb3dc481923680f5, type: 3}
   dist: 0
   explode: {fileID: 6222639126503631770, guid: e3638e807c17f4341955eea36202b10f, type: 3}
   hungerEx: {fileID: 483648205025446981, guid: d829602612b1e402fa65e201019b163f, type: 3}
   hydraEx: {fileID: 9217448240166525496, guid: 8f60045a8d51944d9bca4226f68a365b, type: 3}
+  plusHeart: {fileID: 3861703492399242374, guid: c7818233c02704aa2bcb5019b82187a7,
+    type: 3}
+  SoundM: {fileID: 0}
+  sm: {fileID: 0}
 --- !u!1 &9147341586587960573
 GameObject:
   m_ObjectHideFlags: 0
