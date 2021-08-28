@@ -23340,7 +23340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.moneygeneratortechnology.catgame.greenleaf250
+  productId: com.hkmgt.petgame.greenleaf250
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -37616,7 +37616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.moneygeneratortechnology.catgame.goldleaf150
+  productId: com.hkmgt.petgame.goldleaf150
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -41837,7 +41837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.moneygeneratortechnology.catgame.greenleaf100
+  productId: com.hkmgt.petgame.greenleaf100
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -54116,7 +54116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.moneygeneratortechnology.catgame.goldleaf300
+  productId: com.hkmgt.petgame.goldleaf300
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -62397,7 +62397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: com.moneygeneratortechnology.catgame.goldleaf60
+  productId: com.hkmgt.petgame.goldleaf60
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
@@ -90329,7 +90329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5f511b0d8142cba0aeb92d0b264c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productId: 
+  productId: com.hkmgt.petgame.greenleaf50
   buttonType: 0
   consumePurchase: 1
   onPurchaseComplete:
