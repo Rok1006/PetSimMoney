@@ -17,6 +17,7 @@ public class DailyRewardsManager : MonoBehaviour
     public int currentday = 0;
     public int buttonID;
     public bool collected = false;
+    public GameObject notice;
     [Header("GiftPanel")]
     public GameObject RewardPopUpPanel;
     public Image rewardImage; //image replace, place the image slot ui 
@@ -38,6 +39,7 @@ public class DailyRewardsManager : MonoBehaviour
         SwitchingDays();
         RewardPopUpPanel.SetActive(false);
         //Day[currentday].GetComponent<Button>().interactable = true;
+        notice.SetActive(false);
     }
 
     void Update()
@@ -56,6 +58,7 @@ public class DailyRewardsManager : MonoBehaviour
         
     }
     public void OpenNextDayReward(){
+            notice.SetActive(true);
             collected = false; //turn false again when next day come, player can now collect the next day reward
             currentday++;
             if(currentday>6){
@@ -136,6 +139,7 @@ public class DailyRewardsManager : MonoBehaviour
     //FUnction
       public void DeactivateButton(Button button)
     {
+        notice.SetActive(false);
         Debug.Log(button.name);
         button.GetComponent<Button>().interactable = false;
         Day[buttonID].GetComponent<Button>().interactable = false;

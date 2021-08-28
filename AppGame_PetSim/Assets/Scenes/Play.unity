@@ -2570,6 +2570,7 @@ MonoBehaviour:
   currentday: 0
   buttonID: 0
   collected: 0
+  notice: {fileID: 744052171}
   RewardPopUpPanel: {fileID: 1956899856}
   rewardImage: {fileID: 2136603265}
   rewardText: {fileID: 1819908577}
