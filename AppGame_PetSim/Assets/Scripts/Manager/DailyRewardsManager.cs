@@ -71,6 +71,9 @@ public class DailyRewardsManager : MonoBehaviour
             }
     }
     public void OffAllBlocksCheck(){
+            collected = false;
+            notice.SetActive(true);
+            Manager.Instance.RewardPanel.SetActive(true);
         for(int i = 0; i < Blocks.Length; i++){
             Blocks[i].SetActive(true);
             //break;
