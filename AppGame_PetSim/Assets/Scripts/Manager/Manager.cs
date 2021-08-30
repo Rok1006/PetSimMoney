@@ -185,7 +185,7 @@ public class Manager : MonoBehaviour
     public void ClickInvent(){
         sm.Click();
         openclose+=1;
-        ClickHideStatus();
+        //ClickHideStatus();
     }
     public void ClickStoreBag(){
         sm.Click();
