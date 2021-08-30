@@ -47,6 +47,9 @@ public class DailyRewardsManager : MonoBehaviour
         SwitchingDays();
         if(Input.GetKey(KeyCode.R)){
             OffAllBlocksCheck();
+            collected = false;
+            notice.SetActive(true);
+            Manager.Instance.RewardPanel.SetActive(true);
             currentday = 0;
         }
         // if(Input.GetKeyDown(KeyCode.T)){
@@ -59,6 +62,7 @@ public class DailyRewardsManager : MonoBehaviour
     }
     public void OpenNextDayReward(){
             notice.SetActive(true);
+            Manager.Instance.RewardPanel.SetActive(true);
             collected = false; //turn false again when next day come, player can now collect the next day reward
             currentday++;
             if(currentday>6){

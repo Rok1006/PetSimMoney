@@ -55,6 +55,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             onDt[0] = DateTime.Now.Year;
             onDt[1] = DateTime.Now.Month;
             onDt[2] = DateTime.Now.Day;
+            Manager.Instance.RewardPanel.SetActive(true);
         }
     }
     void OnApplicationQuit() { 

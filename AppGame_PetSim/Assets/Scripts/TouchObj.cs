@@ -18,8 +18,15 @@ public class TouchObj : MonoBehaviour
     }
     void Update()
     {
-          if(this.transform.gameObject.tag == "Air"){
+        if(this.transform.gameObject.tag == "Air"){
             Destroy(this.gameObject, 2f); //later: Destroy(this.gameObject, 1f)
+        }
+          if(this.transform.gameObject.tag == "Normal"){ //Auto destroy after certain time
+            Destroy(this.gameObject, 7f); //later: Destroy(this.gameObject, 1f)
+        }else if(this.transform.gameObject.tag == "Rare"){
+            Destroy(this.gameObject, 7f); //later: Destroy(this.gameObject, 1f)
+        }else if(this.transform.gameObject.tag == "Trash"){
+            Destroy(this.gameObject, 7f); //later: Destroy(this.gameObject, 1f)
         }
     }
     void OnMouseDown(){
