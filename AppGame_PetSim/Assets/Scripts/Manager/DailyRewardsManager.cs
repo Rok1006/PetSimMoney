@@ -40,6 +40,7 @@ public class DailyRewardsManager : MonoBehaviour
         RewardPopUpPanel.SetActive(false);
         //Day[currentday].GetComponent<Button>().interactable = true;
         notice.SetActive(false);
+        Manager.Instance.RewardPanel.SetActive(false);
     }
 
     void Update()
@@ -92,6 +93,7 @@ public class DailyRewardsManager : MonoBehaviour
             case 0://Day1
                 Blocks[0].SetActive(false); 
                 if(!collected){
+                notice.SetActive(true);
                 Day[0].GetComponent<Button>().interactable = true; //make it clickable
                 }
             break;
@@ -99,6 +101,7 @@ public class DailyRewardsManager : MonoBehaviour
                 Blocks[1].SetActive(false); 
                 Day[0].GetComponent<Button>().interactable = false; //make it clickable
                 if(!collected){
+                notice.SetActive(true);
                 Day[1].GetComponent<Button>().interactable = true; //make it clickable
                 }
             break;
