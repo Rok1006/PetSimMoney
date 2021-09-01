@@ -30,7 +30,7 @@ public class UserData
     public List<bool> buttons;
     public int[] onDt = {0, 0, 0};
     public int[] quitDt = {0, 0, 0};
-    public bool adsgiftPopup;
+    public bool received;
     [Header("Manager.cs")]
     public bool MusicIsOn;
     public bool SoundIsOn;

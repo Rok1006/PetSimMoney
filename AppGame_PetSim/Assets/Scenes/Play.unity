@@ -2516,6 +2516,7 @@ MonoBehaviour:
   - {fileID: 851828361}
   onDt: 000000000000000000000000
   quitDt: 000000000000000000000000
+  state: 0
 --- !u!114 &76563530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24189,7 +24190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: player
+  m_Text: MON MON
 --- !u!222 &594295705
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -28,6 +28,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public int[] onDt = {0, 0, 0}; //Year, Month, Day
     public int[] quitDt = {0, 0, 0}; //Year, Month, Day
     bool resetpanel = false;
+    public int state = 0;
     void Awake() {
         Instance = this;
     }
@@ -63,10 +64,15 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     }
     void OnApplicationQuit() { 
         // Debug.Log("app quit");
+          if(state==1){
+                CollectGift();
+                Debug.Log("yuppppp");
+                state = 0;
+            }
         quitDt[0] = DateTime.Now.Year;
         quitDt[1] = DateTime.Now.Month;
         quitDt[2] = DateTime.Now.Day;
-        CollectGift();
+        //received = true;
         //Debug.Log(quitDt);
     }
     void Update() {
@@ -128,6 +134,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         }
         GiftPanel.SetActive(false);
         RevealBar(); //unock the next bar
+        //received = true;
     }
     public void RevealBar(){ //use this to reveal the next bar when last ads is read
         for(int i = 0; i < bars.Length; i++){
@@ -174,6 +181,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
               //trigger after ads finish
             Debug.Log("reward given");
             GiftPanel.SetActive(true);
+            state = 1;
          }
        
     }
