@@ -64,15 +64,10 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     }
     void OnApplicationQuit() { 
         // Debug.Log("app quit");
-          if(state==1){
-                CollectGift();
-                Debug.Log("yuppppp");
-                state = 0;
-            }
         quitDt[0] = DateTime.Now.Year;
         quitDt[1] = DateTime.Now.Month;
         quitDt[2] = DateTime.Now.Day;
-        //received = true;
+        CollectGift();
         //Debug.Log(quitDt);
     }
     void Update() {
@@ -126,14 +121,13 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         green = color;
     }
     public void CollectGift(){ //link to collect button
-        //link num to player own count
+        // RevealBar(); //unock the next bar//link num to player own count
         if(green){ //if green
             Status.Instance.LeafChange(CostMethod.GreenLeaf, GiftNum);
         }else{ //if gold
             Status.Instance.LeafChange(CostMethod.GoldLeaf, GiftNum);
         }
         GiftPanel.SetActive(false);
-        RevealBar(); //unock the next bar
         //received = true;
     }
     public void RevealBar(){ //use this to reveal the next bar when last ads is read
@@ -181,7 +175,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
               //trigger after ads finish
             Debug.Log("reward given");
             GiftPanel.SetActive(true);
-            state = 1;
+            RevealBar();
          }
        
     }
