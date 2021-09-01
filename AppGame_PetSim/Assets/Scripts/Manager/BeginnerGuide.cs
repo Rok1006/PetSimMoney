@@ -21,6 +21,7 @@ public class BeginnerGuide : MonoBehaviour
     public GameObject StoreButton;
     public GameObject CostumeButton;
     public GameObject GiftsButton;
+    public GameObject DailyRewardButton;
     public GameObject[] Fingers;
     [Header("TextDisplay")]
     public string playerName;
@@ -48,6 +49,7 @@ public class BeginnerGuide : MonoBehaviour
         StoreButton.GetComponent<Button>().interactable = false;
         CostumeButton.GetComponent<Button>().interactable = false;
         GiftsButton.GetComponent<Button>().interactable = false;
+        DailyRewardButton.GetComponent<Button>().interactable = false;
         DisableAllFingers();
         
     }
@@ -158,18 +160,32 @@ public class BeginnerGuide : MonoBehaviour
                 if(doIt){
                             Manager.Instance.ClickCloseGift();
                             GiftsButton.GetComponent<Button>().interactable = false;
+                            DailyRewardButton.GetComponent<Button>().interactable = true;
                             Fingers[6].SetActive(true);
                             doIt = false;
                         }
                 break;
                 case 16:
+                if(doIt){
+                        Fingers[6].SetActive(false);
+                        Manager.Instance.ClickTodayReward();
+                        doIt = false;
+                    }
                 break;
-                case 17:
-                    Fingers[6].SetActive(false);
+                case 17: //Lastly, dont forget to always reflect your love towards your cat, by gently petting it.
+                  //empty 
+                if(doIt){
+                        Fingers[7].SetActive(true);
+                        Manager.Instance.ClickCloseReward();
+                        doIt = false;
+                    }
+                break;
+                case 18: //And for now.......You are all set! Have a great time!
+                    Fingers[7].SetActive(false); 
                     EnableAllButton();
                     catai.enabled = true;
                     BeginnerGuideUI.SetActive(false);
-                    User.Instance.ExpUP(User.Instance.maxfpValue);
+                    User.Instance.ExpUP(User.Instance.maxfpValue); //here level up
                     User.Instance.beginnerGuide = true;
                     this.enabled = false;
                 break;
@@ -204,6 +220,7 @@ public class BeginnerGuide : MonoBehaviour
         StoreButton.GetComponent<Button>().interactable = true;
         CostumeButton.GetComponent<Button>().interactable = true;
         GiftsButton.GetComponent<Button>().interactable = true;
+        DailyRewardButton.GetComponent<Button>().interactable = true;
     }
     public void NextSentences(){
         doIt = true;
@@ -223,7 +240,7 @@ public class BeginnerGuide : MonoBehaviour
         EnableAllButton();
         catai.enabled = true;
         BeginnerGuideUI.SetActive(false);
-        User.Instance.ExpUP(User.Instance.maxfpValue);
+        User.Instance.ExpUP(User.Instance.maxfpValue); //here player level up tp 1
         //check beginner guide as finished
         User.Instance.beginnerGuide = true;
         this.enabled = false;

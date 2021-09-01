@@ -84,7 +84,7 @@ public class Manager : MonoBehaviour
         BackPage.SetActive(false);
         SettingPannel.SetActive(false);
         GiftPannel.SetActive(false);
-        RewardPanel.SetActive(false);
+        RewardPanel.SetActive(false); //here
         BGCover.SetActive(false); //in gacha pannel
         CrossCloseEgg.SetActive(false);
         
