@@ -120,6 +120,7 @@ public class SaveLoadManager : MonoBehaviour
         userdata.currentBar = AdsManager.Instance.currentBar;
         userdata.blocks = new List<bool>();
         userdata.buttons = new List<bool>();
+        //userdata.adsgiftPopup = AdsManager.Instance.GiftPanel.activeSelf;
         foreach(GameObject bar in AdsManager.Instance.bars)
         {
             if(bar.activeSelf)
@@ -279,7 +280,7 @@ public class SaveLoadManager : MonoBehaviour
             AdsManager.Instance.ClaimButtons[i].GetComponent<Button>().interactable = button;
             i++;
         }
-
+        //AdsManager.Instance.GiftPanel.SetActive(resultData.adsgiftPopup);
         AdsManager.Instance.quitDt = resultData.quitDt; //date time
         AdsManager.Instance.onDt = resultData.onDt; //date time
 

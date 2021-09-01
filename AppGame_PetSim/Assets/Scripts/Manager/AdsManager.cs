@@ -66,6 +66,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         quitDt[0] = DateTime.Now.Year;
         quitDt[1] = DateTime.Now.Month;
         quitDt[2] = DateTime.Now.Day;
+        CollectGift();
         //Debug.Log(quitDt);
     }
     void Update() {

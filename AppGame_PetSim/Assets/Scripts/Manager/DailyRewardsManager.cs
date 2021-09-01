@@ -59,8 +59,11 @@ public class DailyRewardsManager : MonoBehaviour
         //         currentday = 0;
         //     }
         // }
-        
     }
+    void OnApplicationQuit(){
+        CollectGift();
+    }
+
     public void OpenNextDayReward(){
             notice.SetActive(true);
             //Manager.Instance.RewardPanel.SetActive(true); //here
