@@ -37,9 +37,9 @@ public class TouchObj : MonoBehaviour
             GameObject d = Instantiate(plusgreen, this.transform.position, Quaternion.identity);
             Status.Instance.LeafChange(CostMethod.GreenLeaf, 1);
             sm.Bling();
+            Destroy(this.gameObject); //later: Destroy(this.gameObject, 1f) //put here or on top of destroy
             Destroy(d, 5f);
             Destroy(c, 1f);
-            Destroy(this.gameObject); //later: Destroy(this.gameObject, 1f) //put here or on top of destroy
         }
          if(this.transform.gameObject.tag == "Rare"){
             Debug.Log("rare");
@@ -47,9 +47,9 @@ public class TouchObj : MonoBehaviour
             GameObject d = Instantiate(plusgold, this.transform.position, Quaternion.identity);
             Status.Instance.LeafChange(CostMethod.GoldLeaf, 1);
             sm.Bling();
+            Destroy(this.gameObject); //put here or on top of destroy
             Destroy(c, 1f);
             Destroy(d, 5f);
-            Destroy(this.gameObject); //put here or on top of destroy
         }
          if(this.transform.gameObject.tag == "Trash"){
             User.Instance.ExpUP(5); //add three exp

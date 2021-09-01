@@ -40,7 +40,7 @@ public class DailyRewardsManager : MonoBehaviour
         RewardPopUpPanel.SetActive(false);
         //Day[currentday].GetComponent<Button>().interactable = true;
         notice.SetActive(false);
-        Manager.Instance.RewardPanel.SetActive(false);
+        //Manager.Instance.RewardPanel.SetActive(false); //here
     }
 
     void Update()
@@ -50,7 +50,7 @@ public class DailyRewardsManager : MonoBehaviour
             OffAllBlocksCheck();
             collected = false;
             notice.SetActive(true);
-            Manager.Instance.RewardPanel.SetActive(true);
+            //Manager.Instance.RewardPanel.SetActive(true); //here
             currentday = 0;
         }
         // if(Input.GetKeyDown(KeyCode.T)){
@@ -63,7 +63,7 @@ public class DailyRewardsManager : MonoBehaviour
     }
     public void OpenNextDayReward(){
             notice.SetActive(true);
-            Manager.Instance.RewardPanel.SetActive(true);
+            //Manager.Instance.RewardPanel.SetActive(true); //here
             collected = false; //turn false again when next day come, player can now collect the next day reward
             currentday++;
             if(currentday>6){
@@ -74,7 +74,7 @@ public class DailyRewardsManager : MonoBehaviour
     public void OffAllBlocksCheck(){
             collected = false;
             notice.SetActive(true);
-            Manager.Instance.RewardPanel.SetActive(true);
+            //Manager.Instance.RewardPanel.SetActive(true); //here
         for(int i = 0; i < Blocks.Length; i++){
             Blocks[i].SetActive(true);
             //break;
