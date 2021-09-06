@@ -10,11 +10,12 @@ using System;
 //click collect to add into players owned count [done]
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
-    // #if UNITY_IOS
-    //     string gameId = "4232374";
-    // #else
-    //     string gameId = "4232375";
-    // #endif
+    #if UNITY_IOS
+        string gameId = "4276520";
+    #elif UNITY_ANDROID
+        string gameId = "4276521";
+    #endif
+    //new above
     public static AdsManager Instance;
     public GameObject GiftPanel;
     public Image giftImage; //image replace, place the image slot ui 
@@ -34,7 +35,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     }
     void Start()
     {
-        Advertisement.Initialize("4276520"); //new from new project ID hkmgt_game
+        //Advertisement.Initialize("4276520"); //original just ios: from new project ID hkmgt_game
+        Advertisement.Initialize(gameId); //new
         Advertisement.AddListener(this);
         GiftPanel.SetActive(false);
         InvokeRepeating("CheckTime", 0.0f, 1f);
@@ -100,6 +102,11 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public void PLayRewardedAd(){
         if(Advertisement.IsReady("Rewarded_iOS")){
             Advertisement.Show("Rewarded_iOS");
+        }else{
+            Debug.Log("not ready");
+        }
+        if(Advertisement.IsReady("Rewarded_Android")){ //new
+            Advertisement.Show("Rewarded_Android");
         }else{
             Debug.Log("not ready");
         }
@@ -172,6 +179,12 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     }
      public void OnUnityAdsDidFinish(string placementId, ShowResult showResult){
          if(placementId == "Rewarded_iOS" && showResult == ShowResult.Finished){
+              //trigger after ads finish
+            Debug.Log("reward given");
+            GiftPanel.SetActive(true);
+            RevealBar();
+         }
+           if(placementId == "Rewarded_Android" && showResult == ShowResult.Finished){ //new
               //trigger after ads finish
             Debug.Log("reward given");
             GiftPanel.SetActive(true);
