@@ -11,9 +11,9 @@ using System;
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
     #if UNITY_IOS
-        string gameId = "4276520";
+        //string gameId = "4276520";
     #elif UNITY_ANDROID
-        string gameId = "4276521";
+       // string gameId = "4276521";
     #endif
     //new above
     public static AdsManager Instance;
@@ -36,7 +36,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     void Start()
     {
         //Advertisement.Initialize("4276520"); //original just ios: from new project ID hkmgt_game
-        Advertisement.Initialize(gameId); //new
+        Advertisement.Initialize("4276520");//gameId); //new
         Advertisement.AddListener(this);
         GiftPanel.SetActive(false);
         InvokeRepeating("CheckTime", 0.0f, 1f);

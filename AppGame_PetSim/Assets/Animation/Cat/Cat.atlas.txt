@@ -1,5 +1,5 @@
 
-Cat.png
+Cat2.png
 size: 907,1033
 format: RGBA8888
 filter: Linear,Linear

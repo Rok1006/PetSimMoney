@@ -906,10 +906,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 64d8d0f5-f03f-49c6-ae1f-c854bdfc6623
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: CatGame
-  organizationId: hkmgt_game
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
