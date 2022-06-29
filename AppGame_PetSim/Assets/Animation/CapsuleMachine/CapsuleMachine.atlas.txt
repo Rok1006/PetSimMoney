@@ -1,5 +1,5 @@
 
-CapsuleMachine.png
+CapsuleMachine3.png
 size: 2016,1039
 format: RGBA8888
 filter: Linear,Linear

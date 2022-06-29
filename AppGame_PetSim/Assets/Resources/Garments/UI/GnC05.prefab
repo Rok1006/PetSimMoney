@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GnC05
   itemName: Red Scarf
-  GeneratedItem: {fileID: 6137221264074030646, guid: ba20dd62f016c46d59092bc8274fe6d3,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 81a468de82fef4126bb0386b6e7444d7,
     type: 3}
   type: 1
   rarity: 0

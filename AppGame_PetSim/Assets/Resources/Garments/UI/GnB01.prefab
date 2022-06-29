@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GnB01
   itemName: Octopus Ribbon
-  GeneratedItem: {fileID: 1032151136950021231, guid: 61ccfacbdd75c43f1b811152ca98f9c8,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 27e5327fec56943cc98906320a7a6c38,
     type: 3}
   type: 1
   rarity: 1

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2659364848149535601}
   - component: {fileID: 2659364848149535606}
   m_Layer: 5
-  m_Name: OrangeEgg
+  m_Name: Egg_SR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5906417348714195463, guid: 8a4283da64b304600b62a8897599d6e8,
+  m_Sprite: {fileID: -5012221993545037830, guid: 25f0f19c130144eeca17a6473c164390,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0

@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhB04
   itemName: Ghost Headwear
-  GeneratedItem: {fileID: 1360709362051873901, guid: a3c9912a5cee14476932fcf544c19e3f,
+  GeneratedItem: {fileID: 2247991195423946340, guid: dfc8c2aef10794cbebd5851a88214143,
     type: 3}
   type: 0
   rarity: 1

@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhA04
   itemName: Yellow Flapjack
-  GeneratedItem: {fileID: 662187569477330309, guid: 4a2b87609f6584374b1e6d8a461a0659,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 903a7eb28b9904688a41a3bfcebe5461,
     type: 3}
   type: 0
   rarity: 2

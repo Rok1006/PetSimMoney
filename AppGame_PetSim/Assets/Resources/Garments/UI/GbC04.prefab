@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbC04
   itemName: BackPack
-  GeneratedItem: {fileID: 5976518620502369962, guid: 9fa28cb4bb1bf48dfa1189fe6b05ecd6,
+  GeneratedItem: {fileID: 2247991195423946340, guid: fe2a9a8e091424dcbb350a5d685d9646,
     type: 3}
   type: 2
   rarity: 0

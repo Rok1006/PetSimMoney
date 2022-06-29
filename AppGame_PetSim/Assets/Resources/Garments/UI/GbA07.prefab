@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbA07
   itemName: GhostFire
-  GeneratedItem: {fileID: 2560869425689690001, guid: 0ba5127afbdcb447aa774e05e5df6186,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 6dc1e21275cc74b82907655178e38520,
     type: 3}
   type: 2
   rarity: 2

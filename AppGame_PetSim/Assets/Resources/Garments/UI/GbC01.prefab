@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbC01
   itemName: Normal Devil Wing
-  GeneratedItem: {fileID: 8206059808503233876, guid: b414a1bf9aa7b433c9a97f2b188b1ef1,
+  GeneratedItem: {fileID: 2247991195423946340, guid: a9510a7aaa9954dac91c4d4276ead0ef,
     type: 3}
   type: 2
   rarity: 0

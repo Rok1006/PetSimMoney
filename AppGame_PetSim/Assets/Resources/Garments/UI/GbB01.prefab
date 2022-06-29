@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbB01
   itemName: Standing Goose
-  GeneratedItem: {fileID: 2207580848303975202, guid: f83c80463ae6c448d80e5e2abd20321e,
+  GeneratedItem: {fileID: 2247991195423946340, guid: e89d04d60e656426ea626c075750d4fd,
     type: 3}
   type: 2
   rarity: 1

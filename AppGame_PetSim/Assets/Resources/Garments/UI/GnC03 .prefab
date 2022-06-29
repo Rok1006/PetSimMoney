@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GnC03
   itemName: 'Black Collar '
-  GeneratedItem: {fileID: 6928826941222707360, guid: 0e77ce1a0711d407ea76ce297f384fb0,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 9518e2753b84b4cb3ba5bfab164555f3,
     type: 3}
   type: 1
   rarity: 0

@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhC02
   itemName: Red Ball Headwear
-  GeneratedItem: {fileID: 4927236502669023832, guid: 818198ea8dcef41cd8980d65d553395b,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 8530692af6b3c4f5d8c2f353cb64a57c,
     type: 3}
   type: 0
   rarity: 0

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random=UnityEngine.Random;
+using System;
 //user exp
 public class User : MonoBehaviour
 {
@@ -66,11 +68,11 @@ public class User : MonoBehaviour
     }
     public void LevelUp()
     {   //level up
-        fpValue -= maxfpValue;
-        level++; //increase one level
-        maxfpValue = 10 * (int)Mathf.Round(Mathf.Pow(level + 1, 2.0f));
-        maxfpValue -= maxfpValue % 10;
 
+        fpValue =0;
+        level++; //increase one level
+        maxfpValue = (int)Mathf.Round((float)Math.Log(level)*20+level*0.3f+10);//y=20logx+0.3x+10
+        
         if(level >= maxLevel)
         {
             fpValue = 0;

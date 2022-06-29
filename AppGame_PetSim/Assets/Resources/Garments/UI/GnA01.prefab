@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GnA01
   itemName: Crystal Ribbon
-  GeneratedItem: {fileID: 1757202111169573741, guid: 08f7d156f31b142c794e42fce7cb5991,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 9f09ec7a7a726476b900cee9744b29e4,
     type: 3}
   type: 1
   rarity: 2

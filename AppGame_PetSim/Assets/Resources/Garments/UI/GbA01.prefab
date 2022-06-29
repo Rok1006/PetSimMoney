@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbA01
   itemName: Galaxy Devil Wing
-  GeneratedItem: {fileID: 443005508378920116, guid: 36eb6a86bb4434d4f9b6154ff32e4e79,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 0679daa63436f4527ba0a8d38820c863,
     type: 3}
   type: 2
   rarity: 2

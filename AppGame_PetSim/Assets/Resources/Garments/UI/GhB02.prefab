@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhB02
   itemName: RedOctopus
-  GeneratedItem: {fileID: 6285767108240810367, guid: f68a0974d8d5044debe421b0d89be6d6,
+  GeneratedItem: {fileID: 2247991195423946340, guid: e7caf142280e74dba997f2ec945f4a2e,
     type: 3}
   type: 0
   rarity: 1

@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhA01
   itemName: Blue Donut
-  GeneratedItem: {fileID: 9048817572238259302, guid: b3b99baea14ae4d5d891c3cd3735976e,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 09e6b8d9b294d4913b3b1bf1ec2f6f9c,
     type: 3}
   type: 0
   rarity: 2

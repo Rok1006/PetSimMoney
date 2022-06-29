@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbA05
   itemName: Bunny Dress
-  GeneratedItem: {fileID: 3443149200054089010, guid: 40f156b995f634e689cfeb93d71c837a,
+  GeneratedItem: {fileID: 2247991195423946340, guid: ae3b73c985d8a4774af0f36371e432ef,
     type: 3}
   type: 2
   rarity: 2

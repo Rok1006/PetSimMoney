@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbB04
   itemName: Police Belt
-  GeneratedItem: {fileID: 3167085161219034457, guid: b8c60fc2e3db24e8c98513128a22aff5,
+  GeneratedItem: {fileID: 2247991195423946340, guid: e249bfbc7f78742f78aa5f32c434d818,
     type: 3}
   type: 2
   rarity: 1

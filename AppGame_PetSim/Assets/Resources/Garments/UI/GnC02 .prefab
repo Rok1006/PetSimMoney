@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GnC02
   itemName: Red Ribbon
-  GeneratedItem: {fileID: 4270475044611291066, guid: d1ed3456f36a946b081d00869313e44c,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 293ce2e2cf4d447c884d8a43f0830f73,
     type: 3}
   type: 1
   rarity: 0

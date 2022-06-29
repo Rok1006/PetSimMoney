@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhC06
   itemName: Cooking hat
-  GeneratedItem: {fileID: 8671024817204401312, guid: 9933cc7b52df74d25b306a42e1d15b20,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 413604ad180934288a270201fc276b17,
     type: 3}
   type: 0
   rarity: 0

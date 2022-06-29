@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GnA02
   itemName: Bunny Bow
-  GeneratedItem: {fileID: 1414640480357819860, guid: 382770c037a944066a27dfcdd172fa04,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 5e4521f85370742cda38504e17b70a7b,
     type: 3}
   type: 1
   rarity: 2

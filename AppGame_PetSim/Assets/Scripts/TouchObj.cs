@@ -29,7 +29,7 @@ public class TouchObj : MonoBehaviour
             Destroy(this.gameObject, 7f); //later: Destroy(this.gameObject, 1f)
         }
     }
-    void OnMouseDown(){
+    void OnMouseOver(){
     //Debug.Log("yup");
         if(this.transform.gameObject.tag == "Normal"){
             Debug.Log("normal"); 
