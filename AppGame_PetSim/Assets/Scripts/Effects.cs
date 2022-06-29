@@ -28,19 +28,9 @@ public class Effects : MonoBehaviour
     void Update()
     {
         SceneEffectChange();
-        // if(Input.GetMouseButton(0)){  //Input.GetKey(KeyCode.Space)
-        // Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        // mousePos = worldMousePos;
-        // Debug.Log(mousePos);
-        // //clickSpark.SetActive(true);
-        // //mousePos.y = 1;
-        // //clickSpark.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
-        // GameObject c = Instantiate(cS, mousePos, Quaternion.identity);
-        // c.transform.position = new Vector3(mousePos.x, mousePos.y, 0f);
-        // //cS.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
-        // }
-
-
+        if(Input.GetMouseButtonUp(0)){
+            clickEffect();
+        }  
     }
     void SceneEffectChange(){
         if(ItemsDrop.Instance.totalTrashDropped>5){ //10
@@ -51,6 +41,14 @@ public class Effects : MonoBehaviour
             dirtyblings.SetActive(false);
         }
     }
+
+   public void clickEffect(){
+        var screenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
+        screenPoint.z = 10.0f; //distance of the plane from the camera
+        GameObject c = Instantiate(clickSpark, Camera.main.ScreenToWorldPoint(screenPoint), Quaternion.identity);
+        Destroy(c, 1f);
+    }
+
     public void HappyEmittion(){
         happyheart.transform.position = HeartEmit.transform.position;
         happyheart.Emit(1);

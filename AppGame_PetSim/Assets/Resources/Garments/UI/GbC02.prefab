@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbC02
   itemName: Angel Wing
-  GeneratedItem: {fileID: 2410617236104671204, guid: 796c152a33e4940b68917bd860fe0a87,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 83c56d436cf37429c9354ac31fdd2de9,
     type: 3}
   type: 2
   rarity: 0

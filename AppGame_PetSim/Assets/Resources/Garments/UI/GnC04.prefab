@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GnC04
   itemName: Blue Bow
-  GeneratedItem: {fileID: 2103113547438605252, guid: 007fbb701421d4ace9d4cf20f8ab4aec,
+  GeneratedItem: {fileID: 2247991195423946340, guid: d2611aaf4611148118adaef4e3c8a3ae,
     type: 3}
   type: 1
   rarity: 0

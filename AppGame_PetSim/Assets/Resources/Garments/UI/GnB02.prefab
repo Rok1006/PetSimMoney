@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GnB02
   itemName: Cooking Apron
-  GeneratedItem: {fileID: 1481936329311888834, guid: cc67403afc4f84ad6b972e388b5cbc07,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 91e5adb808ef04c43a0e99975be80866,
     type: 3}
   type: 1
   rarity: 1

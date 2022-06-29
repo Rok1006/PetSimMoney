@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbC03
   itemName: Balloon
-  GeneratedItem: {fileID: 7539238572067280428, guid: 8842ef4bdbf95436482f296208064f37,
+  GeneratedItem: {fileID: 2247991195423946340, guid: d99f8f3d001e4433c844e89559946fac,
     type: 3}
   type: 2
   rarity: 0

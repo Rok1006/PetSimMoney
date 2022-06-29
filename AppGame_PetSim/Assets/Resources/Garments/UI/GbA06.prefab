@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbA06
   itemName: Crystal Dress
-  GeneratedItem: {fileID: 2946712396505596603, guid: acb510062f74747b98f6321eb0d02e6a,
+  GeneratedItem: {fileID: 2247991195423946340, guid: f40a03632256b4af2bba52ab73f05ca4,
     type: 3}
   type: 2
   rarity: 2

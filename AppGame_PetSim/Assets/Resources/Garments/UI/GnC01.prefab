@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GnC01
   itemName: White collar
-  GeneratedItem: {fileID: 6884930215882591547, guid: 9fc01e7bc0b7643228c1d9a719103645,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 0c5333b5af1bf4267ac62093c2ca7df8,
     type: 3}
   type: 1
   rarity: 0

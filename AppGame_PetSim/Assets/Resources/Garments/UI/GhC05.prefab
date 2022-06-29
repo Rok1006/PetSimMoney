@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhC05
   itemName: Apple
-  GeneratedItem: {fileID: 9018673695719720157, guid: b757756f3daa347efabc3967a02bcde7,
+  GeneratedItem: {fileID: 2247991195423946340, guid: da437eba5fd594e158c9c13a01cffb15,
     type: 3}
   type: 0
   rarity: 0

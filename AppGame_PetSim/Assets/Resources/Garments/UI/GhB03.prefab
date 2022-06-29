@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhB03
   itemName: Police Hat
-  GeneratedItem: {fileID: 6473539477141472177, guid: 6542b4508a8244e00b3106016d55a0b9,
+  GeneratedItem: {fileID: 2247991195423946340, guid: e5f321c5b13b142fab876a91c2efcb8e,
     type: 3}
   type: 0
   rarity: 1

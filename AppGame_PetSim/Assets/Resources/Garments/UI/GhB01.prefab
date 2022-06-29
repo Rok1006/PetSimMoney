@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhB01
   itemName: Ball donut
-  GeneratedItem: {fileID: 2184625608452374424, guid: 749b2e34687ad48b9a56c6739fc19be6,
+  GeneratedItem: {fileID: 2247991195423946340, guid: fd43c448c85e145deb1248e3f709b5ab,
     type: 3}
   type: 0
   rarity: 1

@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhA03
   itemName: Bunny Headwear
-  GeneratedItem: {fileID: 6830544771589818464, guid: 8c427da555e564fcd801936e8351dcc5,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 6146c6782834c4b8f9ab127a92d2312b,
     type: 3}
   type: 0
   rarity: 2

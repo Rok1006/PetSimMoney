@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbC05
   itemName: MilkTea
-  GeneratedItem: {fileID: 3683691177811357655, guid: 0295276c14aeb4b8e81b2d6de4faa3b2,
+  GeneratedItem: {fileID: 2247991195423946340, guid: ef4fb0f1f5f974c42b200a5759649337,
     type: 3}
   type: 2
   rarity: 0

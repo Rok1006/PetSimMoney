@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhA06
   itemName: Crystal Crown
-  GeneratedItem: {fileID: 31360403441501962, guid: 3b15824016d414deda87af9f47760c91,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 6f82a4ca1ef5142c78358bf93dfaba34,
     type: 3}
   type: 0
   rarity: 2

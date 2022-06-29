@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbA04
   itemName: King's Cape
-  GeneratedItem: {fileID: 7635609547964965841, guid: b15d2ee95c2d942edb14d60cac7556cb,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 7d20f76caa82d48c7beb09745b16da11,
     type: 3}
   type: 2
   rarity: 2

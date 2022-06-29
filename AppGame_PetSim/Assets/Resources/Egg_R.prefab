@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 7110914105312840115}
   - component: {fileID: 7110914105312840114}
   m_Layer: 5
-  m_Name: RedEgg
+  m_Name: Egg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 255974722933975909, guid: 8a4283da64b304600b62a8897599d6e8, type: 3}
+  m_Sprite: {fileID: 1102792525547017816, guid: 25f0f19c130144eeca17a6473c164390,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -9,6 +9,7 @@ public enum StatsType { Happiness, Energy, Hunger, Hydration }
 public class Status : MonoBehaviour
 {
     public static Status Instance;
+    public float sizeindex;
     [Header("UI")]
     public Slider happiness;
     public Slider energy;
@@ -50,6 +51,7 @@ public class Status : MonoBehaviour
 
     void Update()
     {
+        updateSize();
         happiness.value = happyV / happyMax;
         energy.value = energyV / energyMax;
         hunger.value = hungerV / hungerMax;
@@ -59,6 +61,13 @@ public class Status : MonoBehaviour
 
         DevCheat();
     }
+
+    public void updateSize(){
+        float stateTotal = happyV + hungerV + hydrationV;
+        float stateMax = happyMax + hungerMax + hydrationMax;
+        sizeindex = stateTotal/stateMax;
+    }
+
     void SteadyDecrease()
     { 
         for(int i = 0; i < statsValue.Length; i++)
@@ -163,6 +172,20 @@ public class Status : MonoBehaviour
                 statsValue[i] -= 1f;
             }
         }
+        }
+
+        if(Input.GetKey(KeyCode.X))
+        {
+            for(int i = 0; i < statsValue.Length; i++)
+        {
+                statsValue[i] = statsMax[i];
+        }
+        }
+
+
+
+        if(Input.GetKey(KeyCode.Z)){
+            User.Instance.level = 0;
         }
     }
 }

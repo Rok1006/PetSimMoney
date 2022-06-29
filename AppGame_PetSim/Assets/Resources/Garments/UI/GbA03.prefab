@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbA03
   itemName: Aligator
-  GeneratedItem: {fileID: 1129405973008061348, guid: 0850804ff905945eeabfc08009d137dd,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 0a32675c4f132493098ca20028ce8c93,
     type: 3}
   type: 2
   rarity: 2

@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GhA02
   itemName: Pink Donut
-  GeneratedItem: {fileID: 8370981853413259129, guid: e33b406f4be1747449740eb34183ad71,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 5c57d6378b936404291c92e33459036b,
     type: 3}
   type: 0
   rarity: 2
