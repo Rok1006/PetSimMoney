@@ -62,8 +62,8 @@ GameObject:
   - component: {fileID: 2247991195423946336}
   - component: {fileID: 8144646163018424692}
   m_Layer: 10
-  m_Name: DA01_obj
-  m_TagString: Drink
+  m_Name: UA01_obj
+  m_TagString: spItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,7 +124,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -511387633022464438, guid: d57d7ab2121ef4aa897b2b92ba0e2c91,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emitSpot: {fileID: 0}
-  info: {fileID: 6036092562436712604, guid: 86c0829d485e241cba53c45c2b8d67f7, type: 3}
+  info: {fileID: 375882483184820076, guid: 55a1ddf6ae4b4476399684e1da50fb72, type: 3}
   dist: 0
   explode: {fileID: 6222639126503631770, guid: e3638e807c17f4341955eea36202b10f, type: 3}
   hungerEx: {fileID: 483648205025446981, guid: d829602612b1e402fa65e201019b163f, type: 3}

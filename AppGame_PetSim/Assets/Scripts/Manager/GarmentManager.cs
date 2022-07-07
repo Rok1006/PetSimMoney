@@ -127,6 +127,28 @@ public class GarmentManager : MonoBehaviour
         }
     }
 
+    public void OnClickEquipment(){
+        GameObject button = EventSystem.current.currentSelectedGameObject;
+        string name = button.transform.parent.name;
+        foreach(GarmentType type in Enum.GetValues(typeof(GarmentType)))
+        {
+            foreach(Garment garment in _separatedGarmentLists[(int) type])
+            {
+                if(garment.garment.name == name)
+                {
+                    int index = separatedGarmentLists[(int) garment.type].IndexOf(garment);
+                    if(_separatedGarmentLists[(int) garment.type][index].eqiupped)//Garment already equipped
+                    {
+                        UnequipGarment(garment);
+                    }else if(_separatedGarmentLists[(int) garment.type][index].owned)//owned Garment
+                    {
+                        EquipGarment(garment);
+                    }else{break;}
+                }
+            }
+        }
+    }
+
     public void OnClickEquip()
     {
         GameObject button = EventSystem.current.currentSelectedGameObject;

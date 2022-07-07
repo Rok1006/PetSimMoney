@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType { Drink, Food, Toy, Leaf }
+public enum ItemType { Drink, Food, Toy, Leaf, spItem}
 public enum Rarity { Common, Rare, SuperRare, UltraRare, SecretUltraRare }
 public enum CostMethod { GreenLeaf, GoldLeaf, Cash }
 

@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     public static Manager Instance;
+    public GameObject Cat;
+    public CatAI catai;
     [Header("GameObject")]
     public GameObject Star;
     public GameObject InsideStatus;
@@ -60,6 +62,7 @@ public class Manager : MonoBehaviour
     public int openclose = 0;
     void Start()
     {
+        catenable();
         starAnim = Star.GetComponent<Animator>();
         InsideStatusAnim = InsideStatus.GetComponent<Animator>();
         bagAnim = Bag.GetComponent<Animator>();
@@ -158,6 +161,7 @@ public class Manager : MonoBehaviour
     }
     public void ClickStore(){
         sm.Click();
+        catdisable();
         StoreMenu.SetActive(true);
         //MainScreenUI.SetActive(false);
         ShopManager.Instance.ShopItemsGen();
@@ -167,6 +171,7 @@ public class Manager : MonoBehaviour
     }
      public void ClickCloseStore(){
         sm.Click();
+        catenable();
         StoreMenu.SetActive(false);
         //MainScreenUI.SetActive(true);
     }
@@ -180,7 +185,7 @@ public class Manager : MonoBehaviour
     }
     public void SettingtoMenu(){ //click to menu
         slm.SaveData();
-         SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
     public void ClickInvent(){
         sm.Click();
@@ -197,10 +202,12 @@ public class Manager : MonoBehaviour
     //Gacha Page Related
     public void ClickGacha(){
         sm.Click();
+        catdisable();
         GachaScreen.SetActive(true);
     }
     public void ClickCloseGacha(){
         sm.Click();
+        catenable();
         GachaScreen.SetActive(false);
     }
     public void ClickProbability(){
@@ -213,6 +220,7 @@ public class Manager : MonoBehaviour
     }
     public void ClickItemB(){
         sm.Click();
+        catdisable();
         RedMachine.SetActive(false);
         BlueMachine.SetActive(true);
     }
@@ -228,6 +236,7 @@ public class Manager : MonoBehaviour
     }
     public void ClickCloseCostumes(){
         sm.Click();
+        catenable();
         CostumePanel.SetActive(false);
     }
      public void ClickLeft(){
@@ -249,19 +258,23 @@ public class Manager : MonoBehaviour
     //others
     public void ClickGift(){
         sm.Click();
+        catdisable();
         GiftPannel.SetActive(true);
         AdsManager.Instance.CheckTime();
     }
      public void ClickCloseGift(){
         sm.Click();
+        catenable();
         GiftPannel.SetActive(false);
     }
      public void ClickTodayReward(){
         sm.Click();
+        catdisable();
         RewardPanel.SetActive(true);
     }
      public void ClickCloseReward(){
         sm.Click();
+        catenable();
         RewardPanel.SetActive(false);
     }
     //Settings
@@ -309,5 +322,14 @@ public class Manager : MonoBehaviour
         InventAnim.SetBool("hide", true);
         openclose = 0; //close
         }
+    }
+        void catenable(){
+        Cat.SetActive(true);
+        CatAI.Instance.enableCat = true;
+    }
+
+    void catdisable(){
+        Cat.SetActive(false);
+       // CatAI.Instance.canTouch = false;
     }
 }

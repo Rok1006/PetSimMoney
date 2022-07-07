@@ -70,6 +70,7 @@ public class GachaManager : MonoBehaviour
     {
         float randNum = UnityEngine.Random.Range(0.0f, 1.0f);
         Rarity resultRarity;
+
         if(randNum < _probability[0]) //Super Rare
         {
             _luck = 0;

@@ -25,9 +25,9 @@ public class TouchObj : MonoBehaviour
             Destroy(this.gameObject, 7f); //later: Destroy(this.gameObject, 1f)
         }else if(this.transform.gameObject.tag == "Rare"){
             Destroy(this.gameObject, 7f); //later: Destroy(this.gameObject, 1f)
-        }else if(this.transform.gameObject.tag == "Trash"){
+        }/*else if(this.transform.gameObject.tag == "Trash"){
             Destroy(this.gameObject, 7f); //later: Destroy(this.gameObject, 1f)
-        }
+        }*/
     }
     void OnMouseOver(){
     //Debug.Log("yup");
@@ -52,6 +52,12 @@ public class TouchObj : MonoBehaviour
             Destroy(d, 5f);
         }
          if(this.transform.gameObject.tag == "Trash"){
+            destoryTrash();
+            
+        }
+    }
+
+    public void destoryTrash(){
             User.Instance.ExpUP(5); //add three exp
             Debug.Log("trash"); 
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
@@ -60,9 +66,12 @@ public class TouchObj : MonoBehaviour
             Destroy(c, 1f);
             Destroy(d, 5f);
             Destroy(this.gameObject);
-            
-        }
     }
+
+
+
+
+
 
     void DestroyAuto(){
         Destroy(this.gameObject);

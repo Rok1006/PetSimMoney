@@ -16,6 +16,7 @@ TagManager:
   - HeadPiece
   - PopUpUse
   - Air
+  - spItem
   layers:
   - Default
   - TransparentFX

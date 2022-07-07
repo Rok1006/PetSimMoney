@@ -38,16 +38,16 @@ void Update(){
     }
 }
 void OnMouseOver(){
-    Debug.Log("over");
+if(CatAI.Instance.currentPos != CatAI.Instance.currentToyPos){
     if(Input.GetMouseButton(0)){
         selected = true;
-    }
+    }}
+
 }
 //Others function non related to drag drop
  public void GetToyPos(){
      if(this.gameObject.tag == "Toy"){
         CatAI.Instance.currentToyPos = this.gameObject.transform.position;
-        Debug.Log(CatAI.Instance.currentToyPos);
      }
     }
 public void ToySnap(){
@@ -75,31 +75,35 @@ public void DestroyFoodDrink(){
         Destroy(this.gameObject);
         Destroy(c, 5f);
         //trigger animation: action = ?
-     }
-    if(this.gameObject.tag == "Drink"){
+     }else if(this.gameObject.tag == "Drink"){
         info.Use();
         GameObject c = Instantiate(hydraEx, emitSpot.transform.position, Quaternion.identity);
         Destroy(this.gameObject); 
         Destroy(c, 5f);
         //trigger animation: action = ?
+    }else{
+        info.Use();
+        Destroy(this.gameObject);
     }
 }
 public void DetectToy(){
-        Debug.Log(this.gameObject.tag);
-        GetToyPos(); //get the pos of the toy when drop on the floor
         CatAI.Instance.Dashing(); //do playing
-        CatAI.Instance.p = 0; //stop normal state
+        //CatAI.Instance.p = 0; //stop normal state
         //CatAI.Instance.executing = true;
 }
 void OnCollisionEnter2D(Collision2D col) {
-    if(this.gameObject.tag == "Toy"){  
+    if(this.gameObject.tag == "Toy"){ 
         if (col.gameObject.CompareTag("ItemFloor"))
         {
+            GetToyPos();
             sm.ToyFall();
              if(getAdd){ //boolean: ADD TO LIST ONLY ONCE
                      GameObject t = this.gameObject; //add it into list 
                     CatAI.Instance.toy.Add(t);
                     getAdd = false;
+                }
+                if(!CatAI.Instance.getToy){
+                    GetToyPos();
                 }
            if(!CatAI.Instance.isPlayingToy){ //still glitching need another way
                 DetectToy();
@@ -120,6 +124,7 @@ void OnCollisionEnter2D(Collision2D col) {
         }
     }
 }
+
 void OnTriggerEnter2D(Collider2D col) {
   
 }

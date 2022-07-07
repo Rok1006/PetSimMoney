@@ -25,10 +25,10 @@ public class Scroll : MonoBehaviour
     {
         this.transform.position = new Vector2(this.transform.position.x,localSpeed*speed*i);
         i++;
-        if(this.transform.position.y > 25.7f){
-            this.transform.position = resetPosition;
-            i=0;
-        }
+        //if(this.transform.position.y > 25.7f){
+          //  this.transform.position = resetPosition;
+            //i=0;
+        //}
     }
 
 

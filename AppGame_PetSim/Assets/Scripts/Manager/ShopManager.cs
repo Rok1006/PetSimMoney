@@ -84,6 +84,8 @@ public class ShopManager : MonoBehaviour
                         //TODO
                         //ShopItemCreate(item, shopLeafTemplates, type);
                         break;
+                    case ItemType.spItem:
+                    break;
                     default:
                         break;
                 }
