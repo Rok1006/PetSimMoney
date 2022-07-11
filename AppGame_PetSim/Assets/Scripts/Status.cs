@@ -15,6 +15,12 @@ public class Status : MonoBehaviour
     public Slider energy;
     public Slider hunger;
     public Slider hydration;
+
+    public Image happinessBar;
+    public Image energyBar;
+    public Image hungerBar;
+    public Image HydrationBar;
+
     public Text norT;
     public Text rareT;
     public Text Store_norT;
@@ -56,6 +62,16 @@ public class Status : MonoBehaviour
         energy.value = energyV / energyMax;
         hunger.value = hungerV / hungerMax;
         hydration.value = hydrationV / hydrationMax;
+
+
+        //happinessBar.fillAmount = happyV / happyMax;
+        //energyBar.fillAmount = energyV / energyMax;
+        hungerBar.fillAmount = hungerV / hungerMax;
+        HydrationBar.fillAmount = hydrationV / hydrationMax;
+
+
+
+
 
         UpdateValue();
 

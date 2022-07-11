@@ -10,7 +10,7 @@ using System;
      // void FulfillingState(){ //when ?? value lower to certain amount, do this state, what lower do what first, wait! it doent need to audto do it 
     // //include animation that appears when it is happy and fulfufilled
     // }
-public enum Action {Idle, Walking, SitSleeping, SitAwake, Meowing, Dashing, Playing, Smile, Touch, Angry}
+public enum Action {Idle, Walking, SitSleeping, SitAwake, Meowing, Dashing, Playing, Smile, Touch, Angry, Jump, Prejump}
 
 public class CatAI : MonoBehaviour
 {
@@ -25,8 +25,10 @@ public class CatAI : MonoBehaviour
     public Action action;
     public float speed;
     public float timePass;
+    float step;
     float x;
     float y;
+    bool point1 = true;
     private float oldPosition = 0.0f;
     public Vector3 newPos;
     public Vector3 oldPos;
@@ -34,7 +36,7 @@ public class CatAI : MonoBehaviour
     public Vector3 currentToyPos;
     public int p;
     [Header("Check")]
-    public bool enableCat;
+    public bool enableCat = false;
     public bool executing;
     public bool doNormal;
     public bool beingTouch; //check if the cat is being touch; default turn false
@@ -44,11 +46,13 @@ public class CatAI : MonoBehaviour
     public bool switchCooldown = false;
     public bool getToy;
     public bool tiredCoolDown;
+
    void Awake() {
        Instance = this;
    }
        void Start()
     {
+        step = speed * Time.deltaTime;
         catanim = this.GetComponent<Animator>();
         executing = true;  
         //Idle(); //default state is IDLE
@@ -60,16 +64,17 @@ public class CatAI : MonoBehaviour
         beingTouch = false;
         switchCooldown = false;
         doNormal = true;
-        NormalState();
-        CheckLowStats();
+        //NormalState();
+        Prejump();
+        //CheckLowStats();
     }
     void Update()
     {
-        if(enableCat){  //active the cat animation after disable
+        /*if(enableCat){  //active the cat animation after disable
             CheckToyList();
             NormalState();
             enableCat = false;
-        }
+        }*/
         Growth();
         if (transform.position.x > oldPosition){ // direction:looking right
          transform.localScale = new Vector3(-sizeValue,sizeValue,sizeValue);
@@ -82,7 +87,8 @@ public class CatAI : MonoBehaviour
             //stop
                 break;
             case Action.Walking: //walking
-                float step = speed * Time.deltaTime * Status.Instance.energyV * 0.01f; //energy affect its speed
+                //float step = speed * Time.deltaTime;
+                
                 this.transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, step);//
                 if(currentPos == newPos)//if cat arrive at the new pos
                 { 
@@ -133,6 +139,28 @@ public class CatAI : MonoBehaviour
             break;
             case Action.Angry:
             break;
+            case Action.Prejump:
+                if(currentPos == newPos){
+                    Jump();
+                }
+                target.transform.position = SceneryManager.Instance.CatTreePos(0);//CatTree Point0
+                newPos = target.transform.position;
+                this.transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, step *1.25f);
+            break;
+            case Action.Jump:
+                 
+                if(point1){
+                    target.transform.position =SceneryManager.Instance.CatTreePos(1);//point1
+                    newPos = target.transform.position;
+                    if(currentPos == newPos){
+                        target.transform.position = SceneryManager.Instance.CatTreePos(2);//point2
+                        newPos = target.transform.position;
+                        point1 = false;
+                    }
+                }
+                //float step3 = speed * Time.deltaTime *2f;
+                this.transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, step *5f);//
+            break;
            }
     }
     void CheckLowStats(){ //if hunger and dryness low to certain rate, be angry:have to feed
@@ -147,7 +175,7 @@ public class CatAI : MonoBehaviour
     
 
     public void Growth(){
-        float sizeMax = (float)Math.Log(User.Instance.level+6)*0.15f;
+        float sizeMax = (float)Math.Log(User.Instance.level+10)*0.1f;
         float sizeMin = sizeMax*0.75f;
         sizeValue = (sizeMax-sizeMin)*Status.Instance.sizeindex+sizeMin;
         if(sizeValue < sizeMin){
@@ -255,6 +283,16 @@ public class CatAI : MonoBehaviour
         doNormal = false;
     }
 
+    private void Prejump(){ //be angry when stats all lower than certain: use if but nt else, put action = Action.Angry
+        catanim.SetTrigger("walk");
+        action = Action.Prejump;
+    }
+
+    private void Jump(){
+        catanim.SetTrigger("jump");
+        action = Action.Jump;
+        StartCoroutine("Jumping");
+    }
 
     void RanPos()
     {  	//the range where the cat will walk around at
@@ -380,6 +418,15 @@ public class CatAI : MonoBehaviour
         tiredCoolDown = false;
     }
 
+    IEnumerator Jumping()
+    { //walking
+        catanim.SetTrigger("jump");
+        yield return new WaitForSeconds(2);//wait for 5 sec to do the next
+        NormalState(); 
+        CheckToyList();
+    }
+
+
     void CheckToyList()
     {
         for (int i = 0; i < toy.Count; i++)
@@ -400,7 +447,7 @@ public class CatAI : MonoBehaviour
     }
     void MoveTowardToy()
     {
-        float step1 = speed * Time.deltaTime*(1f+timePass*0.2f); //*Status.Instance.energyV *0.01f; //energy affect its speed
+        float step1 = speed * Time.deltaTime*(1f+timePass*0.15f); //*Status.Instance.energyV *0.01f; //energy affect its speed
         this.transform.position = Vector3.MoveTowards(this.transform.position, currentToyPos, step1);//
     }
     void OnMouseDown()

@@ -50,6 +50,7 @@ public class Manager : MonoBehaviour
     public GameObject CrossCloseEgg;
     public GameObject functionManager;
     public SaveLoadManager slm;
+
   
     void Awake(){
         Instance = this;
@@ -311,6 +312,11 @@ public class Manager : MonoBehaviour
         SettingPannel.transform.Find("Music/MusicToggle").gameObject.GetComponent<Toggle>().isOn = BGM.activeSelf;
         SettingPannel.transform.Find("Sounds/SoundToggle").gameObject.GetComponent<Toggle>().isOn = SoundM.activeSelf;
     }
+    public void ClickChangeScene(){
+        sm.Click();
+        SceneryManager.Instance.changeScene();
+    }
+
     void DetermineOnOff(){   //this is the function for the APP ui Pannel
     if(openclose==1){
         Inventory.SetActive(true);
