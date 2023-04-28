@@ -89,11 +89,13 @@ GameObject:
   - component: {fileID: 5476863298520019369}
   - component: {fileID: 5476863298520019375}
   - component: {fileID: 5476863298520019372}
+  - component: {fileID: 2500319854307180253}
   - component: {fileID: 5476863298520019370}
+  - component: {fileID: 7531545849131521488}
   - component: {fileID: 3689669048758106768}
   - component: {fileID: 1393460587959154228}
   - component: {fileID: 3573957710332448517}
-  - component: {fileID: 375882483184820076}
+  - component: {fileID: 8259068920975975182}
   m_Layer: 0
   m_Name: UA01
   m_TagString: Untagged
@@ -159,6 +161,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2500319854307180253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5476863298520019382}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00bd691276be84d00a9fdd8a2528796a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 2442379027536876160, guid: 24a28ee7ce32542e781ee09e4ecb23c2, type: 3}
+  StartPosition: {x: 0, y: 0, z: 0}
+  thisUI: {fileID: 5476863298520019369}
+  dropPlace: {fileID: 7740868302158531491, guid: ae600f31805884df09af753f1b85a7df,
+    type: 3}
+  inDropArea: 0
+  dist: 0
 --- !u!225 &5476863298520019370
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -171,6 +192,60 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &7531545849131521488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5476863298520019382}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.83, g: 0.83, b: 0.83, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 5476863298520019372}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3573957710332448517}
+        m_MethodName: OnClickItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!223 &3689669048758106768
 Canvas:
   m_ObjectHideFlags: 0
@@ -250,7 +325,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &375882483184820076
+--- !u!114 &8259068920975975182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -263,13 +338,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemID: UA01
-  _itemName: levelUP
+  _itemName: Level potion
   _generatedItem: {fileID: 2247991195423946340, guid: 4c7e567cf5be04d97a1d7dbba9ece5d0,
     type: 3}
   _type: 4
   _rarity: 4
-  _costMethod: 0
+  _costMethod: 2
   _cost: 1
   _levelRequirement: 0
-  _description: LevelUP
+  _description: level up
   itemNumber: 1

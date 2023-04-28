@@ -1,0 +1,437 @@
+fileFormatVersion: 2
+guid: 417256c9eb1e244a5bbedb880e479d43
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2638799295246576134
+    second: wareroom_0
+  - first:
+      213: 2851037303925564023
+    second: wareroom_1
+  - first:
+      213: -4153306398064251557
+    second: wareroom_2
+  - first:
+      213: 8424524813718251578
+    second: wareroom_3
+  - first:
+      213: -8810319690731067533
+    second: wareroom_4
+  - first:
+      213: -8511820575431689589
+    second: wareroom_5
+  - first:
+      213: -2806640215110433019
+    second: wareroom_6
+  - first:
+      213: 2944791745760894028
+    second: wareroom_7
+  - first:
+      213: 127875088467496490
+    second: wareroom_8
+  - first:
+      213: -8958608075483308719
+    second: wareroom_9
+  - first:
+      213: -7442185788371703655
+    second: wareroom_10
+  - first:
+      213: 6957329263715620030
+    second: wareroom_11
+  - first:
+      213: 1651871386137876174
+    second: wareroom_12
+  - first:
+      213: -3206548124941892139
+    second: wareroom_13
+  - first:
+      213: -4242518547113417961
+    second: wareroom_14
+  - first:
+      213: -7619120595691033973
+    second: wareroom_15
+  - first:
+      213: -6048077997720555347
+    second: wareroom_16
+  - first:
+      213: -182161557809947566
+    second: wareroom_17
+  - first:
+      213: -3751213081557951456
+    second: wareroom_18
+  - first:
+      213: -974121011081589617
+    second: wareroom_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wareroom_0
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 2357
+        width: 1849
+        height: 1930
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5d64d950a116bd0800000000000000
+      internalID: -2638799295246576134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_1
+      rect:
+        serializedVersion: 2
+        x: 2206
+        y: 2376
+        width: 1849
+        height: 1938
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772eedd825be09720800000000000000
+      internalID: 2851037303925564023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_2
+      rect:
+        serializedVersion: 2
+        x: 4355
+        y: 3726
+        width: 458
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5de50c06dd7c56c0800000000000000
+      internalID: -4153306398064251557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_3
+      rect:
+        serializedVersion: 2
+        x: 4932
+        y: 3726
+        width: 454
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38e32bdeace9e470800000000000000
+      internalID: 8424524813718251578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_4
+      rect:
+        serializedVersion: 2
+        x: 6182
+        y: 3403
+        width: 1281
+        height: 738
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377685c9be47bb580800000000000000
+      internalID: -8810319690731067533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_5
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 2506
+        width: 335
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a7881c840ffd980800000000000000
+      internalID: -8511820575431689589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_6
+      rect:
+        serializedVersion: 2
+        x: 4944
+        y: 2506
+        width: 338
+        height: 565
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5074406389fcc09d0800000000000000
+      internalID: -2806640215110433019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_7
+      rect:
+        serializedVersion: 2
+        x: 5967
+        y: 2403
+        width: 1280
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c94979d700ed820800000000000000
+      internalID: 2944791745760894028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1529
+        width: 604
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e0ab727bd46c100800000000000000
+      internalID: 127875088467496490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_9
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 1399
+        width: 811
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d1fda8b61aca380800000000000000
+      internalID: -8958608075483308719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_10
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 973
+        width: 2665
+        height: 1372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998e4a3b47b08b890800000000000000
+      internalID: -7442185788371703655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_11
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 460
+        width: 2900
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb413359a166d8060800000000000000
+      internalID: 6957329263715620030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wareroom_19
+      rect:
+        serializedVersion: 2
+        x: 5124
+        y: 400
+        width: 821
+        height: 894
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ccc3ef91a3b72f0800000000000000
+      internalID: -974121011081589617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

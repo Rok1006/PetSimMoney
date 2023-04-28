@@ -260,14 +260,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemID: DA01
   _itemName: Purple Sky
-  _generatedItem: {fileID: 2247991195423946340, guid: 4c7e567cf5be04d97a1d7dbba9ece5d0,
+  _generatedItem: {fileID: 2247991195423946340, guid: f851bfb824163435185aae527bd2687c,
     type: 3}
   _type: 0
   _rarity: 2
   _costMethod: 0
   _cost: 40
   _levelRequirement: 20
-  _description: + 40 hydration per drink
+  _description: + 40 hydration
   _hydrationValue: 40
 --- !u!223 &3802232497078423250
 Canvas:

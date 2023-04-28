@@ -7,6 +7,10 @@ public class SceneryManager : MonoBehaviour
 
     public static SceneryManager Instance;
     public GameObject[] scene = new GameObject[2];//0:house 1:outside
+    
+    bool switchbool = false;
+    public int currentPlanet = 0;
+    int _currentPlanet;
     [Header("Effect")]
     public GameObject star;
     public GameObject bubble;
@@ -17,37 +21,34 @@ public class SceneryManager : MonoBehaviour
     void Awake(){
         Instance = this;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        scene[0].SetActive(true);
-        star.SetActive(true);
-        scene[1].SetActive(false);
-        bubble.SetActive(false);
+
+    void Update(){
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void switchPlanet(int _currentPlanet){
+        Debug.Log("_currentPlanet "+_currentPlanet);
+        scene[_currentPlanet].SetActive(true);
+        scene[currentPlanet].SetActive(false);
+        currentPlanet = _currentPlanet;
     }
 
-    public void changeScene(){
-        if(scene[0].activeSelf){
-            scene[0].SetActive(false);
-            star.SetActive(false);
-            scene[1].SetActive(true);
-            bubble.SetActive(true);
+
+    public void switchScene(){
+        if(switchbool){
+        scene[currentPlanet].SetActive(true);
+        switchbool = false;
         }else{
-            scene[0].SetActive(true);
-            star.SetActive(true);
-            scene[1].SetActive(false);
-            bubble.SetActive(false);
-        }
+        scene[currentPlanet].SetActive(false);
+        switchbool = true;
+        }   
     }
-
     public Vector3 CatTreePos(int i){
         Vector3 point = CatTree.transform.GetChild(i).gameObject.transform.position;
         return point;
     }
+
+    public bool outside(){
+        return scene[currentPlanet].activeSelf;
+    }
+
 }

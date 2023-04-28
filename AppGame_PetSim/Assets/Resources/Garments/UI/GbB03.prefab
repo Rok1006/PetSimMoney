@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: GbB03
   itemName: SnowWhite Dress
-  GeneratedItem: {fileID: 5439174531175221874, guid: 227036ce3a743439091dc9808d468607,
+  GeneratedItem: {fileID: 2247991195423946340, guid: 115f5ddb056cf41d0b8188852cbdf197,
     type: 3}
   type: 2
   rarity: 1

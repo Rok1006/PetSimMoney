@@ -14,6 +14,7 @@ public class Effects : MonoBehaviour
     public GameObject dirtyblings; //dirty particles
     public ParticleSystem happyheart;
     public GameObject HeartEmit;
+    public GameObject whiteScene;
 
     void Awake(){
         Instance = this;
@@ -40,6 +41,10 @@ public class Effects : MonoBehaviour
             cleanblings.SetActive(true);
             dirtyblings.SetActive(false);
         }
+    }
+
+    public void changeScene(){
+        
     }
 
    public void clickEffect(){

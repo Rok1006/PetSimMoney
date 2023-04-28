@@ -72,6 +72,7 @@ public class Inventory : MonoBehaviour
                 }
             } 
         }
+        OnArrangeClick();
     }
     public void AddToSlots(GameObject itemCollected, int amount, int page, int slot)
     {
@@ -90,7 +91,10 @@ public class Inventory : MonoBehaviour
                     occupiedItem.amount = slotCapacity;
                     AddToSlots(itemCollected, newAmount);
                 }
-                occupiedItem.item.transform.Find("Text").gameObject.GetComponent<Text>().text = "X " + occupiedItem.amount;
+                if(occupiedItem.item !=null){
+                    occupiedItem.item.transform.Find("Text").gameObject.GetComponent<Text>().text = "X " + occupiedItem.amount;
+                }
+                
             }
             else //Different item
             {
@@ -108,9 +112,9 @@ public class Inventory : MonoBehaviour
             GameObject item = Instantiate(itemCollected, inventorySlot[page, slot].transform.position, Quaternion.identity)as GameObject; //instanciate items in slot pos
             collection.Add(new ItemsCollect(item, amount, page, slot));
             item.transform.Find("Text").gameObject.GetComponent<Text>().text = "X " + amount.ToString();
-            //item.transform.SetParent(inventorySlot[page, slot].transform, false); //must need, make it as a child
+            item.transform.SetParent(inventorySlot[page, slot].transform, false); //must need, make it as a child
             item.transform.position = inventorySlot[page, slot].transform.position;
-            item.transform.parent = inventorySlot[page, slot].transform;  //set objects to become child of slots
+            //item.transform.parent = inventorySlot[page, slot].transform;  //set objects to become child of slots
             item.transform.localScale = productSize;  //new Vector3(.4f, .5f, .5f);
         }
     }
@@ -187,7 +191,7 @@ public class Inventory : MonoBehaviour
             ItemsCollect collect = collection.Find(x => x.item == itemSelected);
             if(collect.amount <= 1)
             {
-                RemoveFromSlot(collect.slotPlaced[0], collect.slotPlaced[1]); //destroy this ui
+                RemoveFromSlot(collect.slotPlaced[0], collect.slotPlaced[1]); //bctroy this ui
             }
             else
             {
@@ -195,6 +199,8 @@ public class Inventory : MonoBehaviour
                 itemSelected.transform.Find("Text").gameObject.GetComponent<Text>().text = "X " + collect.amount;
             }
         }
+        GameObject pop = Inventory.instance.PopUpItem;
+        pop.SetActive(false);
         //Inventory.instance.fullslot -= 1;
     }
 

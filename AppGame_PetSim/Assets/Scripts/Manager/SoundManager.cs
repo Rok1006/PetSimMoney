@@ -28,6 +28,8 @@ public class SoundManager : MonoBehaviour
     private AudioSource ball;
     private AudioSource flyby;
     private AudioSource crack;
+    private AudioSource test;
+    
 
     void Awake() {
         Instance = this;
@@ -53,6 +55,7 @@ public class SoundManager : MonoBehaviour
         bling = effectAudios[2];
         trash = effectAudios[3];
         buy = effectAudios[4];
+        test = effectAudios[5];
         //Gacha sound
         AudioSource[] gachaAudios = GachaSound.GetComponents<AudioSource>();
         pull = gachaAudios[0];
@@ -61,7 +64,23 @@ public class SoundManager : MonoBehaviour
         flyby = gachaAudios[3];
         crack = gachaAudios[4];
     }
+    public void muteSound(){
+        AudioSource[] Audios = GetComponentsInChildren<AudioSource>();
+
+        for(int i =0; i < Audios.Length; i++){
+            Audios[i].mute = true;
+        }
+    }
+
+    public void unmuteSound(){
+        AudioSource[] Audios = GetComponentsInChildren<AudioSource>();
+        for(int i =0; i < Audios.Length; i++){
+            Audios[i].mute = false;
+        }
+    }
+
     //cat sound
+
     public void footstep(){
         foodStep.Play();
     }
@@ -126,6 +145,13 @@ public class SoundManager : MonoBehaviour
     }
     public void Buy(){
         buy.Play();
+    }
+
+    public void lvUP(){
+        bling.Play();
+    }
+    public void testing(){
+        test.Play();
     }
 
 }

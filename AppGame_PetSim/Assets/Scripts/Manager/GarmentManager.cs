@@ -5,10 +5,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public enum GarmentType { Hat, Neck, Back }
+//public enum GarmentType { Hat, Neck, Back }
 
 public class GarmentManager : MonoBehaviour
-{
+{/*
     public static GarmentManager Instance;
     public List<GameObject> _garmentList = new List<GameObject>();
     public List<GameObject> garmentList { get { return _garmentList; } }
@@ -209,20 +209,6 @@ public class GarmentManager : MonoBehaviour
                     garmentPlaceHolder[(int) currentGarment[i].type].transform) as GameObject;
             }
         }
-    }
+    }*/
 }
 
-public class Garment
-{
-    public GameObject garment;
-    public GarmentType type;
-    public bool eqiupped;
-    public bool owned;
-    public Garment(GameObject garment, GarmentType type)
-    {
-        this.garment = garment;
-        this.type = type;
-        eqiupped = false;
-        owned = false;
-    }
-}

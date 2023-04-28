@@ -2501,7 +2501,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b212109db60ef4a25b4cf66ed15b6f87, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 974c17caadebe44488e5ac4f5455b3bb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.769
   m_Pitch: 1
@@ -6496,7 +6496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonDataAsset: {fileID: 11400000, guid: dc0bc0f70668b44cca2112b35bc7619c, type: 2}
-  initialSkinName: 
+  initialSkinName: Original
   initialFlipX: 1
   initialFlipY: 0
   updateWhenInvisible: 3

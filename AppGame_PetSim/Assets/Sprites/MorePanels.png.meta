@@ -107,6 +107,192 @@ TextureImporter:
   - first:
       213: 7635136696242298554
     second: MorePanels_34
+  - first:
+      213: 7244046810120752894
+    second: MorePanels_0
+  - first:
+      213: -2070103370427041709
+    second: MorePanels_1
+  - first:
+      213: 6208561181799216220
+    second: MorePanels_2
+  - first:
+      213: -4224140739222311139
+    second: MorePanels_3
+  - first:
+      213: -4008642878726932178
+    second: MorePanels_4
+  - first:
+      213: -1315975610471967988
+    second: MorePanels_5
+  - first:
+      213: -1669873574298801905
+    second: MorePanels_6
+  - first:
+      213: 2876882159733418218
+    second: MorePanels_7
+  - first:
+      213: -3552748778410158185
+    second: MorePanels_8
+  - first:
+      213: 9051177547553599899
+    second: MorePanels_9
+  - first:
+      213: 6493383715233322430
+    second: MorePanels_10
+  - first:
+      213: -3494546511786335856
+    second: MorePanels_11
+  - first:
+      213: -8118678529161912538
+    second: MorePanels_12
+  - first:
+      213: 5914584917748708851
+    second: MorePanels_13
+  - first:
+      213: -1494888121941279140
+    second: MorePanels_14
+  - first:
+      213: -51789966912126141
+    second: MorePanels_15
+  - first:
+      213: -8810589196076319459
+    second: MorePanels_16
+  - first:
+      213: 7177203026745980962
+    second: MorePanels_17
+  - first:
+      213: -8472051657580257763
+    second: MorePanels_18
+  - first:
+      213: -5968970536367936933
+    second: MorePanels_19
+  - first:
+      213: 767538539624900124
+    second: MorePanels_20
+  - first:
+      213: 7997978679567285853
+    second: MorePanels_21
+  - first:
+      213: 9054667520222318099
+    second: MorePanels_22
+  - first:
+      213: -7546522845430959732
+    second: MorePanels_23
+  - first:
+      213: -854940968614971855
+    second: MorePanels_24
+  - first:
+      213: 6310201059392272822
+    second: MorePanels_25
+  - first:
+      213: -6837452847796181275
+    second: MorePanels_26
+  - first:
+      213: -6742291873400716640
+    second: MorePanels_27
+  - first:
+      213: -9169989099071833070
+    second: MorePanels_28
+  - first:
+      213: -8117729809106389075
+    second: MorePanels_29
+  - first:
+      213: -680267159963424809
+    second: MorePanels_30
+  - first:
+      213: 5599601714587693971
+    second: MorePanels_31
+  - first:
+      213: 1363106311262199197
+    second: MorePanels_32
+  - first:
+      213: -851676283038062844
+    second: MorePanels_33
+  - first:
+      213: 9015063240541247601
+    second: MorePanels_34
+  - first:
+      213: -7817382170586768731
+    second: MorePanels_35
+  - first:
+      213: -4523320981497028428
+    second: MorePanels_36
+  - first:
+      213: 663439488925340394
+    second: MorePanels_37
+  - first:
+      213: 976337074327132914
+    second: MorePanels_38
+  - first:
+      213: -6553212194481751438
+    second: MorePanels_39
+  - first:
+      213: 8951082819881532376
+    second: MorePanels_40
+  - first:
+      213: -2816120041590616203
+    second: MorePanels_41
+  - first:
+      213: 331948981430157393
+    second: MorePanels_42
+  - first:
+      213: -2198804300026948657
+    second: MorePanels_43
+  - first:
+      213: 4110678175659044982
+    second: MorePanels_44
+  - first:
+      213: -1347273225250342330
+    second: MorePanels_45
+  - first:
+      213: -5538779392957635220
+    second: MorePanels_46
+  - first:
+      213: 8102869186509173154
+    second: MorePanels_47
+  - first:
+      213: -3407033935174708108
+    second: MorePanels_48
+  - first:
+      213: -1659061004959335698
+    second: MorePanels_49
+  - first:
+      213: -8010917180491699988
+    second: MorePanels_50
+  - first:
+      213: -4374452502514959429
+    second: MorePanels_51
+  - first:
+      213: 6444761881201882994
+    second: MorePanels_52
+  - first:
+      213: 4681051392324816762
+    second: MorePanels_53
+  - first:
+      213: 4040185391764893765
+    second: MorePanels_54
+  - first:
+      213: -6893009473608328956
+    second: MorePanels_55
+  - first:
+      213: -610975049009523617
+    second: MorePanels_56
+  - first:
+      213: 8374505802910883418
+    second: MorePanels_57
+  - first:
+      213: -1901203660833994295
+    second: MorePanels_58
+  - first:
+      213: 2910143959392428557
+    second: MorePanels_59
+  - first:
+      213: -4741828253105376480
+    second: MorePanels_60
+  - first:
+      213: -4149499167387955424
+    second: MorePanels_61
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -950,7 +1136,7 @@ TextureImporter:
         width: 339
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -958,6 +1144,27 @@ TextureImporter:
       bones: []
       spriteID: abe521f5f5475f960800000000000000
       internalID: 7635136696242298554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MorePanels_35
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 994
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 7, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa14b88554138390800000000000000
+      internalID: -7817382170586768731
       vertices: []
       indices: 
       edges: []

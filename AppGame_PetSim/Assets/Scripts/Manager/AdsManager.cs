@@ -11,10 +11,15 @@ using System;
 public class AdsManager : MonoBehaviour, IUnityAdsListener
 {
     #if UNITY_IOS
-        //string gameId = "4276520";
+    private string gameId = "4844970";
     #elif UNITY_ANDROID
-       // string gameId = "4276521";
+    private string gameId = "4844971";
     #endif
+    /*#if UNITY_IOS
+        string gameId = "4844970";
+    #elif UNITY_ANDROID
+        string gameId = "4844971";
+    #endif*/
     //new above
     public static AdsManager Instance;
     public GameObject GiftPanel;
@@ -36,18 +41,10 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     void Start()
     {
         //Advertisement.Initialize("4276520"); //original just ios: from new project ID hkmgt_game
-        Advertisement.Initialize("4276520");//gameId); //new
+        Advertisement.Initialize(gameId); //new
         Advertisement.AddListener(this);
         GiftPanel.SetActive(false);
         InvokeRepeating("CheckTime", 0.0f, 1f);
-        //CheckAndLoadBars();
-        // DateTime dtnow = DateTime.Now;
-        // if(quitDt>dtnow){
-        // TimeSpan ts = dtnow - quitDt;
-        // Debug.Log(ts);
-        //}
-        // string time = DateTime.Now.ToString("HH:mm");
-        // Debug.Log(time);
     }
     public void CheckTime()
     {
@@ -77,23 +74,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
             Restart();
             Debug.Log("Restart");
         }
-        //timeNow = DateTime.Now.ToString("HH:mm");
-        // if(Input.GetKey(KeyCode.M)){
-        //     quitDt = DateTime.Now;
-        // }
     }
-    //public void CheckTime(){
-        //   if(timeNow == "12:16"){ //12 am
-        //     //resetpanel = true;
-        //     ResetPanelUponTime();
-        //     Debug.Log("resetttttttt");
-        // }
-        //  DateTime dtnow = DateTime.Now;
-        // if(quitDt>dtnow){
-        // TimeSpan ts = dtnow - quitDt;
-        // Debug.Log(ts);
-        //}
-    //}
+
     public void ResetPanelUponTime(){
         // quitDt = DateTime.Now;
         Restart();
@@ -102,10 +84,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
     public void PLayRewardedAd(){
         if(Advertisement.IsReady("Rewarded_iOS")){
             Advertisement.Show("Rewarded_iOS");
-        }else{
-            Debug.Log("not ready");
-        }
-        if(Advertisement.IsReady("Rewarded_Android")){ //new
+        }else if(Advertisement.IsReady("Rewarded_Android")){ //new
             Advertisement.Show("Rewarded_Android");
         }else{
             Debug.Log("not ready");
@@ -138,25 +117,15 @@ public class AdsManager : MonoBehaviour, IUnityAdsListener
         //received = true;
     }
     public void RevealBar(){ //use this to reveal the next bar when last ads is read
-        for(int i = 0; i < bars.Length; i++){
+        //for(int i = 0; i <= bars.Length; i++){
+        if(0 <= bars.Length){
             bars[currentBar].SetActive(false);
             currentBar+=1; //back to 0 at the end
             //lastBar-=1;
-            break;
+            //break;
         }
     }
-    // public void CheckAndLoadBars(){
-    //     if(currentBar == 1){
-    //         int barNum = currentBar;
-    //         for(int i = barNum; i < bars.Length; i++){
-    //         bars[i].SetActive(true);
-    //         }
-    //          for(int i = barNum; i < ClaimButtons.Length; i++){
-    //         ClaimButtons[i].GetComponent<Button>().interactable = true;
-    //         }
-    //     }
-       
-    // }
+
     public void Restart(){ //change everything back to normal
         for(int i = 0; i < bars.Length; i++){
             bars[i].SetActive(true);

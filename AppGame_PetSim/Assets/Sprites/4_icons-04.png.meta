@@ -1,0 +1,557 @@
+fileFormatVersion: 2
+guid: 2c9222c4f58244810b50af500c00c585
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6777668858693564279
+    second: 4_icons-04_0
+  - first:
+      213: 3916819593621738236
+    second: 4_icons-04_1
+  - first:
+      213: -7526392614719488370
+    second: 4_icons-04_2
+  - first:
+      213: -8254283618494693330
+    second: 4_icons-04_3
+  - first:
+      213: 3947357335179164579
+    second: 4_icons-04_4
+  - first:
+      213: 383752143115556784
+    second: 4_icons-04_5
+  - first:
+      213: -4898394760848689273
+    second: 4_icons-04_6
+  - first:
+      213: -3396877671743301234
+    second: 4_icons-04_7
+  - first:
+      213: 5014068960699012109
+    second: 4_icons-04_8
+  - first:
+      213: 6857434821869756525
+    second: 4_icons-04_9
+  - first:
+      213: -377080246643620823
+    second: 4_icons-04_10
+  - first:
+      213: 4120921696390814150
+    second: 4_icons-04_11
+  - first:
+      213: 7275871637948534308
+    second: 4_icons-04_12
+  - first:
+      213: 2326465038141018839
+    second: 4_icons-04_13
+  - first:
+      213: 7451453979876334594
+    second: 4_icons-04_14
+  - first:
+      213: -5689148392132005514
+    second: 4_icons-04_15
+  - first:
+      213: -4744493186760771762
+    second: 4_icons-04_16
+  - first:
+      213: -1590933052113217844
+    second: 4_icons-04_17
+  - first:
+      213: 4566069100428111092
+    second: 4_icons-04_18
+  - first:
+      213: 1292098108447536490
+    second: 4_icons-04_19
+  - first:
+      213: 1221373799646759186
+    second: 4_icons-04_20
+  - first:
+      213: 8959205006297296578
+    second: 4_icons-04_21
+  - first:
+      213: 3332995752002755315
+    second: 4_icons-04_22
+  - first:
+      213: 7410432175996871709
+    second: 4_icons-04_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 4_icons-04_0
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 895
+        width: 143
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77738a7daed1f0e50800000000000000
+      internalID: 6777668858693564279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 832
+        width: 157
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7923c7a8c535500800000000000000
+      internalID: 383752143115556784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_9
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 837
+        width: 177
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60e0f363a08a2f50800000000000000
+      internalID: 6857434821869756525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 265
+        width: 66
+        height: 637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9248df6738754caf0800000000000000
+      internalID: -377080246643620823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_11
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 262
+        width: 90
+        height: 645
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c913940374703930800000000000000
+      internalID: 4120921696390814150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_12
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 270
+        width: 118
+        height: 635
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e034b94b619f460800000000000000
+      internalID: 7275871637948534308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_16
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 638
+        width: 169
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47fcd3859c282eb0800000000000000
+      internalID: -4744493186760771762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_17
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 585
+        width: 190
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc61d5771dedbe9e0800000000000000
+      internalID: -1590933052113217844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_18
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 561
+        width: 245
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fca7ee97afed5f30800000000000000
+      internalID: 4566069100428111092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_19
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 678
+        width: 83
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6538f042647ee110800000000000000
+      internalID: 1292098108447536490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_20
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 549
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2190ae9eff033f010800000000000000
+      internalID: 1221373799646759186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_21
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 315
+        width: 336
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce604e3c7d755c70800000000000000
+      internalID: 8959205006297296578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_22
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 82
+        width: 590
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa920c3afd214e20800000000000000
+      internalID: 3332995752002755315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_23
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 55
+        width: 227
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d142b6a4dc427d660800000000000000
+      internalID: 7410432175996871709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_1
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 678
+        width: 87
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf21d1f0ba65b5630800000000000000
+      internalID: 3916819593621738236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_2
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 864
+        width: 138
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e758f1bc1ec8790800000000000000
+      internalID: -7526392614719488370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_icons-04_3
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 869
+        width: 197
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e204c4438c4e27d80800000000000000
+      internalID: -8254283618494693330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

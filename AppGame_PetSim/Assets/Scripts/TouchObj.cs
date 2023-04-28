@@ -32,17 +32,17 @@ public class TouchObj : MonoBehaviour
     void OnMouseOver(){
     //Debug.Log("yup");
         if(this.transform.gameObject.tag == "Normal"){
-            Debug.Log("normal"); 
+            //Debug.Log("normal"); 
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
             GameObject d = Instantiate(plusgreen, this.transform.position, Quaternion.identity);
             Status.Instance.LeafChange(CostMethod.GreenLeaf, 1);
+            Status.Instance.greenLeafCounter++;
             sm.Bling();
             Destroy(this.gameObject); //later: Destroy(this.gameObject, 1f) //put here or on top of destroy
             Destroy(d, 5f);
             Destroy(c, 1f);
-        }
-         if(this.transform.gameObject.tag == "Rare"){
-            Debug.Log("rare");
+        }else if(this.transform.gameObject.tag == "Rare"){
+            //Debug.Log("rare");
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity); 
             GameObject d = Instantiate(plusgold, this.transform.position, Quaternion.identity);
             Status.Instance.LeafChange(CostMethod.GoldLeaf, 1);
@@ -50,16 +50,15 @@ public class TouchObj : MonoBehaviour
             Destroy(this.gameObject); //put here or on top of destroy
             Destroy(c, 1f);
             Destroy(d, 5f);
-        }
-         if(this.transform.gameObject.tag == "Trash"){
+        }else if(this.transform.gameObject.tag == "Trash"){
+            Status.Instance.trashCounter++;
             destoryTrash();
             
         }
     }
 
     public void destoryTrash(){
-            User.Instance.ExpUP(5); //add three exp
-            Debug.Log("trash"); 
+            User.Instance.ExpUP(1); //add three exp
             GameObject c = Instantiate(clickSplash, this.transform.position, Quaternion.identity);
             GameObject d = Instantiate(exp, this.transform.position, Quaternion.identity);
             sm.Trash();

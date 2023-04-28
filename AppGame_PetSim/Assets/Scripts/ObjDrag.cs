@@ -15,6 +15,7 @@ public GameObject hungerEx;
 public GameObject hydraEx;
 public GameObject plusHeart;
 private bool getAdd = true;
+public int score;
  public GameObject SoundM;
 public SoundManager sm;
 
@@ -86,11 +87,17 @@ public void DestroyFoodDrink(){
         Destroy(this.gameObject);
     }
 }
+public void Destroymochi(){
+    if(this.gameObject.tag == "mochi"){
+        Destroy(this.gameObject);
+    }
+}
 public void DetectToy(){
         CatAI.Instance.Dashing(); //do playing
         //CatAI.Instance.p = 0; //stop normal state
         //CatAI.Instance.executing = true;
 }
+
 void OnCollisionEnter2D(Collision2D col) {
     if(this.gameObject.tag == "Toy"){ 
         if (col.gameObject.CompareTag("ItemFloor"))
@@ -110,17 +117,21 @@ void OnCollisionEnter2D(Collision2D col) {
            }
             
         }
-    }
-    if(this.gameObject.tag == "Drink"){  
+    }else if(this.gameObject.tag == "Drink"){  
         if (col.gameObject.CompareTag("ItemFloor"))
         {
             sm.DrinkFall();
         }
-    }
-      if(this.gameObject.tag == "Food"){  
+    }else if(this.gameObject.tag == "Food"){  
         if (col.gameObject.CompareTag("ItemFloor"))
         {
             sm.FoodFall();
+        }
+    }else if(this.gameObject.tag == "mochi"){  
+        if (col.gameObject.CompareTag("Player"))
+        {
+            mochi.Instance.StatsChange(score);
+            Destroy(this.gameObject);
         }
     }
 }

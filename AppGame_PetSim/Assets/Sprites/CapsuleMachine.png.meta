@@ -92,6 +92,9 @@ TextureImporter:
   - first:
       213: -1502013659942625592
     second: CapsuleMachine_29
+  - first:
+      213: -2596267254592376687
+    second: CapsuleMachine_30
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -830,7 +833,7 @@ TextureImporter:
         width: 225
         height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -838,6 +841,27 @@ TextureImporter:
       bones: []
       spriteID: 8ced557c886c72be0800000000000000
       internalID: -1502013659942625592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CapsuleMachine_30
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 321
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190fa0400b438fbd0800000000000000
+      internalID: -2596267254592376687
       vertices: []
       indices: 
       edges: []

@@ -1,0 +1,524 @@
+fileFormatVersion: 2
+guid: 7cd9d0e9a091748a49420c474ad42e2b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1536631129223270220
+    second: purpl_0
+  - first:
+      213: 7471070851285072334
+    second: purpl_1
+  - first:
+      213: -1674076988359634626
+    second: purpl_2
+  - first:
+      213: 3083637491866051766
+    second: purpl_3
+  - first:
+      213: -6618904330346609611
+    second: purpl_4
+  - first:
+      213: -2808820869706425544
+    second: purpl_5
+  - first:
+      213: -596100785818635159
+    second: purpl_6
+  - first:
+      213: 5648882985328975347
+    second: purpl_7
+  - first:
+      213: -5074950734759620219
+    second: purpl_8
+  - first:
+      213: -5172234579973114696
+    second: purpl_9
+  - first:
+      213: -485680448023215434
+    second: purpl_10
+  - first:
+      213: -3404725691110515052
+    second: purpl_11
+  - first:
+      213: 5334133292110443202
+    second: purpl_12
+  - first:
+      213: 8604934932719555423
+    second: purpl_13
+  - first:
+      213: -1640276555731766404
+    second: purpl_14
+  - first:
+      213: -7590294465084593255
+    second: purpl_15
+  - first:
+      213: -3579740154301933978
+    second: purpl_16
+  - first:
+      213: 2385030272620423836
+    second: purpl_17
+  - first:
+      213: 5621863563792982125
+    second: purpl_18
+  - first:
+      213: 3090519610101529334
+    second: purpl_19
+  - first:
+      213: 5443565345881013098
+    second: purpl_20
+  - first:
+      213: 4121322963523069168
+    second: purpl_21
+  - first:
+      213: -6966373902239192012
+    second: purpl_22
+  - first:
+      213: -3306711637473246357
+    second: purpl_23
+  - first:
+      213: 7238154980144556139
+    second: purpl_24
+  - first:
+      213: -2569936222190099040
+    second: purpl_25
+  - first:
+      213: -8847636002236524321
+    second: purpl_26
+  - first:
+      213: -372325694247194592
+    second: purpl_27
+  - first:
+      213: 5199282474053603579
+    second: purpl_28
+  - first:
+      213: -3502144659441282853
+    second: purpl_29
+  - first:
+      213: 1496595759504186719
+    second: purpl_30
+  - first:
+      213: -2162153422162180479
+    second: purpl_31
+  - first:
+      213: -4393890204888205775
+    second: purpl_32
+  - first:
+      213: 3612502408918621057
+    second: purpl_33
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 33
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: purpl_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 413
+        width: 202
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f0920eed5335510800000000000000
+      internalID: 1536631129223270220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_1
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 412
+        width: 130
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec93f961b539ea760800000000000000
+      internalID: 7471070851285072334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_2
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 419
+        width: 151
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e311b2649db74c8e0800000000000000
+      internalID: -1674076988359634626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_8
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 226
+        width: 233
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5819b0ae1372299b0800000000000000
+      internalID: -5074950734759620219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_19
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 248
+        width: 249
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fafa7b063bb3ea20800000000000000
+      internalID: 3090519610101529334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_20
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 243
+        width: 162
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b3dd047dd6b8b40800000000000000
+      internalID: 5443565345881013098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_25
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 258
+        width: 108
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a523fc3f90c55cd0800000000000000
+      internalID: -2569936222190099040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_27
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 264
+        width: 104
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02035a5f0cb35daf0800000000000000
+      internalID: -372325694247194592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_33
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 35
+        width: 1282
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b56d11dcf222230800000000000000
+      internalID: 3612502408918621057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_3
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 520
+        width: 110
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4a0c606f74bca20800000000000000
+      internalID: 3083637491866051766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_4
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 463
+        width: 110
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534456b749de424a0800000000000000
+      internalID: -6618904330346609611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_5
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 403
+        width: 110
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bd17ffc401509d0800000000000000
+      internalID: -2808820869706425544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_6
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 345
+        width: 110
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964f2fa5e793ab7f0800000000000000
+      internalID: -596100785818635159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: purpl_7
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 292
+        width: 110
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd1846652dd46e40800000000000000
+      internalID: 5648882985328975347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

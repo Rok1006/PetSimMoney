@@ -1,0 +1,518 @@
+fileFormatVersion: 2
+guid: 6b91ddf2387814541bf2f09b634819dc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2517523257989805603
+    second: SPACERUBBISH_0
+  - first:
+      213: -3562792380873385980
+    second: SPACERUBBISH_1
+  - first:
+      213: -2087039153304650811
+    second: SPACERUBBISH_2
+  - first:
+      213: -664233390830549895
+    second: SPACERUBBISH_3
+  - first:
+      213: -2774209406562371684
+    second: SPACERUBBISH_4
+  - first:
+      213: 3033573466315146609
+    second: SPACERUBBISH_5
+  - first:
+      213: -9088550917835718645
+    second: SPACERUBBISH_6
+  - first:
+      213: 5902149313547670776
+    second: SPACERUBBISH_7
+  - first:
+      213: 8447079421543309024
+    second: SPACERUBBISH_8
+  - first:
+      213: -3304287064867222309
+    second: SPACERUBBISH_9
+  - first:
+      213: 5548007645286814568
+    second: SPACERUBBISH_10
+  - first:
+      213: -8003256914995809387
+    second: SPACERUBBISH_11
+  - first:
+      213: -5346724454946738656
+    second: SPACERUBBISH_12
+  - first:
+      213: -1340512302997146081
+    second: SPACERUBBISH_13
+  - first:
+      213: -335999157425246136
+    second: SPACERUBBISH_14
+  - first:
+      213: -379136614481928065
+    second: SPACERUBBISH_15
+  - first:
+      213: 134012848976209570
+    second: SPACERUBBISH_16
+  - first:
+      213: 5639793165276437448
+    second: SPACERUBBISH_17
+  - first:
+      213: 5524631292086085106
+    second: SPACERUBBISH_18
+  - first:
+      213: 3207298864057828820
+    second: SPACERUBBISH_19
+  - first:
+      213: -7791566671956564790
+    second: SPACERUBBISH_20
+  - first:
+      213: 8155362004060144309
+    second: SPACERUBBISH_21
+  - first:
+      213: 2788357732590635945
+    second: SPACERUBBISH_22
+  - first:
+      213: -581888095456332013
+    second: SPACERUBBISH_23
+  - first:
+      213: -729162059258107405
+    second: SPACERUBBISH_24
+  - first:
+      213: -7016174784506885431
+    second: SPACERUBBISH_25
+  - first:
+      213: 1218626924768706157
+    second: SPACERUBBISH_26
+  - first:
+      213: 5335850111020348329
+    second: SPACERUBBISH_27
+  - first:
+      213: 7319837608757894447
+    second: SPACERUBBISH_28
+  - first:
+      213: 5952765754019096524
+    second: SPACERUBBISH_29
+  - first:
+      213: 1932612128177007380
+    second: SPACERUBBISH_30
+  - first:
+      213: -2638841763790380979
+    second: SPACERUBBISH_31
+  - first:
+      213: -5344080931025305957
+    second: SPACERUBBISH_32
+  - first:
+      213: 3703655230753570969
+    second: SPACERUBBISH_33
+  - first:
+      213: -3029300819866687665
+    second: SPACERUBBISH_34
+  - first:
+      213: -843169131325869995
+    second: SPACERUBBISH_35
+  - first:
+      213: 3182289124056012460
+    second: SPACERUBBISH_36
+  - first:
+      213: 6472657440568409059
+    second: SPACERUBBISH_37
+  - first:
+      213: -6542255806871305812
+    second: SPACERUBBISH_38
+  - first:
+      213: 8479651571441216915
+    second: SPACERUBBISH_39
+  - first:
+      213: 828345205935327620
+    second: SPACERUBBISH_40
+  - first:
+      213: -306897986636472635
+    second: SPACERUBBISH_41
+  - first:
+      213: 2697239983676729660
+    second: SPACERUBBISH_42
+  - first:
+      213: 2816580787864376027
+    second: SPACERUBBISH_43
+  - first:
+      213: -7949842310999473412
+    second: SPACERUBBISH_44
+  - first:
+      213: 4447380258584046952
+    second: SPACERUBBISH_45
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SPACERUBBISH_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 614
+        width: 293
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3263442901a00f220800000000000000
+      internalID: 2517523257989805603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_3
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 819
+        width: 123
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9748793104b28c6f0800000000000000
+      internalID: -664233390830549895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_14
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 669
+        width: 292
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84076d8eb8a465bf0800000000000000
+      internalID: -335999157425246136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_19
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 331
+        width: 303
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d54ea8e25d928c20800000000000000
+      internalID: 3207298864057828820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_20
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 307
+        width: 293
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4a142b46bced390800000000000000
+      internalID: -7791566671956564790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_22
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 515
+        width: 126
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab47cd959c32b620800000000000000
+      internalID: 2788357732590635945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_28
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 414
+        width: 140
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d1f83e589459560800000000000000
+      internalID: 7319837608757894447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_29
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 306
+        width: 293
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc72b670ae87c9250800000000000000
+      internalID: 5952765754019096524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_43
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 327
+        width: 129
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd298ddbd41861720800000000000000
+      internalID: 2816580787864376027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_44
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 10
+        width: 293
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf28188c98c7ca190800000000000000
+      internalID: -7949842310999473412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_45
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 10
+        width: 293
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86dacfd28c448bd30800000000000000
+      internalID: 4447380258584046952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPACERUBBISH_1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 621
+        width: 293
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408d291c43b6e8ec0800000000000000
+      internalID: -3562792380873385980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

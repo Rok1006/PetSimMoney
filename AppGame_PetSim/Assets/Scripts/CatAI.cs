@@ -19,8 +19,10 @@ public class CatAI : MonoBehaviour
     public float sizeValue;
     public GameObject target;
     public GameObject itemPlaceHolder;
+    public GameObject[] Decoration;
+    //SpriteRenderer sprites;
     public GameObject FdDk;
-     public List<GameObject> toy = new List<GameObject>();
+    public List<GameObject> toy = new List<GameObject>();
     [Header("Value")]
     public Action action;
     public float speed;
@@ -29,6 +31,7 @@ public class CatAI : MonoBehaviour
     float x;
     float y;
     bool point1 = true;
+    Vector3 wareroomPos;
     private float oldPosition = 0.0f;
     public Vector3 newPos;
     public Vector3 oldPos;
@@ -46,14 +49,20 @@ public class CatAI : MonoBehaviour
     public bool switchCooldown = false;
     public bool getToy;
     public bool tiredCoolDown;
+    public bool doIDLE = false;
+    public bool sortlayer;
+    int TouchValue;// if continue touch it, it will show other action;
+    MeshRenderer catMesh;
+    bool angry;
 
    void Awake() {
        Instance = this;
    }
        void Start()
     {
-        step = speed * Time.deltaTime;
-        catanim = this.GetComponent<Animator>();
+        wareroomPos = transform.position;
+        catMesh = GetComponent<MeshRenderer>();
+        catanim = GetComponent<Animator>();
         executing = true;  
         //Idle(); //default state is IDLE
         target.transform.position = this.transform.position;
@@ -64,17 +73,21 @@ public class CatAI : MonoBehaviour
         beingTouch = false;
         switchCooldown = false;
         doNormal = true;
-        //NormalState();
-        Prejump();
-        //CheckLowStats();
+        NormalState();
+        //Prejump();
+        CheckLowStats();
     }
     void Update()
-    {
-        /*if(enableCat){  //active the cat animation after disable
+    {    
+        step = speed * Time.deltaTime;
+        if(sortlayer){
+            onClickWareroom();
+        }
+        if(enableCat){  //active the cat animation after disable
             CheckToyList();
             NormalState();
             enableCat = false;
-        }*/
+        }
         Growth();
         if (transform.position.x > oldPosition){ // direction:looking right
          transform.localScale = new Vector3(-sizeValue,sizeValue,sizeValue);
@@ -165,9 +178,11 @@ public class CatAI : MonoBehaviour
     }
     void CheckLowStats(){ //if hunger and dryness low to certain rate, be angry:have to feed
         if(toy.Count == 0){
-            if(Status.Instance.hungerV/Status.Instance.hungerMax+Status.Instance.hydrationV/Status.Instance.hydrationMax<.1f){
+            if(Status.Instance.hungerV/Status.Instance.hungerMax < .2f || Status.Instance.hydrationV/Status.Instance.hydrationMax<.2f){
                 StartCoroutine("Angrying");
+                angry = true;
             }else{
+                angry = false;
                 doNormal = true;
             }
         }else{StartCoroutine("doNothing");}
@@ -175,7 +190,7 @@ public class CatAI : MonoBehaviour
     
 
     public void Growth(){
-        float sizeMax = (float)Math.Log(User.Instance.level+10)*0.1f;
+        float sizeMax = (float)Math.Log(User.Instance.level+20)*0.1f;
         float sizeMin = sizeMax*0.75f;
         sizeValue = (sizeMax-sizeMin)*Status.Instance.sizeindex+sizeMin;
         if(sizeValue < sizeMin){
@@ -188,11 +203,13 @@ public class CatAI : MonoBehaviour
 
     public void Idle()
     {
-        canEatDrink = true;
-        Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 100);
-        Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100); //1%  increase more the value , lesser it decrease
-        Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 50); //2%
-        Status.Instance.StatsChange(StatsType.Energy, -Status.Instance.energyMax / 100);
+        if(!doIDLE){
+            canEatDrink = true;
+            Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 100);
+            Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 100); //1%  increase more the value , lesser it decrease
+            Status.Instance.StatsChange(StatsType.Happiness, -Status.Instance.happyMax / 50); //2%
+            Status.Instance.StatsChange(StatsType.Energy, -Status.Instance.energyMax / 100);
+        }
         action = Action.Idle;
         catanim.SetTrigger("idle");
         StartCoroutine("SwitchAct"); 
@@ -211,7 +228,7 @@ public class CatAI : MonoBehaviour
 
     public void SitSleeping()
     {
-        isPlayingToy = true;//turn true to stop it from detecting
+        //isPlayingToy = false;//turn true to stop it from detecting
         canEatDrink = false;
         Status.Instance.StatsChange(StatsType.Hydration, -Status.Instance.hydrationMax / 150);
         Status.Instance.StatsChange(StatsType.Hunger, -Status.Instance.hungerMax / 200);
@@ -243,6 +260,7 @@ public class CatAI : MonoBehaviour
         action = Action.Meowing;
         catanim.SetTrigger("meow");
         StartCoroutine("SwitchAct");
+
     }
     public void Dashing()
     {
@@ -273,7 +291,13 @@ public class CatAI : MonoBehaviour
         action = Action.Smile;
     }
     private void Touch(){
-        catanim.SetTrigger("touch");
+        if(TouchValue >= 10 && angry == false){
+            Debug.Log("touch2");
+            catanim.SetTrigger("touch2");
+        }else{
+            Debug.Log("touch");
+            catanim.SetTrigger("touch");
+        }
         StartCoroutine("SwitchShortAct");
         action = Action.Touch;
     }
@@ -305,15 +329,14 @@ public class CatAI : MonoBehaviour
     { //randomize action, change probability when more animation
 
         if(doNormal && !switchCooldown){
-        int energyV = 100-(int)Status.Instance.energyV;
-        p = Random.Range(0,81+energyV); //int p = 
-        if(p>0 && p<30){
+        p = Random.Range(0,100); //int p = 
+        if(p>0 && p<70){
             Walking();
-        }else if(p>=30 && p<43){
+        }else if(p>=70 && p<77){
             Idle();
-        }else if(p>=43 && p<62){
+        }else if(p>=77 && p<84){
             SitAwake();
-        }else if(p>=62 && p<81){
+        }else if(p>=84 && p<93){
             Meowing();
         }else{// if(p>=81 && p<100){
             SitSleeping();
@@ -332,10 +355,15 @@ public class CatAI : MonoBehaviour
         int t = Random.Range(5,10);
         switchCooldown = true;
         yield return new WaitForSeconds(t);//wait for 5 sec to do the next
-        switchCooldown = false;
-        isPlayingToy = false;
-        NormalState();//after wait for 5 sec do random generate, detect value to change to different state
-        CheckToyList();
+        switchCooldown = false; 
+        if(!doIDLE){
+            isPlayingToy = false;
+            NormalState();//after wait for 5 sec do random generate, detect value to change to different state
+            CheckToyList();
+        }else{
+            Idle();
+        }
+        
     }
 
      IEnumerator Angrying()
@@ -344,7 +372,10 @@ public class CatAI : MonoBehaviour
         action = Action.Angry;
         doNormal = false;
         yield return new WaitForSeconds(1.333f);
-        CheckLowStats();
+        if(!doIDLE){
+          CheckLowStats();  
+        }
+        
     }
     
     IEnumerator doNothing()
@@ -426,6 +457,12 @@ public class CatAI : MonoBehaviour
         CheckToyList();
     }
 
+    IEnumerator ResetTouchValue()
+    { //walking
+        yield return new WaitForSeconds(3);//wait for 5 sec to do the next
+        TouchValue--;
+    }
+
 
     void CheckToyList()
     {
@@ -458,7 +495,9 @@ public class CatAI : MonoBehaviour
             Touch();
             Effects.Instance.HappyEmittion();
             Status.Instance.StatsChange(StatsType.Happiness, Status.Instance.happyMax / 100);
-            User.Instance.ExpUP(1);   
+            User.Instance.ExpUP(1); 
+            TouchValue++;
+            StartCoroutine("ResetTouchValue");
         }
            
      
@@ -467,6 +506,41 @@ public class CatAI : MonoBehaviour
     {
         beingTouch = false; 
     }
+
+    public void onClickWareroom(){
+
+            transform.position = wareroomPos;
+            catMesh.sortingLayerName = "UI";
+            catMesh.sortingOrder = 4;
+            for(int j=0; j< Decoration.Length;j++){
+                SpriteRenderer[] sprites = Decoration[j].GetComponentsInChildren<SpriteRenderer>();
+                for(int i=0; i<sprites.Length;i++){
+                    //sprites = Decoration[i].GetComponentsInChildren<SpriteRenderer>();
+                    sprites[i].sortingLayerName = "UI";
+                    sprites[i].sortingOrder = 5;
+                }
+            }
+
+    }
+
+    public void onCloseWareroom(){
+        catMesh.sortingLayerName = "Character";
+            catMesh.sortingOrder = 0;
+            for(int j=0; j< Decoration.Length;j++){
+                SpriteRenderer[] sprites = Decoration[j].GetComponentsInChildren<SpriteRenderer>();
+                for(int i=0; i<sprites.Length;i++){
+                    //sprites = Decoration[i].GetComponentsInChildren<SpriteRenderer>();
+                    sprites[i].sortingLayerName = "Items";
+                    sprites[i].sortingOrder = 0;
+                }
+            }
+        sortlayer = false;
+    }
+
+
+
+
+
     void OnTriggerEnter2D(Collider2D col) 
     {
         if (col.gameObject.CompareTag("Food") || col.gameObject.CompareTag("Drink") || col.gameObject.CompareTag("spItem"))
@@ -478,5 +552,12 @@ public class CatAI : MonoBehaviour
             //change action to happy
         }
     }
-   
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Turtle")
+        {
+            Debug.Log("hi turtle");
+            Marine.Instance.Turtle();
+        }
+    }
 }

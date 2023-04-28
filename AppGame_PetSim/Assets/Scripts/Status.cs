@@ -15,12 +15,6 @@ public class Status : MonoBehaviour
     public Slider energy;
     public Slider hunger;
     public Slider hydration;
-
-    public Image happinessBar;
-    public Image energyBar;
-    public Image hungerBar;
-    public Image HydrationBar;
-
     public Text norT;
     public Text rareT;
     public Text Store_norT;
@@ -38,12 +32,17 @@ public class Status : MonoBehaviour
     public float hungerMax { get { return statsMax[2]; }}
     public float hydrationV { get { return statsValue[3]; }}
     public float hydrationMax { get { return statsMax[3]; }}
+    //public float happyBuff;
+    //public float hungerBuff;
+    //public float hydrationBuff;
     [Header("ItemsCount")]
     public int[] leafC = new int[2]{0, 0}; 
     public int greenLeaf { get { return leafC[0]; }} 
     public int goldLeaf { get { return leafC[1]; }}
     public readonly int maxLeaf = 999999;
     private static float decreaseRate = 0.00173611f; // 16 hours = 57600 seconds -> 100 / 57600 = 0.00173611% / second
+    public int trashCounter;
+    public int greenLeafCounter;
     void Awake() 
     {
         Instance = this;
@@ -59,17 +58,9 @@ public class Status : MonoBehaviour
     {
         updateSize();
         happiness.value = happyV / happyMax;
-        energy.value = energyV / energyMax;
+        //energy.value = energyV / energyMax;
         hunger.value = hungerV / hungerMax;
         hydration.value = hydrationV / hydrationMax;
-
-
-        //happinessBar.fillAmount = happyV / happyMax;
-        //energyBar.fillAmount = energyV / energyMax;
-        hungerBar.fillAmount = hungerV / hungerMax;
-        HydrationBar.fillAmount = hydrationV / hydrationMax;
-
-
 
 
 
@@ -132,7 +123,7 @@ public class Status : MonoBehaviour
         int methodNum = (int) method;
         if(value < 0) //Decrease
         {
-            if(leafC[methodNum] + value <= 0) //stat will decrease over 0
+            if(leafC[methodNum] + value < 0) //stat will decrease over 0
             {
                 return false;
             }

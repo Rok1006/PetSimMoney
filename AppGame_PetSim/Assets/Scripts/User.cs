@@ -9,14 +9,14 @@ public class User : MonoBehaviour
 {
     public static User Instance;
     //fp == friendship point
-    public Slider fp;
+    public Slider fpBar;
     [SerializeField] private Text statusLevelNum;
     [SerializeField] private GameObject levelUpPanel;
     [SerializeField] private Text panelLevelNum;
     [SerializeField] private GameObject levelUpRewardTemplate;
     private LevelRewardData currentLevelRewardData;
-    public int fpValue = 10; //current friendship value owned by user, save and load
-    public int maxfpValue = 10; //the current max value for slider, save and load
+    public int fpValue; //current friendship value owned by user, save and load
+    public int maxfpValue; //the current max value for slider, save and load
     //private float fpRate; //rate for friendship value increase
     public int level = 0; //level of the user; increase everytime friendship value reaches the max, link to text
                       //Friendship level
@@ -38,19 +38,25 @@ public class User : MonoBehaviour
     }
     void Start()
     {
-
+        
     }
     void Update()
     {
-        fp.value = fpValue;
+        if(level >= 1){
+            Manager.Instance.outdoorbutton.SetActive(true);
+        }else{
+            Manager.Instance.outdoorbutton.SetActive(false);
+        }
         statusLevelNum.text = level.ToString();
-        fp.maxValue = maxfpValue;
 
+        fpBar.value = fpValue;
+        fpBar.maxValue = maxfpValue;
         //Developer Cheat
         if(Input.GetKeyDown(KeyCode.Space))
         {
             ExpUP(maxfpValue);
         }
+        
     }
     public void ExpUP(int value) //call this function 
     {
@@ -71,8 +77,14 @@ public class User : MonoBehaviour
 
         fpValue =0;
         level++; //increase one level
-        maxfpValue = (int)Mathf.Round((float)Math.Log(level)*20+level*0.3f+10);//y=20logx+0.3x+10
+        maxfpValue = (int)Mathf.Round(2f *level *level + 20f);//y=x^2+20
         
+        if(level >= 10){
+            Manager.Instance.outdoorbutton.SetActive(true);
+        }else{
+            Manager.Instance.outdoorbutton.SetActive(false);
+        }
+
         if(level >= maxLevel)
         {
             fpValue = 0;
@@ -83,12 +95,16 @@ public class User : MonoBehaviour
             levelUpPanel.SetActive(false);
         }
         levelUpPanel.SetActive(true);
+        SoundManager.Instance.lvUP();
         panelLevelNum.text = level.ToString();
         foreach(LevelRewardData data in SaveLoadManager.data.levelRewardData)
         {
             if(data.level == level)
             {
-                currentLevelRewardData = data;
+                if(data != null){
+                    currentLevelRewardData = data;
+                }
+                
             }
         }
         RewardManager.Instance.RewardGen(currentLevelRewardData, levelUpRewardTemplate);

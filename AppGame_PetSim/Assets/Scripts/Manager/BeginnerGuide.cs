@@ -14,8 +14,9 @@ public class BeginnerGuide : MonoBehaviour
     public CatAI catai;
     public GameObject BeginnerGuideUI;
     Animator BGAnim;
+    bool isTyping;
     [Header("Buttons")]
-    public GameObject StatusButton;
+    //public GameObject StatusButton;
     public GameObject BagButton;
     public GameObject GachaButton;
     public GameObject StoreButton;
@@ -41,9 +42,9 @@ public class BeginnerGuide : MonoBehaviour
     void Start()
     {
         BGAnim = BeginnerGuideUI.GetComponent<Animator>();
-        StartCoroutine(Type());
-        NextB.GetComponent<Button>().interactable = false;
-        StatusButton.GetComponent<Button>().interactable = false;
+        StartCoroutine("Type");
+        //NextB.GetComponent<Button>().interactable = false;
+        //StatusButton.GetComponent<Button>().interactable = false;
         BagButton.GetComponent<Button>().interactable = false;
         GachaButton.GetComponent<Button>().interactable = false;
         StoreButton.GetComponent<Button>().interactable = false;
@@ -65,19 +66,19 @@ public class BeginnerGuide : MonoBehaviour
                 break;
                 case 2: //introduce status panel
                         Fingers[0].SetActive(true);
-                        StatusButton.GetComponent<Button>().interactable = true;
+                        //StatusButton.GetComponent<Button>().interactable = true;
                 break;
                 case 3: //show status panel
                         if(doIt){
                             Fingers[0].SetActive(false);
-                            Manager.Instance.ClickStatus();
+                            //Manager.Instance.ClickStatus();
                             doIt = false;
                         }
                 break;
                 case 4: //introduce store
                         if(doIt){
-                            Manager.Instance.ClickHideStatus();
-                            StatusButton.GetComponent<Button>().interactable = false;
+                            //Manager.Instance.ClickHideStatus();
+                            //StatusButton.GetComponent<Button>().interactable = false;
                             StoreButton.GetComponent<Button>().interactable = true;
                             Fingers[3].SetActive(true);
                             doIt = false;
@@ -136,13 +137,13 @@ public class BeginnerGuide : MonoBehaviour
                 case 12:
                     if(doIt){
                             Fingers[4].SetActive(false);
-                            Manager.Instance.ClickCostumes();
+                            Manager.Instance.WareroomPannel.SetActive(true);//ClickWareroom();
                             doIt = false;
                         }
                 break;
                 case 13:
                 if(doIt){
-                            Manager.Instance.ClickCloseCostumes();
+                            Manager.Instance.WareroomPannel.SetActive(false);//ClickCloseWareroom();
                             CostumeButton.GetComponent<Button>().interactable = false;
                             GiftsButton.GetComponent<Button>().interactable = true;
                             Fingers[5].SetActive(true);
@@ -185,16 +186,17 @@ public class BeginnerGuide : MonoBehaviour
                     EnableAllButton();
                     catai.enabled = true;
                     BeginnerGuideUI.SetActive(false);
-                    User.Instance.ExpUP(User.Instance.maxfpValue); //here level up
+                    User.Instance.LevelUp();
+                    //User.Instance.ExpUP(User.Instance.maxfpValue); //here level up
                     User.Instance.beginnerGuide = true;
                     this.enabled = false;
                 break;
 
 
             }
-            if(textDisplay.text == sentences[index]){
+            /*if(textDisplay.text == sentences[index]){
                 NextB.GetComponent<Button>().interactable = true;
-            }
+            }*/
         }
         else
         {
@@ -202,19 +204,21 @@ public class BeginnerGuide : MonoBehaviour
         }
     }
     public void DisableAllFingers(){
-        for(int i = 0; i < Fingers.Length; i++){
+        for(int i = 1; i < Fingers.Length; i++){
             Fingers[i].SetActive(false);
     }
     }
     //about the function of dialogue
     IEnumerator Type(){
+        isTyping= true;
         foreach(char letter in sentences[index].ToCharArray()){
             textDisplay.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+        isTyping= false;
     }
     public void EnableAllButton(){
-        StatusButton.GetComponent<Button>().interactable = true;
+        //StatusButton.GetComponent<Button>().interactable = true;
         BagButton.GetComponent<Button>().interactable = true;
         GachaButton.GetComponent<Button>().interactable = true;
         StoreButton.GetComponent<Button>().interactable = true;
@@ -225,16 +229,28 @@ public class BeginnerGuide : MonoBehaviour
     public void NextSentences(){
         doIt = true;
         BGAnim.SetTrigger("Next");
-        NextB.GetComponent<Button>().interactable = false;
+        //NextB.GetComponent<Button>().interactable = false;
         if(index < sentences.Length - 1){
             index++;
             textDisplay.text = "";
-            StartCoroutine(Type());
+            StartCoroutine("Type");
         }else{
             textDisplay.text = "";
         }
         guideState++;
     }
+    public void Next2(){
+        if(isTyping){
+            StopCoroutine("Type");
+            textDisplay.text = sentences[guideState];
+            //guideState++;
+            isTyping = false;
+        }else{
+            NextSentences();
+        }
+
+    }
+
     public void SkipButton(){
         DisableAllFingers();
         EnableAllButton();

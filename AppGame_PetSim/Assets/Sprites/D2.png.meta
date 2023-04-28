@@ -480,48 +480,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: D2_8
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 564
-        width: 33
-        height: 33
-      alignment: 9
-      pivot: {x: 0.47268516, y: 0.45175263}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ecb97cfaf99c497d0800000000000000
-      internalID: -2912481371315790898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: D2_9
-      rect:
-        serializedVersion: 2
-        x: 157
-        y: 533
-        width: 59
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49e13cb9b32ad6500800000000000000
-      internalID: 391147119551127188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: D2_10
       rect:
         serializedVersion: 2

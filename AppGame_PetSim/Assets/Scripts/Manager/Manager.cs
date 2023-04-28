@@ -10,10 +10,7 @@ public class Manager : MonoBehaviour
     public GameObject Cat;
     public CatAI catai;
     [Header("GameObject")]
-    public GameObject Star;
-    public GameObject InsideStatus;
     public GameObject Bag;
-    public GameObject InsideBag;
     public GameObject StoreMenu;
     public GameObject Inventory;
     public GameObject MainScreenUI;
@@ -27,21 +24,29 @@ public class Manager : MonoBehaviour
     public GameObject ProbaScreen;
     public GameObject RedMachine;
     public GameObject BlueMachine;
-    public GameObject ExchangePanel;
+    [Header("Outdoor")]
+    public GameObject OutdoorPannel;
+    public GameObject AdventurePannel;
+    public GameObject outdoorbutton;
+    public GameObject outdoorIMG;
+    public GameObject homeIMG;
+    public GameObject Loading;
+
     [Header("Others")]
     public GameObject SettingPannel;
     public GameObject GiftPannel;
     public GameObject RewardPanel;
+    public GameObject WareroomPannel;
+    public GameObject AchievementPannel;
+
     [Header("Anim")]
     public int boughtItems;
     public int CostumePageCount = 0;
     public Text boughtnum;
     public GameObject numholder;
-    Animator starAnim;
-    Animator InsideStatusAnim;
     Animator bagAnim;
-    Animator InsideBagAnim;
     Animator InventAnim;
+    [Header("Sound")]
     public GameObject SoundM;
     public SoundManager sm;
     public GameObject BGM;
@@ -50,12 +55,12 @@ public class Manager : MonoBehaviour
     public GameObject CrossCloseEgg;
     public GameObject functionManager;
     public SaveLoadManager slm;
+   
 
   
     void Awake(){
         Instance = this;
         sm = SoundM.GetComponent<SoundManager>();
-        BGM.SetActive(true);
         SoundM.SetActive(true);
         slm = GameObject.Find("FunctionManager").GetComponent<SaveLoadManager>();
     }
@@ -63,14 +68,11 @@ public class Manager : MonoBehaviour
     public int openclose = 0;
     void Start()
     {
+
+        SceneryManager.Instance.switchScene();
         catenable();
-        starAnim = Star.GetComponent<Animator>();
-        InsideStatusAnim = InsideStatus.GetComponent<Animator>();
         bagAnim = Bag.GetComponent<Animator>();
-        InsideBagAnim = InsideBag.GetComponent<Animator>();
         InventAnim = Inventory.GetComponent<Animator>();
-        InsideStatus.SetActive(false);
-        InsideBag.SetActive(false);
         StoreMenu.SetActive(false);
         Inventory.SetActive(false);
         MainScreenUI.SetActive(true);
@@ -80,7 +82,6 @@ public class Manager : MonoBehaviour
         ProbaScreen.SetActive(false);
         RedMachine.SetActive(true);
         BlueMachine.SetActive(false);
-        ExchangePanel.SetActive(false);
 
         CostumePanel.SetActive(false);
         HeadPage.SetActive(false);
@@ -91,6 +92,9 @@ public class Manager : MonoBehaviour
         RewardPanel.SetActive(false); //here
         BGCover.SetActive(false); //in gacha pannel
         CrossCloseEgg.SetActive(false);
+        
+        Loading.SetActive(true);
+        StartCoroutine("WaitForSecond");
         
     }
     void Update()
@@ -120,41 +124,17 @@ public class Manager : MonoBehaviour
              sm.Click();
          }
     }
-    public void ClickStatus(){ //click the star
-        sm.Click();
-        starAnim.SetBool("hide", true);
-        starAnim.SetBool("reveal", false);
-        InsideStatus.SetActive(true); //then play animation
-        InsideStatusAnim.SetBool("reveal", true);
-        InsideStatusAnim.SetBool("hide", false);
-        //hide invent
-        //ClickHideBag();
-        InventAnim.SetBool("hide", true);
-        InventAnim.SetBool("out", false);
-        openclose = 0;
-    }
-    public void ClickHideStatus(){
-        sm.Click();
-        starAnim.SetBool("hide", false);
-        starAnim.SetBool("reveal", true);
-        InsideStatusAnim.SetBool("reveal", false);
-        InsideStatusAnim.SetBool("hide", true);
-    }
+
     public void ClickBag(){
         sm.Click();
         bagAnim.SetBool("hide", true);
         bagAnim.SetBool("out", false);
-        InsideBag.SetActive(true); //then play animation
-        InsideBagAnim.SetBool("out", true);
-        InsideBagAnim.SetBool("hide", false);
         ClickInvent();
     }
      public void ClickHideBag(){
         sm.Click();
         bagAnim.SetBool("hide", false);
         bagAnim.SetBool("out", true);
-        InsideBagAnim.SetBool("out", false);
-        InsideBagAnim.SetBool("hide", true);
         //also close inventory
         InventAnim.SetBool("hide", true);
         InventAnim.SetBool("out", false);
@@ -176,8 +156,31 @@ public class Manager : MonoBehaviour
         StoreMenu.SetActive(false);
         //MainScreenUI.SetActive(true);
     }
+
+    public void ClickAchievement(){
+        sm.Click();
+        catdisable();
+        AchievementPannel.SetActive(true);
+        AchievementInfo.Instance.updateUI();
+        //AchievementPannel.GetComponent<AchievementInfo>().lockAchievement();
+    }
+    public void ClickCloseAchievement(){
+        sm.Click();
+        catenable();
+        AchievementPannel.SetActive(false);
+    }
+
+
+
     public void ClickSetting(){
         sm.Click();
+/////////////////close bag//////////////////////
+        bagAnim.SetBool("hide", false);
+        bagAnim.SetBool("out", true);
+        //also close inventory
+        InventAnim.SetBool("hide", true);
+        InventAnim.SetBool("out", false);
+/////////////////close bag//////////////////////
         SettingPannel.SetActive(true);
     }
     public void CLickCLoseSetting(){
@@ -191,7 +194,6 @@ public class Manager : MonoBehaviour
     public void ClickInvent(){
         sm.Click();
         openclose+=1;
-        //ClickHideStatus();
     }
     public void ClickStoreBag(){
         sm.Click();
@@ -233,6 +235,7 @@ public class Manager : MonoBehaviour
     //Costume Page RElated
     public void ClickCostumes(){
         sm.Click();
+        catdisable();
         CostumePanel.SetActive(true);
     }
     public void ClickCloseCostumes(){
@@ -270,33 +273,62 @@ public class Manager : MonoBehaviour
     }
      public void ClickTodayReward(){
         sm.Click();
-        catdisable();
+
+
+
+        /////hidebag////
+        bagAnim.SetBool("hide", false);
+        bagAnim.SetBool("out", true);
+        //also close inventory
+        InventAnim.SetBool("hide", true);
+        InventAnim.SetBool("out", false);
+        /////hidebag////
+
+
+        CatAI.Instance.isPlayingToy = true;
         RewardPanel.SetActive(true);
     }
      public void ClickCloseReward(){
         sm.Click();
-        catenable();
+        CatAI.Instance.isPlayingToy = false;
         RewardPanel.SetActive(false);
     }
+    public void ClickWareroom(){
+        sm.Click();
+        CatAI.Instance.doIDLE = true;
+        CatAI.Instance.sortlayer = true;
+        CatAI.Instance.Idle();
+        CatAI.Instance.isPlayingToy = true;
+        WareroomPannel.SetActive(true);
+    }
+
+    public void ClickCloseWareroom(){
+        sm.Click();
+        CatAI.Instance.onCloseWareroom();
+        CatAI.Instance.doIDLE = false;
+        CatAI.Instance.isPlayingToy = false;
+        WareroomPannel.SetActive(false);
+    }
+
     //Settings
     public void OnClickMusicToggle(bool isOn){
         sm.Click();
-        if(isOn){
-            Debug.Log("Music On");
+        if(isOn){//Debug.Log("Music On");
             BGM.SetActive(true);
-        }else{
-            Debug.Log("Music Off");
+        }else{//Debug.Log("Music Off");
             BGM.SetActive(false);
         }
     }
-      public void OnClickSoundToggle(bool isOn){
+    public void OnClickSoundToggle(bool isOn){
          sm.Click();
         if(isOn){
-            Debug.Log("Music On");
-            SoundM.SetActive(true);
+            //Debug.Log("Music On");
+            //SoundM.SetActive(true);
+            sm.unmuteSound();
         }else{
-            Debug.Log("Music Off");
-            SoundM.SetActive(false);
+            //Debug.Log("Music Off");
+            //SoundM.SetActive(false);
+            sm.muteSound();
         }
     }
       public void OnClickNoticeToggle(bool isOn){
@@ -313,10 +345,46 @@ public class Manager : MonoBehaviour
         SettingPannel.transform.Find("Sounds/SoundToggle").gameObject.GetComponent<Toggle>().isOn = SoundM.activeSelf;
     }
     public void ClickChangeScene(){
-        sm.Click();
-        SceneryManager.Instance.changeScene();
+        Loading.SetActive(true);
+        StartCoroutine("WaitForSecond");
+        OutdoorPannel.SetActive(false);
+        SceneryManager.Instance.switchScene();
+    }
+    public void ClickOutdoor(){
+        sm.Click();  
+        OutdoorPannel.SetActive(true);
+        if(SceneryManager.Instance.outside())
+        {
+            //Debug.Log("home img");
+            homeIMG.SetActive(true);
+            outdoorIMG.SetActive(false);
+        }else{
+            //Debug.Log("outdoor img");
+            homeIMG.SetActive(false);
+            outdoorIMG.SetActive(true);
+        }
     }
 
+    public void ClickCloseOutdoor(){
+        sm.Click();  
+        OutdoorPannel.SetActive(false);
+    }
+
+    public void ClickAdventure(){
+        sm.Click();  
+        AdventurePannel.SetActive(true);
+        AdventureManager.Instance.updateUI();
+        AdventureManager.Instance.FinishAdventure();
+        if(AdventureManager.Instance.isExplore){
+            Airship.Instance.exploreAnim();
+        }
+        OutdoorPannel.SetActive(false);
+    }
+
+    public void ClickCloseAdventure(){
+        sm.Click();
+        AdventurePannel.SetActive(false);
+    }
     void DetermineOnOff(){   //this is the function for the APP ui Pannel
     if(openclose==1){
         Inventory.SetActive(true);
@@ -329,13 +397,19 @@ public class Manager : MonoBehaviour
         openclose = 0; //close
         }
     }
-        void catenable(){
+    public void catenable(){
         Cat.SetActive(true);
         CatAI.Instance.enableCat = true;
     }
 
-    void catdisable(){
+    public void catdisable(){
         Cat.SetActive(false);
        // CatAI.Instance.canTouch = false;
+    }
+
+     IEnumerator WaitForSecond()
+    { //for shorter animation
+        yield return new WaitForSeconds(2);
+        Loading.SetActive(false);
     }
 }

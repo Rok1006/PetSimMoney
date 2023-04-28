@@ -189,7 +189,7 @@ MonoBehaviour:
   _costMethod: 0
   _cost: 15
   _levelRequirement: 3
-  _description: + 15 fullness per piece
+  _description: + 15 fullness
   _hungerValue: 15
 --- !u!223 &4739645389422153106
 Canvas:

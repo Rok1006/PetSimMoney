@@ -39,12 +39,27 @@ public class RewardManager : MonoBehaviour
     {
         _rewardList.Clear(); //clear old list
         int count = 0;
+
+
+/*
+        string name = data.name.GetEnumerator();
+        while(name.MoveNext())
+        {
+            GameObject reward = ItemManager.Instance.itemList.Find(x => x.name.Equals(name));
+            addReward(new Reward(reward, data.amount[count]));
+            count++;
+        }*/
+
+
+
         foreach(string name in data.name)
         {
             GameObject reward = ItemManager.Instance.itemList.Find(x => x.name.Equals(name));
             addReward(new Reward(reward, data.amount[count]));
             count++;
         }
+
+
         giveReward();
         RewardUIGen(template);
     }

@@ -25,6 +25,12 @@ public class GachaManager : MonoBehaviour
     public GameObject[] drawButton = new GameObject[2]; 
     public GameObject backButton;
 
+    public GameObject repeated;
+    public GameObject repeatPanelControll;
+    public bool[] repeatarray = new bool[3];
+
+
+
     public Text probabilityPreview;
     public Text[] probabilityShowList = new Text[3];
     public int _luck = 0;
@@ -56,7 +62,7 @@ public class GachaManager : MonoBehaviour
             pool.Add(new List<Garment>());
             foreach(GarmentType type in Enum.GetValues(typeof(GarmentType)))
             {
-                foreach(Garment garment in GarmentManager.Instance.separatedGarmentLists[(int) type])
+                foreach(Garment garment in WareroomManager.Instance.separatedGarmentLists[(int) type])
                 {
                     if(garment.garment.GetComponent<GarmentInfo>().rarity == rarity)
                         pool[(int) rarity].Add(garment);
@@ -172,19 +178,19 @@ public class GachaManager : MonoBehaviour
         {
             case 1:
                 //Draw to result1
-                result1 = garments[rand];
-                GarmentManager.Instance.OwnGarment(result1);
+                result1 = garments[rand]; //Debug.Log(result1) = Garment
+                WareroomManager.Instance.OwnGarment(result1); 
                 break;
             case 3:
                 //Draw to result3
                 result3[round] = garments[rand];
-                GarmentManager.Instance.OwnGarment(result3[round]);
+                WareroomManager.Instance.OwnGarment(result3[round]);
                 break;
             default:
                 //Error
                 break;            
         }
-        GameObject eggUI = Instantiate(template, pos) as GameObject; //where the eggs appear
+        GameObject eggUI = Instantiate(template, pos) as GameObject; //where the eggs appear //instantiate = create new gameobj
         switch(drawType)
         {
             case 1:
@@ -196,7 +202,6 @@ public class GachaManager : MonoBehaviour
                 EA3[round] = eggAnim3;  //new added in , only work with draw 1 option, not the draw 3 option
                 break;
             default:
-                //Error
                 break;            
         }
 
@@ -216,23 +221,24 @@ public class GachaManager : MonoBehaviour
         GameObject finalResult;
         if(resultState==1){ //draw 1
             EA.SetTrigger("ClickEgg");  //newly added: work great for draw 1
-            GameObject p = Instantiate(particles, Draw1Panel.transform.position, Quaternion.identity); 
+            GameObject p = Instantiate(particles, Draw1Panel.transform.position, Quaternion.identity); //rainbow effect
             CleanSlot(); //clear egg
             finalResult = Instantiate(result1.garment, Draw1Panel.transform) as GameObject;
-            //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button //not using
+            if(!WareroomManager.Instance.OwnGarment(result1)){ //if owned
+                //GameObject R = Instantiate(repeated, Draw1Panel.transform.parent) as GameObject;
+                //R.SetActive(true);
+            }   
+            //public bool OwnGarment(Garment garment);
             Draw1Panel.SetActive(true);
-            //Destroy(p, .6f);
+
+
         }
         else if(resultState==3)
         { //draw 2
-            // GameObject[] finalResults = new GameObject[3];
-            // for(int i = 0; i < 3; i++)
-            // {
-                GameObject p = Instantiate(particles, Draw3Slot[i].transform.position, Quaternion.identity);
+                GameObject p = Instantiate(particles, Draw3Slot[i].transform.position, Quaternion.identity);//rainbow effect
                 CleanSlot(i);
                 finalResult = Instantiate(result3[i].garment, Draw3Slot[i].transform) as GameObject;
-                //finalResult.GetComponent<Button>().onClick.AddListener(ClosePanel); //Need to add a close button //not using
-            //}
+                
             Draw3Panel.SetActive(true);
         }
     }

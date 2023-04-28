@@ -17,6 +17,13 @@ TagManager:
   - PopUpUse
   - Air
   - spItem
+  - Ghost
+  - Marine
+  - Turtle
+  - PlanetPT
+  - Achievement
+  - mochi
+  - Fish
   layers:
   - Default
   - TransparentFX
